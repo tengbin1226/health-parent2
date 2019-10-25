@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="health-mobile" />
+        <module name="health-member-service" />
+        <module name="health-member-web" />
+        <module name="health-user-web" />
+        <module name="health-common" />
+        <module name="health-user-service" />
+        <module name="health-api" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="health-api" options="-parameters" />
+      <module name="health-common" options="-parameters" />
+      <module name="health-member-service" options="-parameters" />
+      <module name="health-member-web" options="-parameters" />
+      <module name="health-mobile" options="-parameters" />
+      <module name="health-parent" options="-parameters" />
+      <module name="health-user-service" options="-parameters" />
+      <module name="health-user-web" options="-parameters" />
+    </option>
+  </component>
+</project>
