@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a0f75aff-8077-4b6c-bea1-18fd3c78ad7a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/health-parent.iml" beforeDir="false" afterPath="$PROJECT_DIR$/health-parent.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -193,7 +190,17 @@
     <panes>
       <pane id="PackagesPane" />
       <pane id="Scope" />
-      <pane id="ProjectPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="health-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="health-parent" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -327,7 +334,7 @@
       <workItem from="1572065285249" duration="129000" />
       <workItem from="1572067754378" duration="16000" />
       <workItem from="1572070397986" duration="2000" />
-      <workItem from="1572078433594" duration="139000" />
+      <workItem from="1572078433594" duration="831000" />
     </task>
     <task id="LOCAL-00001" summary="健康管理系统项目">
       <created>1571971670804</created>
@@ -336,16 +343,23 @@
       <option name="project" value="LOCAL" />
       <updated>1571971670804</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="健康管理系统项目(SOA架构,即面向服务架构)">
+      <created>1572078655520</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1572078655520</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38345000" />
+    <option name="totallyTimeSpent" value="39037000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="23" width="1550" height="848" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15616623" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15616623" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -367,7 +381,7 @@
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.50067025" side_tool="true" weight="0.32960895" />
       <window_info anchor="bottom" id="Run with VisualVM" order="13" />
-      <window_info active="true" anchor="bottom" id="Java Enterprise" order="14" sideWeight="0.49932975" visible="true" weight="0.32402235" />
+      <window_info anchor="bottom" id="Java Enterprise" order="14" sideWeight="0.49932975" visible="true" weight="0.32402235" />
       <window_info anchor="bottom" id="Database Changes" order="15" />
       <window_info anchor="bottom" id="Version Control" order="16" />
       <window_info anchor="bottom" id="MyBatis Log" order="17" />
@@ -395,7 +409,8 @@
       <path value="$MAVEN_REPOSITORY$" />
     </ignored-roots>
     <MESSAGE value="健康管理系统项目" />
-    <option name="LAST_COMMIT_MESSAGE" value="健康管理系统项目" />
+    <MESSAGE value="健康管理系统项目(SOA架构,即面向服务架构)" />
+    <option name="LAST_COMMIT_MESSAGE" value="健康管理系统项目(SOA架构,即面向服务架构)" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="editorHistoryManager">
