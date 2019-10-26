@@ -176,7 +176,7 @@
   <component name="MavenRunner">
     <option name="jreName" value="#JAVA_HOME" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="85" />
     <option name="y" value="60" />
     <option name="width" value="1750" />
@@ -334,7 +334,7 @@
       <workItem from="1572065285249" duration="129000" />
       <workItem from="1572067754378" duration="16000" />
       <workItem from="1572070397986" duration="2000" />
-      <workItem from="1572078433594" duration="831000" />
+      <workItem from="1572078433594" duration="1236000" />
     </task>
     <task id="LOCAL-00001" summary="健康管理系统项目">
       <created>1571971670804</created>
@@ -350,14 +350,21 @@
       <option name="project" value="LOCAL" />
       <updated>1572078655520</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="健康管理系统项目(SOA架构,即面向服务架构)">
+      <created>1572079589404</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1572079589404</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39037000" />
+    <option name="totallyTimeSpent" value="39442000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="23" width="1550" height="848" extended-state="6" />
+    <frame x="-7" y="23" width="1550" height="848" extended-state="7" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15616623" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
