@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * 菜单Example类
+ * 菜单Example
  */
 public class MenuExample implements Serializable {
 

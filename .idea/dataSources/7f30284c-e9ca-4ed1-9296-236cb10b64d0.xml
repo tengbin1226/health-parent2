@@ -945,205 +945,208 @@
     <table id="239" parent="4" name="t_checkitem">
       <Collation>utf8_general_ci</Collation>
     </table>
-    <table id="240" parent="4" name="t_interpose_classify">
+    <table id="240" parent="4" name="t_healthmanager">
+      <Comment>健康管理师表</Comment>
+    </table>
+    <table id="241" parent="4" name="t_interpose_classify">
       <Comment>人群分类表</Comment>
     </table>
-    <table id="241" parent="4" name="t_interpose_followup_visit">
+    <table id="242" parent="4" name="t_interpose_followup_visit">
       <Comment>随访日记</Comment>
     </table>
-    <table id="242" parent="4" name="t_interpose_food">
+    <table id="243" parent="4" name="t_interpose_food">
       <Comment>饮食干预方案</Comment>
     </table>
-    <table id="243" parent="4" name="t_interpose_indicator">
+    <table id="244" parent="4" name="t_interpose_indicator">
       <Comment>指标管理</Comment>
     </table>
-    <table id="244" parent="4" name="t_interpose_plain">
+    <table id="245" parent="4" name="t_interpose_plain">
       <Comment>干预计划</Comment>
     </table>
-    <table id="245" parent="4" name="t_interpose_scheme">
+    <table id="246" parent="4" name="t_interpose_scheme">
       <Comment>干预方案</Comment>
     </table>
-    <table id="246" parent="4" name="t_interpose_sprot">
+    <table id="247" parent="4" name="t_interpose_sprot">
       <Comment>运动干预方案</Comment>
     </table>
-    <table id="247" parent="4" name="t_member">
+    <table id="248" parent="4" name="t_member">
       <Collation>utf8_general_ci</Collation>
     </table>
-    <table id="248" parent="4" name="t_member_ dynamicinfo">
+    <table id="249" parent="4" name="t_member_dynamicinfo">
       <Comment>会员动态信息表</Comment>
     </table>
-    <table id="249" parent="4" name="t_member_examination">
+    <table id="250" parent="4" name="t_member_examination">
       <Comment>会员体检表</Comment>
     </table>
-    <table id="250" parent="4" name="t_member_info"/>
-    <table id="251" parent="4" name="t_member_medicalhistory">
+    <table id="251" parent="4" name="t_member_info"/>
+    <table id="252" parent="4" name="t_member_medicalhistory">
       <Comment>会员病史表</Comment>
     </table>
-    <table id="252" parent="4" name="t_menu">
+    <table id="253" parent="4" name="t_menu">
       <Collation>utf8_general_ci</Collation>
     </table>
-    <table id="253" parent="4" name="t_order">
+    <table id="254" parent="4" name="t_order">
       <Collation>utf8_general_ci</Collation>
     </table>
-    <table id="254" parent="4" name="t_ordersetting">
+    <table id="255" parent="4" name="t_ordersetting">
       <Collation>utf8_general_ci</Collation>
     </table>
-    <table id="255" parent="4" name="t_permission">
+    <table id="256" parent="4" name="t_permission">
       <Collation>utf8_general_ci</Collation>
     </table>
-    <table id="256" parent="4" name="t_role">
+    <table id="257" parent="4" name="t_role">
       <Collation>utf8_general_ci</Collation>
     </table>
-    <table id="257" parent="4" name="t_role_menu">
+    <table id="258" parent="4" name="t_role_menu">
       <Collation>utf8_general_ci</Collation>
     </table>
-    <table id="258" parent="4" name="t_role_permission">
+    <table id="259" parent="4" name="t_role_permission">
       <Collation>utf8_general_ci</Collation>
     </table>
-    <table id="259" parent="4" name="t_setmeal">
+    <table id="260" parent="4" name="t_setmeal">
       <Collation>utf8_general_ci</Collation>
     </table>
-    <table id="260" parent="4" name="t_setmeal_checkgroup">
+    <table id="261" parent="4" name="t_setmeal_checkgroup">
       <Collation>utf8_general_ci</Collation>
     </table>
-    <table id="261" parent="4" name="t_user">
+    <table id="262" parent="4" name="t_user">
       <Collation>utf8_general_ci</Collation>
     </table>
-    <table id="262" parent="4" name="t_user_role">
+    <table id="263" parent="4" name="t_user_role">
       <Collation>utf8_general_ci</Collation>
     </table>
-    <column id="263" parent="237" name="id">
+    <column id="264" parent="237" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="264" parent="237" name="code">
+    <column id="265" parent="237" name="code">
       <Position>2</Position>
       <DataType>varchar(32)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="265" parent="237" name="name">
+    <column id="266" parent="237" name="name">
       <Position>3</Position>
       <DataType>varchar(32)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="266" parent="237" name="helpCode">
+    <column id="267" parent="237" name="helpCode">
       <Position>4</Position>
       <DataType>varchar(32)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="267" parent="237" name="sex">
+    <column id="268" parent="237" name="sex">
       <Position>5</Position>
       <DataType>char(1)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="268" parent="237" name="remark">
+    <column id="269" parent="237" name="remark">
       <Position>6</Position>
       <DataType>varchar(128)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="269" parent="237" name="attention">
+    <column id="270" parent="237" name="attention">
       <Position>7</Position>
       <DataType>varchar(128)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="270" parent="237" name="PRIMARY">
+    <key id="271" parent="237" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="271" parent="238" name="checkgroup_id">
+    <column id="272" parent="238" name="checkgroup_id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>0</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="272" parent="238" name="checkitem_id">
+    <column id="273" parent="238" name="checkitem_id">
       <Position>2</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>0</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="273" parent="238" name="item_id">
+    <index id="274" parent="238" name="item_id">
       <ColNames>checkitem_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="274" parent="238" name="PRIMARY">
+    <key id="275" parent="238" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>checkgroup_id
 checkitem_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="275" parent="238" name="group_id">
+    <foreign-key id="276" parent="238" name="group_id">
       <ColNames>checkgroup_id</ColNames>
       <RefSchemaName>health</RefSchemaName>
       <RefTableName>t_checkgroup</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <foreign-key id="276" parent="238" name="item_id">
+    <foreign-key id="277" parent="238" name="item_id">
       <ColNames>checkitem_id</ColNames>
       <RefSchemaName>health</RefSchemaName>
       <RefTableName>t_checkitem</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="277" parent="239" name="id">
+    <column id="278" parent="239" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="278" parent="239" name="code">
+    <column id="279" parent="239" name="code">
       <Position>2</Position>
       <DataType>varchar(16)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="279" parent="239" name="name">
+    <column id="280" parent="239" name="name">
       <Position>3</Position>
       <DataType>varchar(32)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="280" parent="239" name="sex">
+    <column id="281" parent="239" name="sex">
       <Position>4</Position>
       <DataType>char(1)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="281" parent="239" name="age">
+    <column id="282" parent="239" name="age">
       <Position>5</Position>
       <DataType>varchar(32)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="282" parent="239" name="price">
+    <column id="283" parent="239" name="price">
       <Position>6</Position>
       <DataType>float|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="283" parent="239" name="type">
+    <column id="284" parent="239" name="type">
       <Position>7</Position>
       <Comment>查检项类型,分为检查和检验两种</Comment>
       <DataType>char(1)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="284" parent="239" name="attention">
+    <column id="285" parent="239" name="attention">
       <Position>8</Position>
       <DataType>varchar(128)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="285" parent="239" name="remark">
+    <column id="286" parent="239" name="remark">
       <Position>9</Position>
       <DataType>varchar(128)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="286" parent="239" name="PRIMARY">
+    <key id="287" parent="239" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="287" parent="240" name="id">
+    <column id="288" parent="240" name="id">
       <Position>1</Position>
       <Comment>主键编号,自增</Comment>
       <DataType>int(11)|0s</DataType>
@@ -1151,33 +1154,72 @@ checkitem_id</ColNames>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="288" parent="240" name="member_id">
+    <column id="289" parent="240" name="health_mgr_id">
+      <Position>2</Position>
+      <Comment>健康管理师编号</Comment>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="290" parent="240" name="health_mgr_name">
+      <Position>3</Position>
+      <Comment>健康管理师名称</Comment>
+      <DataType>varchar(50)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="291" parent="240" name="state">
+      <Position>4</Position>
+      <Comment>状态(1:启用;0:禁用)</Comment>
+      <DataType>int(11)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="292" parent="240" name="remark">
+      <Position>5</Position>
+      <Comment>备注</Comment>
+      <DataType>varchar(200)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="293" parent="240" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="294" parent="241" name="id">
+      <Position>1</Position>
+      <Comment>主键编号,自增</Comment>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="295" parent="241" name="member_id">
       <Position>2</Position>
       <Comment>会员编号,外键引用会员表</Comment>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="289" parent="240" name="state">
+    <column id="296" parent="241" name="state">
       <Position>3</Position>
       <Comment>状态. 默认:系统预分类</Comment>
       <DataType>varchar(100)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="290" parent="240" name="people_classify">
+    <column id="297" parent="241" name="people_classify">
       <Position>4</Position>
       <Comment>人群分类.,默认:高血压</Comment>
       <DataType>varchar(100)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="291" parent="240" name="PRIMARY">
+    <key id="298" parent="241" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="292" parent="241" name="id">
+    <column id="299" parent="242" name="id">
       <Position>1</Position>
       <Comment>主键编号,自增</Comment>
       <DataType>int(11)|0s</DataType>
@@ -1185,109 +1227,63 @@ checkitem_id</ColNames>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="293" parent="241" name="health_mgr_id">
+    <column id="300" parent="242" name="health_mgr_id">
       <Position>2</Position>
       <Comment>回访人员,健康管理师编号</Comment>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="294" parent="241" name="interpose_name">
+    <column id="301" parent="242" name="interpose_name">
       <Position>3</Position>
       <Comment>被干预人</Comment>
       <DataType>varchar(100)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="295" parent="241" name="fileNumber">
+    <column id="302" parent="242" name="fileNumber">
       <Position>4</Position>
       <Comment>档案号</Comment>
       <DataType>varchar(32)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="296" parent="241" name="return_time">
+    <column id="303" parent="242" name="return_time">
       <Position>5</Position>
       <Comment>回访日期</Comment>
       <DataType>datetime|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="297" parent="241" name="specific_time">
+    <column id="304" parent="242" name="specific_time">
       <Position>6</Position>
       <Comment>具体时间</Comment>
       <DataType>datetime|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="298" parent="241" name="visit_method">
+    <column id="305" parent="242" name="visit_method">
       <Position>7</Position>
       <Comment>方式(电话,短信,邮件)</Comment>
       <DataType>varchar(40)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="299" parent="241" name="remark">
+    <column id="306" parent="242" name="remark">
       <Position>8</Position>
       <Comment>回访内容</Comment>
       <DataType>varchar(200)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="300" parent="241" name="feedback_info">
+    <column id="307" parent="242" name="feedback_info">
       <Position>9</Position>
       <Comment>反馈信息</Comment>
       <DataType>varchar(200)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="301" parent="241" name="handling_result">
+    <column id="308" parent="242" name="handling_result">
       <Position>10</Position>
       <Comment>处理结果</Comment>
       <DataType>varchar(200)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <key id="302" parent="241" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>id</ColNames>
-      <Primary>1</Primary>
-    </key>
-    <column id="303" parent="242" name="id">
-      <Position>1</Position>
-      <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
-      <SequenceIdentity>1</SequenceIdentity>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="304" parent="242" name="member_id">
-      <Position>2</Position>
-      <Comment>会员编号,外键引用会员表</Comment>
-      <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="305" parent="242" name="eat_times">
-      <Position>3</Position>
-      <Comment>餐次</Comment>
-      <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="306" parent="242" name="food_name">
-      <Position>4</Position>
-      <Comment>推荐食物名称</Comment>
-      <DataType>varchar(200)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="307" parent="242" name="food_weight">
-      <Position>5</Position>
-      <Comment>分量</Comment>
-      <DataType>float|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="308" parent="242" name="intake_count">
-      <Position>6</Position>
-      <Comment>推荐摄入热量(kcal)</Comment>
-      <DataType>float|0s</DataType>
-      <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
     <key id="309" parent="242" name="PRIMARY">
@@ -1297,206 +1293,204 @@ checkitem_id</ColNames>
     </key>
     <column id="310" parent="243" name="id">
       <Position>1</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="311" parent="243" name="member_id">
+      <Position>2</Position>
+      <Comment>会员编号,外键引用会员表</Comment>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="312" parent="243" name="eat_times">
+      <Position>3</Position>
+      <Comment>餐次</Comment>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="313" parent="243" name="food_name">
+      <Position>4</Position>
+      <Comment>推荐食物名称</Comment>
+      <DataType>varchar(200)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="314" parent="243" name="food_weight">
+      <Position>5</Position>
+      <Comment>分量</Comment>
+      <DataType>float|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="315" parent="243" name="intake_count">
+      <Position>6</Position>
+      <Comment>推荐摄入热量(kcal)</Comment>
+      <DataType>float|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="316" parent="243" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="317" parent="244" name="id">
+      <Position>1</Position>
       <Comment>主键编号,自增</Comment>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="311" parent="243" name="sequence_no">
+    <column id="318" parent="244" name="sequence_no">
       <Position>2</Position>
       <Comment>序号</Comment>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="312" parent="243" name="indicator_name">
+    <column id="319" parent="244" name="indicator_name">
       <Position>3</Position>
       <Comment>指标名称</Comment>
       <DataType>varchar(100)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="313" parent="243" name="normal_value">
+    <column id="320" parent="244" name="normal_value">
       <Position>4</Position>
       <Comment>正常参考值</Comment>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="314" parent="243" name="unit">
+    <column id="321" parent="244" name="unit">
       <Position>5</Position>
       <Comment>单位(kg/m^2)</Comment>
       <DataType>varchar(30)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="315" parent="243" name="left_critical">
+    <column id="322" parent="244" name="left_critical">
       <Position>6</Position>
       <Comment>左临界值</Comment>
       <DataType>float|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="316" parent="243" name="right_critical">
+    <column id="323" parent="244" name="right_critical">
       <Position>7</Position>
       <Comment>右临界值</Comment>
       <DataType>float|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="317" parent="243" name="remark">
+    <column id="324" parent="244" name="remark">
       <Position>8</Position>
       <Comment>说明</Comment>
       <DataType>varchar(200)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="318" parent="243" name="state">
+    <column id="325" parent="244" name="state">
       <Position>9</Position>
       <Comment>是否禁用(1:禁用,0:启用)</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="319" parent="243" name="PRIMARY">
+    <key id="326" parent="244" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="320" parent="244" name="id">
+    <column id="327" parent="245" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="321" parent="244" name="member_id">
+    <column id="328" parent="245" name="member_id">
       <Position>2</Position>
       <Comment>会员编号,外键引用会员表</Comment>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="322" parent="244" name="interpose_time">
+    <column id="329" parent="245" name="interpose_time">
       <Position>3</Position>
       <Comment>干预时间(三餐,每天,早晚)</Comment>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="323" parent="244" name="interpose_shape">
+    <column id="330" parent="245" name="interpose_shape">
       <Position>4</Position>
       <Comment>干预形式(营养饮食,运动指导,中医养生)</Comment>
       <DataType>varchar(100)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="324" parent="244" name="remark">
+    <column id="331" parent="245" name="remark">
       <Position>5</Position>
       <Comment>主要内容</Comment>
       <DataType>varchar(200)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="325" parent="244" name="PRIMARY">
+    <key id="332" parent="245" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="326" parent="245" name="id">
+    <column id="333" parent="246" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="327" parent="245" name="member_id">
+    <column id="334" parent="246" name="member_id">
       <Position>2</Position>
       <Comment>会员编号,外键引用会员表</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="328" parent="245" name="scheme_tittle">
+    <column id="335" parent="246" name="scheme_tittle">
       <Position>3</Position>
       <Comment>方案标题</Comment>
       <DataType>varchar(200)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="329" parent="245" name="model_id">
+    <column id="336" parent="246" name="model_id">
       <Position>4</Position>
       <Comment>选用标题</Comment>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="330" parent="245" name="start_time">
+    <column id="337" parent="246" name="start_time">
       <Position>5</Position>
       <Comment>开始时间</Comment>
       <DataType>datetime|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="331" parent="245" name="end_time">
+    <column id="338" parent="246" name="end_time">
       <Position>6</Position>
       <Comment>结束时间</Comment>
       <DataType>datetime|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="332" parent="245" name="scheme_target">
+    <column id="339" parent="246" name="scheme_target">
       <Position>7</Position>
       <Comment>方案目标</Comment>
       <DataType>varchar(200)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="333" parent="245" name="executor_id">
+    <column id="340" parent="246" name="executor_id">
       <Position>8</Position>
       <Comment>执行人,健康管理师编号</Comment>
       <DataType>int(11)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <key id="334" parent="245" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>id</ColNames>
-      <Primary>1</Primary>
-    </key>
-    <column id="335" parent="246" name="id">
-      <Position>1</Position>
-      <Comment>主键编号,自动增长</Comment>
-      <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
-      <SequenceIdentity>1</SequenceIdentity>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="336" parent="246" name="member_id">
-      <Position>2</Position>
-      <Comment>会员编号,外键引用会员表</Comment>
-      <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="337" parent="246" name="sport_name">
-      <Position>3</Position>
-      <Comment>运动名称</Comment>
-      <DataType>varchar(200)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="338" parent="246" name="sport_time">
-      <Position>4</Position>
-      <Comment>运动时长(单位:min)</Comment>
-      <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="339" parent="246" name="sport_cycle">
-      <Position>5</Position>
-      <Comment>运动周期(如:每天;每两天)</Comment>
-      <DataType>varchar(50)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="340" parent="246" name="consume_count">
-      <Position>6</Position>
-      <Comment>消耗量(指定运动消耗的卡路里)</Comment>
-      <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
     <key id="341" parent="246" name="PRIMARY">
@@ -1506,78 +1500,132 @@ checkitem_id</ColNames>
     </key>
     <column id="342" parent="247" name="id">
       <Position>1</Position>
+      <Comment>主键编号,自动增长</Comment>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="343" parent="247" name="member_id">
+      <Position>2</Position>
+      <Comment>会员编号,外键引用会员表</Comment>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="344" parent="247" name="sport_name">
+      <Position>3</Position>
+      <Comment>运动名称</Comment>
+      <DataType>varchar(200)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="345" parent="247" name="sport_time">
+      <Position>4</Position>
+      <Comment>运动时长(单位:min)</Comment>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="346" parent="247" name="sport_cycle">
+      <Position>5</Position>
+      <Comment>运动周期(如:每天;每两天)</Comment>
+      <DataType>varchar(50)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="347" parent="247" name="consume_count">
+      <Position>6</Position>
+      <Comment>消耗量(指定运动消耗的卡路里)</Comment>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="348" parent="247" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="349" parent="248" name="id">
+      <Position>1</Position>
       <Comment>主键</Comment>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="343" parent="247" name="fileNumber">
+    <column id="350" parent="248" name="fileNumber">
       <Position>2</Position>
       <Comment>档案号</Comment>
       <DataType>varchar(32)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="344" parent="247" name="name">
+    <column id="351" parent="248" name="name">
       <Position>3</Position>
       <Comment>姓名</Comment>
       <DataType>varchar(32)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="345" parent="247" name="sex">
+    <column id="352" parent="248" name="sex">
       <Position>4</Position>
       <Comment>性别</Comment>
       <DataType>varchar(8)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="346" parent="247" name="idCard">
+    <column id="353" parent="248" name="idCard">
       <Position>5</Position>
       <Comment>身份证</Comment>
       <DataType>varchar(18)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="347" parent="247" name="phoneNumber">
+    <column id="354" parent="248" name="phoneNumber">
       <Position>6</Position>
       <Comment>手机号</Comment>
       <DataType>varchar(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="348" parent="247" name="regTime">
+    <column id="355" parent="248" name="regTime">
       <Position>7</Position>
       <Comment>注册时间</Comment>
       <DataType>date|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="349" parent="247" name="password">
+    <column id="356" parent="248" name="password">
       <Position>8</Position>
       <Comment>密码</Comment>
       <DataType>varchar(32)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="350" parent="247" name="email">
+    <column id="357" parent="248" name="email">
       <Position>9</Position>
       <Comment>邮箱</Comment>
       <DataType>varchar(32)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="351" parent="247" name="birthday">
+    <column id="358" parent="248" name="birthday">
       <Position>10</Position>
       <Comment>生日</Comment>
       <DataType>date|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="352" parent="247" name="remark">
+    <column id="359" parent="248" name="remark">
       <Position>11</Position>
       <Comment>备注</Comment>
       <DataType>varchar(128)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="353" parent="247" name="PRIMARY">
+    <column id="360" parent="248" name="health_mgr_id">
+      <Position>12</Position>
+      <Comment>健康管理师编号</Comment>
+      <DataType>int(11)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="361" parent="248" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="354" parent="248" name="id">
+    <column id="362" parent="249" name="id">
       <Position>1</Position>
       <Comment>主键,自动增长</Comment>
       <DataType>int(11)|0s</DataType>
@@ -1585,78 +1633,78 @@ checkitem_id</ColNames>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="355" parent="248" name="member_id">
+    <column id="363" parent="249" name="member_id">
       <Position>2</Position>
       <Comment>会员编号,外键引用会员表</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="356" parent="248" name="height">
+    <column id="364" parent="249" name="height">
       <Position>3</Position>
       <Comment>身高</Comment>
       <DataType>float|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="357" parent="248" name="weight">
+    <column id="365" parent="249" name="weight">
       <Position>4</Position>
       <Comment>体重</Comment>
       <DataType>float|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="358" parent="248" name="dbp">
+    <column id="366" parent="249" name="dbp">
       <Position>5</Position>
       <Comment>舒张压</Comment>
       <DataType>float|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="359" parent="248" name="sbp">
+    <column id="367" parent="249" name="sbp">
       <Position>6</Position>
       <Comment>收缩压</Comment>
       <DataType>float|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="360" parent="248" name="breth">
+    <column id="368" parent="249" name="breth">
       <Position>7</Position>
       <Comment>呼吸</Comment>
       <DataType>varchar(40)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="361" parent="248" name="thermometer">
+    <column id="369" parent="249" name="thermometer">
       <Position>8</Position>
       <Comment>体温</Comment>
       <DataType>float|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="362" parent="248" name="waistline">
+    <column id="370" parent="249" name="waistline">
       <Position>9</Position>
       <Comment>腰围</Comment>
       <DataType>float|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="363" parent="248" name="hipline">
+    <column id="371" parent="249" name="hipline">
       <Position>10</Position>
       <Comment>臀围</Comment>
       <DataType>float|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="364" parent="248" name="bmi">
+    <column id="372" parent="249" name="bmi">
       <Position>11</Position>
       <Comment>身体质量指数</Comment>
       <DataType>float|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="365" parent="248" name="oxyhemoglobin">
+    <column id="373" parent="249" name="oxyhemoglobin">
       <Position>12</Position>
       <Comment>血氧饱和度</Comment>
       <DataType>float|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="366" parent="248" name="PRIMARY">
+    <key id="374" parent="249" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="367" parent="249" name="id">
+    <column id="375" parent="250" name="id">
       <Position>1</Position>
       <Comment>主键编号,自增</Comment>
       <DataType>int(11)|0s</DataType>
@@ -1664,36 +1712,36 @@ checkitem_id</ColNames>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="368" parent="249" name="member_id">
+    <column id="376" parent="250" name="member_id">
       <Position>2</Position>
       <Comment>会员编号,外键引用会员表</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="369" parent="249" name="exam_date">
+    <column id="377" parent="250" name="exam_date">
       <Position>3</Position>
       <Comment>体检时间</Comment>
       <DataType>datetime|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="370" parent="249" name="setmeal_id">
+    <column id="378" parent="250" name="setmeal_id">
       <Position>4</Position>
       <Comment>检测套餐,外键引用套餐表</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="371" parent="249" name="report_state">
+    <column id="379" parent="250" name="report_state">
       <Position>5</Position>
       <Comment>报告状态:1:报告未上传 0:报告已上传</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="372" parent="249" name="PRIMARY">
+    <key id="380" parent="250" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="373" parent="250" name="id">
+    <column id="381" parent="251" name="id">
       <Position>1</Position>
       <Comment>主键编号,自动增长</Comment>
       <DataType>int(11)|0s</DataType>
@@ -1701,95 +1749,47 @@ checkitem_id</ColNames>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="374" parent="250" name="member_id">
+    <column id="382" parent="251" name="member_id">
       <Position>2</Position>
       <Comment>会员编号,外键引用会员表</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="375" parent="250" name="marital_status">
+    <column id="383" parent="251" name="marital_status">
       <Position>3</Position>
       <Comment>婚姻状态</Comment>
-      <DataType>varbinary(20)|0s</DataType>
+      <DataType>varchar(30)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="376" parent="250" name="job">
+    <column id="384" parent="251" name="job">
       <Position>4</Position>
       <Comment>职业</Comment>
       <DataType>varchar(50)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="377" parent="250" name="education_degree">
+    <column id="385" parent="251" name="education_degree">
       <Position>5</Position>
       <Comment>文化程度</Comment>
       <DataType>varchar(20)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="378" parent="250" name="native">
+    <column id="386" parent="251" name="native_place">
       <Position>6</Position>
       <Comment>籍贯</Comment>
       <DataType>varchar(20)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="379" parent="250" name="health_manager">
+    <column id="387" parent="251" name="health_manager">
       <Position>7</Position>
       <Comment>健康管理师</Comment>
       <DataType>varchar(30)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="380" parent="250" name="state">
+    <column id="388" parent="251" name="state">
       <Position>8</Position>
       <Comment>档案状态:0:启用; 1:停用</Comment>
       <DataType>int(11)|0s</DataType>
       <DefaultExpression>0</DefaultExpression>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <key id="381" parent="250" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>id</ColNames>
-      <Primary>1</Primary>
-    </key>
-    <column id="382" parent="251" name="id">
-      <Position>1</Position>
-      <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
-      <SequenceIdentity>1</SequenceIdentity>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="383" parent="251" name="member_id">
-      <Position>2</Position>
-      <Comment>会员编号,外键引用会员表</Comment>
-      <DataType>int(11)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="384" parent="251" name="previous_history">
-      <Position>3</Position>
-      <Comment>既往史</Comment>
-      <DataType>varchar(200)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="385" parent="251" name="family_history">
-      <Position>4</Position>
-      <Comment>家族史</Comment>
-      <DataType>varchar(200)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="386" parent="251" name="allergic_history">
-      <Position>5</Position>
-      <Comment>过敏史</Comment>
-      <DataType>varchar(200)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="387" parent="251" name="medical_history">
-      <Position>6</Position>
-      <Comment>病史</Comment>
-      <DataType>varchar(200)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="388" parent="251" name="chronic disease">
-      <Position>7</Position>
-      <Comment>慢性病</Comment>
-      <DataType>varchar(200)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
     <key id="389" parent="251" name="PRIMARY">
@@ -1804,444 +1804,492 @@ checkitem_id</ColNames>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="391" parent="252" name="name">
+    <column id="391" parent="252" name="member_id">
       <Position>2</Position>
-      <DataType>varchar(128)|0s</DataType>
+      <Comment>会员编号,外键引用会员表</Comment>
+      <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="392" parent="252" name="linkUrl">
+    <column id="392" parent="252" name="previous_history">
       <Position>3</Position>
-      <DataType>varchar(128)|0s</DataType>
+      <Comment>既往史</Comment>
+      <DataType>varchar(200)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="393" parent="252" name="path">
+    <column id="393" parent="252" name="family_history">
       <Position>4</Position>
-      <DataType>varchar(128)|0s</DataType>
+      <Comment>家族史</Comment>
+      <DataType>varchar(200)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="394" parent="252" name="priority">
+    <column id="394" parent="252" name="allergic_history">
       <Position>5</Position>
-      <DataType>int(11)|0s</DataType>
+      <Comment>过敏史</Comment>
+      <DataType>varchar(200)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="395" parent="252" name="icon">
+    <column id="395" parent="252" name="medical_history">
       <Position>6</Position>
-      <DataType>varchar(64)|0s</DataType>
+      <Comment>病史</Comment>
+      <DataType>varchar(200)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="396" parent="252" name="description">
+    <column id="396" parent="252" name="chronic disease">
       <Position>7</Position>
-      <DataType>varchar(128)|0s</DataType>
+      <Comment>慢性病</Comment>
+      <DataType>varchar(200)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="397" parent="252" name="parentMenuId">
-      <Position>8</Position>
-      <DataType>int(11)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="398" parent="252" name="level">
-      <Position>9</Position>
-      <DataType>int(11)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <index id="399" parent="252" name="FK_Reference_13">
-      <ColNames>parentMenuId</ColNames>
-      <Type>btree</Type>
-    </index>
-    <key id="400" parent="252" name="PRIMARY">
+    <key id="397" parent="252" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="401" parent="252" name="FK_Reference_13">
-      <ColNames>parentMenuId</ColNames>
-      <RefSchemaName>health</RefSchemaName>
-      <RefTableName>t_menu</RefTableName>
-      <RefColNames>id</RefColNames>
-    </foreign-key>
-    <column id="402" parent="253" name="id">
+    <column id="398" parent="253" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="403" parent="253" name="member_id">
+    <column id="399" parent="253" name="name">
+      <Position>2</Position>
+      <DataType>varchar(128)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="400" parent="253" name="linkUrl">
+      <Position>3</Position>
+      <DataType>varchar(128)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="401" parent="253" name="path">
+      <Position>4</Position>
+      <DataType>varchar(128)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="402" parent="253" name="priority">
+      <Position>5</Position>
+      <DataType>int(11)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="403" parent="253" name="icon">
+      <Position>6</Position>
+      <DataType>varchar(64)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="404" parent="253" name="description">
+      <Position>7</Position>
+      <DataType>varchar(128)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="405" parent="253" name="parentMenuId">
+      <Position>8</Position>
+      <DataType>int(11)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="406" parent="253" name="level">
+      <Position>9</Position>
+      <DataType>int(11)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="407" parent="253" name="FK_Reference_13">
+      <ColNames>parentMenuId</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="408" parent="253" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="409" parent="253" name="FK_Reference_13">
+      <ColNames>parentMenuId</ColNames>
+      <RefSchemaName>health</RefSchemaName>
+      <RefTableName>t_menu</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="410" parent="254" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="411" parent="254" name="member_id">
       <Position>2</Position>
       <Comment>员会id</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="404" parent="253" name="orderDate">
+    <column id="412" parent="254" name="orderDate">
       <Position>3</Position>
       <Comment>约预日期</Comment>
       <DataType>date|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="405" parent="253" name="orderType">
+    <column id="413" parent="254" name="orderType">
       <Position>4</Position>
       <Comment>约预类型 电话预约/微信预约</Comment>
       <DataType>varchar(8)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="406" parent="253" name="orderStatus">
+    <column id="414" parent="254" name="orderStatus">
       <Position>5</Position>
       <Comment>预约状态（是否到诊）</Comment>
       <DataType>varchar(8)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="407" parent="253" name="setmeal_id">
+    <column id="415" parent="254" name="setmeal_id">
       <Position>6</Position>
       <Comment>餐套id</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="408" parent="253" name="key_member_id">
+    <index id="416" parent="254" name="key_member_id">
       <ColNames>member_id</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="409" parent="253" name="key_setmeal_id">
+    <index id="417" parent="254" name="key_setmeal_id">
       <ColNames>setmeal_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="410" parent="253" name="PRIMARY">
+    <key id="418" parent="254" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="411" parent="253" name="key_member_id">
+    <foreign-key id="419" parent="254" name="key_member_id">
       <ColNames>member_id</ColNames>
       <RefSchemaName>health</RefSchemaName>
       <RefTableName>t_member</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <foreign-key id="412" parent="253" name="key_setmeal_id">
+    <foreign-key id="420" parent="254" name="key_setmeal_id">
       <ColNames>setmeal_id</ColNames>
       <RefSchemaName>health</RefSchemaName>
       <RefTableName>t_setmeal</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="413" parent="254" name="id">
+    <column id="421" parent="255" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="414" parent="254" name="orderDate">
+    <column id="422" parent="255" name="orderDate">
       <Position>2</Position>
       <Comment>约预日期</Comment>
       <DataType>date|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="415" parent="254" name="number">
+    <column id="423" parent="255" name="number">
       <Position>3</Position>
       <Comment>可预约人数</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="416" parent="254" name="reservations">
+    <column id="424" parent="255" name="reservations">
       <Position>4</Position>
       <Comment>已预约人数</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="417" parent="254" name="PRIMARY">
+    <key id="425" parent="255" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="418" parent="255" name="id">
+    <column id="426" parent="256" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="419" parent="255" name="name">
+    <column id="427" parent="256" name="name">
       <Position>2</Position>
       <DataType>varchar(32)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="420" parent="255" name="keyword">
+    <column id="428" parent="256" name="keyword">
       <Position>3</Position>
       <DataType>varchar(64)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="421" parent="255" name="description">
+    <column id="429" parent="256" name="description">
       <Position>4</Position>
       <DataType>varchar(128)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="422" parent="255" name="PRIMARY">
+    <key id="430" parent="256" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="423" parent="256" name="id">
+    <column id="431" parent="257" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="424" parent="256" name="name">
+    <column id="432" parent="257" name="name">
       <Position>2</Position>
       <DataType>varchar(32)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="425" parent="256" name="keyword">
+    <column id="433" parent="257" name="keyword">
       <Position>3</Position>
       <DataType>varchar(64)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="426" parent="256" name="description">
+    <column id="434" parent="257" name="description">
       <Position>4</Position>
       <DataType>varchar(128)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="427" parent="256" name="PRIMARY">
+    <key id="435" parent="257" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="428" parent="257" name="role_id">
+    <column id="436" parent="258" name="role_id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="429" parent="257" name="menu_id">
+    <column id="437" parent="258" name="menu_id">
       <Position>2</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="430" parent="257" name="FK_Reference_10">
+    <index id="438" parent="258" name="FK_Reference_10">
       <ColNames>menu_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="431" parent="257" name="PRIMARY">
+    <key id="439" parent="258" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>role_id
 menu_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="432" parent="257" name="FK_Reference_9">
+    <foreign-key id="440" parent="258" name="FK_Reference_9">
       <ColNames>role_id</ColNames>
       <RefSchemaName>health</RefSchemaName>
       <RefTableName>t_role</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <foreign-key id="433" parent="257" name="FK_Reference_10">
+    <foreign-key id="441" parent="258" name="FK_Reference_10">
       <ColNames>menu_id</ColNames>
       <RefSchemaName>health</RefSchemaName>
       <RefTableName>t_menu</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="434" parent="258" name="role_id">
+    <column id="442" parent="259" name="role_id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="435" parent="258" name="permission_id">
+    <column id="443" parent="259" name="permission_id">
       <Position>2</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="436" parent="258" name="FK_Reference_12">
+    <index id="444" parent="259" name="FK_Reference_12">
       <ColNames>permission_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="437" parent="258" name="PRIMARY">
+    <key id="445" parent="259" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>role_id
 permission_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="438" parent="258" name="FK_Reference_11">
+    <foreign-key id="446" parent="259" name="FK_Reference_11">
       <ColNames>role_id</ColNames>
       <RefSchemaName>health</RefSchemaName>
       <RefTableName>t_role</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <foreign-key id="439" parent="258" name="FK_Reference_12">
+    <foreign-key id="447" parent="259" name="FK_Reference_12">
       <ColNames>permission_id</ColNames>
       <RefSchemaName>health</RefSchemaName>
       <RefTableName>t_permission</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="440" parent="259" name="id">
+    <column id="448" parent="260" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="441" parent="259" name="name">
+    <column id="449" parent="260" name="name">
       <Position>2</Position>
       <DataType>varchar(128)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="442" parent="259" name="code">
+    <column id="450" parent="260" name="code">
       <Position>3</Position>
       <DataType>varchar(8)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="443" parent="259" name="helpCode">
+    <column id="451" parent="260" name="helpCode">
       <Position>4</Position>
       <DataType>varchar(16)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="444" parent="259" name="sex">
+    <column id="452" parent="260" name="sex">
       <Position>5</Position>
       <DataType>char(1)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="445" parent="259" name="age">
+    <column id="453" parent="260" name="age">
       <Position>6</Position>
       <DataType>varchar(32)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="446" parent="259" name="price">
+    <column id="454" parent="260" name="price">
       <Position>7</Position>
       <DataType>float|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="447" parent="259" name="remark">
+    <column id="455" parent="260" name="remark">
       <Position>8</Position>
       <DataType>varchar(128)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="448" parent="259" name="attention">
+    <column id="456" parent="260" name="attention">
       <Position>9</Position>
       <DataType>varchar(128)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="449" parent="259" name="img">
+    <column id="457" parent="260" name="img">
       <Position>10</Position>
       <DataType>varchar(128)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="450" parent="259" name="PRIMARY">
+    <key id="458" parent="260" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="451" parent="260" name="setmeal_id">
+    <column id="459" parent="261" name="setmeal_id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>0</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="452" parent="260" name="checkgroup_id">
+    <column id="460" parent="261" name="checkgroup_id">
       <Position>2</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>0</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="453" parent="260" name="checkgroup_key">
+    <index id="461" parent="261" name="checkgroup_key">
       <ColNames>checkgroup_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="454" parent="260" name="PRIMARY">
+    <key id="462" parent="261" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>setmeal_id
 checkgroup_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="455" parent="260" name="setmeal_key">
+    <foreign-key id="463" parent="261" name="setmeal_key">
       <ColNames>setmeal_id</ColNames>
       <RefSchemaName>health</RefSchemaName>
       <RefTableName>t_setmeal</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <foreign-key id="456" parent="260" name="checkgroup_key">
+    <foreign-key id="464" parent="261" name="checkgroup_key">
       <ColNames>checkgroup_id</ColNames>
       <RefSchemaName>health</RefSchemaName>
       <RefTableName>t_checkgroup</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="457" parent="261" name="id">
+    <column id="465" parent="262" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="458" parent="261" name="birthday">
+    <column id="466" parent="262" name="birthday">
       <Position>2</Position>
       <DataType>date|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="459" parent="261" name="gender">
+    <column id="467" parent="262" name="gender">
       <Position>3</Position>
       <DataType>varchar(1)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="460" parent="261" name="username">
+    <column id="468" parent="262" name="username">
       <Position>4</Position>
       <DataType>varchar(32)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="461" parent="261" name="password">
+    <column id="469" parent="262" name="password">
       <Position>5</Position>
       <DataType>varchar(256)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="462" parent="261" name="remark">
+    <column id="470" parent="262" name="remark">
       <Position>6</Position>
       <DataType>varchar(32)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="463" parent="261" name="station">
+    <column id="471" parent="262" name="station">
       <Position>7</Position>
       <DataType>varchar(1)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="464" parent="261" name="telephone">
+    <column id="472" parent="262" name="telephone">
       <Position>8</Position>
       <DataType>varchar(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="465" parent="261" name="PRIMARY">
+    <key id="473" parent="262" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="466" parent="262" name="user_id">
+    <column id="474" parent="263" name="user_id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="467" parent="262" name="role_id">
+    <column id="475" parent="263" name="role_id">
       <Position>2</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="468" parent="262" name="FK_Reference_8">
+    <index id="476" parent="263" name="FK_Reference_8">
       <ColNames>role_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="469" parent="262" name="PRIMARY">
+    <key id="477" parent="263" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>user_id
 role_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="470" parent="262" name="FK_Reference_7">
+    <foreign-key id="478" parent="263" name="FK_Reference_7">
       <ColNames>user_id</ColNames>
       <RefSchemaName>health</RefSchemaName>
       <RefTableName>t_user</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <foreign-key id="471" parent="262" name="FK_Reference_8">
+    <foreign-key id="479" parent="263" name="FK_Reference_8">
       <ColNames>role_id</ColNames>
       <RefSchemaName>health</RefSchemaName>
       <RefTableName>t_role</RefTableName>

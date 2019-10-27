@@ -11,7 +11,7 @@ import java.util.Date;
 @Data
 public class Member implements Serializable {
 
-    private static final long serialVersionUID = -7096586519975486811L;
+    private static final long serialVersionUID = -6684962882814268620L;
 
     private Integer id;
 
@@ -34,4 +34,6 @@ public class Member implements Serializable {
     private Date birthday;
 
     private String remark;
+
+    private Integer healthMgrId;
 }
