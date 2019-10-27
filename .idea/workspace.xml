@@ -51,7 +51,20 @@
     <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/health-api/src/main/java/com/health/bean/HealthMgr.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="184">
+              <caret line="8" column="3" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -153,12 +166,12 @@
         <option value="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/UserRoleKey.java" />
         <option value="$PROJECT_DIR$/health-api/src/main/java/com/health/service/UserService.java" />
         <option value="$PROJECT_DIR$/health-api/src/main/java/com/health/service/MemberService.java" />
-        <option value="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/HealthMgr.java" />
         <option value="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/HealthMgrExample.java" />
         <option value="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/Menu.java" />
         <option value="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/MenuExample.java" />
         <option value="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/MemberExample.java" />
         <option value="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/Member.java" />
+        <option value="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/HealthMgr.java" />
       </list>
     </option>
   </component>
@@ -343,7 +356,7 @@
       <workItem from="1572070397986" duration="2000" />
       <workItem from="1572078433594" duration="3703000" />
       <workItem from="1572179202048" duration="106000" />
-      <workItem from="1572179321504" duration="12972000" />
+      <workItem from="1572179321504" duration="13448000" />
     </task>
     <task id="LOCAL-00001" summary="健康管理系统项目">
       <created>1571971670804</created>
@@ -377,10 +390,11 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54987000" />
+    <option name="totallyTimeSpent" value="55463000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="23" width="1550" height="848" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20576407" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -1197,16 +1211,6 @@
     <entry file="file://$PROJECT_DIR$/health-api/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/health-api/src/main/java/com/health/bean/HealthMgr.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="7" column="8" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/health-api/src/main/java/com/health/service/MemberService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="161">
@@ -1340,6 +1344,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="183">
           <caret line="8" column="5" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/health-api/src/main/java/com/health/bean/HealthMgr.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="8" column="3" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
