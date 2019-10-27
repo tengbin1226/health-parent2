@@ -1,28 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a0f75aff-8077-4b6c-bea1-18fd3c78ad7a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/HealthMgr.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/HealthMgrExample.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/health-api/src/main/java/com/health/service/MemberService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/health-member-service/src/main/java/com/health/mapper/MemberDynamicinfoMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/health-member-service/src/main/java/com/health/mapper/MemberDynamicinfoMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/health-member-service/src/main/java/com/health/mapper/MemberExaminationMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/health-member-service/src/main/java/com/health/mapper/MemberExaminationMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/health-member-service/src/main/java/com/health/mapper/MemberInfoMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/health-member-service/src/main/java/com/health/mapper/MemberInfoMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/health-member-service/src/main/java/com/health/mapper/MemberMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/health-member-service/src/main/java/com/health/mapper/MemberMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/health-member-service/src/main/java/com/health/mapper/MemberMedicalhistoryMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/health-member-service/src/main/java/com/health/mapper/MemberMedicalhistoryMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7f30284c-e9ca-4ed1-9296-236cb10b64d0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/7f30284c-e9ca-4ed1-9296-236cb10b64d0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/Member.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/MemberExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/MemberExample.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/MenuExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/MenuExample.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/health-api/src/main/java/com/health/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/health-api/src/main/java/com/health/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/health-api/src/main/resources/application.properties" beforeDir="false" />
-    </list>
+    <list default="true" id="a0f75aff-8077-4b6c-bea1-18fd3c78ad7a" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/health-mobile/target/" />
@@ -227,105 +206,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="health-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="health-parent" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="health-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="health-parent" type="462c0819:PsiDirectoryNode" />
-              <item name="health-api" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="health-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="health-parent" type="462c0819:PsiDirectoryNode" />
-              <item name="health-api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="health-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="health-parent" type="462c0819:PsiDirectoryNode" />
-              <item name="health-api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="health-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="health-parent" type="462c0819:PsiDirectoryNode" />
-              <item name="health-api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="health-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="health-parent" type="462c0819:PsiDirectoryNode" />
-              <item name="health-api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="health" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="health-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="health-parent" type="462c0819:PsiDirectoryNode" />
-              <item name="health-api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="health" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="health-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="health-parent" type="462c0819:PsiDirectoryNode" />
-              <item name="health-member-service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="health-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="health-parent" type="462c0819:PsiDirectoryNode" />
-              <item name="health-member-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="health-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="health-parent" type="462c0819:PsiDirectoryNode" />
-              <item name="health-member-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="health-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="health-parent" type="462c0819:PsiDirectoryNode" />
-              <item name="health-member-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="health-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="health-parent" type="462c0819:PsiDirectoryNode" />
-              <item name="health-member-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="health" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="health-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="health-parent" type="462c0819:PsiDirectoryNode" />
-              <item name="health-member-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
+      <pane id="ProjectPane" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -462,7 +343,7 @@
       <workItem from="1572070397986" duration="2000" />
       <workItem from="1572078433594" duration="3703000" />
       <workItem from="1572179202048" duration="106000" />
-      <workItem from="1572179321504" duration="12808000" />
+      <workItem from="1572179321504" duration="12972000" />
     </task>
     <task id="LOCAL-00001" summary="健康管理系统项目">
       <created>1571971670804</created>
@@ -496,7 +377,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54823000" />
+    <option name="totallyTimeSpent" value="54987000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="23" width="1550" height="848" extended-state="6" />
