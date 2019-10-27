@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a0f75aff-8077-4b6c-bea1-18fd3c78ad7a" name="Default Changelist" comment="" />
+    <list default="true" id="a0f75aff-8077-4b6c-bea1-18fd3c78ad7a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/health-mobile/target/" />
@@ -37,12 +39,6 @@
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="health@localhost" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="health@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="health: schema" type="76f4a085:MysqlImplModel$Schema" />
       </path>
     </expand>
     <select />
@@ -219,7 +215,17 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="ProjectPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="health-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="health-parent" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -356,7 +362,7 @@
       <workItem from="1572070397986" duration="2000" />
       <workItem from="1572078433594" duration="3703000" />
       <workItem from="1572179202048" duration="106000" />
-      <workItem from="1572179321504" duration="13448000" />
+      <workItem from="1572179321504" duration="14442000" />
     </task>
     <task id="LOCAL-00001" summary="健康管理系统项目">
       <created>1571971670804</created>
@@ -386,15 +392,21 @@
       <option name="project" value="LOCAL" />
       <updated>1572190417815</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="新增项目相关信息">
+      <created>1572193762256</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1572193762256</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="55463000" />
+    <option name="totallyTimeSpent" value="56457000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="23" width="1550" height="848" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20576407" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -448,8 +460,8 @@
     <MESSAGE value="健康管理系统项目" />
     <MESSAGE value="健康管理系统项目(SOA架构,即面向服务架构)" />
     <MESSAGE value="新增会员管理相关信息" />
-    <option name="LAST_COMMIT_MESSAGE" value="新增会员管理相关信息" />
-    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
+    <MESSAGE value="新增项目相关信息" />
+    <option name="LAST_COMMIT_MESSAGE" value="新增项目相关信息" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
