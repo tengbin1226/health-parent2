@@ -5,6 +5,9 @@ import lombok.Data;
 import java.io.Serializable;
 import java.util.Date;
 
+/**
+ * 预约设置
+ */
 @Data
 public class OrderSetting implements Serializable {
 

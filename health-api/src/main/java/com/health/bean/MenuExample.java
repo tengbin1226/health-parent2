@@ -1,9 +1,16 @@
 package com.health.bean;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MenuExample {
+/**
+ * 菜单Example类
+ */
+public class MenuExample implements Serializable {
+
+    private static final long serialVersionUID = -6411143727015893497L;
+
     protected String orderByClause;
 
     protected boolean distinct;

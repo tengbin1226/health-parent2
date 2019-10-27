@@ -24,6 +24,13 @@ public class BackendController {
         return "login";
     }
 
+    /**
+     * 进入主页面
+     *
+     * @param username
+     * @param password
+     * @return
+     */
     @GetMapping("/workbench")
     public String toWorkbenchPage(@RequestParam String username, @RequestParam String password) {
 

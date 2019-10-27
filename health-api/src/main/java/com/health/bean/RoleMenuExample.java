@@ -1,9 +1,16 @@
 package com.health.bean;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class RoleMenuExample {
+/**
+ * 角色菜单关系Example
+ */
+public class RoleMenuExample implements Serializable {
+
+    private static final long serialVersionUID = 3239238927794137999L;
+
     protected String orderByClause;
 
     protected boolean distinct;

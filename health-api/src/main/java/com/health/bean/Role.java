@@ -4,6 +4,9 @@ import lombok.Data;
 
 import java.io.Serializable;
 
+/**
+ * 角色
+ */
 @Data
 public class Role implements Serializable {
 

@@ -4,6 +4,9 @@ import lombok.Data;
 
 import java.io.Serializable;
 
+/**
+ * 套餐与检查分类关联
+ */
 @Data
 public class SetMealCheckGroupKey implements Serializable {
 

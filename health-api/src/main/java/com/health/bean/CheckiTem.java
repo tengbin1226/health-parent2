@@ -4,6 +4,9 @@ import lombok.Data;
 
 import java.io.Serializable;
 
+/**
+ * 检查项
+ */
 @Data
 public class CheckiTem implements Serializable {
 

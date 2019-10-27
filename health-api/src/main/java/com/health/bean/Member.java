@@ -5,6 +5,9 @@ import lombok.Data;
 import java.io.Serializable;
 import java.util.Date;
 
+/**
+ * 会员
+ */
 @Data
 public class Member implements Serializable {
 

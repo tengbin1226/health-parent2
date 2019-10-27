@@ -1,9 +1,16 @@
 package com.health.bean;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class RolePermissionExample {
+/**
+ * 角色权限关联Example
+ */
+public class RolePermissionExample implements Serializable {
+
+    private static final long serialVersionUID = 2509463412923450697L;
+
     protected String orderByClause;
 
     protected boolean distinct;

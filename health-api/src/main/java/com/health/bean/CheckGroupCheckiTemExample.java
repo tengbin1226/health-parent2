@@ -4,7 +4,12 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CheckGroupCheckiTemExample {
+/**
+ * 检查分类和检查项Example类
+ */
+public class CheckGroupCheckiTemExample implements Serializable {
+
+    private static final long serialVersionUID = 5097067716686463416L;
 
     protected String orderByClause;
 

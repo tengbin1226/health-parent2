@@ -4,6 +4,9 @@ import lombok.Data;
 
 import java.io.Serializable;
 
+/**
+ * 角色权限关联
+ */
 @Data
 public class RolePermissionKey implements Serializable {
 

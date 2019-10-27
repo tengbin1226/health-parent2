@@ -1,9 +1,16 @@
 package com.health.bean;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SetMealCheckGroupExample {
+/**
+ * 套餐与检查分类关联Example
+ */
+public class SetMealCheckGroupExample implements Serializable {
+
+    private static final long serialVersionUID = 3002759421588314161L;
+
     protected String orderByClause;
 
     protected boolean distinct;

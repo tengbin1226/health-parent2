@@ -4,6 +4,9 @@ import lombok.Data;
 
 import java.io.Serializable;
 
+/**
+ * 检查分类
+ */
 @Data
 public class CheckGroup implements Serializable {
 

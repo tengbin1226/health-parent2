@@ -4,6 +4,9 @@ import lombok.Data;
 
 import java.io.Serializable;
 
+/**
+ * 套餐
+ */
 @Data
 public class SetMeal implements Serializable {
 
