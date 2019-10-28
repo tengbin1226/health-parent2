@@ -2,8 +2,10 @@ package com.health.mapper;
 
 import com.health.bean.Member;
 import com.health.bean.MemberExample;
-import java.util.List;
+import com.health.vo.MemberVO;
 import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
 
 public interface MemberMapper {
     int countByExample(MemberExample example);
@@ -27,4 +29,7 @@ public interface MemberMapper {
     int updateByPrimaryKeySelective(Member record);
 
     int updateByPrimaryKey(Member record);
+
+    /* 查询会员信息*/
+    List<MemberVO> queryMemberInfo();
 }

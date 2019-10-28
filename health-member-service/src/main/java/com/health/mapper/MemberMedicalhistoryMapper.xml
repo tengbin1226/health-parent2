@@ -1,108 +1,110 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.health.mapper.MemberMedicalhistoryMapper" >
-  <resultMap id="BaseResultMap" type="com.health.bean.MemberMedicalhistory" >
-    <id column="id" property="id" jdbcType="INTEGER" />
-    <result column="member_id" property="memberId" jdbcType="INTEGER" />
-    <result column="previous_history" property="previousHistory" jdbcType="VARCHAR" />
-    <result column="family_history" property="familyHistory" jdbcType="VARCHAR" />
-    <result column="allergic_history" property="allergicHistory" jdbcType="VARCHAR" />
-    <result column="medical_history" property="medicalHistory" jdbcType="VARCHAR" />
-    <result column="chronic disease" property="chronicDisease" jdbcType="VARCHAR" />
-  </resultMap>
-  <sql id="Example_Where_Clause" >
-    <where >
-      <foreach collection="oredCriteria" item="criteria" separator="or" >
-        <if test="criteria.valid" >
-          <trim prefix="(" suffix=")" prefixOverrides="and" >
-            <foreach collection="criteria.criteria" item="criterion" >
-              <choose >
-                <when test="criterion.noValue" >
-                  and ${criterion.condition}
-                </when>
-                <when test="criterion.singleValue" >
-                  and ${criterion.condition} #{criterion.value}
-                </when>
-                <when test="criterion.betweenValue" >
-                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
-                </when>
-                <when test="criterion.listValue" >
-                  and ${criterion.condition}
-                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
-                    #{listItem}
-                  </foreach>
-                </when>
-              </choose>
+<mapper namespace="com.health.mapper.MemberMedicalhistoryMapper">
+    <resultMap id="BaseResultMap" type="com.health.bean.MemberMedicalhistory">
+        <id column="id" property="id" jdbcType="INTEGER"/>
+        <result column="member_id" property="memberId" jdbcType="INTEGER"/>
+        <result column="previous_history" property="previousHistory" jdbcType="VARCHAR"/>
+        <result column="family_history" property="familyHistory" jdbcType="VARCHAR"/>
+        <result column="allergic_history" property="allergicHistory" jdbcType="VARCHAR"/>
+        <result column="medical_history" property="medicalHistory" jdbcType="VARCHAR"/>
+        <result column="chronic disease" property="chronicDisease" jdbcType="VARCHAR"/>
+    </resultMap>
+    <sql id="Example_Where_Clause">
+        <where>
+            <foreach collection="oredCriteria" item="criteria" separator="or">
+                <if test="criteria.valid">
+                    <trim prefix="(" suffix=")" prefixOverrides="and">
+                        <foreach collection="criteria.criteria" item="criterion">
+                            <choose>
+                                <when test="criterion.noValue">
+                                    and ${criterion.condition}
+                                </when>
+                                <when test="criterion.singleValue">
+                                    and ${criterion.condition} #{criterion.value}
+                                </when>
+                                <when test="criterion.betweenValue">
+                                    and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                                </when>
+                                <when test="criterion.listValue">
+                                    and ${criterion.condition}
+                                    <foreach collection="criterion.value" item="listItem" open="(" close=")"
+                                             separator=",">
+                                        #{listItem}
+                                    </foreach>
+                                </when>
+                            </choose>
+                        </foreach>
+                    </trim>
+                </if>
             </foreach>
-          </trim>
-        </if>
-      </foreach>
-    </where>
-  </sql>
-  <sql id="Update_By_Example_Where_Clause" >
-    <where >
-      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
-        <if test="criteria.valid" >
-          <trim prefix="(" suffix=")" prefixOverrides="and" >
-            <foreach collection="criteria.criteria" item="criterion" >
-              <choose >
-                <when test="criterion.noValue" >
-                  and ${criterion.condition}
-                </when>
-                <when test="criterion.singleValue" >
-                  and ${criterion.condition} #{criterion.value}
-                </when>
-                <when test="criterion.betweenValue" >
-                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
-                </when>
-                <when test="criterion.listValue" >
-                  and ${criterion.condition}
-                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
-                    #{listItem}
-                  </foreach>
-                </when>
-              </choose>
+        </where>
+    </sql>
+    <sql id="Update_By_Example_Where_Clause">
+        <where>
+            <foreach collection="example.oredCriteria" item="criteria" separator="or">
+                <if test="criteria.valid">
+                    <trim prefix="(" suffix=")" prefixOverrides="and">
+                        <foreach collection="criteria.criteria" item="criterion">
+                            <choose>
+                                <when test="criterion.noValue">
+                                    and ${criterion.condition}
+                                </when>
+                                <when test="criterion.singleValue">
+                                    and ${criterion.condition} #{criterion.value}
+                                </when>
+                                <when test="criterion.betweenValue">
+                                    and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                                </when>
+                                <when test="criterion.listValue">
+                                    and ${criterion.condition}
+                                    <foreach collection="criterion.value" item="listItem" open="(" close=")"
+                                             separator=",">
+                                        #{listItem}
+                                    </foreach>
+                                </when>
+                            </choose>
+                        </foreach>
+                    </trim>
+                </if>
             </foreach>
-          </trim>
-        </if>
-      </foreach>
-    </where>
-  </sql>
-  <sql id="Base_Column_List" >
+        </where>
+    </sql>
+    <sql id="Base_Column_List">
     id, member_id, previous_history, family_history, allergic_history, medical_history, 
     "chronic disease"
   </sql>
-  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.health.bean.MemberMedicalhistoryExample" >
-    select
-    <if test="distinct" >
-      distinct
-    </if>
-    <include refid="Base_Column_List" />
-    from t_member_medicalhistory
-    <if test="_parameter != null" >
-      <include refid="Example_Where_Clause" />
-    </if>
-    <if test="orderByClause != null" >
-      order by ${orderByClause}
-    </if>
-  </select>
-  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
-    select 
-    <include refid="Base_Column_List" />
-    from t_member_medicalhistory
-    where id = #{id,jdbcType=INTEGER}
-  </select>
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.health.bean.MemberMedicalhistoryExample">
+        select
+        <if test="distinct">
+            distinct
+        </if>
+        <include refid="Base_Column_List"/>
+        from t_member_medicalhistory
+        <if test="_parameter != null">
+            <include refid="Example_Where_Clause"/>
+        </if>
+        <if test="orderByClause != null">
+            order by ${orderByClause}
+        </if>
+    </select>
+    <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer">
+        select
+        <include refid="Base_Column_List"/>
+        from t_member_medicalhistory
+        where id = #{id,jdbcType=INTEGER}
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from t_member_medicalhistory
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <delete id="deleteByExample" parameterType="com.health.bean.MemberMedicalhistoryExample" >
-    delete from t_member_medicalhistory
-    <if test="_parameter != null" >
-      <include refid="Example_Where_Clause" />
-    </if>
-  </delete>
-  <insert id="insert" parameterType="com.health.bean.MemberMedicalhistory" >
+    <delete id="deleteByExample" parameterType="com.health.bean.MemberMedicalhistoryExample">
+        delete from t_member_medicalhistory
+        <if test="_parameter != null">
+            <include refid="Example_Where_Clause"/>
+        </if>
+    </delete>
+    <insert id="insert" parameterType="com.health.bean.MemberMedicalhistory">
     insert into t_member_medicalhistory (id, member_id, previous_history, 
       family_history, allergic_history, medical_history, 
       "chronic disease")
@@ -110,128 +112,129 @@
       #{familyHistory,jdbcType=VARCHAR}, #{allergicHistory,jdbcType=VARCHAR}, #{medicalHistory,jdbcType=VARCHAR}, 
       #{chronicDisease,jdbcType=VARCHAR})
   </insert>
-  <insert id="insertSelective" parameterType="com.health.bean.MemberMedicalhistory" >
-    insert into t_member_medicalhistory
-    <trim prefix="(" suffix=")" suffixOverrides="," >
-      <if test="id != null" >
-        id,
-      </if>
-      <if test="memberId != null" >
-        member_id,
-      </if>
-      <if test="previousHistory != null" >
-        previous_history,
-      </if>
-      <if test="familyHistory != null" >
-        family_history,
-      </if>
-      <if test="allergicHistory != null" >
-        allergic_history,
-      </if>
-      <if test="medicalHistory != null" >
-        medical_history,
-      </if>
-      <if test="chronicDisease != null" >
-        "chronic disease",
-      </if>
-    </trim>
-    <trim prefix="values (" suffix=")" suffixOverrides="," >
-      <if test="id != null" >
-        #{id,jdbcType=INTEGER},
-      </if>
-      <if test="memberId != null" >
-        #{memberId,jdbcType=INTEGER},
-      </if>
-      <if test="previousHistory != null" >
-        #{previousHistory,jdbcType=VARCHAR},
-      </if>
-      <if test="familyHistory != null" >
-        #{familyHistory,jdbcType=VARCHAR},
-      </if>
-      <if test="allergicHistory != null" >
-        #{allergicHistory,jdbcType=VARCHAR},
-      </if>
-      <if test="medicalHistory != null" >
-        #{medicalHistory,jdbcType=VARCHAR},
-      </if>
-      <if test="chronicDisease != null" >
-        #{chronicDisease,jdbcType=VARCHAR},
-      </if>
-    </trim>
-  </insert>
-  <select id="countByExample" parameterType="com.health.bean.MemberMedicalhistoryExample" resultType="java.lang.Integer" >
-    select count(*) from t_member_medicalhistory
-    <if test="_parameter != null" >
-      <include refid="Example_Where_Clause" />
-    </if>
-  </select>
-  <update id="updateByExampleSelective" parameterType="map" >
-    update t_member_medicalhistory
-    <set >
-      <if test="record.id != null" >
-        id = #{record.id,jdbcType=INTEGER},
-      </if>
-      <if test="record.memberId != null" >
+    <insert id="insertSelective" parameterType="com.health.bean.MemberMedicalhistory">
+        insert into t_member_medicalhistory
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                id,
+            </if>
+            <if test="memberId != null">
+                member_id,
+            </if>
+            <if test="previousHistory != null">
+                previous_history,
+            </if>
+            <if test="familyHistory != null">
+                family_history,
+            </if>
+            <if test="allergicHistory != null">
+                allergic_history,
+            </if>
+            <if test="medicalHistory != null">
+                medical_history,
+            </if>
+            <if test="chronicDisease != null">
+                "chronic disease",
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                #{id,jdbcType=INTEGER},
+            </if>
+            <if test="memberId != null">
+                #{memberId,jdbcType=INTEGER},
+            </if>
+            <if test="previousHistory != null">
+                #{previousHistory,jdbcType=VARCHAR},
+            </if>
+            <if test="familyHistory != null">
+                #{familyHistory,jdbcType=VARCHAR},
+            </if>
+            <if test="allergicHistory != null">
+                #{allergicHistory,jdbcType=VARCHAR},
+            </if>
+            <if test="medicalHistory != null">
+                #{medicalHistory,jdbcType=VARCHAR},
+            </if>
+            <if test="chronicDisease != null">
+                #{chronicDisease,jdbcType=VARCHAR},
+            </if>
+        </trim>
+    </insert>
+    <select id="countByExample" parameterType="com.health.bean.MemberMedicalhistoryExample"
+            resultType="java.lang.Integer">
+        select count(*) from t_member_medicalhistory
+        <if test="_parameter != null">
+            <include refid="Example_Where_Clause"/>
+        </if>
+    </select>
+    <update id="updateByExampleSelective" parameterType="map">
+        update t_member_medicalhistory
+        <set>
+            <if test="record.id != null">
+                id = #{record.id,jdbcType=INTEGER},
+            </if>
+            <if test="record.memberId != null">
+                member_id = #{record.memberId,jdbcType=INTEGER},
+            </if>
+            <if test="record.previousHistory != null">
+                previous_history = #{record.previousHistory,jdbcType=VARCHAR},
+            </if>
+            <if test="record.familyHistory != null">
+                family_history = #{record.familyHistory,jdbcType=VARCHAR},
+            </if>
+            <if test="record.allergicHistory != null">
+                allergic_history = #{record.allergicHistory,jdbcType=VARCHAR},
+            </if>
+            <if test="record.medicalHistory != null">
+                medical_history = #{record.medicalHistory,jdbcType=VARCHAR},
+            </if>
+            <if test="record.chronicDisease != null">
+                "chronic disease" = #{record.chronicDisease,jdbcType=VARCHAR},
+            </if>
+        </set>
+        <if test="_parameter != null">
+            <include refid="Update_By_Example_Where_Clause"/>
+        </if>
+    </update>
+    <update id="updateByExample" parameterType="map">
+        update t_member_medicalhistory
+        set id = #{record.id,jdbcType=INTEGER},
         member_id = #{record.memberId,jdbcType=INTEGER},
-      </if>
-      <if test="record.previousHistory != null" >
         previous_history = #{record.previousHistory,jdbcType=VARCHAR},
-      </if>
-      <if test="record.familyHistory != null" >
         family_history = #{record.familyHistory,jdbcType=VARCHAR},
-      </if>
-      <if test="record.allergicHistory != null" >
         allergic_history = #{record.allergicHistory,jdbcType=VARCHAR},
-      </if>
-      <if test="record.medicalHistory != null" >
         medical_history = #{record.medicalHistory,jdbcType=VARCHAR},
-      </if>
-      <if test="record.chronicDisease != null" >
-        "chronic disease" = #{record.chronicDisease,jdbcType=VARCHAR},
-      </if>
-    </set>
-    <if test="_parameter != null" >
-      <include refid="Update_By_Example_Where_Clause" />
-    </if>
-  </update>
-  <update id="updateByExample" parameterType="map" >
-    update t_member_medicalhistory
-    set id = #{record.id,jdbcType=INTEGER},
-      member_id = #{record.memberId,jdbcType=INTEGER},
-      previous_history = #{record.previousHistory,jdbcType=VARCHAR},
-      family_history = #{record.familyHistory,jdbcType=VARCHAR},
-      allergic_history = #{record.allergicHistory,jdbcType=VARCHAR},
-      medical_history = #{record.medicalHistory,jdbcType=VARCHAR},
-      "chronic disease" = #{record.chronicDisease,jdbcType=VARCHAR}
-    <if test="_parameter != null" >
-      <include refid="Update_By_Example_Where_Clause" />
-    </if>
-  </update>
-  <update id="updateByPrimaryKeySelective" parameterType="com.health.bean.MemberMedicalhistory" >
-    update t_member_medicalhistory
-    <set >
-      <if test="memberId != null" >
-        member_id = #{memberId,jdbcType=INTEGER},
-      </if>
-      <if test="previousHistory != null" >
-        previous_history = #{previousHistory,jdbcType=VARCHAR},
-      </if>
-      <if test="familyHistory != null" >
-        family_history = #{familyHistory,jdbcType=VARCHAR},
-      </if>
-      <if test="allergicHistory != null" >
-        allergic_history = #{allergicHistory,jdbcType=VARCHAR},
-      </if>
-      <if test="medicalHistory != null" >
-        medical_history = #{medicalHistory,jdbcType=VARCHAR},
-      </if>
-      <if test="chronicDisease != null" >
-        "chronic disease" = #{chronicDisease,jdbcType=VARCHAR},
-      </if>
-    </set>
-    where id = #{id,jdbcType=INTEGER}
-  </update>
-  <update id="updateByPrimaryKey" parameterType="com.health.bean.MemberMedicalhistory" >
+        "chronic disease" = #{record.chronicDisease,jdbcType=VARCHAR}
+        <if test="_parameter != null">
+            <include refid="Update_By_Example_Where_Clause"/>
+        </if>
+    </update>
+    <update id="updateByPrimaryKeySelective" parameterType="com.health.bean.MemberMedicalhistory">
+        update t_member_medicalhistory
+        <set>
+            <if test="memberId != null">
+                member_id = #{memberId,jdbcType=INTEGER},
+            </if>
+            <if test="previousHistory != null">
+                previous_history = #{previousHistory,jdbcType=VARCHAR},
+            </if>
+            <if test="familyHistory != null">
+                family_history = #{familyHistory,jdbcType=VARCHAR},
+            </if>
+            <if test="allergicHistory != null">
+                allergic_history = #{allergicHistory,jdbcType=VARCHAR},
+            </if>
+            <if test="medicalHistory != null">
+                medical_history = #{medicalHistory,jdbcType=VARCHAR},
+            </if>
+            <if test="chronicDisease != null">
+                "chronic disease" = #{chronicDisease,jdbcType=VARCHAR},
+            </if>
+        </set>
+        where id = #{id,jdbcType=INTEGER}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="com.health.bean.MemberMedicalhistory">
     update t_member_medicalhistory
     set member_id = #{memberId,jdbcType=INTEGER},
       previous_history = #{previousHistory,jdbcType=VARCHAR},

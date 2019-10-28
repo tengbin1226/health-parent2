@@ -1,12 +1,12 @@
 package com.health.bean;
 
+import lombok.Data;
+
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * 会员详细信息Example类
- */
+@Data
 public class MemberInfoExample implements Serializable {
 
     private static final long serialVersionUID = -5294217624358765484L;
@@ -511,73 +511,63 @@ public class MemberInfoExample implements Serializable {
             return (Criteria) this;
         }
 
-        public Criteria andHealthManagerIsNull() {
-            addCriterion("health_manager is null");
+        public Criteria andHealthMgrIdIsNull() {
+            addCriterion("health_mgr_id is null");
             return (Criteria) this;
         }
 
-        public Criteria andHealthManagerIsNotNull() {
-            addCriterion("health_manager is not null");
+        public Criteria andHealthMgrIdIsNotNull() {
+            addCriterion("health_mgr_id is not null");
             return (Criteria) this;
         }
 
-        public Criteria andHealthManagerEqualTo(String value) {
-            addCriterion("health_manager =", value, "healthManager");
+        public Criteria andHealthMgrIdEqualTo(Integer value) {
+            addCriterion("health_mgr_id =", value, "healthMgrId");
             return (Criteria) this;
         }
 
-        public Criteria andHealthManagerNotEqualTo(String value) {
-            addCriterion("health_manager <>", value, "healthManager");
+        public Criteria andHealthMgrIdNotEqualTo(Integer value) {
+            addCriterion("health_mgr_id <>", value, "healthMgrId");
             return (Criteria) this;
         }
 
-        public Criteria andHealthManagerGreaterThan(String value) {
-            addCriterion("health_manager >", value, "healthManager");
+        public Criteria andHealthMgrIdGreaterThan(Integer value) {
+            addCriterion("health_mgr_id >", value, "healthMgrId");
             return (Criteria) this;
         }
 
-        public Criteria andHealthManagerGreaterThanOrEqualTo(String value) {
-            addCriterion("health_manager >=", value, "healthManager");
+        public Criteria andHealthMgrIdGreaterThanOrEqualTo(Integer value) {
+            addCriterion("health_mgr_id >=", value, "healthMgrId");
             return (Criteria) this;
         }
 
-        public Criteria andHealthManagerLessThan(String value) {
-            addCriterion("health_manager <", value, "healthManager");
+        public Criteria andHealthMgrIdLessThan(Integer value) {
+            addCriterion("health_mgr_id <", value, "healthMgrId");
             return (Criteria) this;
         }
 
-        public Criteria andHealthManagerLessThanOrEqualTo(String value) {
-            addCriterion("health_manager <=", value, "healthManager");
+        public Criteria andHealthMgrIdLessThanOrEqualTo(Integer value) {
+            addCriterion("health_mgr_id <=", value, "healthMgrId");
             return (Criteria) this;
         }
 
-        public Criteria andHealthManagerLike(String value) {
-            addCriterion("health_manager like", value, "healthManager");
+        public Criteria andHealthMgrIdIn(List<Integer> values) {
+            addCriterion("health_mgr_id in", values, "healthMgrId");
             return (Criteria) this;
         }
 
-        public Criteria andHealthManagerNotLike(String value) {
-            addCriterion("health_manager not like", value, "healthManager");
+        public Criteria andHealthMgrIdNotIn(List<Integer> values) {
+            addCriterion("health_mgr_id not in", values, "healthMgrId");
             return (Criteria) this;
         }
 
-        public Criteria andHealthManagerIn(List<String> values) {
-            addCriterion("health_manager in", values, "healthManager");
+        public Criteria andHealthMgrIdBetween(Integer value1, Integer value2) {
+            addCriterion("health_mgr_id between", value1, value2, "healthMgrId");
             return (Criteria) this;
         }
 
-        public Criteria andHealthManagerNotIn(List<String> values) {
-            addCriterion("health_manager not in", values, "healthManager");
-            return (Criteria) this;
-        }
-
-        public Criteria andHealthManagerBetween(String value1, String value2) {
-            addCriterion("health_manager between", value1, value2, "healthManager");
-            return (Criteria) this;
-        }
-
-        public Criteria andHealthManagerNotBetween(String value1, String value2) {
-            addCriterion("health_manager not between", value1, value2, "healthManager");
+        public Criteria andHealthMgrIdNotBetween(Integer value1, Integer value2) {
+            addCriterion("health_mgr_id not between", value1, value2, "healthMgrId");
             return (Criteria) this;
         }
 

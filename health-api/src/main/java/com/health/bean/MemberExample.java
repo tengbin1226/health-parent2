@@ -6,9 +6,6 @@ import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 
-/**
- * 会员Example
- */
 public class MemberExample implements Serializable {
 
     private static final long serialVersionUID = 8771198333243152087L;
@@ -876,66 +873,6 @@ public class MemberExample implements Serializable {
 
         public Criteria andRemarkNotBetween(String value1, String value2) {
             addCriterion("remark not between", value1, value2, "remark");
-            return (Criteria) this;
-        }
-
-        public Criteria andHealthMgrIdIsNull() {
-            addCriterion("health_mgr_id is null");
-            return (Criteria) this;
-        }
-
-        public Criteria andHealthMgrIdIsNotNull() {
-            addCriterion("health_mgr_id is not null");
-            return (Criteria) this;
-        }
-
-        public Criteria andHealthMgrIdEqualTo(Integer value) {
-            addCriterion("health_mgr_id =", value, "healthMgrId");
-            return (Criteria) this;
-        }
-
-        public Criteria andHealthMgrIdNotEqualTo(Integer value) {
-            addCriterion("health_mgr_id <>", value, "healthMgrId");
-            return (Criteria) this;
-        }
-
-        public Criteria andHealthMgrIdGreaterThan(Integer value) {
-            addCriterion("health_mgr_id >", value, "healthMgrId");
-            return (Criteria) this;
-        }
-
-        public Criteria andHealthMgrIdGreaterThanOrEqualTo(Integer value) {
-            addCriterion("health_mgr_id >=", value, "healthMgrId");
-            return (Criteria) this;
-        }
-
-        public Criteria andHealthMgrIdLessThan(Integer value) {
-            addCriterion("health_mgr_id <", value, "healthMgrId");
-            return (Criteria) this;
-        }
-
-        public Criteria andHealthMgrIdLessThanOrEqualTo(Integer value) {
-            addCriterion("health_mgr_id <=", value, "healthMgrId");
-            return (Criteria) this;
-        }
-
-        public Criteria andHealthMgrIdIn(List<Integer> values) {
-            addCriterion("health_mgr_id in", values, "healthMgrId");
-            return (Criteria) this;
-        }
-
-        public Criteria andHealthMgrIdNotIn(List<Integer> values) {
-            addCriterion("health_mgr_id not in", values, "healthMgrId");
-            return (Criteria) this;
-        }
-
-        public Criteria andHealthMgrIdBetween(Integer value1, Integer value2) {
-            addCriterion("health_mgr_id between", value1, value2, "healthMgrId");
-            return (Criteria) this;
-        }
-
-        public Criteria andHealthMgrIdNotBetween(Integer value1, Integer value2) {
-            addCriterion("health_mgr_id not between", value1, value2, "healthMgrId");
             return (Criteria) this;
         }
     }
