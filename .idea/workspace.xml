@@ -2,26 +2,442 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a0f75aff-8077-4b6c-bea1-18fd3c78ad7a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/health-common/src/main/java/com/health/constants/ReturnMsg.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/health-member-web/src/main/resources/static/css/login.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/health-member-web/src/main/resources/static/css/orderset.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/health-member-web/src/main/resources/static/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/health-member-web/src/main/resources/static/demo/01-container.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/health-member-web/src/main/resources/static/demo/02-dropdown.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/health-member-web/src/main/resources/static/demo/03-menu.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/health-member-web/src/main/resources/static/demo/04-table.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/health-member-web/src/main/resources/static/demo/05-pagination.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/health-member-web/src/main/resources/static/demo/06-message.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/health-member-web/src/main/resources/static/demo/07-tabs.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/health-member-web/src/main/resources/static/demo/08-form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/health-member-web/src/main/resources/static/img/american-express.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/health-member-web/src/main/resources/static/img/avatar.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/health-member-web/src/main/resources/static/img/avatar04.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/health-member-web/src/main/resources/static/img/avatar2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/health-member-web/src/main/resources/static/img/avatar3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/health-member-web/src/main/resources/static/img/avatar5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/health-member-web/src/main/resources/static/img/bg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/health-member-web/src/main/resources/static/img/boxed-bg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/health-member-web/src/main/resources/static/img/boxed-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/health-member-web/src/main/resources/static/img/cirrus.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/health-member-web/src/main/resources/static/img/icons.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/health-member-web/src/main/resources/static/img/loginLogo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/health-member-web/src/main/resources/static/img/logingBg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/health-member-web/src/main/resources/static/img/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/health-member-web/src/main/resources/static/img/mastercard.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/health-member-web/src/main/resources/static/img/mestro.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/health-member-web/src/main/resources/static/img/minilogo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/health-member-web/src/main/resources/static/img/paypal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/health-member-web/src/main/resources/static/img/paypal2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/health-member-web/src/main/resources/static/img/photo1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/health-member-web/src/main/resources/static/img/photo2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/health-member-web/src/main/resources/static/img/photo3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/health-member-web/src/main/resources/static/img/photo4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/health-member-web/src/main/resources/static/img/pwd.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/health-member-web/src/main/resources/static/img/user.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/health-member-web/src/main/resources/static/img/user1-128x128.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/health-member-web/src/main/resources/static/img/user2-160x160.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/health-member-web/src/main/resources/static/img/user3-128x128.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/health-member-web/src/main/resources/static/img/user4-128x128.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/health-member-web/src/main/resources/static/img/user5-128x128.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/health-member-web/src/main/resources/static/img/user6-128x128.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/health-member-web/src/main/resources/static/img/user7-128x128.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/health-member-web/src/main/resources/static/img/user8-128x128.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/health-member-web/src/main/resources/static/img/visa.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/health-member-web/src/main/resources/static/js/axios-0.18.0.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/health-member-web/src/main/resources/static/js/echarts.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/health-member-web/src/main/resources/static/js/jquery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/health-member-web/src/main/resources/static/js/vue.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/health-member-web/src/main/resources/static/plugins/elementui/fonts/element-icons.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/health-member-web/src/main/resources/static/plugins/elementui/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/health-member-web/src/main/resources/static/plugins/elementui/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/health-member-web/src/main/resources/static/plugins/font-awesome/css/font-awesome.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/health-member-web/src/main/resources/static/plugins/font-awesome/css/font-awesome.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/health-member-web/src/main/resources/static/plugins/font-awesome/fonts/FontAwesome.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/health-member-web/src/main/resources/static/plugins/font-awesome/fonts/fontawesome-webfont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/health-member-web/src/main/resources/static/plugins/font-awesome/fonts/fontawesome-webfont.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/health-member-web/src/main/resources/static/plugins/font-awesome/fonts/fontawesome-webfont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/health-member-web/src/main/resources/static/plugins/font-awesome/fonts/fontawesome-webfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/health-member-web/src/main/resources/static/plugins/font-awesome/fonts/fontawesome-webfont.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/health-member-web/src/main/resources/templates/member.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/health-api/src/main/java/com/health/service/MemberService.java" beforeDir="false" afterPath="$PROJECT_DIR$/health-api/src/main/java/com/health/service/MemberService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/health-api/src/main/java/com/health/vo/MemberVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/health-api/src/main/java/com/health/vo/MemberVO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/health-healthmanager-service/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/health-healthmanager-service/.mvn/wrapper/MavenWrapperDownloader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/health-healthmanager-service/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/health-healthmanager-service/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/health-healthmanager-service/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/health-healthmanager-service/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/health-healthmanager-service/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/health-healthmanager-service/src/main/java/com/health/HealthHealthmanagerServiceApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/health-healthmanager-service/src/main/java/com/health/ServletInitializer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/health-healthmanager-service/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/health-member-service/src/main/java/com/health/mapper/MemberMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/health-member-service/src/main/java/com/health/mapper/MemberMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/health-member-service/src/main/java/com/health/service/MemberServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/health-member-service/src/main/java/com/health/service/MemberServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/health-member-web/src/main/java/com/health/web/controller/MemberController.java" beforeDir="false" afterPath="$PROJECT_DIR$/health-member-web/src/main/java/com/health/web/controller/MemberController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/css/axure_rp_page.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/css/default.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/css/images/images.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/css/images/newwindow.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/css/images/note.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/css/images/ui-bg_flat_0_aaaaaa_40x100.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/css/images/ui-bg_glass_55_fbf9ee_1x400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/css/images/ui-bg_glass_65_ffffff_1x400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/css/images/ui-bg_glass_75_dadada_1x400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/css/images/ui-bg_glass_75_e6e6e6_1x400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/css/images/ui-bg_glass_75_ffffff_1x400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/css/images/ui-bg_highlight-soft_75_cccccc_1x100.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/css/images/ui-bg_inset-soft_95_fef1ec_1x100.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/css/images/ui-icons_222222_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/css/images/ui-icons_2e83ff_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/css/images/ui-icons_454545_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/css/images/ui-icons_888888_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/css/images/ui-icons_cd0a0a_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/css/jquery-ui-themes.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/css/reset.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/css/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/data/document.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/data/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/files/1_1briefintroduction/data.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/files/1_1briefintroduction/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/files/1_2imprint/data.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/files/1_2imprint/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/files/1_3versionhistory/data.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/files/1_3versionhistory/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/files/1_4revisionhistory/data.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/files/1_4revisionhistory/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/files/1_5projectdate/data.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/files/1_5projectdate/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/files/2_1productstructure/data.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/files/2_1productstructure/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/files/2_2messagestructure/data.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/files/2_2messagestructure/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/files/3_1healthmanagement/data.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/files/3_1healthmanagement/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/files/3_2medicalequipment/data.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/files/3_2medicalequipment/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/files/3_3evaluationprocess/data.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/files/3_3evaluationprocess/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/files/3_4interventionprocess/data.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/files/3_4interventionprocess/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/files/4_1workbench/data.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/files/4_1workbench/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/files/4_2_1memberprofile/data.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/files/4_2_1memberprofile/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/files/4_2_2physicalexaminationtoupload/data.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/files/4_2_2physicalexaminationtoupload/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/files/4_2_3memberstatistics/data.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/files/4_2_3memberstatistics/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/files/4_3_1subscribelist/data.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/files/4_3_1subscribelist/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/files/4_3_2setanappointment/data.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/files/4_3_2setanappointment/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/files/4_3_3packagemanagement/data.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/files/4_3_3packagemanagement/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/files/4_3_4testportfoliomanagement/data.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/files/4_3_4testportfoliomanagement/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/files/4_3_5checkitemmanagement/data.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/files/4_3_5checkitemmanagement/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/files/authoritymanagement/data.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/files/authoritymanagement/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/files/category/data.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/files/category/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/files/dietarylibrary/data.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/files/dietarylibrary/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/files/diseaselibrary/data.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/files/diseaselibrary/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/files/evaluate/data.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/files/evaluate/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/files/followupdiary/data.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/files/followupdiary/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/files/healthplan/data.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/files/healthplan/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/files/identificationconstitution/data.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/files/identificationconstitution/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/files/interventionplan/data.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/files/interventionplan/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/files/loginPage/data.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/files/loginPage/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/files/makeplan/data.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/files/makeplan/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/files/menumanagement/data.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/files/menumanagement/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/files/psychologicaltests/data.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/files/psychologicaltests/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/files/questionnaireset/data.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/files/questionnaireset/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/files/sportsitemlibrary/data.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/files/sportsitemlibrary/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/files/targetmanagement/data.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/files/targetmanagement/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/files/templatemanagement/data.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/files/templatemanagement/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/files/testbasemanagement/data.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/files/testbasemanagement/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/files/usermanagement/data.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/files/usermanagement/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/files/workloadstatistics/data.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/files/workloadstatistics/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/files/风险测评（再议）/data.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/files/风险测评（再议）/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/259_close_12rollover1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/259_close_12rollover2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/260_collapse_12rollover1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/260_collapse_12rollover2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/261_expand_12rollover1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/261_expand_12rollover2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/TCMconstitution/u5616.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/TCMconstitution/u5618.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/appointmentSetting/u2477.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/authorityManagement/u12628.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/authorityManagement/u12637.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/authorityManagement/u12641.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/close.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/close.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/close_hover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/close_hover.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/developProposal/u8009.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/developProposal/u8025.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/developProposal/u8061.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/developProposal/u8103.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/divider.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/divider.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/evaluationProcess/u217.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/expand.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/expand.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/expand_hover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/expand_hover.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/healthManagementMainProcess/u213.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/images.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/informationFlowChart/u177.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/informationFlowChart/u183.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/informationFlowChart/u187.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/informationFlowChart/u189.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/informationFlowChart/u193.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/informationFlowChart/u197.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/informationFlowChart/u201.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/informationFlowChart/u205.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/informationFlowChart/u209.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/interventionProcess/u219.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/loginPage/u223.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/loginPage/u241.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/loginPage/u243.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/memberFile/u1058.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/memberFile/u721.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/memberFile/u726.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/memberFile/u742.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/memberFile/u744.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/memberFile/u789.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/memberFile/u798.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/memberStatistics/u1709.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/memberStatistics/u1712.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/memberStatistics/u1714.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/packageManagement/u3013.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/packageManagement/u3017.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/productBrieFIntro/u0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/productStructureDrawing/u151.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/productStructureDrawing/u153.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/productStructureDrawing/u157.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/productStructureDrawing/u163.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/productStructureDrawing/u165.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/productStructureDrawing/u169.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/productStructureDrawing/u171.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/projectDate/u105.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/projectDate/u109.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/projectDate/u117.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/projectDate/u119.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/projectDate/u123.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/projectDate/u131.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/projectDate/u133.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/projectDate/u137.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/projectDate/u145.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/realseHistory/u100.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/realseHistory/u84.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/realseHistory/u86.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/realseHistory/u88.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/realseHistory/u90.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/realseHistory/u92.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/realseHistory/u94.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/realseHistory/u96.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/realseHistory/u98.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/releaseNotes/u11.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/releaseNotes/u13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/releaseNotes/u15.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/releaseNotes/u17.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/releaseNotes/u19.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/releaseNotes/u21.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/releaseNotes/u23.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/releaseNotes/u25.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/releaseNotes/u27.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/releaseNotes/u29.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/releaseNotes/u31.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/releaseNotes/u33.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/releaseNotes/u35.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/releaseNotes/u37.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/releaseNotes/u9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/reservationProcess/u215.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/reservationlist/u2192.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/reservationlist/u2194.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/reservationlist/u2307.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/riskEvaluation/u4519.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/riskEvaluation/u4521.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/riskEvaluation/u4523.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/transparent.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/versionHistory/u40.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/versionHistory/u42.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/versionHistory/u44.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/versionHistory/u46.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/versionHistory/u48.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/versionHistory/u50.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/versionHistory/u52.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/versionHistory/u54.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/versionHistory/u56.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/versionHistory/u58.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/versionHistory/u60.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/versionHistory/u62.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/workbench/u260.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/workbench/u276.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/workbench/u295.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/workbench/u460.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/workbench/u462.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/workbench/u464.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/workbench/u466.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/workbench/u468.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/workbench/u470.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/workbench/u472.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/workbench/u474.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/workbench/u476.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/workbench/u478.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/workbench/u480.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/workbench/u482.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/workbench/u484.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/workbench/u486.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/workbench/u488.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/workbench/u490.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/workbench/u492.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/workbench/u494.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/workbench/u496.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/workbench/u498.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/workbench/u500.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/workbench/u507.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/workbench/u509.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/workbench/u511.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/workbench/u513.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/workbench/u516.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/workbench/u518.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/workbench/u520.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/workbench/u522.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/workbench/u524.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/workloadStatistics/u11664.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/workloadStatistics/u11671.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/images/workloadStatistics/u11696.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/js/axure/action.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/js/axure/adaptive.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/js/axure/annotation.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/js/axure/axQuery.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/js/axure/axQuery.std.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/js/axure/doc.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/js/axure/drag.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/js/axure/events.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/js/axure/expr.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/js/axure/flyout.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/js/axure/geometry.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/js/axure/globals.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/js/axure/ie.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/js/axure/init.temp.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/js/axure/legacy.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/js/axure/math.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/js/axure/model.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/js/axure/move.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/js/axure/recording.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/js/axure/repeater.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/js/axure/sto.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/js/axure/style.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/js/axure/tree.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/js/axure/utils.temp.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/js/axure/variables.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/js/axure/viewer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/js/axure/visibility.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/js/axutils.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/js/jquery-1.7.1.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/js/jquery-ui-1.8.10.custom.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/js/messagecenter.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/js/player/axplayer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/js/player/splitter.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/plugins/debug/debug.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/plugins/debug/styles/debug.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/plugins/debug/styles/images/reset.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/plugins/debug/styles/images/reset_hover.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/plugins/debug/styles/images/variables_hover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/plugins/debug/styles/images/variables_hover.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/plugins/debug/styles/images/variables_off.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/plugins/debug/styles/images/variables_off.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/plugins/debug/styles/images/variables_on.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/plugins/debug/styles/images/variables_on.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/plugins/page_notes/page_notes.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/plugins/page_notes/styles/images/back.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/plugins/page_notes/styles/images/back.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/plugins/page_notes/styles/images/back_hover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/plugins/page_notes/styles/images/back_hover.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/plugins/page_notes/styles/images/footnotes.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/plugins/page_notes/styles/images/footnotes.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/plugins/page_notes/styles/images/footnotes_hover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/plugins/page_notes/styles/images/footnotes_hover.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/plugins/page_notes/styles/images/footnotes_on.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/plugins/page_notes/styles/images/footnotes_on.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/plugins/page_notes/styles/images/forward.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/plugins/page_notes/styles/images/forward.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/plugins/page_notes/styles/images/forward_hover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/plugins/page_notes/styles/images/forward_hover.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/plugins/page_notes/styles/images/notes_hover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/plugins/page_notes/styles/images/notes_hover.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/plugins/page_notes/styles/images/notes_off.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/plugins/page_notes/styles/images/notes_off.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/plugins/page_notes/styles/images/notes_on.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/plugins/page_notes/styles/images/notes_on.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/plugins/page_notes/styles/page_notes.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/plugins/recordplay/recordplay.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/plugins/recordplay/styles/recordplay.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/plugins/sitemap/sitemap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/plugins/sitemap/styles/images/079_page_16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/plugins/sitemap/styles/images/086_case_16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/plugins/sitemap/styles/images/225_responsive_16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/plugins/sitemap/styles/images/228_togglenotes_16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/plugins/sitemap/styles/images/229_variables_16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/plugins/sitemap/styles/images/231_event_16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/plugins/sitemap/styles/images/232_search_16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/plugins/sitemap/styles/images/233_hyperlink_16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/plugins/sitemap/styles/images/235_folderclosed_16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/plugins/sitemap/styles/images/236_folderopen_16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/plugins/sitemap/styles/images/adaptivecheck.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/plugins/sitemap/styles/images/flow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/plugins/sitemap/styles/images/flow.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/plugins/sitemap/styles/images/folder_closed.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/plugins/sitemap/styles/images/folder_closed.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/plugins/sitemap/styles/images/folder_open.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/plugins/sitemap/styles/images/folder_open.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/plugins/sitemap/styles/images/hotspots.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/plugins/sitemap/styles/images/hotspots.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/plugins/sitemap/styles/images/hotspots_hover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/plugins/sitemap/styles/images/hotspots_hover.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/plugins/sitemap/styles/images/hotspots_on.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/plugins/sitemap/styles/images/hotspots_on.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/plugins/sitemap/styles/images/images.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/plugins/sitemap/styles/images/minus.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/plugins/sitemap/styles/images/note.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/plugins/sitemap/styles/images/note.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/plugins/sitemap/styles/images/page.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/plugins/sitemap/styles/images/page.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/plugins/sitemap/styles/images/plus.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/plugins/sitemap/styles/images/share.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/plugins/sitemap/styles/images/share.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/plugins/sitemap/styles/images/share_hover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/plugins/sitemap/styles/images/share_hover.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/plugins/sitemap/styles/images/share_on.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/plugins/sitemap/styles/images/share_on.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/plugins/sitemap/styles/images/sitemap_hover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/plugins/sitemap/styles/images/sitemap_hover.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/plugins/sitemap/styles/images/sitemap_off.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/plugins/sitemap/styles/images/sitemap_off.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/plugins/sitemap/styles/images/sitemap_on.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/plugins/sitemap/styles/images/sitemap_on.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/plugins/sitemap/styles/images/views.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/plugins/sitemap/styles/images/views.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/plugins/sitemap/styles/images/views_hover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/plugins/sitemap/styles/images/views_hover.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/plugins/sitemap/styles/images/views_on.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/plugins/sitemap/styles/images/views_on.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/static/plugins/sitemap/styles/sitemap.css" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -73,14 +489,66 @@
     <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/health-user-web/src/main/resources/templates/login.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="322">
+              <caret line="14" column="23" lean-forward="true" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/health-member-web/src/main/java/com/health/web/controller/MemberController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1724">
-              <caret line="122" column="9" selection-start-line="122" selection-start-column="9" selection-end-line="122" selection-end-column="9" />
+            <state relative-caret-position="322">
+              <caret line="39" column="16" selection-start-line="39" selection-start-column="16" selection-end-line="39" selection-end-column="16" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#650#651#0" expanded="true" />
+                <element signature="e#681#682#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/health-user-web/src/main/java/com/health/controller/BackendController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="820">
+              <caret line="43" column="9" selection-start-line="43" selection-start-column="9" selection-end-line="43" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/health-user-web/src/main/resources/application.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-138">
+              <caret column="16" selection-start-column="16" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/health-member-web/src/main/resources/application.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="184">
+              <caret line="14" column="49" selection-start-line="14" selection-start-column="49" selection-end-line="14" selection-end-column="49" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/health-member-service/src/main/java/com/health/HealthMemberServiceApplication.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="207">
+              <caret line="11" column="60" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="60" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#337#338#0" expanded="true" />
+                <element signature="e#418#419#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -98,8 +566,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>health-backend</find>
-      <find>&quot;菜单管理</find>
       <find>权限管理</find>
       <find>菜单管理</find>
       <find>resources/css</find>
@@ -124,6 +590,12 @@
       <find>health-user-web</find>
       <find>health-service-provider</find>
       <find>192.168.20.20:2181</find>
+      <find>mysql</find>
+      <find>user</find>
+      <find>username</find>
+      <find>findPage</find>
+      <find>pagination</find>
+      <find>jumper</find>
     </findStrings>
     <replaceStrings>
       <replace>health-user-service</replace>
@@ -143,6 +615,7 @@
       <replace>health-member-web</replace>
       <replace>health-member-service</replace>
       <replace>zookeeper://192.168.20.17:2181</replace>
+      <replace>member</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -151,8 +624,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/RoleMenuKey.java" />
-        <option value="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/RolePermissionExample.java" />
         <option value="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/RolePermissionKey.java" />
         <option value="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/SetMeal.java" />
         <option value="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/SetMealCheckGroupExample.java" />
@@ -188,9 +659,7 @@
         <option value="$PROJECT_DIR$/health-user-web/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/health-member-service/pom.xml" />
         <option value="$PROJECT_DIR$/health-common/pom.xml" />
-        <option value="$PROJECT_DIR$/health-member-service/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/health-member-web/pom.xml" />
-        <option value="$PROJECT_DIR$/health-member-web/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/health-healthmanager-service/pom.xml" />
         <option value="$PROJECT_DIR$/health-member-service/src/main/java/com/health/mapper/HealthMgrMapper.xml" />
         <option value="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/MemberInfo.java" />
@@ -201,7 +670,11 @@
         <option value="$PROJECT_DIR$/health-common/src/main/java/com/health/constants/ReturnMsg.java" />
         <option value="$PROJECT_DIR$/health-api/src/main/java/com/health/service/MemberService.java" />
         <option value="$PROJECT_DIR$/health-member-service/src/main/java/com/health/service/MemberServiceImpl.java" />
+        <option value="$PROJECT_DIR$/health-member-service/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/health-member-web/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/health-member-web/src/main/java/com/health/web/controller/MemberController.java" />
+        <option value="$PROJECT_DIR$/health-member-web/src/main/resources/templates/member.html" />
+        <option value="$PROJECT_DIR$/health-user-web/src/main/resources/templates/login.html" />
       </list>
     </option>
   </component>
@@ -254,7 +727,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -266,47 +738,45 @@
             <path>
               <item name="health-parent" type="b2602c69:ProjectViewProjectNode" />
               <item name="health-parent" type="462c0819:PsiDirectoryNode" />
-              <item name="health-api" type="462c0819:PsiDirectoryNode" />
+              <item name="health-member-service" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="health-parent" type="b2602c69:ProjectViewProjectNode" />
               <item name="health-parent" type="462c0819:PsiDirectoryNode" />
-              <item name="health-api" type="462c0819:PsiDirectoryNode" />
+              <item name="health-member-service" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="health-parent" type="b2602c69:ProjectViewProjectNode" />
               <item name="health-parent" type="462c0819:PsiDirectoryNode" />
-              <item name="health-api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="health-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="health-parent" type="462c0819:PsiDirectoryNode" />
-              <item name="health-api" type="462c0819:PsiDirectoryNode" />
+              <item name="health-member-service" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="health-parent" type="b2602c69:ProjectViewProjectNode" />
               <item name="health-parent" type="462c0819:PsiDirectoryNode" />
-              <item name="health-api" type="462c0819:PsiDirectoryNode" />
+              <item name="health-member-service" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="health" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="health-parent" type="b2602c69:ProjectViewProjectNode" />
               <item name="health-parent" type="462c0819:PsiDirectoryNode" />
-              <item name="health-api" type="462c0819:PsiDirectoryNode" />
+              <item name="health-member-service" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="health" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="health-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="health-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="health-member-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="health-parent" type="b2602c69:ProjectViewProjectNode" />
@@ -353,10 +823,72 @@
               <item name="health" type="462c0819:PsiDirectoryNode" />
               <item name="controller" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="health-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="health-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="health-member-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="health-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="health-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="health-member-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="health-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="health-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="health-member-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="health-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="health-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="health-user-web" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="health-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="health-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="health-user-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="health-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="health-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="health-user-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="health-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="health-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="health-user-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="health-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="health-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="health-user-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -373,7 +905,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="database.console.LAST_STATE" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../IDEASpace/zookeeper-windows" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/health-member-web/src/main/resources/templates" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.jscs" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -386,18 +918,18 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="database.main" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.repository.indices" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Study\work space\health-parent\health-member-web\src\main\resources\templates" />
       <recent name="D:\Study\work space\health-parent\health-member-web\src\main\resources\static" />
       <recent name="D:\Study\work space\health-parent\health-member-service\src\main\java\com\health\mapper" />
       <recent name="D:\Study\work space\health-parent\health-user-web\src\main\resources\static\js" />
       <recent name="D:\Study\work space\health-parent\health-user-web\src\main\resources\templates" />
-      <recent name="D:\Study\work space\health-parent\health-api\src\main\java\com\health\bean" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -416,19 +948,13 @@
         </RuleState>
       </list>
     </option>
-    <option name="contentProportion" value="0.19808744" />
+    <option name="contentProportion" value="0.20081967" />
   </component>
   <component name="RunManager" selected="Spring Boot.HealthMemberWebApplication">
-    <configuration name="HealthCommonApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="health-common" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.health.HealthCommonApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="HealthHealthmanagerServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="health-healthmanager-service" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.health.HealthHealthmanagerServiceApplication" />
+    <configuration name="HealthMemberServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="health-member-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.health.HealthMemberServiceApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -436,6 +962,9 @@
     <configuration name="HealthMemberWebApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="health-member-web" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.health.HealthMemberWebApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="UPDATE_ACTION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -443,13 +972,6 @@
     <configuration name="HealthMobileApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="health-mobile" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.health.HealthMobileApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="HealthServiceProviderApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="health-member-service" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.health.HealthMemberServiceApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -475,13 +997,11 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Spring Boot.HealthCommonApplication" />
       <item itemvalue="Spring Boot.HealthMemberWebApplication" />
       <item itemvalue="Spring Boot.HealthMobileApplication" />
-      <item itemvalue="Spring Boot.HealthServiceProviderApplication" />
       <item itemvalue="Spring Boot.HealthUserServiceApplication" />
       <item itemvalue="Spring Boot.HealthUserWebApplication" />
-      <item itemvalue="Spring Boot.HealthHealthmanagerServiceApplication" />
+      <item itemvalue="Spring Boot.HealthMemberServiceApplication" />
     </list>
   </component>
   <component name="SvnConfiguration">
@@ -508,7 +1028,9 @@
       <workItem from="1572179321504" duration="16133000" />
       <workItem from="1572223516898" duration="12697000" />
       <workItem from="1572254287106" duration="2409000" />
-      <workItem from="1572259036988" duration="6489000" />
+      <workItem from="1572259036988" duration="7992000" />
+      <workItem from="1572268543717" duration="4419000" />
+      <workItem from="1572277997342" duration="3238000" />
     </task>
     <task id="LOCAL-00001" summary="健康管理系统项目">
       <created>1571971670804</created>
@@ -573,15 +1095,21 @@
       <option name="project" value="LOCAL" />
       <updated>1572262151475</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="完成会员管理后端控制器代码">
+      <created>1572265574997</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1572265574997</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="79743000" />
+    <option name="totallyTimeSpent" value="88903000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="23" width="1550" height="848" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Structure" order="0" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="1" />
@@ -590,7 +1118,7 @@
       <window_info id="UI Designer" order="4" />
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info id="Web" order="6" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="7" visible="true" weight="0.2680965" />
+      <window_info content_ui="combo" id="Project" order="7" visible="true" weight="0.1735925" />
       <window_info anchor="bottom" id="Messages" order="0" weight="0.32402235" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.32914925" />
@@ -600,7 +1128,7 @@
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="7" />
       <window_info anchor="bottom" id="FindBugs-IDEA" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Spring" order="9" />
+      <window_info anchor="bottom" id="Spring" order="9" weight="0.32960895" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.32960895" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.50067025" side_tool="true" weight="0.38687152" />
@@ -611,7 +1139,7 @@
       <window_info anchor="bottom" id="MyBatis Log" order="17" weight="0.32960895" />
       <window_info anchor="bottom" id="Debug with VisualVM" order="18" />
       <window_info anchor="bottom" id="Database Console" order="19" weight="0.40223464" />
-      <window_info anchor="bottom" id="Run Dashboard" order="20" sideWeight="0.49932975" weight="0.5614525" />
+      <window_info active="true" anchor="bottom" id="Run Dashboard" order="20" sideWeight="0.49932975" visible="true" weight="0.33240223" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" show_stripe_button="false" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -681,32 +1209,14 @@
     <MESSAGE value="新增项目" />
     <MESSAGE value="重新修订项目相关文件" />
     <MESSAGE value="完成会员管理crud" />
-    <option name="LAST_COMMIT_MESSAGE" value="完成会员管理crud" />
+    <MESSAGE value="完成会员管理后端控制器代码" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成会员管理后端控制器代码" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/health-member-service/src/main/java/com/health/mapper/MemberDynamicinfoMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$MAVEN_REPOSITORY$/com/github/pagehelper/pagehelper-spring-boot-starter/1.2.12/pagehelper-spring-boot-starter-1.2.12.pom">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-728" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/health-common/src/main/java/com/health/context/Constants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="15" column="54" selection-start-line="15" selection-start-column="54" selection-end-line="15" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/health-api/src/main/java/com/health/bean/MemberExample.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="184">
@@ -771,20 +1281,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/health-user-service/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="16" selection-start-column="16" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/health-user-web/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="16" selection-start-column="16" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/health-member-web/src/main/java/com/health/ServletInitializer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="92">
@@ -832,20 +1328,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/health-user-web/src/main/resources/templates/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-644">
-          <caret line="29" column="15" lean-forward="true" selection-start-line="29" selection-start-column="15" selection-end-line="29" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/health-user-web/src/main/java/com/health/controller/BackendController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="43" column="9" selection-start-line="43" selection-start-column="9" selection-end-line="43" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/health-user-web/src/main/resources/static/files/loginPage/data.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="91">
@@ -888,43 +1370,6 @@
     <entry file="file://$PROJECT_DIR$/health-user-web/src/main/resources/static/js/axure/ie.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/health-member-service/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="17" column="25" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/health-member-service/src/main/java/com/health/HealthMemberServiceApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#337#338#0" expanded="true" />
-            <element signature="e#418#419#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/health-member-web/src/main/java/com/health/HealthMemberWebApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding>
-            <element signature="e#251#252#0" expanded="true" />
-            <element signature="e#328#329#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/health-member-web/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="9" column="34" lean-forward="true" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/health-member-service/src/main/java/com/health/mapper/MemberMapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="529">
@@ -946,35 +1391,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/health-member-service/pom.xml">
-      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="117" column="18" selection-start-line="117" selection-start-column="18" selection-end-line="117" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/health-healthmanager-service/pom.xml">
-      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2415">
-          <caret line="105" column="8" selection-start-line="105" selection-start-column="8" selection-end-line="105" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/health-healthmanager-service/src/main/java/com/health/HealthHealthmanagerServiceApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/health-healthmanager-service/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/health-healthmanager-service/pom.xml" />
+    <entry file="file://$PROJECT_DIR$/health-healthmanager-service/src/main/java/com/health/HealthHealthmanagerServiceApplication.java" />
+    <entry file="file://$PROJECT_DIR$/health-healthmanager-service/src/main/resources/application.properties" />
     <entry file="file://$PROJECT_DIR$/health-member-service/src/main/java/com/health/mapper/HealthMgrMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="230">
@@ -1032,21 +1451,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/health-healthmanager-service/src/main/java/com/health/ServletInitializer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="25" column="44" selection-start-line="25" selection-start-column="44" selection-end-line="25" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/health-healthmanager-service/src/main/java/com/health/ServletInitializer.java" />
     <entry file="file://$PROJECT_DIR$/health-common/src/main/java/com/health/constants/ReturnMsg.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="207">
@@ -1077,13 +1482,121 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/health-member-web/src/main/java/com/health/web/controller/MemberController.java">
+    <entry file="file://$PROJECT_DIR$/health-member-web/src/main/java/com/health/HealthMemberWebApplication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1724">
-          <caret line="122" column="9" selection-start-line="122" selection-start-column="9" selection-end-line="122" selection-end-column="9" />
+        <state relative-caret-position="184">
+          <caret line="9" column="64" lean-forward="true" selection-start-line="9" selection-start-column="64" selection-end-line="9" selection-end-column="64" />
+          <folding>
+            <element signature="e#251#252#0" expanded="true" />
+            <element signature="e#328#329#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/health-user-service/pom.xml">
+      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="43" column="8" selection-start-line="43" selection-start-column="8" selection-end-line="43" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="171" column="24" lean-forward="true" selection-start-line="171" selection-start-column="24" selection-end-line="171" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/health-user-service/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="16" selection-start-column="16" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/health-member-service/pom.xml">
+      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="53" lean-forward="true" selection-start-line="53" selection-end-line="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/health-member-service/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/health-member-service/src/main/java/com/health/HealthMemberServiceApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="11" column="60" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="60" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#337#338#0" expanded="true" />
+            <element signature="e#418#419#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/health-member-web/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="14" column="49" selection-start-line="14" selection-start-column="49" selection-end-line="14" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/health-user-web/src/main/java/com/health/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-9">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/health-user-web/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-138">
+          <caret column="16" selection-start-column="16" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/health-user-web/src/main/java/com/health/controller/BackendController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="820">
+          <caret line="43" column="9" selection-start-line="43" selection-start-column="9" selection-end-line="43" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/health-member-web/src/main/java/com/health/web/controller/MemberController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="39" column="16" selection-start-line="39" selection-start-column="16" selection-end-line="39" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#650#651#0" expanded="true" />
+            <element signature="e#681#682#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/health-member-web/src/main/resources/templates/member.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="291">
+          <caret line="355" column="14" lean-forward="true" selection-start-line="355" selection-start-column="14" selection-end-line="355" selection-end-column="14" />
+          <folding>
+            <element signature="n#style#0;n#el-input#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/health-user-web/src/main/resources/templates/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="14" column="23" lean-forward="true" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -1098,6 +1611,7 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>
@@ -1116,7 +1630,7 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
-          <last-edited>Spring</last-edited>
+          <last-edited>Spring (health-member-web)|Spring</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1151,10 +1665,12 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
+          <last-edited>health-member-service</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>

@@ -6,6 +6,7 @@ import com.health.service.MemberService;
 import com.health.vo.MemberAddVO;
 import com.health.vo.MemberVO;
 import org.apache.dubbo.config.annotation.Reference;
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
@@ -14,7 +15,7 @@ import java.util.List;
 /**
  * 会员管理控制器
  */
-@RestController
+@Controller
 @RequestMapping("/member")
 public class MemberController {
 
@@ -22,15 +23,25 @@ public class MemberController {
     private MemberService memberService;
 
     /**
+     * 跳转到会员档案页面
+     * @return
+     */
+    @GetMapping("/member")
+    public String toMemberPage(){
+        return "member";
+    }
+
+
+    /**
      * 分页查询会员信息
      *
      * @return
      */
-    @GetMapping("/members")
-    public List<MemberVO> queryMemebers() {
+    @PostMapping("/members")
+    public PageInfo<MemberVO> queryMemebers() {
         PageInfo<MemberVO> memberVOPageInfo = memberService.queryMembers();
 
-        return memberVOPageInfo.getList();
+        return memberVOPageInfo;
     }
 
     /**
