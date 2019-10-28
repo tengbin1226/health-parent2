@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/health-healthmanager-service" />
     <file type="web" url="file://$PROJECT_DIR$/health-member-service" />
     <file type="web" url="file://$PROJECT_DIR$/health-member-web" />
     <file type="web" url="file://$PROJECT_DIR$/health-mobile" />
@@ -15,6 +16,7 @@
         <option value="$PROJECT_DIR$/health-common/pom.xml" />
         <option value="$PROJECT_DIR$/health-user-web/pom.xml" />
         <option value="$PROJECT_DIR$/health-user-service/pom.xml" />
+        <option value="$PROJECT_DIR$/health-healthmanager-service/pom.xml" />
       </list>
     </option>
   </component>

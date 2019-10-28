@@ -18,7 +18,7 @@ import java.util.List;
 @RequestMapping("/member")
 public class MemberController {
 
-    @Reference
+    @Reference(check = false)
     private MemberService memberService;
 
     /**

@@ -12,6 +12,7 @@
         <module name="health-user-web" />
         <module name="health-common" />
         <module name="health-user-service" />
+        <module name="health-healthmanager-service" />
         <module name="health-api" />
       </profile>
     </annotationProcessing>
@@ -20,6 +21,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="health-api" options="-parameters" />
       <module name="health-common" options="-parameters" />
+      <module name="health-healthmanager-service" options="-parameters" />
       <module name="health-member-service" options="-parameters" />
       <module name="health-member-web" options="-parameters" />
       <module name="health-mobile" options="-parameters" />

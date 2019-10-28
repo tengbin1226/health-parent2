@@ -1,7 +1,13 @@
 package com.health.bean;
 
+import lombok.Data;
+
 import java.io.Serializable;
 
+/**
+ * 会员详细信息
+ */
+@Data
 public class MemberInfo implements Serializable {
 
     private static final long serialVersionUID = 5454629818784291643L;

@@ -308,15 +308,15 @@
   </update>
 
     <!--自定义会员查询结果集-->
-    <resultMap id="memberMap" type="com.health.vo.MemberVO">
-        <result property="healthMgrName" column="health_mgr_name" javaType="java.lang.String"/>
+    <resultMap id="MemberResultMap" type="com.health.vo.MemberVO">
+        <id property="healthMgrName" column="health_mgr_name" javaType="java.lang.String"/>
         <association property="member" javaType="com.health.bean.Member" resultMap="BaseResultMap"/>
         <association property="memberinfo" javaType="com.health.bean.MemberInfo"
                      resultMap="com.health.mapper.MemberInfoMapper.BaseResultMap"/>
     </resultMap>
 
     <!-- 查询会员信息-->
-    <select id="queryMemberInfo" resultType="memberMap">
+    <select id="queryMemberInfo" resultMap="MemberResultMap">
         SELECT
             tm.*,
             tmi.marital_status, tmi.job, tmi.education_degree, tmi.native_place, tmi.state,
