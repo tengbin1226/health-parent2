@@ -24,7 +24,6 @@
         <module>health-member-service</module>
         <module>health-user-web</module>
         <module>health-user-service</module>
-        <module>health-healthmanager-service</module>
     </modules>
 
     <properties>

@@ -310,6 +310,7 @@
     <!--自定义会员查询结果集-->
     <resultMap id="MemberResultMap" type="com.health.vo.MemberVO">
         <id property="healthMgrName" column="health_mgr_name" javaType="java.lang.String"/>
+        <id property="age" column="age" javaType="int"/>
         <association property="member" javaType="com.health.bean.Member" resultMap="BaseResultMap"/>
         <association property="memberinfo" javaType="com.health.bean.MemberInfo"
                      resultMap="com.health.mapper.MemberInfoMapper.BaseResultMap"/>
@@ -318,15 +319,29 @@
     <!-- 查询会员信息-->
     <select id="queryMemberInfo" resultMap="MemberResultMap">
         SELECT
-            tm.*,
-            tmi.marital_status, tmi.job, tmi.education_degree, tmi.native_place, tmi.state,
+            tm.id,
+            tm.fileNumber,
+            tm.NAME,
+            tm.sex,
+            tm.idCard,
+            tm.phoneNumber,
+            tm.regTime,
+            tm.PASSWORD,
+            tm.email,
+            TIMESTAMPDIFF(YEAR,tm.birthday, CURDATE()) AS age,
+            tm.remark,
+            tmi.marital_status,
+            tmi.job,
+            tmi.education_degree,
+            tmi.native_place,
+            tmi.state,
             th.health_mgr_name
         FROM
             t_member tm,
             t_member_info tmi,
             t_healthmgr th
         WHERE
-                tmi.health_mgr_id = th.health_mgr_id
-          AND tm.id = tmi.member_id
+            tmi.health_mgr_id = th.health_mgr_id
+            AND tm.id = tmi.member_id
     </select>
 </mapper>

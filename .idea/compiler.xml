@@ -12,10 +12,12 @@
         <module name="health-user-web" />
         <module name="health-common" />
         <module name="health-user-service" />
-        <module name="health-healthmanager-service" />
         <module name="health-api" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="health-healthmanager-service" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">

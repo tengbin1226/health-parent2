@@ -20,5 +20,7 @@ public class MemberVO implements Serializable {
 
     private MemberInfo memberinfo;
 
+    private Integer age;
+
     private String healthMgrName;
 }

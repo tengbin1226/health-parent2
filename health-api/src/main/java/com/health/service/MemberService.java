@@ -37,4 +37,11 @@ public interface MemberService {
      * @return
      */
     MemberVO findByMemberId(Integer id);
+
+    /**
+     * 修改会员信息
+     * @param memberAddVO
+     * @return
+     */
+    Boolean updateMemberInfo(MemberAddVO memberAddVO);
 }
