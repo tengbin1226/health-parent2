@@ -1,14 +1,6 @@
 package com.health.bean;
 
-import java.io.Serializable;
-
-/**
- * 角色菜单关联
- */
-public class RoleMenuKey implements Serializable {
-
-    private static final long serialVersionUID = -2282617924786654906L;
-
+public class RoleMenuKey {
     private Integer roleId;
 
     private Integer menuId;

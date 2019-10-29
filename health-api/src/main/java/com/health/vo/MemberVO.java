@@ -1,26 +1,30 @@
 package com.health.vo;
 
-import com.health.bean.HealthMgr;
 import com.health.bean.Member;
+import com.health.bean.MemberDynamicinfo;
 import com.health.bean.MemberInfo;
+import com.health.bean.MemberMedicalHistory;
 import lombok.Data;
 
 import java.io.Serializable;
-import java.util.Date;
 
 /**
- * 会员管理查询vo
+ * 会员添加vo类
  */
 @Data
 public class MemberVO implements Serializable {
 
-    private static final long serialversionuid = 7670839669649796605l;
+    private static final long serialVersionUID = -4889653619790866170L;
 
+    // 基本信息
     private Member member;
 
-    private MemberInfo memberinfo;
+    // 详细信息
+    private MemberInfo memberInfo;
 
-    private Integer age;
+    // 会员动态信息
+    private MemberDynamicinfo memberDynamicinfo;
 
-    private String healthMgrName;
+    // 会员病史
+    private MemberMedicalHistory MemberMedicalHistory;
 }

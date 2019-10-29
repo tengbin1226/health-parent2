@@ -1,35 +1,37 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.health.mapper.MemberInfoMapper" >
-  <resultMap id="BaseResultMap" type="com.health.bean.MemberInfo" >
-    <id column="id" property="id" jdbcType="INTEGER" />
-    <result column="member_id" property="memberId" jdbcType="INTEGER" />
-    <result column="marital_status" property="maritalStatus" jdbcType="VARCHAR" />
-    <result column="job" property="job" jdbcType="VARCHAR" />
-    <result column="education_degree" property="educationDegree" jdbcType="VARCHAR" />
-    <result column="native_place" property="nativePlace" jdbcType="VARCHAR" />
-    <result column="health_mgr_id" property="healthMgrId" jdbcType="INTEGER" />
-    <result column="state" property="state" jdbcType="INTEGER" />
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.health.mapper.MemberInfoMapper">
+  <resultMap id="BaseResultMap" type="com.health.bean.MemberInfo">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="t_member_id" jdbcType="INTEGER" property="tMemberId" />
+    <result column="marital_status" jdbcType="INTEGER" property="maritalStatus" />
+    <result column="job" jdbcType="VARCHAR" property="job" />
+    <result column="education_degree" jdbcType="VARCHAR" property="educationDegree" />
+    <result column="native_place" jdbcType="VARCHAR" property="nativePlace" />
+    <result column="health_mgr_id" jdbcType="INTEGER" property="healthMgrId" />
+    <result column="status" jdbcType="INTEGER" property="status" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
   </resultMap>
-  <sql id="Example_Where_Clause" >
-    <where >
-      <foreach collection="oredCriteria" item="criteria" separator="or" >
-        <if test="criteria.valid" >
-          <trim prefix="(" suffix=")" prefixOverrides="and" >
-            <foreach collection="criteria.criteria" item="criterion" >
-              <choose >
-                <when test="criterion.noValue" >
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
                   and ${criterion.condition}
                 </when>
-                <when test="criterion.singleValue" >
+                <when test="criterion.singleValue">
                   and ${criterion.condition} #{criterion.value}
                 </when>
-                <when test="criterion.betweenValue" >
+                <when test="criterion.betweenValue">
                   and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
                 </when>
-                <when test="criterion.listValue" >
+                <when test="criterion.listValue">
                   and ${criterion.condition}
-                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
                     #{listItem}
                   </foreach>
                 </when>
@@ -40,25 +42,25 @@
       </foreach>
     </where>
   </sql>
-  <sql id="Update_By_Example_Where_Clause" >
-    <where >
-      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
-        <if test="criteria.valid" >
-          <trim prefix="(" suffix=")" prefixOverrides="and" >
-            <foreach collection="criteria.criteria" item="criterion" >
-              <choose >
-                <when test="criterion.noValue" >
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
                   and ${criterion.condition}
                 </when>
-                <when test="criterion.singleValue" >
+                <when test="criterion.singleValue">
                   and ${criterion.condition} #{criterion.value}
                 </when>
-                <when test="criterion.betweenValue" >
+                <when test="criterion.betweenValue">
                   and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
                 </when>
-                <when test="criterion.listValue" >
+                <when test="criterion.listValue">
                   and ${criterion.condition}
-                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
                     #{listItem}
                   </foreach>
                 </when>
@@ -69,41 +71,326 @@
       </foreach>
     </where>
   </sql>
-  <sql id="Base_Column_List" >
-    id, member_id, marital_status, job, education_degree, native_place, health_mgr_id, 
-    state
+  <sql id="Base_Column_List">
+    id, t_member_id, marital_status, job, education_degree, native_place, health_mgr_id, 
+    status, create_time, update_time
   </sql>
-  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.health.bean.MemberInfoExample" >
+  <select id="selectByExample" parameterType="com.health.bean.MemberInfoExample" resultMap="BaseResultMap">
     select
-    <if test="distinct" >
+    <if test="distinct">
       distinct
     </if>
     <include refid="Base_Column_List" />
     from t_member_info
-    <if test="_parameter != null" >
+    <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
-    <if test="orderByClause != null" >
+    <if test="orderByClause != null">
       order by ${orderByClause}
     </if>
   </select>
-  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />
     from t_member_info
     where id = #{id,jdbcType=INTEGER}
   </select>
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from t_member_info
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <delete id="deleteByExample" parameterType="com.health.bean.MemberInfoExample" >
+  <delete id="deleteByExample" parameterType="com.health.bean.MemberInfoExample">
     delete from t_member_info
-    <if test="_parameter != null" >
+    <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="com.health.bean.MemberInfo" >
+  <insert id="insert" parameterType="com.health.bean.MemberInfo">
+    insert into t_member_info (id, t_member_id, marital_status, 
+      job, education_degree, native_place, 
+      health_mgr_id, status, create_time, 
+      update_time)
+    values (#{id,jdbcType=INTEGER}, #{tMemberId,jdbcType=INTEGER}, #{maritalStatus,jdbcType=INTEGER}, 
+      #{job,jdbcType=VARCHAR}, #{educationDegree,jdbcType=VARCHAR}, #{nativePlace,jdbcType=VARCHAR}, 
+      #{healthMgrId,jdbcType=INTEGER}, #{status,jdbcType=INTEGER}, #{createTime,jdbcType=TIMESTAMP}, 
+      #{updateTime,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="com.health.bean.MemberInfo">
+    insert into t_member_info
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="tMemberId != null">
+        t_member_id,
+      </if>
+      <if test="maritalStatus != null">
+        marital_status,
+      </if>
+      <if test="job != null">
+        job,
+      </if>
+      <if test="educationDegree != null">
+        education_degree,
+      </if>
+      <if test="nativePlace != null">
+        native_place,
+      </if>
+      <if test="healthMgrId != null">
+        health_mgr_id,
+      </if>
+      <if test="status != null">
+        status,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+      <if test="updateTime != null">
+        update_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="tMemberId != null">
+        #{tMemberId,jdbcType=INTEGER},
+      </if>
+      <if test="maritalStatus != null">
+        #{maritalStatus,jdbcType=INTEGER},
+      </if>
+      <if test="job != null">
+        #{job,jdbcType=VARCHAR},
+      </if>
+      <if test="educationDegree != null">
+        #{educationDegree,jdbcType=VARCHAR},
+      </if>
+      <if test="nativePlace != null">
+        #{nativePlace,jdbcType=VARCHAR},
+      </if>
+      <if test="healthMgrId != null">
+        #{healthMgrId,jdbcType=INTEGER},
+      </if>
+      <if test="status != null">
+        #{status,jdbcType=INTEGER},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null">
+        #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.health.bean.MemberInfoExample" resultType="java.lang.Integer">
+    select count(*) from t_member_info
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update t_member_info
+    <set>
+      <if test="record.id != null">
+        id = #{record.id,jdbcType=INTEGER},
+      </if>
+      <if test="record.tMemberId != null">
+        t_member_id = #{record.tMemberId,jdbcType=INTEGER},
+      </if>
+      <if test="record.maritalStatus != null">
+        marital_status = #{record.maritalStatus,jdbcType=INTEGER},
+      </if>
+      <if test="record.job != null">
+        job = #{record.job,jdbcType=VARCHAR},
+      </if>
+      <if test="record.educationDegree != null">
+        education_degree = #{record.educationDegree,jdbcType=VARCHAR},
+      </if>
+      <if test="record.nativePlace != null">
+        native_place = #{record.nativePlace,jdbcType=VARCHAR},
+      </if>
+      <if test="record.healthMgrId != null">
+        health_mgr_id = #{record.healthMgrId,jdbcType=INTEGER},
+      </if>
+      <if test="record.status != null">
+        status = #{record.status,jdbcType=INTEGER},
+      </if>
+      <if test="record.createTime != null">
+        create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.updateTime != null">
+        update_time = #{record.updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update t_member_info
+    set id = #{record.id,jdbcType=INTEGER},
+      t_member_id = #{record.tMemberId,jdbcType=INTEGER},
+      marital_status = #{record.maritalStatus,jdbcType=INTEGER},
+      job = #{record.job,jdbcType=VARCHAR},
+      education_degree = #{record.educationDegree,jdbcType=VARCHAR},
+      native_place = #{record.nativePlace,jdbcType=VARCHAR},
+      health_mgr_id = #{record.healthMgrId,jdbcType=INTEGER},
+      status = #{record.status,jdbcType=INTEGER},
+      create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      update_time = #{record.updateTime,jdbcType=TIMESTAMP}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.health.bean.MemberInfo">
+    update t_member_info
+    <set>
+      <if test="tMemberId != null">
+        t_member_id = #{tMemberId,jdbcType=INTEGER},
+      </if>
+      <if test="maritalStatus != null">
+        marital_status = #{maritalStatus,jdbcType=INTEGER},
+      </if>
+      <if test="job != null">
+        job = #{job,jdbcType=VARCHAR},
+      </if>
+      <if test="educationDegree != null">
+        education_degree = #{educationDegree,jdbcType=VARCHAR},
+      </if>
+      <if test="nativePlace != null">
+        native_place = #{nativePlace,jdbcType=VARCHAR},
+      </if>
+      <if test="healthMgrId != null">
+        health_mgr_id = #{healthMgrId,jdbcType=INTEGER},
+      </if>
+      <if test="status != null">
+        status = #{status,jdbcType=INTEGER},
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null">
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.health.bean.MemberInfo">
+    update t_member_info
+    set t_member_id = #{tMemberId,jdbcType=INTEGER},
+      marital_status = #{maritalStatus,jdbcType=INTEGER},
+      job = #{job,jdbcType=VARCHAR},
+      education_degree = #{educationDegree,jdbcType=VARCHAR},
+      native_place = #{nativePlace,jdbcType=VARCHAR},
+      health_mgr_id = #{healthMgrId,jdbcType=INTEGER},
+      status = #{status,jdbcType=INTEGER},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <resultMap id="BaseResultMap" type="com.health.bean.MemberInfo">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="member_id" jdbcType="INTEGER" property="memberId" />
+    <result column="marital_status" jdbcType="VARCHAR" property="maritalStatus" />
+    <result column="job" jdbcType="VARCHAR" property="job" />
+    <result column="education_degree" jdbcType="VARCHAR" property="educationDegree" />
+    <result column="native_place" jdbcType="VARCHAR" property="nativePlace" />
+    <result column="health_mgr_id" jdbcType="INTEGER" property="healthMgrId" />
+    <result column="state" jdbcType="INTEGER" property="state" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    id, member_id, marital_status, job, education_degree, native_place, health_mgr_id, 
+    state
+  </sql>
+  <select id="selectByExample" parameterType="com.health.bean.MemberInfoExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from t_member_info
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from t_member_info
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from t_member_info
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.health.bean.MemberInfoExample">
+    delete from t_member_info
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.health.bean.MemberInfo">
     insert into t_member_info (id, member_id, marital_status, 
       job, education_degree, native_place, 
       health_mgr_id, state)
@@ -111,100 +398,100 @@
       #{job,jdbcType=VARCHAR}, #{educationDegree,jdbcType=VARCHAR}, #{nativePlace,jdbcType=VARCHAR}, 
       #{healthMgrId,jdbcType=INTEGER}, #{state,jdbcType=INTEGER})
   </insert>
-  <insert id="insertSelective" parameterType="com.health.bean.MemberInfo" >
+  <insert id="insertSelective" parameterType="com.health.bean.MemberInfo">
     insert into t_member_info
-    <trim prefix="(" suffix=")" suffixOverrides="," >
-      <if test="id != null" >
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
         id,
       </if>
-      <if test="memberId != null" >
+      <if test="memberId != null">
         member_id,
       </if>
-      <if test="maritalStatus != null" >
+      <if test="maritalStatus != null">
         marital_status,
       </if>
-      <if test="job != null" >
+      <if test="job != null">
         job,
       </if>
-      <if test="educationDegree != null" >
+      <if test="educationDegree != null">
         education_degree,
       </if>
-      <if test="nativePlace != null" >
+      <if test="nativePlace != null">
         native_place,
       </if>
-      <if test="healthMgrId != null" >
+      <if test="healthMgrId != null">
         health_mgr_id,
       </if>
-      <if test="state != null" >
+      <if test="state != null">
         state,
       </if>
     </trim>
-    <trim prefix="values (" suffix=")" suffixOverrides="," >
-      <if test="id != null" >
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
         #{id,jdbcType=INTEGER},
       </if>
-      <if test="memberId != null" >
+      <if test="memberId != null">
         #{memberId,jdbcType=INTEGER},
       </if>
-      <if test="maritalStatus != null" >
+      <if test="maritalStatus != null">
         #{maritalStatus,jdbcType=VARCHAR},
       </if>
-      <if test="job != null" >
+      <if test="job != null">
         #{job,jdbcType=VARCHAR},
       </if>
-      <if test="educationDegree != null" >
+      <if test="educationDegree != null">
         #{educationDegree,jdbcType=VARCHAR},
       </if>
-      <if test="nativePlace != null" >
+      <if test="nativePlace != null">
         #{nativePlace,jdbcType=VARCHAR},
       </if>
-      <if test="healthMgrId != null" >
+      <if test="healthMgrId != null">
         #{healthMgrId,jdbcType=INTEGER},
       </if>
-      <if test="state != null" >
+      <if test="state != null">
         #{state,jdbcType=INTEGER},
       </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="com.health.bean.MemberInfoExample" resultType="java.lang.Integer" >
+  <select id="countByExample" parameterType="com.health.bean.MemberInfoExample" resultType="java.lang.Integer">
     select count(*) from t_member_info
-    <if test="_parameter != null" >
+    <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
   </select>
-  <update id="updateByExampleSelective" parameterType="map" >
+  <update id="updateByExampleSelective" parameterType="map">
     update t_member_info
-    <set >
-      <if test="record.id != null" >
+    <set>
+      <if test="record.id != null">
         id = #{record.id,jdbcType=INTEGER},
       </if>
-      <if test="record.memberId != null" >
+      <if test="record.memberId != null">
         member_id = #{record.memberId,jdbcType=INTEGER},
       </if>
-      <if test="record.maritalStatus != null" >
+      <if test="record.maritalStatus != null">
         marital_status = #{record.maritalStatus,jdbcType=VARCHAR},
       </if>
-      <if test="record.job != null" >
+      <if test="record.job != null">
         job = #{record.job,jdbcType=VARCHAR},
       </if>
-      <if test="record.educationDegree != null" >
+      <if test="record.educationDegree != null">
         education_degree = #{record.educationDegree,jdbcType=VARCHAR},
       </if>
-      <if test="record.nativePlace != null" >
+      <if test="record.nativePlace != null">
         native_place = #{record.nativePlace,jdbcType=VARCHAR},
       </if>
-      <if test="record.healthMgrId != null" >
+      <if test="record.healthMgrId != null">
         health_mgr_id = #{record.healthMgrId,jdbcType=INTEGER},
       </if>
-      <if test="record.state != null" >
+      <if test="record.state != null">
         state = #{record.state,jdbcType=INTEGER},
       </if>
     </set>
-    <if test="_parameter != null" >
+    <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
-  <update id="updateByExample" parameterType="map" >
+  <update id="updateByExample" parameterType="map">
     update t_member_info
     set id = #{record.id,jdbcType=INTEGER},
       member_id = #{record.memberId,jdbcType=INTEGER},
@@ -214,38 +501,38 @@
       native_place = #{record.nativePlace,jdbcType=VARCHAR},
       health_mgr_id = #{record.healthMgrId,jdbcType=INTEGER},
       state = #{record.state,jdbcType=INTEGER}
-    <if test="_parameter != null" >
+    <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
-  <update id="updateByPrimaryKeySelective" parameterType="com.health.bean.MemberInfo" >
+  <update id="updateByPrimaryKeySelective" parameterType="com.health.bean.MemberInfo">
     update t_member_info
-    <set >
-      <if test="memberId != null" >
+    <set>
+      <if test="memberId != null">
         member_id = #{memberId,jdbcType=INTEGER},
       </if>
-      <if test="maritalStatus != null" >
+      <if test="maritalStatus != null">
         marital_status = #{maritalStatus,jdbcType=VARCHAR},
       </if>
-      <if test="job != null" >
+      <if test="job != null">
         job = #{job,jdbcType=VARCHAR},
       </if>
-      <if test="educationDegree != null" >
+      <if test="educationDegree != null">
         education_degree = #{educationDegree,jdbcType=VARCHAR},
       </if>
-      <if test="nativePlace != null" >
+      <if test="nativePlace != null">
         native_place = #{nativePlace,jdbcType=VARCHAR},
       </if>
-      <if test="healthMgrId != null" >
+      <if test="healthMgrId != null">
         health_mgr_id = #{healthMgrId,jdbcType=INTEGER},
       </if>
-      <if test="state != null" >
+      <if test="state != null">
         state = #{state,jdbcType=INTEGER},
       </if>
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.health.bean.MemberInfo" >
+  <update id="updateByPrimaryKey" parameterType="com.health.bean.MemberInfo">
     update t_member_info
     set member_id = #{memberId,jdbcType=INTEGER},
       marital_status = #{maritalStatus,jdbcType=VARCHAR},

@@ -1,18 +1,8 @@
 package com.health.bean;
 
-import lombok.Data;
-
-import java.io.Serializable;
 import java.util.Date;
 
-/**
- * 预约设置
- */
-@Data
-public class OrderSetting implements Serializable {
-
-    private static final long serialVersionUID = 4640969054513750152L;
-
+public class OrderSetting {
     private Integer id;
 
     private Date orderdate;
@@ -20,4 +10,56 @@ public class OrderSetting implements Serializable {
     private Integer number;
 
     private Integer reservations;
+
+    private Date createTime;
+
+    private Date updateTime;
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public Date getOrderdate() {
+        return orderdate;
+    }
+
+    public void setOrderdate(Date orderdate) {
+        this.orderdate = orderdate;
+    }
+
+    public Integer getNumber() {
+        return number;
+    }
+
+    public void setNumber(Integer number) {
+        this.number = number;
+    }
+
+    public Integer getReservations() {
+        return reservations;
+    }
+
+    public void setReservations(Integer reservations) {
+        this.reservations = reservations;
+    }
+
+    public Date getCreateTime() {
+        return createTime;
+    }
+
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
+    }
+
+    public Date getUpdateTime() {
+        return updateTime;
+    }
+
+    public void setUpdateTime(Date updateTime) {
+        this.updateTime = updateTime;
+    }
 }

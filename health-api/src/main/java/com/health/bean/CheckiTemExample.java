@@ -1,16 +1,10 @@
 package com.health.bean;
 
-import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
-/**
- * 检查项Example类
- */
-public class CheckiTemExample implements Serializable {
-
-    private static final long serialVersionUID = 557679475240868675L;
-
+public class CheckiTemExample {
     protected String orderByClause;
 
     protected boolean distinct;
@@ -311,6 +305,76 @@ public class CheckiTemExample implements Serializable {
             return (Criteria) this;
         }
 
+        public Criteria andMnemonicNameIsNull() {
+            addCriterion("mnemonic_name is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andMnemonicNameIsNotNull() {
+            addCriterion("mnemonic_name is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andMnemonicNameEqualTo(String value) {
+            addCriterion("mnemonic_name =", value, "mnemonicName");
+            return (Criteria) this;
+        }
+
+        public Criteria andMnemonicNameNotEqualTo(String value) {
+            addCriterion("mnemonic_name <>", value, "mnemonicName");
+            return (Criteria) this;
+        }
+
+        public Criteria andMnemonicNameGreaterThan(String value) {
+            addCriterion("mnemonic_name >", value, "mnemonicName");
+            return (Criteria) this;
+        }
+
+        public Criteria andMnemonicNameGreaterThanOrEqualTo(String value) {
+            addCriterion("mnemonic_name >=", value, "mnemonicName");
+            return (Criteria) this;
+        }
+
+        public Criteria andMnemonicNameLessThan(String value) {
+            addCriterion("mnemonic_name <", value, "mnemonicName");
+            return (Criteria) this;
+        }
+
+        public Criteria andMnemonicNameLessThanOrEqualTo(String value) {
+            addCriterion("mnemonic_name <=", value, "mnemonicName");
+            return (Criteria) this;
+        }
+
+        public Criteria andMnemonicNameLike(String value) {
+            addCriterion("mnemonic_name like", value, "mnemonicName");
+            return (Criteria) this;
+        }
+
+        public Criteria andMnemonicNameNotLike(String value) {
+            addCriterion("mnemonic_name not like", value, "mnemonicName");
+            return (Criteria) this;
+        }
+
+        public Criteria andMnemonicNameIn(List<String> values) {
+            addCriterion("mnemonic_name in", values, "mnemonicName");
+            return (Criteria) this;
+        }
+
+        public Criteria andMnemonicNameNotIn(List<String> values) {
+            addCriterion("mnemonic_name not in", values, "mnemonicName");
+            return (Criteria) this;
+        }
+
+        public Criteria andMnemonicNameBetween(String value1, String value2) {
+            addCriterion("mnemonic_name between", value1, value2, "mnemonicName");
+            return (Criteria) this;
+        }
+
+        public Criteria andMnemonicNameNotBetween(String value1, String value2) {
+            addCriterion("mnemonic_name not between", value1, value2, "mnemonicName");
+            return (Criteria) this;
+        }
+
         public Criteria andSexIsNull() {
             addCriterion("sex is null");
             return (Criteria) this;
@@ -511,6 +575,76 @@ public class CheckiTemExample implements Serializable {
             return (Criteria) this;
         }
 
+        public Criteria andAffiliationClassifyIsNull() {
+            addCriterion("affiliation_classify is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andAffiliationClassifyIsNotNull() {
+            addCriterion("affiliation_classify is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andAffiliationClassifyEqualTo(String value) {
+            addCriterion("affiliation_classify =", value, "affiliationClassify");
+            return (Criteria) this;
+        }
+
+        public Criteria andAffiliationClassifyNotEqualTo(String value) {
+            addCriterion("affiliation_classify <>", value, "affiliationClassify");
+            return (Criteria) this;
+        }
+
+        public Criteria andAffiliationClassifyGreaterThan(String value) {
+            addCriterion("affiliation_classify >", value, "affiliationClassify");
+            return (Criteria) this;
+        }
+
+        public Criteria andAffiliationClassifyGreaterThanOrEqualTo(String value) {
+            addCriterion("affiliation_classify >=", value, "affiliationClassify");
+            return (Criteria) this;
+        }
+
+        public Criteria andAffiliationClassifyLessThan(String value) {
+            addCriterion("affiliation_classify <", value, "affiliationClassify");
+            return (Criteria) this;
+        }
+
+        public Criteria andAffiliationClassifyLessThanOrEqualTo(String value) {
+            addCriterion("affiliation_classify <=", value, "affiliationClassify");
+            return (Criteria) this;
+        }
+
+        public Criteria andAffiliationClassifyLike(String value) {
+            addCriterion("affiliation_classify like", value, "affiliationClassify");
+            return (Criteria) this;
+        }
+
+        public Criteria andAffiliationClassifyNotLike(String value) {
+            addCriterion("affiliation_classify not like", value, "affiliationClassify");
+            return (Criteria) this;
+        }
+
+        public Criteria andAffiliationClassifyIn(List<String> values) {
+            addCriterion("affiliation_classify in", values, "affiliationClassify");
+            return (Criteria) this;
+        }
+
+        public Criteria andAffiliationClassifyNotIn(List<String> values) {
+            addCriterion("affiliation_classify not in", values, "affiliationClassify");
+            return (Criteria) this;
+        }
+
+        public Criteria andAffiliationClassifyBetween(String value1, String value2) {
+            addCriterion("affiliation_classify between", value1, value2, "affiliationClassify");
+            return (Criteria) this;
+        }
+
+        public Criteria andAffiliationClassifyNotBetween(String value1, String value2) {
+            addCriterion("affiliation_classify not between", value1, value2, "affiliationClassify");
+            return (Criteria) this;
+        }
+
         public Criteria andTypeIsNull() {
             addCriterion("type is null");
             return (Criteria) this;
@@ -578,6 +712,76 @@ public class CheckiTemExample implements Serializable {
 
         public Criteria andTypeNotBetween(String value1, String value2) {
             addCriterion("type not between", value1, value2, "type");
+            return (Criteria) this;
+        }
+
+        public Criteria andRemarkIsNull() {
+            addCriterion("remark is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andRemarkIsNotNull() {
+            addCriterion("remark is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andRemarkEqualTo(String value) {
+            addCriterion("remark =", value, "remark");
+            return (Criteria) this;
+        }
+
+        public Criteria andRemarkNotEqualTo(String value) {
+            addCriterion("remark <>", value, "remark");
+            return (Criteria) this;
+        }
+
+        public Criteria andRemarkGreaterThan(String value) {
+            addCriterion("remark >", value, "remark");
+            return (Criteria) this;
+        }
+
+        public Criteria andRemarkGreaterThanOrEqualTo(String value) {
+            addCriterion("remark >=", value, "remark");
+            return (Criteria) this;
+        }
+
+        public Criteria andRemarkLessThan(String value) {
+            addCriterion("remark <", value, "remark");
+            return (Criteria) this;
+        }
+
+        public Criteria andRemarkLessThanOrEqualTo(String value) {
+            addCriterion("remark <=", value, "remark");
+            return (Criteria) this;
+        }
+
+        public Criteria andRemarkLike(String value) {
+            addCriterion("remark like", value, "remark");
+            return (Criteria) this;
+        }
+
+        public Criteria andRemarkNotLike(String value) {
+            addCriterion("remark not like", value, "remark");
+            return (Criteria) this;
+        }
+
+        public Criteria andRemarkIn(List<String> values) {
+            addCriterion("remark in", values, "remark");
+            return (Criteria) this;
+        }
+
+        public Criteria andRemarkNotIn(List<String> values) {
+            addCriterion("remark not in", values, "remark");
+            return (Criteria) this;
+        }
+
+        public Criteria andRemarkBetween(String value1, String value2) {
+            addCriterion("remark between", value1, value2, "remark");
+            return (Criteria) this;
+        }
+
+        public Criteria andRemarkNotBetween(String value1, String value2) {
+            addCriterion("remark not between", value1, value2, "remark");
             return (Criteria) this;
         }
 
@@ -651,73 +855,123 @@ public class CheckiTemExample implements Serializable {
             return (Criteria) this;
         }
 
-        public Criteria andRemarkIsNull() {
-            addCriterion("remark is null");
+        public Criteria andCreateTimeIsNull() {
+            addCriterion("create_time is null");
             return (Criteria) this;
         }
 
-        public Criteria andRemarkIsNotNull() {
-            addCriterion("remark is not null");
+        public Criteria andCreateTimeIsNotNull() {
+            addCriterion("create_time is not null");
             return (Criteria) this;
         }
 
-        public Criteria andRemarkEqualTo(String value) {
-            addCriterion("remark =", value, "remark");
+        public Criteria andCreateTimeEqualTo(Date value) {
+            addCriterion("create_time =", value, "createTime");
             return (Criteria) this;
         }
 
-        public Criteria andRemarkNotEqualTo(String value) {
-            addCriterion("remark <>", value, "remark");
+        public Criteria andCreateTimeNotEqualTo(Date value) {
+            addCriterion("create_time <>", value, "createTime");
             return (Criteria) this;
         }
 
-        public Criteria andRemarkGreaterThan(String value) {
-            addCriterion("remark >", value, "remark");
+        public Criteria andCreateTimeGreaterThan(Date value) {
+            addCriterion("create_time >", value, "createTime");
             return (Criteria) this;
         }
 
-        public Criteria andRemarkGreaterThanOrEqualTo(String value) {
-            addCriterion("remark >=", value, "remark");
+        public Criteria andCreateTimeGreaterThanOrEqualTo(Date value) {
+            addCriterion("create_time >=", value, "createTime");
             return (Criteria) this;
         }
 
-        public Criteria andRemarkLessThan(String value) {
-            addCriterion("remark <", value, "remark");
+        public Criteria andCreateTimeLessThan(Date value) {
+            addCriterion("create_time <", value, "createTime");
             return (Criteria) this;
         }
 
-        public Criteria andRemarkLessThanOrEqualTo(String value) {
-            addCriterion("remark <=", value, "remark");
+        public Criteria andCreateTimeLessThanOrEqualTo(Date value) {
+            addCriterion("create_time <=", value, "createTime");
             return (Criteria) this;
         }
 
-        public Criteria andRemarkLike(String value) {
-            addCriterion("remark like", value, "remark");
+        public Criteria andCreateTimeIn(List<Date> values) {
+            addCriterion("create_time in", values, "createTime");
             return (Criteria) this;
         }
 
-        public Criteria andRemarkNotLike(String value) {
-            addCriterion("remark not like", value, "remark");
+        public Criteria andCreateTimeNotIn(List<Date> values) {
+            addCriterion("create_time not in", values, "createTime");
             return (Criteria) this;
         }
 
-        public Criteria andRemarkIn(List<String> values) {
-            addCriterion("remark in", values, "remark");
+        public Criteria andCreateTimeBetween(Date value1, Date value2) {
+            addCriterion("create_time between", value1, value2, "createTime");
             return (Criteria) this;
         }
 
-        public Criteria andRemarkNotIn(List<String> values) {
-            addCriterion("remark not in", values, "remark");
+        public Criteria andCreateTimeNotBetween(Date value1, Date value2) {
+            addCriterion("create_time not between", value1, value2, "createTime");
             return (Criteria) this;
         }
 
-        public Criteria andRemarkBetween(String value1, String value2) {
-            addCriterion("remark between", value1, value2, "remark");
+        public Criteria andUpdateTimeIsNull() {
+            addCriterion("update_time is null");
             return (Criteria) this;
         }
 
-        public Criteria andRemarkNotBetween(String value1, String value2) {
-            addCriterion("remark not between", value1, value2, "remark");
+        public Criteria andUpdateTimeIsNotNull() {
+            addCriterion("update_time is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andUpdateTimeEqualTo(Date value) {
+            addCriterion("update_time =", value, "updateTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andUpdateTimeNotEqualTo(Date value) {
+            addCriterion("update_time <>", value, "updateTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andUpdateTimeGreaterThan(Date value) {
+            addCriterion("update_time >", value, "updateTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andUpdateTimeGreaterThanOrEqualTo(Date value) {
+            addCriterion("update_time >=", value, "updateTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andUpdateTimeLessThan(Date value) {
+            addCriterion("update_time <", value, "updateTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andUpdateTimeLessThanOrEqualTo(Date value) {
+            addCriterion("update_time <=", value, "updateTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andUpdateTimeIn(List<Date> values) {
+            addCriterion("update_time in", values, "updateTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andUpdateTimeNotIn(List<Date> values) {
+            addCriterion("update_time not in", values, "updateTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andUpdateTimeBetween(Date value1, Date value2) {
+            addCriterion("update_time between", value1, value2, "updateTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andUpdateTimeNotBetween(Date value1, Date value2) {
+            addCriterion("update_time not between", value1, value2, "updateTime");
             return (Criteria) this;
         }
     }

@@ -1,9 +1,8 @@
 package com.health.mapper;
 
-import com.github.pagehelper.Page;
 import com.health.bean.Member;
 import com.health.bean.MemberExample;
-import com.health.vo.MemberVO;
+import com.health.vo.MemberQueryVO;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
@@ -32,5 +31,5 @@ public interface MemberMapper {
     int updateByPrimaryKey(Member record);
 
     /* 查询会员信息*/
-    Page<MemberVO> queryMemberInfo(String queryString);
+    List<MemberQueryVO> queryMemberInfo(String queryString);
 }

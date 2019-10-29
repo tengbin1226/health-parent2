@@ -1,16 +1,10 @@
 package com.health.bean;
 
-import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
-/**
- * 套餐Example
- */
-public class SetMealExample implements Serializable {
-
-    private static final long serialVersionUID = -8721285346708682739L;
-
+public class SetMealExample {
     protected String orderByClause;
 
     protected boolean distinct;
@@ -451,73 +445,123 @@ public class SetMealExample implements Serializable {
             return (Criteria) this;
         }
 
-        public Criteria andAgeIsNull() {
-            addCriterion("age is null");
+        public Criteria andMaxageIsNull() {
+            addCriterion("maxage is null");
             return (Criteria) this;
         }
 
-        public Criteria andAgeIsNotNull() {
-            addCriterion("age is not null");
+        public Criteria andMaxageIsNotNull() {
+            addCriterion("maxage is not null");
             return (Criteria) this;
         }
 
-        public Criteria andAgeEqualTo(String value) {
-            addCriterion("age =", value, "age");
+        public Criteria andMaxageEqualTo(Integer value) {
+            addCriterion("maxage =", value, "maxage");
             return (Criteria) this;
         }
 
-        public Criteria andAgeNotEqualTo(String value) {
-            addCriterion("age <>", value, "age");
+        public Criteria andMaxageNotEqualTo(Integer value) {
+            addCriterion("maxage <>", value, "maxage");
             return (Criteria) this;
         }
 
-        public Criteria andAgeGreaterThan(String value) {
-            addCriterion("age >", value, "age");
+        public Criteria andMaxageGreaterThan(Integer value) {
+            addCriterion("maxage >", value, "maxage");
             return (Criteria) this;
         }
 
-        public Criteria andAgeGreaterThanOrEqualTo(String value) {
-            addCriterion("age >=", value, "age");
+        public Criteria andMaxageGreaterThanOrEqualTo(Integer value) {
+            addCriterion("maxage >=", value, "maxage");
             return (Criteria) this;
         }
 
-        public Criteria andAgeLessThan(String value) {
-            addCriterion("age <", value, "age");
+        public Criteria andMaxageLessThan(Integer value) {
+            addCriterion("maxage <", value, "maxage");
             return (Criteria) this;
         }
 
-        public Criteria andAgeLessThanOrEqualTo(String value) {
-            addCriterion("age <=", value, "age");
+        public Criteria andMaxageLessThanOrEqualTo(Integer value) {
+            addCriterion("maxage <=", value, "maxage");
             return (Criteria) this;
         }
 
-        public Criteria andAgeLike(String value) {
-            addCriterion("age like", value, "age");
+        public Criteria andMaxageIn(List<Integer> values) {
+            addCriterion("maxage in", values, "maxage");
             return (Criteria) this;
         }
 
-        public Criteria andAgeNotLike(String value) {
-            addCriterion("age not like", value, "age");
+        public Criteria andMaxageNotIn(List<Integer> values) {
+            addCriterion("maxage not in", values, "maxage");
             return (Criteria) this;
         }
 
-        public Criteria andAgeIn(List<String> values) {
-            addCriterion("age in", values, "age");
+        public Criteria andMaxageBetween(Integer value1, Integer value2) {
+            addCriterion("maxage between", value1, value2, "maxage");
             return (Criteria) this;
         }
 
-        public Criteria andAgeNotIn(List<String> values) {
-            addCriterion("age not in", values, "age");
+        public Criteria andMaxageNotBetween(Integer value1, Integer value2) {
+            addCriterion("maxage not between", value1, value2, "maxage");
             return (Criteria) this;
         }
 
-        public Criteria andAgeBetween(String value1, String value2) {
-            addCriterion("age between", value1, value2, "age");
+        public Criteria andMinageIsNull() {
+            addCriterion("minage is null");
             return (Criteria) this;
         }
 
-        public Criteria andAgeNotBetween(String value1, String value2) {
-            addCriterion("age not between", value1, value2, "age");
+        public Criteria andMinageIsNotNull() {
+            addCriterion("minage is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andMinageEqualTo(Integer value) {
+            addCriterion("minage =", value, "minage");
+            return (Criteria) this;
+        }
+
+        public Criteria andMinageNotEqualTo(Integer value) {
+            addCriterion("minage <>", value, "minage");
+            return (Criteria) this;
+        }
+
+        public Criteria andMinageGreaterThan(Integer value) {
+            addCriterion("minage >", value, "minage");
+            return (Criteria) this;
+        }
+
+        public Criteria andMinageGreaterThanOrEqualTo(Integer value) {
+            addCriterion("minage >=", value, "minage");
+            return (Criteria) this;
+        }
+
+        public Criteria andMinageLessThan(Integer value) {
+            addCriterion("minage <", value, "minage");
+            return (Criteria) this;
+        }
+
+        public Criteria andMinageLessThanOrEqualTo(Integer value) {
+            addCriterion("minage <=", value, "minage");
+            return (Criteria) this;
+        }
+
+        public Criteria andMinageIn(List<Integer> values) {
+            addCriterion("minage in", values, "minage");
+            return (Criteria) this;
+        }
+
+        public Criteria andMinageNotIn(List<Integer> values) {
+            addCriterion("minage not in", values, "minage");
+            return (Criteria) this;
+        }
+
+        public Criteria andMinageBetween(Integer value1, Integer value2) {
+            addCriterion("minage between", value1, value2, "minage");
+            return (Criteria) this;
+        }
+
+        public Criteria andMinageNotBetween(Integer value1, Integer value2) {
+            addCriterion("minage not between", value1, value2, "minage");
             return (Criteria) this;
         }
 
@@ -788,6 +832,126 @@ public class SetMealExample implements Serializable {
 
         public Criteria andImgNotBetween(String value1, String value2) {
             addCriterion("img not between", value1, value2, "img");
+            return (Criteria) this;
+        }
+
+        public Criteria andCreateTimeIsNull() {
+            addCriterion("create_time is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andCreateTimeIsNotNull() {
+            addCriterion("create_time is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andCreateTimeEqualTo(Date value) {
+            addCriterion("create_time =", value, "createTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andCreateTimeNotEqualTo(Date value) {
+            addCriterion("create_time <>", value, "createTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andCreateTimeGreaterThan(Date value) {
+            addCriterion("create_time >", value, "createTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andCreateTimeGreaterThanOrEqualTo(Date value) {
+            addCriterion("create_time >=", value, "createTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andCreateTimeLessThan(Date value) {
+            addCriterion("create_time <", value, "createTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andCreateTimeLessThanOrEqualTo(Date value) {
+            addCriterion("create_time <=", value, "createTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andCreateTimeIn(List<Date> values) {
+            addCriterion("create_time in", values, "createTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andCreateTimeNotIn(List<Date> values) {
+            addCriterion("create_time not in", values, "createTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andCreateTimeBetween(Date value1, Date value2) {
+            addCriterion("create_time between", value1, value2, "createTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andCreateTimeNotBetween(Date value1, Date value2) {
+            addCriterion("create_time not between", value1, value2, "createTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andUpdateTineIsNull() {
+            addCriterion("update_tine is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andUpdateTineIsNotNull() {
+            addCriterion("update_tine is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andUpdateTineEqualTo(Date value) {
+            addCriterion("update_tine =", value, "updateTine");
+            return (Criteria) this;
+        }
+
+        public Criteria andUpdateTineNotEqualTo(Date value) {
+            addCriterion("update_tine <>", value, "updateTine");
+            return (Criteria) this;
+        }
+
+        public Criteria andUpdateTineGreaterThan(Date value) {
+            addCriterion("update_tine >", value, "updateTine");
+            return (Criteria) this;
+        }
+
+        public Criteria andUpdateTineGreaterThanOrEqualTo(Date value) {
+            addCriterion("update_tine >=", value, "updateTine");
+            return (Criteria) this;
+        }
+
+        public Criteria andUpdateTineLessThan(Date value) {
+            addCriterion("update_tine <", value, "updateTine");
+            return (Criteria) this;
+        }
+
+        public Criteria andUpdateTineLessThanOrEqualTo(Date value) {
+            addCriterion("update_tine <=", value, "updateTine");
+            return (Criteria) this;
+        }
+
+        public Criteria andUpdateTineIn(List<Date> values) {
+            addCriterion("update_tine in", values, "updateTine");
+            return (Criteria) this;
+        }
+
+        public Criteria andUpdateTineNotIn(List<Date> values) {
+            addCriterion("update_tine not in", values, "updateTine");
+            return (Criteria) this;
+        }
+
+        public Criteria andUpdateTineBetween(Date value1, Date value2) {
+            addCriterion("update_tine between", value1, value2, "updateTine");
+            return (Criteria) this;
+        }
+
+        public Criteria andUpdateTineNotBetween(Date value1, Date value2) {
+            addCriterion("update_tine not between", value1, value2, "updateTine");
             return (Criteria) this;
         }
     }

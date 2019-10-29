@@ -1,17 +1,10 @@
 package com.health.bean;
 
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-/**
- * 会员体检Example类
- */
-public class MemberExaminationExample implements Serializable {
-
-    private static final long serialVersionUID = 8516244415949079646L;
-
+public class MemberExaminationExample {
     protected String orderByClause;
 
     protected boolean distinct;
@@ -172,63 +165,123 @@ public class MemberExaminationExample implements Serializable {
             return (Criteria) this;
         }
 
-        public Criteria andMemberIdIsNull() {
-            addCriterion("member_id is null");
+        public Criteria andTSetmealIdIsNull() {
+            addCriterion("t_setmeal_id is null");
             return (Criteria) this;
         }
 
-        public Criteria andMemberIdIsNotNull() {
-            addCriterion("member_id is not null");
+        public Criteria andTSetmealIdIsNotNull() {
+            addCriterion("t_setmeal_id is not null");
             return (Criteria) this;
         }
 
-        public Criteria andMemberIdEqualTo(Integer value) {
-            addCriterion("member_id =", value, "memberId");
+        public Criteria andTSetmealIdEqualTo(Integer value) {
+            addCriterion("t_setmeal_id =", value, "tSetmealId");
             return (Criteria) this;
         }
 
-        public Criteria andMemberIdNotEqualTo(Integer value) {
-            addCriterion("member_id <>", value, "memberId");
+        public Criteria andTSetmealIdNotEqualTo(Integer value) {
+            addCriterion("t_setmeal_id <>", value, "tSetmealId");
             return (Criteria) this;
         }
 
-        public Criteria andMemberIdGreaterThan(Integer value) {
-            addCriterion("member_id >", value, "memberId");
+        public Criteria andTSetmealIdGreaterThan(Integer value) {
+            addCriterion("t_setmeal_id >", value, "tSetmealId");
             return (Criteria) this;
         }
 
-        public Criteria andMemberIdGreaterThanOrEqualTo(Integer value) {
-            addCriterion("member_id >=", value, "memberId");
+        public Criteria andTSetmealIdGreaterThanOrEqualTo(Integer value) {
+            addCriterion("t_setmeal_id >=", value, "tSetmealId");
             return (Criteria) this;
         }
 
-        public Criteria andMemberIdLessThan(Integer value) {
-            addCriterion("member_id <", value, "memberId");
+        public Criteria andTSetmealIdLessThan(Integer value) {
+            addCriterion("t_setmeal_id <", value, "tSetmealId");
             return (Criteria) this;
         }
 
-        public Criteria andMemberIdLessThanOrEqualTo(Integer value) {
-            addCriterion("member_id <=", value, "memberId");
+        public Criteria andTSetmealIdLessThanOrEqualTo(Integer value) {
+            addCriterion("t_setmeal_id <=", value, "tSetmealId");
             return (Criteria) this;
         }
 
-        public Criteria andMemberIdIn(List<Integer> values) {
-            addCriterion("member_id in", values, "memberId");
+        public Criteria andTSetmealIdIn(List<Integer> values) {
+            addCriterion("t_setmeal_id in", values, "tSetmealId");
             return (Criteria) this;
         }
 
-        public Criteria andMemberIdNotIn(List<Integer> values) {
-            addCriterion("member_id not in", values, "memberId");
+        public Criteria andTSetmealIdNotIn(List<Integer> values) {
+            addCriterion("t_setmeal_id not in", values, "tSetmealId");
             return (Criteria) this;
         }
 
-        public Criteria andMemberIdBetween(Integer value1, Integer value2) {
-            addCriterion("member_id between", value1, value2, "memberId");
+        public Criteria andTSetmealIdBetween(Integer value1, Integer value2) {
+            addCriterion("t_setmeal_id between", value1, value2, "tSetmealId");
             return (Criteria) this;
         }
 
-        public Criteria andMemberIdNotBetween(Integer value1, Integer value2) {
-            addCriterion("member_id not between", value1, value2, "memberId");
+        public Criteria andTSetmealIdNotBetween(Integer value1, Integer value2) {
+            addCriterion("t_setmeal_id not between", value1, value2, "tSetmealId");
+            return (Criteria) this;
+        }
+
+        public Criteria andTMemberIdIsNull() {
+            addCriterion("t_member_id is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andTMemberIdIsNotNull() {
+            addCriterion("t_member_id is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andTMemberIdEqualTo(Integer value) {
+            addCriterion("t_member_id =", value, "tMemberId");
+            return (Criteria) this;
+        }
+
+        public Criteria andTMemberIdNotEqualTo(Integer value) {
+            addCriterion("t_member_id <>", value, "tMemberId");
+            return (Criteria) this;
+        }
+
+        public Criteria andTMemberIdGreaterThan(Integer value) {
+            addCriterion("t_member_id >", value, "tMemberId");
+            return (Criteria) this;
+        }
+
+        public Criteria andTMemberIdGreaterThanOrEqualTo(Integer value) {
+            addCriterion("t_member_id >=", value, "tMemberId");
+            return (Criteria) this;
+        }
+
+        public Criteria andTMemberIdLessThan(Integer value) {
+            addCriterion("t_member_id <", value, "tMemberId");
+            return (Criteria) this;
+        }
+
+        public Criteria andTMemberIdLessThanOrEqualTo(Integer value) {
+            addCriterion("t_member_id <=", value, "tMemberId");
+            return (Criteria) this;
+        }
+
+        public Criteria andTMemberIdIn(List<Integer> values) {
+            addCriterion("t_member_id in", values, "tMemberId");
+            return (Criteria) this;
+        }
+
+        public Criteria andTMemberIdNotIn(List<Integer> values) {
+            addCriterion("t_member_id not in", values, "tMemberId");
+            return (Criteria) this;
+        }
+
+        public Criteria andTMemberIdBetween(Integer value1, Integer value2) {
+            addCriterion("t_member_id between", value1, value2, "tMemberId");
+            return (Criteria) this;
+        }
+
+        public Criteria andTMemberIdNotBetween(Integer value1, Integer value2) {
+            addCriterion("t_member_id not between", value1, value2, "tMemberId");
             return (Criteria) this;
         }
 
@@ -292,123 +345,183 @@ public class MemberExaminationExample implements Serializable {
             return (Criteria) this;
         }
 
-        public Criteria andSetmealIdIsNull() {
-            addCriterion("setmeal_id is null");
+        public Criteria andReportStatusIsNull() {
+            addCriterion("report_status is null");
             return (Criteria) this;
         }
 
-        public Criteria andSetmealIdIsNotNull() {
-            addCriterion("setmeal_id is not null");
+        public Criteria andReportStatusIsNotNull() {
+            addCriterion("report_status is not null");
             return (Criteria) this;
         }
 
-        public Criteria andSetmealIdEqualTo(Integer value) {
-            addCriterion("setmeal_id =", value, "setmealId");
+        public Criteria andReportStatusEqualTo(Integer value) {
+            addCriterion("report_status =", value, "reportStatus");
             return (Criteria) this;
         }
 
-        public Criteria andSetmealIdNotEqualTo(Integer value) {
-            addCriterion("setmeal_id <>", value, "setmealId");
+        public Criteria andReportStatusNotEqualTo(Integer value) {
+            addCriterion("report_status <>", value, "reportStatus");
             return (Criteria) this;
         }
 
-        public Criteria andSetmealIdGreaterThan(Integer value) {
-            addCriterion("setmeal_id >", value, "setmealId");
+        public Criteria andReportStatusGreaterThan(Integer value) {
+            addCriterion("report_status >", value, "reportStatus");
             return (Criteria) this;
         }
 
-        public Criteria andSetmealIdGreaterThanOrEqualTo(Integer value) {
-            addCriterion("setmeal_id >=", value, "setmealId");
+        public Criteria andReportStatusGreaterThanOrEqualTo(Integer value) {
+            addCriterion("report_status >=", value, "reportStatus");
             return (Criteria) this;
         }
 
-        public Criteria andSetmealIdLessThan(Integer value) {
-            addCriterion("setmeal_id <", value, "setmealId");
+        public Criteria andReportStatusLessThan(Integer value) {
+            addCriterion("report_status <", value, "reportStatus");
             return (Criteria) this;
         }
 
-        public Criteria andSetmealIdLessThanOrEqualTo(Integer value) {
-            addCriterion("setmeal_id <=", value, "setmealId");
+        public Criteria andReportStatusLessThanOrEqualTo(Integer value) {
+            addCriterion("report_status <=", value, "reportStatus");
             return (Criteria) this;
         }
 
-        public Criteria andSetmealIdIn(List<Integer> values) {
-            addCriterion("setmeal_id in", values, "setmealId");
+        public Criteria andReportStatusIn(List<Integer> values) {
+            addCriterion("report_status in", values, "reportStatus");
             return (Criteria) this;
         }
 
-        public Criteria andSetmealIdNotIn(List<Integer> values) {
-            addCriterion("setmeal_id not in", values, "setmealId");
+        public Criteria andReportStatusNotIn(List<Integer> values) {
+            addCriterion("report_status not in", values, "reportStatus");
             return (Criteria) this;
         }
 
-        public Criteria andSetmealIdBetween(Integer value1, Integer value2) {
-            addCriterion("setmeal_id between", value1, value2, "setmealId");
+        public Criteria andReportStatusBetween(Integer value1, Integer value2) {
+            addCriterion("report_status between", value1, value2, "reportStatus");
             return (Criteria) this;
         }
 
-        public Criteria andSetmealIdNotBetween(Integer value1, Integer value2) {
-            addCriterion("setmeal_id not between", value1, value2, "setmealId");
+        public Criteria andReportStatusNotBetween(Integer value1, Integer value2) {
+            addCriterion("report_status not between", value1, value2, "reportStatus");
             return (Criteria) this;
         }
 
-        public Criteria andReportStateIsNull() {
-            addCriterion("report_state is null");
+        public Criteria andCreateTimeIsNull() {
+            addCriterion("create_time is null");
             return (Criteria) this;
         }
 
-        public Criteria andReportStateIsNotNull() {
-            addCriterion("report_state is not null");
+        public Criteria andCreateTimeIsNotNull() {
+            addCriterion("create_time is not null");
             return (Criteria) this;
         }
 
-        public Criteria andReportStateEqualTo(Integer value) {
-            addCriterion("report_state =", value, "reportState");
+        public Criteria andCreateTimeEqualTo(Date value) {
+            addCriterion("create_time =", value, "createTime");
             return (Criteria) this;
         }
 
-        public Criteria andReportStateNotEqualTo(Integer value) {
-            addCriterion("report_state <>", value, "reportState");
+        public Criteria andCreateTimeNotEqualTo(Date value) {
+            addCriterion("create_time <>", value, "createTime");
             return (Criteria) this;
         }
 
-        public Criteria andReportStateGreaterThan(Integer value) {
-            addCriterion("report_state >", value, "reportState");
+        public Criteria andCreateTimeGreaterThan(Date value) {
+            addCriterion("create_time >", value, "createTime");
             return (Criteria) this;
         }
 
-        public Criteria andReportStateGreaterThanOrEqualTo(Integer value) {
-            addCriterion("report_state >=", value, "reportState");
+        public Criteria andCreateTimeGreaterThanOrEqualTo(Date value) {
+            addCriterion("create_time >=", value, "createTime");
             return (Criteria) this;
         }
 
-        public Criteria andReportStateLessThan(Integer value) {
-            addCriterion("report_state <", value, "reportState");
+        public Criteria andCreateTimeLessThan(Date value) {
+            addCriterion("create_time <", value, "createTime");
             return (Criteria) this;
         }
 
-        public Criteria andReportStateLessThanOrEqualTo(Integer value) {
-            addCriterion("report_state <=", value, "reportState");
+        public Criteria andCreateTimeLessThanOrEqualTo(Date value) {
+            addCriterion("create_time <=", value, "createTime");
             return (Criteria) this;
         }
 
-        public Criteria andReportStateIn(List<Integer> values) {
-            addCriterion("report_state in", values, "reportState");
+        public Criteria andCreateTimeIn(List<Date> values) {
+            addCriterion("create_time in", values, "createTime");
             return (Criteria) this;
         }
 
-        public Criteria andReportStateNotIn(List<Integer> values) {
-            addCriterion("report_state not in", values, "reportState");
+        public Criteria andCreateTimeNotIn(List<Date> values) {
+            addCriterion("create_time not in", values, "createTime");
             return (Criteria) this;
         }
 
-        public Criteria andReportStateBetween(Integer value1, Integer value2) {
-            addCriterion("report_state between", value1, value2, "reportState");
+        public Criteria andCreateTimeBetween(Date value1, Date value2) {
+            addCriterion("create_time between", value1, value2, "createTime");
             return (Criteria) this;
         }
 
-        public Criteria andReportStateNotBetween(Integer value1, Integer value2) {
-            addCriterion("report_state not between", value1, value2, "reportState");
+        public Criteria andCreateTimeNotBetween(Date value1, Date value2) {
+            addCriterion("create_time not between", value1, value2, "createTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andUpdateTimeIsNull() {
+            addCriterion("update_time is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andUpdateTimeIsNotNull() {
+            addCriterion("update_time is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andUpdateTimeEqualTo(Date value) {
+            addCriterion("update_time =", value, "updateTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andUpdateTimeNotEqualTo(Date value) {
+            addCriterion("update_time <>", value, "updateTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andUpdateTimeGreaterThan(Date value) {
+            addCriterion("update_time >", value, "updateTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andUpdateTimeGreaterThanOrEqualTo(Date value) {
+            addCriterion("update_time >=", value, "updateTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andUpdateTimeLessThan(Date value) {
+            addCriterion("update_time <", value, "updateTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andUpdateTimeLessThanOrEqualTo(Date value) {
+            addCriterion("update_time <=", value, "updateTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andUpdateTimeIn(List<Date> values) {
+            addCriterion("update_time in", values, "updateTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andUpdateTimeNotIn(List<Date> values) {
+            addCriterion("update_time not in", values, "updateTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andUpdateTimeBetween(Date value1, Date value2) {
+            addCriterion("update_time between", value1, value2, "updateTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andUpdateTimeNotBetween(Date value1, Date value2) {
+            addCriterion("update_time not between", value1, value2, "updateTime");
             return (Criteria) this;
         }
     }

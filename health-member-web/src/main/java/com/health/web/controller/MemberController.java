@@ -4,11 +4,12 @@ import com.health.entity.PageResult;
 import com.health.entity.QueryPageBean;
 import com.health.entity.Result;
 import com.health.service.MemberService;
-import com.health.vo.MemberAddVO;
 import com.health.vo.MemberVO;
+import com.health.vo.MemberQueryVO;
 import org.apache.dubbo.config.annotation.Reference;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.util.ObjectUtils;
 import org.springframework.web.bind.annotation.*;
 
 /**
@@ -21,7 +22,6 @@ public class MemberController {
     @Reference(check = false)
     private MemberService memberService;
 
-
     /**
      * 跳转到页面
      */
@@ -30,7 +30,6 @@ public class MemberController {
         return "member";
     }
 
-
     /**
      * 分页查询会员信息
      *
@@ -38,9 +37,9 @@ public class MemberController {
      */
     @GetMapping("/members")
     @ResponseBody
-    public PageResult<MemberVO> queryMemebers() {
-
-        PageResult<MemberVO> pageResult = memberService.queryMembers(1,6,null);
+    public PageResult<MemberQueryVO> queryMemebers(@RequestParam Integer currentPage,@RequestParam Integer pageSize,@RequestParam String queryString) {
+        // 获取分页查询结果
+        PageResult<MemberQueryVO> pageResult = memberService.queryMembers(currentPage,pageSize,queryString);
 
         return pageResult;
     }
@@ -52,7 +51,7 @@ public class MemberController {
      * @return
      */
     @PostMapping("/member")
-    public Result addMemberInfo(MemberAddVO memberAddVO) {
+    public Result addMemberInfo(MemberVO memberAddVO) {
         // 实例化返回结果
         Result Result = new Result();
         // 添加会员信息
@@ -117,7 +116,7 @@ public class MemberController {
      * @return
      */
     @PutMapping("/member")
-    public Result updateMemberInfo(MemberAddVO memberAddVO) {
+    public Result updateMemberInfo(MemberVO memberAddVO) {
         // 实例化返回结果
         Result Result = new Result();
 

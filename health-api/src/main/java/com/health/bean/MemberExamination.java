@@ -1,25 +1,75 @@
 package com.health.bean;
 
-import lombok.Data;
-
-import java.io.Serializable;
 import java.util.Date;
 
-/**
- * 会员体检
- */
-@Data
-public class MemberExamination implements Serializable {
-
-    private static final long serialVersionUID = 358690094208016550L;
-
+public class MemberExamination {
     private Integer id;
 
-    private Integer memberId;
+    private Integer tSetmealId;
+
+    private Integer tMemberId;
 
     private Date examDate;
 
-    private Integer setmealId;
+    private Integer reportStatus;
 
-    private Integer reportState;
+    private Date createTime;
+
+    private Date updateTime;
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public Integer gettSetmealId() {
+        return tSetmealId;
+    }
+
+    public void settSetmealId(Integer tSetmealId) {
+        this.tSetmealId = tSetmealId;
+    }
+
+    public Integer gettMemberId() {
+        return tMemberId;
+    }
+
+    public void settMemberId(Integer tMemberId) {
+        this.tMemberId = tMemberId;
+    }
+
+    public Date getExamDate() {
+        return examDate;
+    }
+
+    public void setExamDate(Date examDate) {
+        this.examDate = examDate;
+    }
+
+    public Integer getReportStatus() {
+        return reportStatus;
+    }
+
+    public void setReportStatus(Integer reportStatus) {
+        this.reportStatus = reportStatus;
+    }
+
+    public Date getCreateTime() {
+        return createTime;
+    }
+
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
+    }
+
+    public Date getUpdateTime() {
+        return updateTime;
+    }
+
+    public void setUpdateTime(Date updateTime) {
+        this.updateTime = updateTime;
+    }
 }
