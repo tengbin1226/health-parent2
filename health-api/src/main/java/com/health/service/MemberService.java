@@ -2,6 +2,7 @@ package com.health.service;
 
 import com.github.pagehelper.PageInfo;
 import com.health.bean.Member;
+import com.health.entity.PageResult;
 import com.health.vo.MemberAddVO;
 import com.health.vo.MemberVO;
 
@@ -15,7 +16,7 @@ public interface MemberService {
      *
      * @return
      */
-    PageInfo<MemberVO> queryMembers();
+    PageResult<MemberVO> queryMembers(Integer currentPage, Integer pageSize, String queryString);
 
     /**
      * 添加会员信息

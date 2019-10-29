@@ -1,7 +1,8 @@
 package com.health.web.controller;
 
-import com.github.pagehelper.PageInfo;
-import com.health.constants.ReturnMsg;
+import com.health.entity.PageResult;
+import com.health.entity.QueryPageBean;
+import com.health.entity.Result;
 import com.health.service.MemberService;
 import com.health.vo.MemberAddVO;
 import com.health.vo.MemberVO;
@@ -10,21 +11,19 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
-
 /**
  * 会员管理控制器
  */
 @Controller
-@RequestMapping("/member")
+@RequestMapping("/memberInfo")
 public class MemberController {
 
     @Reference(check = false)
     private MemberService memberService;
 
+
     /**
-     * 跳转到会员档案页面
-     * @return
+     * 跳转到页面
      */
     @GetMapping("/member")
     public String toMemberPage(){
@@ -37,11 +36,13 @@ public class MemberController {
      *
      * @return
      */
-    @PostMapping("/members")
-    public PageInfo<MemberVO> queryMemebers() {
-        PageInfo<MemberVO> memberVOPageInfo = memberService.queryMembers();
+    @GetMapping("/members")
+    @ResponseBody
+    public PageResult<MemberVO> queryMemebers() {
 
-        return memberVOPageInfo;
+        PageResult<MemberVO> pageResult = memberService.queryMembers(1,6,null);
+
+        return pageResult;
     }
 
     /**
@@ -51,21 +52,21 @@ public class MemberController {
      * @return
      */
     @PostMapping("/member")
-    public ReturnMsg addMemberInfo(MemberAddVO memberAddVO) {
+    public Result addMemberInfo(MemberAddVO memberAddVO) {
         // 实例化返回结果
-        ReturnMsg returnMsg = new ReturnMsg();
+        Result Result = new Result();
         // 添加会员信息
         Boolean flag = memberService.addMember(memberAddVO);
         if (flag) {
             // 设置属性
-            returnMsg.setMessgae("添加成功!");
-            returnMsg.setFlag(true);
+            Result.setMessage("添加成功!");
+            Result.setFlag(true);
         } else {
             // 设置属性
-            returnMsg.setMessgae("添加失败!请检查代码后重试");
-            returnMsg.setFlag(false);
+            Result.setMessage("添加失败!请检查代码后重试");
+            Result.setFlag(false);
         }
-        return returnMsg;
+        return Result;
     }
 
     /**
@@ -75,21 +76,21 @@ public class MemberController {
      * @return
      */
     @DeleteMapping("/member/{id}")
-    public ReturnMsg deleteMemberInfo(@PathVariable Integer id) {
+    public Result deleteMemberInfo(@PathVariable Integer id) {
         // 实例化返回结果
-        ReturnMsg returnMsg = new ReturnMsg();
+        Result Result = new Result();
         // 删除所有会员信息
         Boolean flag = memberService.deleteMemberById(id);
         if (flag) {
             // 设置属性
-            returnMsg.setMessgae("删除成功!");
-            returnMsg.setFlag(true);
+            Result.setMessage("删除成功!");
+            Result.setFlag(true);
         } else {
             // 设置属性
-            returnMsg.setMessgae("删除失败!请检查代码后重试");
-            returnMsg.setFlag(false);
+            Result.setMessage("删除失败!请检查代码后重试");
+            Result.setFlag(false);
         }
-        return returnMsg;
+        return Result;
     }
 
 
@@ -116,23 +117,23 @@ public class MemberController {
      * @return
      */
     @PutMapping("/member")
-    public ReturnMsg updateMemberInfo(MemberAddVO memberAddVO) {
+    public Result updateMemberInfo(MemberAddVO memberAddVO) {
         // 实例化返回结果
-        ReturnMsg returnMsg = new ReturnMsg();
+        Result Result = new Result();
 
         // 修改会员信息
         Boolean flag = memberService.updateMemberInfo(memberAddVO);
 
         if (flag) {
             // 设置属性
-            returnMsg.setMessgae("修改成功!");
-            returnMsg.setFlag(true);
+            Result.setMessage("修改成功!");
+            Result.setFlag(true);
         } else {
             // 设置属性
-            returnMsg.setMessgae("修改失败!请检查代码后重试");
-            returnMsg.setFlag(false);
+            Result.setMessage("修改失败!请检查代码后重试");
+            Result.setFlag(false);
         }
-        return returnMsg;
+        return Result;
     }
 
 }

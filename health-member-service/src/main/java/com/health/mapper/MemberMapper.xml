@@ -317,7 +317,7 @@
     </resultMap>
 
     <!-- 查询会员信息-->
-    <select id="queryMemberInfo" resultMap="MemberResultMap">
+    <select id="queryMemberInfo" resultMap="MemberResultMap" parameterType="string">
         SELECT
             tm.id,
             tm.fileNumber,
@@ -343,5 +343,10 @@
         WHERE
             tmi.health_mgr_id = th.health_mgr_id
             AND tm.id = tmi.member_id
+        <if test="value != null and value.length > 0">
+            <where>
+                and tm.NAME like #{value}
+            </where>
+        </if>
     </select>
 </mapper>

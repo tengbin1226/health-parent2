@@ -1,5 +1,6 @@
 package com.health.mapper;
 
+import com.github.pagehelper.Page;
 import com.health.bean.Member;
 import com.health.bean.MemberExample;
 import com.health.vo.MemberVO;
@@ -31,5 +32,5 @@ public interface MemberMapper {
     int updateByPrimaryKey(Member record);
 
     /* 查询会员信息*/
-    List<MemberVO> queryMemberInfo();
+    Page<MemberVO> queryMemberInfo(String queryString);
 }

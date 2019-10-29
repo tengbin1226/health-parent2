@@ -1,11 +1,14 @@
 package com.health.service;
 
+import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.health.bean.*;
+import com.health.entity.PageResult;
 import com.health.mapper.*;
 import com.health.vo.MemberAddVO;
 import com.health.vo.MemberVO;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.dubbo.config.annotation.Service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.ObjectUtils;
@@ -41,24 +44,27 @@ public class MemberServiceImpl implements MemberService {
     /**
      * 分页查询会员信息
      *
+     * @param currentPage
+     * @param pageSize
+     * @param queryString
      * @return
      */
     @Override
-    public PageInfo<MemberVO> queryMembers() {
-        //初始化分页对象
-        PageInfo<MemberVO> pageInfo = null;
+    public PageResult<MemberVO> queryMembers(Integer currentPage, Integer pageSize, String queryString) {
+        //拼接模糊查询的%
+        if(!StringUtils.isEmpty(queryString)){
+            queryString = "%" + queryString + "%";
+        }
+        //使用pageHelper插件
+        PageHelper.startPage(currentPage, pageSize);
+        //调用startPage方法后的下一个select方法会执行分页
+        Page<MemberVO> page = memberMapper.queryMemberInfo(queryString);
 
-        //创建分页帮助对象
-        PageHelper.startPage(1, 6);
+        PageResult<MemberVO> pageResult=new PageResult(page.getTotal(), page.getResult());
 
-        List<MemberVO> factories = memberMapper.queryMemberInfo();
-
-        //根据返回的查询结果集实例化分页对象
-        pageInfo = new PageInfo<>(factories);
-
-        return pageInfo;
+        //返回自定义分页查询结果
+        return pageResult;
     }
-
 
     /**
      * 添加会员信息
