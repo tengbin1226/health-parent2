@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="health-mobile" />
         <module name="health-member-service" />
+        <module name="health-order-service" />
         <module name="health-member-web" />
         <module name="health-user-web" />
         <module name="health-common" />
@@ -27,6 +28,7 @@
       <module name="health-member-service" options="-parameters" />
       <module name="health-member-web" options="-parameters" />
       <module name="health-mobile" options="-parameters" />
+      <module name="health-order-service" options="-parameters" />
       <module name="health-parent" options="-parameters" />
       <module name="health-user-service" options="-parameters" />
       <module name="health-user-web" options="-parameters" />

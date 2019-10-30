@@ -1,17 +1,22 @@
 package com.health.bean;
 
+import javax.naming.directory.SearchResult;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-public class MemberDynamicinfoExample {
+public class MemberDynamicInfoExample implements Serializable {
+
+    private static final long serialVersionUID = 7070516801500526619L;
+
     protected String orderByClause;
 
     protected boolean distinct;
 
     protected List<Criteria> oredCriteria;
 
-    public MemberDynamicinfoExample() {
+    public MemberDynamicInfoExample() {
         oredCriteria = new ArrayList<Criteria>();
     }
 
@@ -712,6 +717,126 @@ public class MemberDynamicinfoExample {
 
         public Criteria andHiplineNotBetween(Float value1, Float value2) {
             addCriterion("hipline not between", value1, value2, "hipline");
+            return (Criteria) this;
+        }
+
+        public Criteria andBmiIsNull() {
+            addCriterion("bmi is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andBmiIsNotNull() {
+            addCriterion("bmi is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andBmiEqualTo(Integer value) {
+            addCriterion("bmi =", value, "bmi");
+            return (Criteria) this;
+        }
+
+        public Criteria andBmiNotEqualTo(Integer value) {
+            addCriterion("bmi <>", value, "bmi");
+            return (Criteria) this;
+        }
+
+        public Criteria andBmiGreaterThan(Integer value) {
+            addCriterion("bmi >", value, "bmi");
+            return (Criteria) this;
+        }
+
+        public Criteria andBmiGreaterThanOrEqualTo(Integer value) {
+            addCriterion("bmi >=", value, "bmi");
+            return (Criteria) this;
+        }
+
+        public Criteria andBmiLessThan(Integer value) {
+            addCriterion("bmi <", value, "bmi");
+            return (Criteria) this;
+        }
+
+        public Criteria andBmiLessThanOrEqualTo(Integer value) {
+            addCriterion("bmi <=", value, "bmi");
+            return (Criteria) this;
+        }
+
+        public Criteria andBmiIn(List<Integer> values) {
+            addCriterion("bmi in", values, "bmi");
+            return (Criteria) this;
+        }
+
+        public Criteria andBmiNotIn(List<Integer> values) {
+            addCriterion("bmi not in", values, "bmi");
+            return (Criteria) this;
+        }
+
+        public Criteria andBmiBetween(Integer value1, Integer value2) {
+            addCriterion("bmi between", value1, value2, "bmi");
+            return (Criteria) this;
+        }
+
+        public Criteria andBmiNotBetween(Integer value1, Integer value2) {
+            addCriterion("bmi not between", value1, value2, "bmi");
+            return (Criteria) this;
+        }
+
+        public Criteria andSpoIsNull() {
+            addCriterion("spo is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andSpoIsNotNull() {
+            addCriterion("spo is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andSpoEqualTo(Float value) {
+            addCriterion("spo =", value, "spo");
+            return (Criteria) this;
+        }
+
+        public Criteria andSpoNotEqualTo(Float value) {
+            addCriterion("spo <>", value, "spo");
+            return (Criteria) this;
+        }
+
+        public Criteria andSpoGreaterThan(Float value) {
+            addCriterion("spo >", value, "spo");
+            return (Criteria) this;
+        }
+
+        public Criteria andSpoGreaterThanOrEqualTo(Float value) {
+            addCriterion("spo >=", value, "spo");
+            return (Criteria) this;
+        }
+
+        public Criteria andSpoLessThan(Float value) {
+            addCriterion("spo <", value, "spo");
+            return (Criteria) this;
+        }
+
+        public Criteria andSpoLessThanOrEqualTo(Float value) {
+            addCriterion("spo <=", value, "spo");
+            return (Criteria) this;
+        }
+
+        public Criteria andSpoIn(List<Float> values) {
+            addCriterion("spo in", values, "spo");
+            return (Criteria) this;
+        }
+
+        public Criteria andSpoNotIn(List<Float> values) {
+            addCriterion("spo not in", values, "spo");
+            return (Criteria) this;
+        }
+
+        public Criteria andSpoBetween(Float value1, Float value2) {
+            addCriterion("spo between", value1, value2, "spo");
+            return (Criteria) this;
+        }
+
+        public Criteria andSpoNotBetween(Float value1, Float value2) {
+            addCriterion("spo not between", value1, value2, "spo");
             return (Criteria) this;
         }
 

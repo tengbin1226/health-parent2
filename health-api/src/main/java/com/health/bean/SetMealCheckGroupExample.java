@@ -1,10 +1,17 @@
 package com.health.bean;
 
+import lombok.Data;
+
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-public class SetMealCheckGroupExample {
+@Data
+public class SetMealCheckGroupExample implements Serializable {
+
+    private static final long serialVersionUID = 3002759421588314161L;
+
     protected String orderByClause;
 
     protected boolean distinct;

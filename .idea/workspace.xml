@@ -1,8 +1,142 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a0f75aff-8077-4b6c-bea1-18fd3c78ad7a" name="Default Changelist" comment="数据库表以及领域对象基本完善,完成会员管理的会员档案显示功能">
+    <list default="true" id="a0f75aff-8077-4b6c-bea1-18fd3c78ad7a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/MemberDynamicInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/health-api/src/main/java/com/health/service/OrderService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/health-api/src/main/java/com/health/vo/OrderQueryVO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/health-common/src/main/java/com/health/constant/MessageConstant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/health-common/src/main/java/com/health/constant/RedisConstant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/health-common/src/main/java/com/health/constant/RedisMessageConstant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/health-common/src/main/java/com/health/utils/DateUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/health-common/src/main/java/com/health/utils/MD5Utils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/health-common/src/main/java/com/health/utils/SMSUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/health-common/src/main/java/com/health/utils/ValidateCodeUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/health-member-service/src/main/java/com/health/mapper/MemberDynamicInfoMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/health-member-service/src/main/java/com/health/mapper/MemberDynamicInfoMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/health-order-service/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/health-order-service/.mvn/wrapper/MavenWrapperDownloader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/health-order-service/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/health-order-service/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/health-order-service/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/health-order-service/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/health-order-service/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/health-order-service/src/main/java/com/health/HealthOrderServiceApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/health-order-service/src/main/java/com/health/mapper/OrderMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/health-order-service/src/main/java/com/health/mapper/OrderSettingMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/health-order-service/src/main/java/com/health/mapper/OrderSettingMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/health-order-service/src/main/java/com/health/service/OrderServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/health-order-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7f30284c-e9ca-4ed1-9296-236cb10b64d0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/7f30284c-e9ca-4ed1-9296-236cb10b64d0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/BodyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/BodyTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/BodyTestExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/BodyTestExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/BodyType.java" beforeDir="false" afterPath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/BodyType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/BodyTypeExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/BodyTypeExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/CheckGroup.java" beforeDir="false" afterPath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/CheckGroup.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/CheckGroupCheckiTem.java" beforeDir="false" afterPath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/CheckGroupCheckiTem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/CheckGroupCheckiTemExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/CheckGroupCheckiTemExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/CheckGroupCheckiTemKey.java" beforeDir="false" afterPath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/CheckGroupCheckiTemKey.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/CheckGroupExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/CheckGroupExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/CheckiTem.java" beforeDir="false" afterPath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/CheckiTem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/CheckiTemExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/CheckiTemExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/ClinicDepartment.java" beforeDir="false" afterPath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/ClinicDepartment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/ClinicDepartmentExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/ClinicDepartmentExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/DiseaseLibrary.java" beforeDir="false" afterPath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/DiseaseLibrary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/DiseaseLibraryExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/DiseaseLibraryExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/DiseaseLibraryKey.java" beforeDir="false" afterPath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/DiseaseLibraryKey.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/Evaluate.java" beforeDir="false" afterPath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/Evaluate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/EvaluateExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/EvaluateExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/HealthMgr.java" beforeDir="false" afterPath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/HealthMgr.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/HealthMgrExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/HealthMgrExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/HealthPlan.java" beforeDir="false" afterPath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/HealthPlan.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/HealthPlanExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/HealthPlanExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/HealthPlanType.java" beforeDir="false" afterPath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/HealthPlanType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/HealthPlanTypeExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/HealthPlanTypeExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/InterposeClassify.java" beforeDir="false" afterPath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/InterposeClassify.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/InterposeClassifyExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/InterposeClassifyExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/InterposeFollowupVisit.java" beforeDir="false" afterPath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/InterposeFollowupVisit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/InterposeFollowupVisitExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/InterposeFollowupVisitExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/InterposeFood.java" beforeDir="false" afterPath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/InterposeFood.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/InterposeFoodExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/InterposeFoodExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/InterposeIndicator.java" beforeDir="false" afterPath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/InterposeIndicator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/InterposeIndicatorExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/InterposeIndicatorExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/InterposePlan.java" beforeDir="false" afterPath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/InterposePlan.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/InterposePlanExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/InterposePlanExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/InterposeScheme.java" beforeDir="false" afterPath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/InterposeScheme.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/InterposeSchemeExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/InterposeSchemeExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/InterposeSprot.java" beforeDir="false" afterPath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/InterposeSprot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/InterposeSprotExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/InterposeSprotExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/Meals.java" beforeDir="false" afterPath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/Meals.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/MealsExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/MealsExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/MealsType.java" beforeDir="false" afterPath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/MealsType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/MealsTypeExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/MealsTypeExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/Member.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/MemberDynamicinfo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/MemberDynamicinfoExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/MemberDynamicInfoExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/MemberExamination.java" beforeDir="false" afterPath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/MemberExamination.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/MemberExaminationExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/MemberExaminationExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/MemberExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/MemberExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/MemberInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/MemberInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/MemberInfoExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/MemberInfoExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/MemberMedicalHistory.java" beforeDir="false" afterPath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/MemberMedicalHistory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/MemberMedicalHistoryExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/MemberMedicalHistoryExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/MentalityResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/MentalityResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/MentalityResultExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/MentalityResultExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/MentalityTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/MentalityTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/MentalityTestExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/MentalityTestExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/MenuExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/MenuExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/MenuPermission.java" beforeDir="false" afterPath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/MenuPermission.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/MenuPermissionExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/MenuPermissionExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/MenuPermissionKey.java" beforeDir="false" afterPath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/MenuPermissionKey.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/OrderExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/OrderExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/OrderSetting.java" beforeDir="false" afterPath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/OrderSetting.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/OrderSettingExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/OrderSettingExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/Permission.java" beforeDir="false" afterPath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/Permission.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/PermissionExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/PermissionExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/QuestionBank.java" beforeDir="false" afterPath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/QuestionBank.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/QuestionBankExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/QuestionBankExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/Questionnaire.java" beforeDir="false" afterPath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/Questionnaire.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/QuestionnaireExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/QuestionnaireExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/Role.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/RoleExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/RoleExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/RoleMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/RoleMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/RoleMenuExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/RoleMenuExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/RoleMenuKey.java" beforeDir="false" afterPath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/RoleMenuKey.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/SetMeal.java" beforeDir="false" afterPath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/SetMeal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/SetMealCheckGroup.java" beforeDir="false" afterPath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/SetMealCheckGroup.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/SetMealCheckGroupExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/SetMealCheckGroupExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/SetMealCheckGroupKey.java" beforeDir="false" afterPath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/SetMealCheckGroupKey.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/SetMealExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/SetMealExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/SportsItemLibrary.java" beforeDir="false" afterPath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/SportsItemLibrary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/SportsItemLibraryExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/SportsItemLibraryExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/UserExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/UserExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/UserRole.java" beforeDir="false" afterPath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/UserRole.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/UserRoleExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/UserRoleExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/UserRoleKey.java" beforeDir="false" afterPath="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/UserRoleKey.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-api/src/main/java/com/health/service/MemberService.java" beforeDir="false" afterPath="$PROJECT_DIR$/health-api/src/main/java/com/health/service/MemberService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-api/src/main/java/com/health/vo/MemberQueryVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/health-api/src/main/java/com/health/vo/MemberQueryVO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-api/src/main/java/com/health/vo/MemberVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/health-api/src/main/java/com/health/vo/MemberVO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/health-common/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-common/src/main/java/com/health/context/Constants.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-common/src/main/java/com/health/context/SystemContext.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-service/src/main/java/com/health/mapper/MemberDynamicinfoMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-service/src/main/java/com/health/mapper/MemberDynamicinfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/health-order-service/src/main/java/com/health/mapper/OrderMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-service/src/main/java/com/health/mapper/MemberInfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/health-member-service/src/main/java/com/health/mapper/MemberInfoMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-service/src/main/java/com/health/mapper/MemberMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/health-member-service/src/main/java/com/health/mapper/MemberMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-service/src/main/java/com/health/mapper/MemberMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/health-member-service/src/main/java/com/health/mapper/MemberMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-service/src/main/java/com/health/service/MemberServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/health-member-service/src/main/java/com/health/service/MemberServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/health-member-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/java/com/health/web/controller/MemberController.java" beforeDir="false" afterPath="$PROJECT_DIR$/health-member-web/src/main/java/com/health/web/controller/MemberController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/health-member-web/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/templates/member.html" beforeDir="false" afterPath="$PROJECT_DIR$/health-member-web/src/main/resources/templates/member.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -14,6 +148,7 @@
     <ignored path="$PROJECT_DIR$/health-user-web/target/" />
     <ignored path="$PROJECT_DIR$/health-user-service/target/" />
     <ignored path="$PROJECT_DIR$/health-healthmanager-service/target/" />
+    <ignored path="$PROJECT_DIR$/health-order-service/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,6 +176,12 @@
         <item name="health@localhost" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
       </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="health@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="health: schema" type="76f4a085:MysqlImplModel$Schema" />
+      </path>
     </expand>
     <select />
   </component>
@@ -48,11 +189,12 @@
     <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="FxmlFile" />
         <option value="Interface" />
         <option value="Class" />
       </list>
@@ -63,10 +205,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>u237</find>
-      <find>login</find>
-      <find>登录页</find>
-      <find>loging</find>
       <find>pagehelp</find>
       <find>FactoryVO</find>
       <find>health-user-web</find>
@@ -93,6 +231,10 @@
       <find>MemberMedicalhistory</find>
       <find>andMemberIdEqualTo(id)</find>
       <find>andMemberIdEqualTo(member.getId());</find>
+      <find>CELL_TYPE_NUMERIC</find>
+      <find>formData</find>
+      <find>memberDynamicinfo</find>
+      <find>MemberDynamicinfo</find>
     </findStrings>
     <replaceStrings>
       <replace>health-user-service</replace>
@@ -120,6 +262,9 @@
       <replace>MemberMedicalHistory</replace>
       <replace>andTMemberIdEqualTo(id)</replace>
       <replace>andTMemberIdEqualTo(member.getId());</replace>
+      <replace>memberDynamicInfo</replace>
+      <replace>memberDynamicInfoMapper</replace>
+      <replace>MemberDynamicInfo</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -128,57 +273,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/MenuPermissionExample.java" />
+        <option value="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/OrderExample.java" />
+        <option value="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/OrderSetting.java" />
+        <option value="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/OrderSettingExample.java" />
+        <option value="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/Permission.java" />
+        <option value="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/PermissionExample.java" />
+        <option value="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/QuestionBank.java" />
+        <option value="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/QuestionBankExample.java" />
+        <option value="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/Questionnaire.java" />
+        <option value="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/QuestionnaireExample.java" />
+        <option value="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/Role.java" />
+        <option value="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/RoleExample.java" />
+        <option value="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/RoleMenu.java" />
+        <option value="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/RoleMenuExample.java" />
+        <option value="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/RoleMenuKey.java" />
+        <option value="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/SetMeal.java" />
+        <option value="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/SetMealCheckGroup.java" />
+        <option value="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/SetMealCheckGroupExample.java" />
+        <option value="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/SetMealCheckGroupKey.java" />
+        <option value="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/SetMealExample.java" />
+        <option value="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/SportsItemLibrary.java" />
+        <option value="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/SportsItemLibraryExample.java" />
+        <option value="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/User.java" />
+        <option value="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/UserExample.java" />
+        <option value="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/UserRole.java" />
         <option value="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/UserRoleExample.java" />
         <option value="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/UserRoleKey.java" />
-        <option value="$PROJECT_DIR$/health-api/src/main/java/com/health/service/UserService.java" />
-        <option value="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/HealthMgrExample.java" />
-        <option value="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/Menu.java" />
-        <option value="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/MenuExample.java" />
-        <option value="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/HealthMgr.java" />
-        <option value="$PROJECT_DIR$/health-member-service/src/main/java/com/health/mapper/MemberDynamicinfoMapper.xml" />
-        <option value="$PROJECT_DIR$/health-member-service/src/main/java/com/health/mapper/MemberExaminationMapper.xml" />
-        <option value="$PROJECT_DIR$/health-member-service/src/main/java/com/health/mapper/MemberInfoMapper.xml" />
-        <option value="$PROJECT_DIR$/health-member-service/src/main/java/com/health/mapper/MemberExaminationMapper.java" />
-        <option value="$PROJECT_DIR$/health-member-service/src/main/java/com/health/mapper/MemberDynamicinfoMapper.java" />
-        <option value="$PROJECT_DIR$/health-common/src/main/java/com/health/context/Constants.java" />
-        <option value="$PROJECT_DIR$/health-common/src/main/java/com/health/context/SystemContext.java" />
-        <option value="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/MemberExample.java" />
-        <option value="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/MemberInfoExample.java" />
-        <option value="$PROJECT_DIR$/health-member-service/src/main/java/com/health/mapper/MemberInfoMapper.java" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/7f30284c-e9ca-4ed1-9296-236cb10b64d0/console.sql" />
-        <option value="$PROJECT_DIR$/health-common/src/main/java/com/health/vo/MemberVO.java" />
-        <option value="$PROJECT_DIR$/health-user-service/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/health-user-web/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/health-healthmanager-service/pom.xml" />
-        <option value="$PROJECT_DIR$/health-member-service/src/main/java/com/health/mapper/HealthMgrMapper.xml" />
-        <option value="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/MemberInfo.java" />
-        <option value="$PROJECT_DIR$/health-api/src/main/java/com/health/vo/MemberAddVO.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/health-common/src/main/java/com/health/constants/ReturnMsg.java" />
-        <option value="$PROJECT_DIR$/health-user-web/src/main/resources/templates/login.html" />
-        <option value="$PROJECT_DIR$/health-api/src/main/java/com/health/entity/QueryPageBean.java" />
-        <option value="$PROJECT_DIR$/health-api/src/main/java/com/health/entity/Result.java" />
-        <option value="$PROJECT_DIR$/health-api/pom.xml" />
-        <option value="$PROJECT_DIR$/health-common/pom.xml" />
-        <option value="$PROJECT_DIR$/health-member-web/pom.xml" />
-        <option value="$PROJECT_DIR$/health-member-service/pom.xml" />
-        <option value="$PROJECT_DIR$/health-user-web/pom.xml" />
-        <option value="$PROJECT_DIR$/health-user-service/pom.xml" />
-        <option value="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/Member.java" />
-        <option value="$PROJECT_DIR$/health-api/src/main/java/com/health/service/MemberService.java" />
-        <option value="$PROJECT_DIR$/health-member-web/src/main/resources/static/css/style.css" />
-        <option value="$PROJECT_DIR$/health-member-web/src/main/resources/static/plugins/elementui/index.css" />
         <option value="$PROJECT_DIR$/health-member-web/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/health-api/src/main/java/com/health/entity/PageResult.java" />
-        <option value="$PROJECT_DIR$/health-member-web/src/main/java/com/health/web/controller/MemberController.java" />
-        <option value="$PROJECT_DIR$/health-member-service/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/health-member-service/src/main/java/com/health/mapper/MemberMedicalhistoryMapper.xml" />
-        <option value="$PROJECT_DIR$/health-member-service/src/main/java/com/health/mapper/MemberMapper.java" />
-        <option value="$PROJECT_DIR$/health-member-service/src/main/java/com/health/mapper/MemberMedicalhistoryMapper.java" />
-        <option value="$PROJECT_DIR$/health-member-web/src/main/resources/templates/member.html" />
-        <option value="$PROJECT_DIR$/health-api/src/main/java/com/health/vo/MemberVO.java" />
-        <option value="$PROJECT_DIR$/health-member-service/src/main/java/com/health/service/MemberServiceImpl.java" />
+        <option value="$PROJECT_DIR$/health-api/src/main/java/com/health/service/MemberService.java" />
         <option value="$PROJECT_DIR$/health-member-service/src/main/java/com/health/mapper/MemberMapper.xml" />
+        <option value="$PROJECT_DIR$/health-common/src/main/java/com/health/constant/RedisMessageConstant.java" />
+        <option value="$PROJECT_DIR$/health-common/src/main/java/com/health/utils/SMSUtils.java" />
+        <option value="$PROJECT_DIR$/health-common/src/main/java/com/health/utils/MD5Utils.java" />
+        <option value="$PROJECT_DIR$/health-common/pom.xml" />
+        <option value="$PROJECT_DIR$/health-member-web/src/main/java/com/health/web/controller/MemberController.java" />
+        <option value="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/MemberInfo.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/health-order-service/pom.xml" />
+        <option value="$PROJECT_DIR$/health-order-service/src/main/java/com/health/service.fxml" />
+        <option value="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/Order.java" />
+        <option value="$PROJECT_DIR$/health-api/src/main/java/com/health/vo/OrderQueryVO.java" />
+        <option value="$PROJECT_DIR$/health-api/src/main/java/com/health/service/OrderService.java" />
+        <option value="$PROJECT_DIR$/health-order-service/src/main/java/com/health/service/OrderServiceImpl.java" />
+        <option value="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/MemberDynamicinfo.java" />
+        <option value="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/MemberDynamicInfoExample.java" />
+        <option value="$PROJECT_DIR$/health-member-service/src/main/java/com/health/mapper/MemberDynamicInfoMapper.java" />
+        <option value="$PROJECT_DIR$/health-member-service/src/main/java/com/health/mapper/MemberDynamicInfoMapper.xml" />
+        <option value="$PROJECT_DIR$/health-member-service/src/main/java/com/health/service/MemberServiceImpl.java" />
+        <option value="$PROJECT_DIR$/health-api/src/main/java/com/health/bean/MemberDynamicInfo.java" />
+        <option value="$PROJECT_DIR$/health-api/src/main/java/com/health/vo/MemberVO.java" />
+        <option value="$PROJECT_DIR$/health-member-web/src/main/resources/templates/member.html" />
       </list>
     </option>
   </component>
@@ -229,7 +374,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -242,6 +386,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -258,7 +403,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="database.console.LAST_STATE" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/health-api/src/main/java/com/health/bean" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/health-member-service/src/main/java/com/health/mapper" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.jscs" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -281,11 +426,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Study\work space\health-parent\health-api\src\main\java\com\health\bean" />
       <recent name="D:\Study\work space\health-parent\health-member-service\src\main\java\com\health\mapper" />
-      <recent name="D:\Study\work space\health-parent\health-api\src\main\java\com\health" />
-      <recent name="D:\Study\work space\health-parent\health-member-web\src\main\resources\templates" />
-      <recent name="D:\Study\work space\health-parent\health-member-web\src\main\resources\static" />
+      <recent name="D:\Study\work space\health-parent\health-api\src\main\java\com\health\bean" />
+      <recent name="D:\Study\work space\health-parent\health-order-service\src\main\java\com\health\mapper" />
+      <recent name="D:\Study\work space\health-parent\health-common\src\main\java\com\health\utils" />
+      <recent name="D:\Study\work space\health-parent\health-common\src\main\java\com\health\constant" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -304,7 +449,7 @@
         </RuleState>
       </list>
     </option>
-    <option name="contentProportion" value="0.31669044" />
+    <option name="contentProportion" value="0.25463623" />
   </component>
   <component name="RunManager" selected="Spring Boot.HealthMemberWebApplication">
     <configuration name="HealthMemberServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
@@ -340,6 +485,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="HealthOrderServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="health-order-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.health.HealthOrderServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="HealthUserServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="health-user-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.health.HealthUserServiceApplication" />
@@ -367,6 +519,7 @@
       <item itemvalue="Spring Boot.HealthUserWebApplication" />
       <item itemvalue="Spring Boot.HealthMemberServiceApplication" />
       <item itemvalue="Spring Boot.HealthMemberWebApplication (1)" />
+      <item itemvalue="Spring Boot.HealthOrderServiceApplication" />
     </list>
   </component>
   <component name="SvnConfiguration">
@@ -400,7 +553,9 @@
       <workItem from="1572283131616" duration="6189000" />
       <workItem from="1572309259340" duration="16351000" />
       <workItem from="1572329967858" duration="11464000" />
-      <workItem from="1572344742779" duration="4734000" />
+      <workItem from="1572344742779" duration="8442000" />
+      <workItem from="1572396328544" duration="9934000" />
+      <workItem from="1572406942856" duration="4176000" />
     </task>
     <task id="LOCAL-00001" summary="健康管理系统项目">
       <created>1571971670804</created>
@@ -493,11 +648,18 @@
       <option name="project" value="LOCAL" />
       <updated>1572349098852</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="数据库表以及领域对象基本完善,完成会员管理的会员档案显示功能">
+      <created>1572349517774</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1572349517774</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="127861000" />
+    <option name="totallyTimeSpent" value="145679000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1488" height="878" extended-state="6" />
@@ -509,11 +671,11 @@
       <window_info id="UI Designer" order="4" />
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info id="Web" order="6" side_tool="true" />
-      <window_info active="true" content_ui="combo" x="531" y="59" width="411" height="746" id="Project" order="7" visible="true" weight="0.27132866" />
-      <window_info anchor="bottom" id="Messages" order="0" weight="0.32037532" />
+      <window_info active="true" content_ui="combo" x="531" y="59" width="411" height="746" id="Project" order="7" visible="true" weight="0.27062938" />
+      <window_info anchor="bottom" id="Messages" order="0" weight="0.3163539" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.32914925" />
-      <window_info anchor="bottom" id="Run" order="3" weight="0.25201073" />
+      <window_info anchor="bottom" id="Run" order="3" weight="0.6179625" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.38268158" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
@@ -525,16 +687,16 @@
       <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.50067025" side_tool="true" weight="0.38687152" />
       <window_info anchor="bottom" id="Run with VisualVM" order="13" />
       <window_info anchor="bottom" id="Java Enterprise" order="14" show_stripe_button="false" sideWeight="0.49932975" weight="0.32402235" />
-      <window_info anchor="bottom" id="Database Changes" order="15" weight="0.32960895" />
+      <window_info anchor="bottom" id="Database Changes" order="15" weight="0.32841823" />
       <window_info anchor="bottom" id="Version Control" order="16" show_stripe_button="false" />
       <window_info anchor="bottom" id="MyBatis Log" order="17" weight="0.32841823" />
       <window_info anchor="bottom" id="Debug with VisualVM" order="18" />
-      <window_info anchor="bottom" id="Run Dashboard" order="19" sideWeight="0.49932975" weight="0.3230563" />
-      <window_info anchor="bottom" id="Database Console" order="20" weight="0.41480446" />
+      <window_info anchor="bottom" id="Run Dashboard" order="19" sideWeight="0.49932975" weight="0.46782842" />
+      <window_info anchor="bottom" id="Database Console" order="20" weight="0.40348527" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" show_stripe_button="false" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="3" weight="0.2727882" />
+      <window_info anchor="right" id="Maven" order="3" weight="0.12517482" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="right" id="Database" order="6" weight="0.18041958" />
@@ -568,24 +730,6 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/health-member-web/src/main/java/com/health/web/controller/MemberController.java</url>
-          <line>41</line>
-          <properties />
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/health-member-service/src/main/java/com/health/service/MemberServiceImpl.java</url>
-          <line>59</line>
-          <properties />
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/health-member-service/src/main/java/com/health/service/MemberServiceImpl.java</url>
-          <line>66</line>
-          <properties />
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/health-api/src/main/java/com/health/entity/PageResult.java</url>
           <line>10</line>
           <properties />
@@ -599,260 +743,300 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/health-user-web/src/main/java/com/health/controller/UserController.java">
+    <entry file="file://$PROJECT_DIR$/health-api/src/main/java/com/health/bean/SetMeal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="535">
+          <caret line="36" column="28" selection-start-line="36" selection-start-column="28" selection-end-line="36" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/health-api/src/main/java/com/health/bean/SetMealCheckGroup.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="7" column="5" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/health-api/src/main/java/com/health/bean/SetMealCheckGroupExample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="9" column="5" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/health-api/src/main/java/com/health/bean/SetMealCheckGroupKey.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="6" column="5" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/health-api/src/main/java/com/health/bean/SetMealExample.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="253">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+          <caret line="14" column="31" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/health-user-web/src/main/java/com/health/controller/BackendController.java">
+    <entry file="file://$PROJECT_DIR$/health-api/src/main/java/com/health/bean/SportsItemLibraryExample.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="43" column="9" selection-start-line="43" selection-start-column="9" selection-end-line="43" selection-end-column="9" />
+        <state relative-caret-position="184">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
         </state>
       </provider>
     </entry>
-    <entry file="das://7f30284c-e9ca-4ed1-9296-236cb10b64d0/schema/health/table/t_healthmgr">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state projectRestartId="61d96ac0-a85a-4ecd-866a-23ac14dac821">
-          <filtering>
-            <filter text="" />
-          </filtering>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/health-api/src/main/java/com/health/bean/MemberInfo.java">
+    <entry file="file://$PROJECT_DIR$/health-api/src/main/java/com/health/bean/SportsItemLibrary.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="505">
-          <caret line="28" column="26" lean-forward="true" selection-start-line="28" selection-start-column="4" selection-end-line="28" selection-end-column="26" />
+        <state relative-caret-position="535">
+          <caret line="38" column="28" selection-start-line="38" selection-start-column="28" selection-end-line="38" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/health-api/src/main/java/com/health/bean/Member.java">
+    <entry file="file://$PROJECT_DIR$/health-api/src/main/java/com/health/bean/UserExample.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="33" column="1" lean-forward="true" selection-start-line="33" selection-start-column="1" selection-end-line="33" selection-end-column="1" />
+        <state relative-caret-position="184">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/health-api/src/main/java/com/health/bean/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="535">
+          <caret line="36" column="28" selection-start-line="36" selection-start-column="28" selection-end-line="36" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/health-api/src/main/java/com/health/bean/UserRoleExample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/health-api/src/main/java/com/health/bean/UserRoleKey.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="6" column="5" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/health-api/src/main/java/com/health/bean/UserRole.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="7" column="5" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/health-member-service/src/main/java/com/health/HealthMemberServiceApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="13" lean-forward="true" selection-start-line="11" selection-start-column="31" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/health-member-web/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/health-api/src/main/java/com/health/service/UserService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        <state relative-caret-position="161">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/github/pagehelper/pagehelper/5.1.10/pagehelper-5.1.10.jar!/com/github/pagehelper/Page.class">
+    <entry file="file://$PROJECT_DIR$/health-member-service/src/main/java/com/health/mapper/MemberMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="382" column="24" lean-forward="true" selection-start-line="382" selection-start-column="24" selection-end-line="382" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/health-common/src/main/java/com/health/constant/MessageConstant.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="3" column="7" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/health-common/src/main/java/com/health/constant/RedisMessageConstant.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="7" column="21" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/health-common/src/main/java/com/health/context/Constants.java" />
+    <entry file="file://$PROJECT_DIR$/health-common/src/main/java/com/health/utils/SMSUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-575">
+          <caret line="17" column="14" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/health-common/src/main/java/com/health/utils/MD5Utils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/health-common/pom.xml">
+      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="65" column="21" selection-start-line="65" selection-start-column="21" selection-end-line="65" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/poi/poi/4.1.0/poi-4.1.0-sources.jar!/org/apache/poi/ss/usermodel/Cell.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="41" column="17" selection-start-line="41" selection-start-column="17" selection-end-line="41" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/health-common/src/main/java/com/health/utils/POIUtils.java" />
+    <entry file="file://$PROJECT_DIR$/health-member-web/pom.xml">
+      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="139">
+          <caret line="29" column="34" selection-start-line="29" selection-start-column="34" selection-end-line="29" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/health-member-web/src/main/java/com/health/web/controller/MemberController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="897">
+          <caret line="52" column="7" selection-start-line="52" selection-start-column="7" selection-end-line="52" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/health-api/src/main/java/com/health/bean/MemberInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="24" column="32" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="188">
+          <caret line="26" column="36" selection-start-line="26" selection-start-column="36" selection-end-line="26" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/health-member-service/pom.xml">
+      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="18" column="38" lean-forward="true" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/health-order-service/pom.xml">
+      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="299">
-          <caret line="18" column="2" lean-forward="true" selection-start-line="18" selection-start-column="2" selection-end-line="18" selection-end-column="22" />
+          <caret line="13" column="30" lean-forward="true" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/health-member-service/src/main/java/com/health/mapper/HealthMgrMapper.java">
+    <entry file="file://$PROJECT_DIR$/health-order-service/src/main/java/com/health/service.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="10" column="45" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/health-api/src/main/java/com/health/bean/RolePermissionExample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/health-api/src/main/java/com/health/bean/RolePermissionKey.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/health-order-service/src/main/java/com/health/HealthOrderServiceApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/health-order-service/src/main/java/com/health/mapper/OrderSettingMapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="92">
           <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/health-member-web/src/main/resources/static/css/style.css">
+    <entry file="file://$PROJECT_DIR$/health-api/src/main/java/com/health/vo/OrderQueryVO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="15" column="39" selection-start-line="15" selection-start-column="39" selection-end-line="15" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/health-member-web/src/main/resources/static/plugins/elementui/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-112856">
-          <caret line="20" column="21" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
-          <folding>
-            <element signature="e#210639#210778#2" expanded="true" />
-            <element signature="e#213576#213715#2" expanded="true" />
-            <element signature="e#217942#218081#2" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/health-member-web/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="78">
-          <caret line="14" column="49" selection-start-line="14" selection-start-column="49" selection-end-line="14" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/health-api/src/main/java/com/health/entity/QueryPageBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="19" column="26" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="26" />
+        <state relative-caret-position="184">
+          <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.2.0.RELEASE/spring-webmvc-5.2.0.RELEASE.jar!/org/springframework/web/servlet/FrameworkServlet.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="503" selection-start-line="503" selection-end-line="503" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/alibaba/druid/1.1.10/druid-1.1.10.jar!/com/alibaba/druid/support/http/WebStatFilter.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="100" selection-start-line="100" selection-end-line="100" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/9.0.27/tomcat-embed-core-9.0.27.jar!/org/apache/catalina/core/ApplicationFilterChain.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="109">
-          <caret line="95" selection-start-line="95" selection-end-line="95" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.2.0.RELEASE/spring-web-5.2.0.RELEASE.jar!/org/springframework/web/filter/RequestContextFilter.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="41" selection-start-line="41" selection-end-line="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.2.0.RELEASE/spring-web-5.2.0.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="107" selection-start-line="107" selection-end-line="107" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.2.0.RELEASE/spring-webmvc-5.2.0.RELEASE.jar!/org/springframework/web/servlet/mvc/method/annotation/RequestMappingHandlerAdapter.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="561" selection-start-line="561" selection-end-line="561" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.2.0.RELEASE/spring-webmvc-5.2.0.RELEASE.jar!/org/springframework/web/servlet/DispatcherServlet.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
-          <caret line="430" selection-start-line="430" selection-end-line="430" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/health-member-web/src/main/java/com/health/HealthMemberWebApplication.java">
+    <entry file="file://$PROJECT_DIR$/health-api/src/main/java/com/health/bean/OrderSetting.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="115">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding>
-            <element signature="e#251#252#0" expanded="true" />
-            <element signature="e#328#329#0" expanded="true" />
-          </folding>
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/health-api/src/main/java/com/health/vo/MemberQueryVO.java">
+    <entry file="file://$PROJECT_DIR$/health-api/src/main/java/com/health/bean/Order.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="18" column="10" lean-forward="true" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="391">
+          <caret line="20" column="31" lean-forward="true" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="31" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/health-api/src/main/java/com/health/entity/PageResult.java">
+    <entry file="file://$PROJECT_DIR$/health-api/src/main/java/com/health/service/OrderService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-17">
-          <caret line="7" column="28" lean-forward="true" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/health-user-service/src/main/java/com/health/ServletInitializer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/health-member-service/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="14" column="32" lean-forward="true" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/health-api/src/main/java/com/health/bean/CheckiTemExample.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/health-api/src/main/java/com/health/bean/BodyType.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/health-api/src/main/java/com/health/bean/PermissionExample.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/health-api/src/main/java/com/health/bean/MemberDynamicinfo.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/health-api/src/main/java/com/health/bean/SportsItemLibrary.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/health-api/src/main/java/com/health/bean/HealthPlanTypeExample.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/health-api/src/main/java/com/health/bean/Questionnaire.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/health-api/src/main/java/com/health/bean/DiseaseLibraryExample.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/health-api/src/main/java/com/health/bean/HealthPlan.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/health-api/src/main/java/com/health/bean/MealsExample.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/health-api/src/main/java/com/health/bean/MemberMedicalhistoryWithBLOBs.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" column="60" selection-start-line="2" selection-start-column="60" selection-end-line="2" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/health-member-service/src/main/java/com/health/mapper/MemberMedicalHistoryMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="395">
-          <caret line="110" column="21" lean-forward="true" selection-start-line="90" selection-start-column="2" selection-end-line="110" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/health-api/src/main/java/com/health/bean/CheckGroupCheckiTemKey.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/health-api/src/main/java/com/health/bean/RoleMenuExample.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="18" column="24" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/health-api/src/main/java/com/health/bean/MemberMedicalHistory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-776">
-          <caret line="7" column="21" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/health-member-service/src/main/java/com/health/mapper/MemberMedicalHistoryMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        <state relative-caret-position="184">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -861,98 +1045,94 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/health-api/src/main/java/com/health/service/MemberService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        <state relative-caret-position="322">
+          <caret line="16" column="102" lean-forward="true" selection-start-line="11" selection-start-column="3" selection-end-line="16" selection-end-column="102" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/health-order-service/src/main/java/com/health/service/OrderServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="19" column="108" selection-start-line="19" selection-start-column="108" selection-end-line="19" selection-end-column="108" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/health-member-service/src/main/java/com/health/mapper/MemberMapper.java">
+    <entry file="file://$PROJECT_DIR$/health-api/src/main/java/com/health/bean/MemberDynamicInfoExample.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="521">
-          <caret line="33" column="24" selection-start-line="33" selection-start-column="24" selection-end-line="33" selection-end-column="24" />
+        <state relative-caret-position="184">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/health-member-service/src/main/java/com/health/HealthMemberServiceApplication.java">
+    <entry file="file://$PROJECT_DIR$/health-member-service/src/main/java/com/health/mapper/MemberDynamicInfoMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#337#338#0" expanded="true" />
-            <element signature="e#418#419#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="92">
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/health-member-web/src/main/resources/templates/member.html">
+    <entry file="file://$PROJECT_DIR$/health-member-service/src/main/java/com/health/mapper/MemberDynamicInfoMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="742">
-          <caret line="58" column="60" selection-start-line="58" selection-start-column="41" selection-end-line="58" selection-end-column="60" />
-          <folding>
-            <element signature="n#style#0;n#el-input#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="437">
+          <caret line="19" column="35" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/health-order-service/src/test/java/com/health/HealthOrderServiceApplicationTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" column="28" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/health-member-service/src/main/java/com/health/service/MemberServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5175">
-          <caret line="225" column="54" selection-start-line="225" selection-start-column="54" selection-end-line="225" selection-end-column="54" />
+        <state relative-caret-position="286">
+          <caret line="230" column="17" selection-start-line="230" selection-start-column="17" selection-end-line="230" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/health-api/src/main/java/com/health/bean/MemberDynamicInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="443">
+          <caret line="34" column="21" selection-start-line="34" selection-start-column="18" selection-end-line="34" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/health-api/src/main/java/com/health/bean/MemberDynamicinfoExample.java">
+    <entry file="file://$PROJECT_DIR$/health-api/src/main/java/com/health/bean/Member.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-134">
-          <caret line="110" column="9" lean-forward="true" selection-start-line="110" selection-start-column="9" selection-end-line="110" selection-end-column="9" />
+        <state relative-caret-position="397">
+          <caret line="32" column="25" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="25" />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/health-member-service/pom.xml">
-      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="13" column="13" lean-forward="true" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2967" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/health-api/src/main/java/com/health/vo/MemberVO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="573">
-          <caret line="28" column="53" selection-start-line="28" selection-start-column="53" selection-end-line="28" selection-end-column="53" />
+        <state relative-caret-position="512">
+          <caret line="30" column="53" selection-start-line="30" selection-start-column="33" selection-end-line="30" selection-end-column="53" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/health-member-service/src/main/java/com/health/mapper/MemberMapper.xml">
+    <entry file="file://$PROJECT_DIR$/health-api/src/main/java/com/health/bean/MemberMedicalHistory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="383">
-          <caret line="670" column="34" selection-start-line="670" selection-start-column="34" selection-end-line="670" selection-end-column="34" />
+        <state relative-caret-position="483">
+          <caret line="24" column="33" selection-start-line="24" selection-start-column="19" selection-end-line="24" selection-end-column="33" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/health-member-web/src/main/java/com/health/web/controller/MemberController.java">
+    <entry file="file://$PROJECT_DIR$/health-member-web/src/main/resources/templates/member.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="535">
+          <caret line="299" column="18" lean-forward="true" selection-start-line="66" selection-start-column="12" selection-end-line="299" selection-end-column="18" />
         </state>
       </provider>
     </entry>
@@ -967,7 +1147,6 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>
@@ -1021,11 +1200,11 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>health-member-service</last-edited>
+          <last-edited>health-order-service</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.24315444" />
                 <option value="0.5" />
               </list>
             </option>

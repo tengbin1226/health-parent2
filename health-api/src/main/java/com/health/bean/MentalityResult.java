@@ -1,8 +1,15 @@
 package com.health.bean;
 
+import lombok.Data;
+
+import java.io.Serializable;
 import java.util.Date;
 
-public class MentalityResult {
+@Data
+public class MentalityResult implements Serializable {
+
+    private static final long serialVersionUID = -3704003949453611715L;
+
     private Integer id;
 
     private Integer tMemberId;
@@ -16,60 +23,4 @@ public class MentalityResult {
     private Date createtime;
 
     private Date updatetime;
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public Integer gettMemberId() {
-        return tMemberId;
-    }
-
-    public void settMemberId(Integer tMemberId) {
-        this.tMemberId = tMemberId;
-    }
-
-    public Integer gettOcd() {
-        return tOcd;
-    }
-
-    public void settOcd(Integer tOcd) {
-        this.tOcd = tOcd;
-    }
-
-    public Integer gettAnxiety() {
-        return tAnxiety;
-    }
-
-    public void settAnxiety(Integer tAnxiety) {
-        this.tAnxiety = tAnxiety;
-    }
-
-    public Integer gettTerror() {
-        return tTerror;
-    }
-
-    public void settTerror(Integer tTerror) {
-        this.tTerror = tTerror;
-    }
-
-    public Date getCreatetime() {
-        return createtime;
-    }
-
-    public void setCreatetime(Date createtime) {
-        this.createtime = createtime;
-    }
-
-    public Date getUpdatetime() {
-        return updatetime;
-    }
-
-    public void setUpdatetime(Date updatetime) {
-        this.updatetime = updatetime;
-    }
 }

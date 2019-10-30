@@ -1,10 +1,14 @@
 package com.health.bean;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-public class BodyTestExample {
+public class BodyTestExample implements Serializable {
+
+    private static final long serialVersionUID = 1707384916978864422L;
+
     protected String orderByClause;
 
     protected boolean distinct;

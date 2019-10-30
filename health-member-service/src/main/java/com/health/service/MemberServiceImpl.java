@@ -30,7 +30,7 @@ public class MemberServiceImpl implements MemberService {
 
     // 会员动态信息
     @Autowired
-    private MemberDynamicinfoMapper memberDynamicinfoMapper;
+    private MemberDynamicInfoMapper MemberDynamicInfoMapper;
 
     // 会员病史信息
     @Autowired
@@ -55,14 +55,14 @@ public class MemberServiceImpl implements MemberService {
             queryString = "%" + queryString + "%";
         }
         // 初始化分页对象
-        PageInfo<MemberQueryVO> pageInfo=null;
+        PageInfo<MemberQueryVO> pageInfo = null;
         //使用pageHelper插件
         PageHelper.startPage(currentPage, pageSize);
 
         //调用startPage方法后的下一个select方法会执行分页
         List<MemberQueryVO> list = memberMapper.queryMemberInfo(queryString);
 
-        pageInfo=new PageInfo<>(list);
+        pageInfo = new PageInfo<>(list);
 
         PageResult<MemberQueryVO> pageResult = new PageResult(pageInfo.getTotal(), pageInfo.getList());
 
@@ -86,7 +86,7 @@ public class MemberServiceImpl implements MemberService {
         // 获取会员详细信息对象
         MemberInfo memberinfo = memberVO.getMemberInfo();
         // 获取会员动态信息对象
-        MemberDynamicinfo memberDynamicinfo = memberVO.getMemberDynamicinfo();
+        MemberDynamicInfo MemberDynamicInfo = memberVO.getMemberDynamicInfo();
         // 获取会员病史信息对象
         MemberMedicalHistory MemberMedicalHistory = memberVO.getMemberMedicalHistory();
 
@@ -95,7 +95,7 @@ public class MemberServiceImpl implements MemberService {
         // 添加会员详细信息
         int i1 = memberInfoMapper.insertSelective(memberinfo);
         // 添加会员动态信息
-        int i2 = memberDynamicinfoMapper.insertSelective(memberDynamicinfo);
+        int i2 = MemberDynamicInfoMapper.insertSelective(MemberDynamicInfo);
         // 添加会员病史信息
         int i3 = MemberMedicalHistoryMapper.insertSelective(MemberMedicalHistory);
 
@@ -103,7 +103,26 @@ public class MemberServiceImpl implements MemberService {
     }
 
     /**
-     * 根据主键编号删除会员基本信息及详细信息
+     * 逻辑删除(修改状态)
+     *
+     * @param id
+     * @return
+     */
+    @Override
+    public Boolean updateMemberStatus(Integer id) {
+
+        // 根据主键编号查询会员信息
+        Member member = memberMapper.selectByPrimaryKey(id);
+        // 设置属性,即修改会员状态属性值
+        member.setStatus(1);
+
+        int i = memberMapper.updateByPrimaryKey(member);
+
+        return i > 0;
+    }
+
+    /**
+     * 物理删除
      *
      * @param id
      * @return
@@ -114,10 +133,10 @@ public class MemberServiceImpl implements MemberService {
             return false;
         }
         // 删除会员动态信息
-        MemberDynamicinfoExample memberDynamicinfoExample = new MemberDynamicinfoExample();
-        MemberDynamicinfoExample.Criteria criteria1 = memberDynamicinfoExample.createCriteria();
+        MemberDynamicInfoExample MemberDynamicInfoExample = new MemberDynamicInfoExample();
+        MemberDynamicInfoExample.Criteria criteria1 = MemberDynamicInfoExample.createCriteria();
         criteria1.andTMemberIdEqualTo(id);
-        int i2 = memberDynamicinfoMapper.deleteByExample(memberDynamicinfoExample);
+        int i2 = MemberDynamicInfoMapper.deleteByExample(MemberDynamicInfoExample);
 
         // 删除会员病史信息
         MemberMedicalHistoryExample MemberMedicalHistoryExample = new MemberMedicalHistoryExample();
@@ -166,11 +185,11 @@ public class MemberServiceImpl implements MemberService {
         HealthMgr healthMgr = healthMgrs.get(0);
 
         // 查询会员动态信息
-        MemberDynamicinfoExample example1 = new MemberDynamicinfoExample();
-        MemberDynamicinfoExample.Criteria criteria2 = example1.createCriteria();
+        MemberDynamicInfoExample example1 = new MemberDynamicInfoExample();
+        MemberDynamicInfoExample.Criteria criteria2 = example1.createCriteria();
         criteria2.andTMemberIdEqualTo(id);
-        List<MemberDynamicinfo> memberDynamicinfos = memberDynamicinfoMapper.selectByExample(example1);
-        MemberDynamicinfo memberDynamicinfo = memberDynamicinfos.get(0);
+        List<MemberDynamicInfo> MemberDynamicInfos = MemberDynamicInfoMapper.selectByExample(example1);
+        MemberDynamicInfo MemberDynamicInfo = MemberDynamicInfos.get(0);
 
 
         // 查询会员病史信息
@@ -185,7 +204,7 @@ public class MemberServiceImpl implements MemberService {
         // 设置属性
         memberVO.setMember(member);
         memberVO.setMemberInfo(memberInfo);
-        memberVO.setMemberDynamicinfo(memberDynamicinfo);
+        memberVO.setMemberDynamicInfo(MemberDynamicInfo);
         memberVO.setMemberMedicalHistory(MemberMedicalHistory);
         return memberVO;
     }
@@ -203,7 +222,7 @@ public class MemberServiceImpl implements MemberService {
         // 获取会员详细信息对象
         MemberInfo memberinfo = memberVO.getMemberInfo();
         // 获取会员动态信息对象
-        MemberDynamicinfo memberDynamicinfo = memberVO.getMemberDynamicinfo();
+        MemberDynamicInfo MemberDynamicInfo = memberVO.getMemberDynamicInfo();
         // 获取会员病史信息对象
         MemberMedicalHistory MemberMedicalHistory = memberVO.getMemberMedicalHistory();
 
@@ -215,10 +234,10 @@ public class MemberServiceImpl implements MemberService {
         criteria.andTMemberIdEqualTo(member.getId());
         int i1 = memberInfoMapper.updateByExampleSelective(memberinfo, memberInfoExample);
         // 修改会员动态信息
-        MemberDynamicinfoExample dynamicinfoExample = new MemberDynamicinfoExample();
-        MemberDynamicinfoExample.Criteria criteria1 = dynamicinfoExample.createCriteria();
+        MemberDynamicInfoExample dynamicinfoExample = new MemberDynamicInfoExample();
+        MemberDynamicInfoExample.Criteria criteria1 = dynamicinfoExample.createCriteria();
         criteria1.andTMemberIdEqualTo(member.getId());
-        int i2 = memberDynamicinfoMapper.updateByExampleSelective(memberDynamicinfo, dynamicinfoExample);
+        int i2 = MemberDynamicInfoMapper.updateByExampleSelective(MemberDynamicInfo, dynamicinfoExample);
 
         // 修改会员病史信息
         MemberMedicalHistoryExample medicalhistoryExample = new MemberMedicalHistoryExample();

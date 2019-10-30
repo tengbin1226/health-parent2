@@ -1,10 +1,14 @@
 package com.health.bean;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-public class CheckiTemExample {
+public class CheckiTemExample implements Serializable {
+
+    private static final long serialVersionUID = 557679475240868675L;
+
     protected String orderByClause;
 
     protected boolean distinct;

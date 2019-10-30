@@ -1,7 +1,7 @@
 package com.health.vo;
 
 import com.health.bean.Member;
-import com.health.bean.MemberDynamicinfo;
+import com.health.bean.MemberDynamicInfo;
 import com.health.bean.MemberInfo;
 import com.health.bean.MemberMedicalHistory;
 import lombok.Data;
@@ -22,9 +22,11 @@ public class MemberVO implements Serializable {
     // 详细信息
     private MemberInfo memberInfo;
 
+    private String healthManagerName;
+
     // 会员动态信息
-    private MemberDynamicinfo memberDynamicinfo;
+    private MemberDynamicInfo memberDynamicInfo;
 
     // 会员病史
-    private MemberMedicalHistory MemberMedicalHistory;
+    private MemberMedicalHistory memberMedicalHistory;
 }

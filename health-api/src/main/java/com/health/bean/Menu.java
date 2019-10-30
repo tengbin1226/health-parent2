@@ -1,8 +1,12 @@
 package com.health.bean;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class Menu {
+public class Menu implements Serializable {
+
+    private static final long serialVersionUID = 2723457546263326060L;
+
     private Integer id;
 
     private String name;

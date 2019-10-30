@@ -24,7 +24,14 @@ public interface MemberService {
     Boolean addMember(MemberVO memberVO);
 
     /**
-     * 根据主键编号删除会员基本信息及详细信息
+     * 逻辑删除(修改状态)
+     * @param id
+     * @return
+     */
+    Boolean updateMemberStatus(Integer id);
+
+    /**
+     *物理删除
      * @param id
      * @return
      */

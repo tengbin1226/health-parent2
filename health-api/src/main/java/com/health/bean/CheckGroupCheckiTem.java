@@ -1,25 +1,16 @@
 package com.health.bean;
 
+import lombok.Data;
+
+import java.io.Serializable;
 import java.util.Date;
 
-public class CheckGroupCheckiTem extends CheckGroupCheckiTemKey {
+@Data
+public class CheckGroupCheckiTem extends CheckGroupCheckiTemKey implements Serializable {
+
+    private static final long serialVersionUID = -6650700226029867782L;
+
     private Date createTime;
 
     private Date updateTime;
-
-    public Date getCreateTime() {
-        return createTime;
-    }
-
-    public void setCreateTime(Date createTime) {
-        this.createTime = createTime;
-    }
-
-    public Date getUpdateTime() {
-        return updateTime;
-    }
-
-    public void setUpdateTime(Date updateTime) {
-        this.updateTime = updateTime;
-    }
 }

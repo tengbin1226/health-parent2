@@ -1,10 +1,14 @@
 package com.health.bean;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-public class InterposePlanExample {
+public class InterposePlanExample implements Serializable {
+
+    private static final long serialVersionUID = -8628879731520417421L;
+
     protected String orderByClause;
 
     protected boolean distinct;

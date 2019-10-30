@@ -1,8 +1,12 @@
 package com.health.bean;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class MemberExamination {
+public class MemberExamination implements Serializable {
+
+    private static final long serialVersionUID = 8194648329274356713L;
+
     private Integer id;
 
     private Integer tSetmealId;

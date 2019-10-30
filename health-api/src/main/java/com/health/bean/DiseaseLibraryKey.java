@@ -1,23 +1,15 @@
 package com.health.bean;
 
-public class DiseaseLibraryKey {
+import lombok.Data;
+
+import java.io.Serializable;
+
+@Data
+public class DiseaseLibraryKey implements Serializable {
+
+    private static final long serialVersionUID = 7792968698968707414L;
+
     private Integer id;
 
     private String medicalTreatmentPeriod;
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public String getMedicalTreatmentPeriod() {
-        return medicalTreatmentPeriod;
-    }
-
-    public void setMedicalTreatmentPeriod(String medicalTreatmentPeriod) {
-        this.medicalTreatmentPeriod = medicalTreatmentPeriod == null ? null : medicalTreatmentPeriod.trim();
-    }
 }

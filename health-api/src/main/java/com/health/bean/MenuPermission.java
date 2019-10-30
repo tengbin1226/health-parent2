@@ -1,25 +1,17 @@
 package com.health.bean;
 
+import lombok.Data;
+
+import java.io.Serializable;
 import java.util.Date;
 
-public class MenuPermission extends MenuPermissionKey {
+@Data
+public class MenuPermission extends MenuPermissionKey implements Serializable {
+
+    private static final long serialVersionUID = 6947795011807272321L;
+
     private Date createtime;
 
     private Date updatetime;
 
-    public Date getCreatetime() {
-        return createtime;
-    }
-
-    public void setCreatetime(Date createtime) {
-        this.createtime = createtime;
-    }
-
-    public Date getUpdatetime() {
-        return updatetime;
-    }
-
-    public void setUpdatetime(Date updatetime) {
-        this.updatetime = updatetime;
-    }
 }

@@ -1,8 +1,18 @@
 package com.health.bean;
 
+import lombok.Data;
+
+import java.io.Serializable;
 import java.util.Date;
 
-public class InterposePlan {
+/**
+ * 干预计划
+ */
+@Data
+public class InterposePlan implements Serializable {
+
+    private static final long serialVersionUID = 6841240932842216570L;
+
     private Integer id;
 
     private Integer tMemberId;
@@ -16,60 +26,4 @@ public class InterposePlan {
     private Date createTime;
 
     private Date updateTime;
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public Integer gettMemberId() {
-        return tMemberId;
-    }
-
-    public void settMemberId(Integer tMemberId) {
-        this.tMemberId = tMemberId;
-    }
-
-    public String getInterposeTime() {
-        return interposeTime;
-    }
-
-    public void setInterposeTime(String interposeTime) {
-        this.interposeTime = interposeTime == null ? null : interposeTime.trim();
-    }
-
-    public String getInterposeShape() {
-        return interposeShape;
-    }
-
-    public void setInterposeShape(String interposeShape) {
-        this.interposeShape = interposeShape == null ? null : interposeShape.trim();
-    }
-
-    public String getContent() {
-        return content;
-    }
-
-    public void setContent(String content) {
-        this.content = content == null ? null : content.trim();
-    }
-
-    public Date getCreateTime() {
-        return createTime;
-    }
-
-    public void setCreateTime(Date createTime) {
-        this.createTime = createTime;
-    }
-
-    public Date getUpdateTime() {
-        return updateTime;
-    }
-
-    public void setUpdateTime(Date updateTime) {
-        this.updateTime = updateTime;
-    }
 }

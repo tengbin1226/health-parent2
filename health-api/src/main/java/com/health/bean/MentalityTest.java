@@ -1,8 +1,15 @@
 package com.health.bean;
 
+import lombok.Data;
+
+import java.io.Serializable;
 import java.util.Date;
 
-public class MentalityTest {
+@Data
+public class MentalityTest implements Serializable {
+
+    private static final long serialVersionUID = 8991582785292099065L;
+
     private Integer id;
 
     private String tQuestion;
@@ -12,44 +19,4 @@ public class MentalityTest {
     private Date createtime;
 
     private Date updatetime;
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public String gettQuestion() {
-        return tQuestion;
-    }
-
-    public void settQuestion(String tQuestion) {
-        this.tQuestion = tQuestion == null ? null : tQuestion.trim();
-    }
-
-    public Integer gettOption() {
-        return tOption;
-    }
-
-    public void settOption(Integer tOption) {
-        this.tOption = tOption;
-    }
-
-    public Date getCreatetime() {
-        return createtime;
-    }
-
-    public void setCreatetime(Date createtime) {
-        this.createtime = createtime;
-    }
-
-    public Date getUpdatetime() {
-        return updatetime;
-    }
-
-    public void setUpdatetime(Date updatetime) {
-        this.updatetime = updatetime;
-    }
 }

@@ -1,8 +1,18 @@
 package com.health.bean;
 
+import lombok.Data;
+
+import java.io.Serializable;
 import java.util.Date;
 
-public class InterposeFood {
+/**
+ * 饮食干预
+ */
+@Data
+public class InterposeFood implements Serializable {
+
+    private static final long serialVersionUID = 2929604345853929203L;
+
     private Integer id;
 
     private Integer tMemberId;
@@ -18,68 +28,4 @@ public class InterposeFood {
     private Date createTime;
 
     private Date updateTime;
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public Integer gettMemberId() {
-        return tMemberId;
-    }
-
-    public void settMemberId(Integer tMemberId) {
-        this.tMemberId = tMemberId;
-    }
-
-    public Integer getEatTimes() {
-        return eatTimes;
-    }
-
-    public void setEatTimes(Integer eatTimes) {
-        this.eatTimes = eatTimes;
-    }
-
-    public String getRecommendFood() {
-        return recommendFood;
-    }
-
-    public void setRecommendFood(String recommendFood) {
-        this.recommendFood = recommendFood == null ? null : recommendFood.trim();
-    }
-
-    public Float getFoodQuantity() {
-        return foodQuantity;
-    }
-
-    public void setFoodQuantity(Float foodQuantity) {
-        this.foodQuantity = foodQuantity;
-    }
-
-    public Float getAdi() {
-        return adi;
-    }
-
-    public void setAdi(Float adi) {
-        this.adi = adi;
-    }
-
-    public Date getCreateTime() {
-        return createTime;
-    }
-
-    public void setCreateTime(Date createTime) {
-        this.createTime = createTime;
-    }
-
-    public Date getUpdateTime() {
-        return updateTime;
-    }
-
-    public void setUpdateTime(Date updateTime) {
-        this.updateTime = updateTime;
-    }
 }

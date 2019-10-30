@@ -65,5 +65,5 @@ public class MemberQueryVO implements Serializable {
     private String nativePlace;
 
     // 状态
-    private Integer state;
+    private Integer status;
 }

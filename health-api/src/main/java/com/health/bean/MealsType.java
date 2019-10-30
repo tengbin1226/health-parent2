@@ -1,8 +1,12 @@
 package com.health.bean;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class MealsType {
+public class MealsType implements Serializable {
+
+    private static final long serialVersionUID = -2075074318352291357L;
+
     private Integer id;
 
     private String name;
@@ -10,36 +14,4 @@ public class MealsType {
     private Date createTime;
 
     private Date updateTime;
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name == null ? null : name.trim();
-    }
-
-    public Date getCreateTime() {
-        return createTime;
-    }
-
-    public void setCreateTime(Date createTime) {
-        this.createTime = createTime;
-    }
-
-    public Date getUpdateTime() {
-        return updateTime;
-    }
-
-    public void setUpdateTime(Date updateTime) {
-        this.updateTime = updateTime;
-    }
 }

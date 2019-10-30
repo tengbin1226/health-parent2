@@ -1,5 +1,6 @@
 package com.health.web.controller;
 
+import com.health.constant.MessageConstant;
 import com.health.entity.PageResult;
 import com.health.entity.QueryPageBean;
 import com.health.entity.Result;
@@ -58,11 +59,11 @@ public class MemberController {
         Boolean flag = memberService.addMember(memberAddVO);
         if (flag) {
             // 设置属性
-            Result.setMessage("添加成功!");
+            Result.setMessage(MessageConstant.ADD_MEMBER_SUCCESS);
             Result.setFlag(true);
         } else {
             // 设置属性
-            Result.setMessage("添加失败!请检查代码后重试");
+            Result.setMessage(MessageConstant.ADD_MEMBER_FAIL);
             Result.setFlag(false);
         }
         return Result;
@@ -79,19 +80,18 @@ public class MemberController {
         // 实例化返回结果
         Result Result = new Result();
         // 删除所有会员信息
-        Boolean flag = memberService.deleteMemberById(id);
+        Boolean flag = memberService.updateMemberStatus(id);
         if (flag) {
             // 设置属性
-            Result.setMessage("删除成功!");
+            Result.setMessage(MessageConstant.DELETE_MEMBER_SUCCESS);
             Result.setFlag(true);
         } else {
             // 设置属性
-            Result.setMessage("删除失败!请检查代码后重试");
+            Result.setMessage(MessageConstant.DELETE_MEMBER_FAIL);
             Result.setFlag(false);
         }
         return Result;
     }
-
 
     /**
      * 根据主键编号查询会员信息
@@ -125,11 +125,11 @@ public class MemberController {
 
         if (flag) {
             // 设置属性
-            Result.setMessage("修改成功!");
+            Result.setMessage(MessageConstant.EDIT_MEMBER_SUCCESS);
             Result.setFlag(true);
         } else {
             // 设置属性
-            Result.setMessage("修改失败!请检查代码后重试");
+            Result.setMessage(MessageConstant.EDIT_MEMBER_FAIL);
             Result.setFlag(false);
         }
         return Result;

@@ -1,23 +1,15 @@
 package com.health.bean;
 
-public class MenuPermissionKey {
+import lombok.Data;
+
+import java.io.Serializable;
+
+@Data
+public class MenuPermissionKey implements Serializable {
+
+    private static final long serialVersionUID = -1566859676614108117L;
+
     private Integer tMenuId;
 
     private Integer tPermissionId;
-
-    public Integer gettMenuId() {
-        return tMenuId;
-    }
-
-    public void settMenuId(Integer tMenuId) {
-        this.tMenuId = tMenuId;
-    }
-
-    public Integer gettPermissionId() {
-        return tPermissionId;
-    }
-
-    public void settPermissionId(Integer tPermissionId) {
-        this.tPermissionId = tPermissionId;
-    }
 }

@@ -1,10 +1,15 @@
 package com.health.bean;
 
+import java.io.Serializable;
+import java.security.SecureRandom;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-public class MentalityTestExample {
+public class MentalityTestExample implements Serializable {
+
+    private static final long serialVersionUID = -6679517388019636983L;
+
     protected String orderByClause;
 
     protected boolean distinct;

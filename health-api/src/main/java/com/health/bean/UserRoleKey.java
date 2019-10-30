@@ -1,23 +1,15 @@
 package com.health.bean;
 
-public class UserRoleKey {
+import lombok.Data;
+
+import java.io.Serializable;
+
+@Data
+public class UserRoleKey implements Serializable {
+
+    private static final long serialVersionUID = 2913731180321028372L;
+
     private Integer userId;
 
     private Integer roleId;
-
-    public Integer getUserId() {
-        return userId;
-    }
-
-    public void setUserId(Integer userId) {
-        this.userId = userId;
-    }
-
-    public Integer getRoleId() {
-        return roleId;
-    }
-
-    public void setRoleId(Integer roleId) {
-        this.roleId = roleId;
-    }
 }

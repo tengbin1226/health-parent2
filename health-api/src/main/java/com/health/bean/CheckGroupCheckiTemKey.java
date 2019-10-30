@@ -1,23 +1,15 @@
 package com.health.bean;
 
-public class CheckGroupCheckiTemKey {
+import lombok.Data;
+
+import java.io.Serializable;
+
+@Data
+public class CheckGroupCheckiTemKey implements Serializable {
+
+    private static final long serialVersionUID = 4097606740824959666L;
+
     private Integer checkgroupId;
 
     private Integer checkitemId;
-
-    public Integer getCheckgroupId() {
-        return checkgroupId;
-    }
-
-    public void setCheckgroupId(Integer checkgroupId) {
-        this.checkgroupId = checkgroupId;
-    }
-
-    public Integer getCheckitemId() {
-        return checkitemId;
-    }
-
-    public void setCheckitemId(Integer checkitemId) {
-        this.checkitemId = checkitemId;
-    }
 }
