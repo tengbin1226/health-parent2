@@ -1,17 +1,19 @@
 package com.health.web.controller;
 
+import com.github.pagehelper.PageInfo;
 import com.health.constant.MessageConstant;
 import com.health.entity.PageResult;
 import com.health.entity.QueryPageBean;
 import com.health.entity.Result;
 import com.health.service.MemberService;
-import com.health.vo.MemberVO;
 import com.health.vo.MemberQueryVO;
+import com.health.vo.MemberVO;
 import org.apache.dubbo.config.annotation.Reference;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.util.ObjectUtils;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 /**
  * 会员管理控制器
@@ -27,7 +29,7 @@ public class MemberController {
      * 跳转到页面
      */
     @GetMapping("/member")
-    public String toMemberPage(){
+    public String toMemberPage() {
         return "member";
     }
 
@@ -36,11 +38,17 @@ public class MemberController {
      *
      * @return
      */
-    @GetMapping("/members")
+    @PostMapping("/members")
     @ResponseBody
-    public PageResult<MemberQueryVO> queryMemebers(@RequestParam Integer currentPage,@RequestParam Integer pageSize,@RequestParam String queryString) {
+    public PageResult<MemberQueryVO> queryMemebers(@RequestBody QueryPageBean queryPageBean) {
+
         // 获取分页查询结果
-        PageResult<MemberQueryVO> pageResult = memberService.queryMembers(currentPage,pageSize,queryString);
+        PageInfo<MemberQueryVO> members = memberService.queryMembers(queryPageBean.getCurrentPage(),queryPageBean.getPageSize(),queryPageBean.getQueryString());
+
+        // 实例化自定义分页对象
+        PageResult<MemberQueryVO> pageResult=new PageResult<>();
+        pageResult.setRows(members.getList());
+        pageResult.setTotal(members.getTotal());
 
         return pageResult;
     }
@@ -100,13 +108,10 @@ public class MemberController {
      * @return
      */
     @GetMapping("/member/{id}")
-    public String findMemberById(@PathVariable Integer id, Model model) {
+    public MemberVO findMemberById(@PathVariable Integer id, Model model) {
         // 获取会员信息
         MemberVO memberVO = memberService.findByMemberId(id);
-        // 添加属性
-        model.addAttribute("memberVO", memberVO);
-        // 返回指定页面
-        return "modify";
+        return memberVO;
     }
 
     /**

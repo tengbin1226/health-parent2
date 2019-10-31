@@ -49,25 +49,26 @@ public class MemberServiceImpl implements MemberService {
      * @return
      */
     @Override
-    public PageResult<MemberQueryVO> queryMembers(Integer currentPage, Integer pageSize, String queryString) {
+    public PageInfo<MemberQueryVO> queryMembers(Integer currentPage, Integer pageSize, String queryString) {
         //拼接模糊查询的%
-        if (StringUtils.isNotBlank(queryString)) {
-            queryString = "%" + queryString + "%";
+        if ("无".equals(queryString) || "".equals(queryString) || StringUtils.isBlank(queryString)) {
+            queryString =null;
+        }else {
+            queryString="%"+queryString+"%";
         }
         // 初始化分页对象
         PageInfo<MemberQueryVO> pageInfo = null;
+
         //使用pageHelper插件
         PageHelper.startPage(currentPage, pageSize);
 
-        //调用startPage方法后的下一个select方法会执行分页
+        // 获取查询结果集
         List<MemberQueryVO> list = memberMapper.queryMemberInfo(queryString);
 
         pageInfo = new PageInfo<>(list);
 
-        PageResult<MemberQueryVO> pageResult = new PageResult(pageInfo.getTotal(), pageInfo.getList());
-
         //返回自定义分页查询结果
-        return pageResult;
+        return pageInfo;
     }
 
     /**

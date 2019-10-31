@@ -376,37 +376,32 @@
 	
 	
 	 <!-- 查询会员信息-->
-    <select id="queryMemberInfo" resultType="com.health.vo.MemberQueryVO" parameterType="string">
+    <select id="queryMemberInfo" resultType="com.health.vo.MemberQueryVO">
 		SELECT
-		tm.id AS id,
-		tm.fileNumber AS filenumber,
-		tm.name AS name,
-		tm.sex AS sex,
-		tm.idCard AS idcard,
-		tm.phoneNumber AS phonenumber,
-		tm.regTime AS regtime,
-		tm.PASSWORD AS PASSWORD,
-		tm.email AS email,
-		TIMESTAMPDIFF(YEAR,tm.birthday,CURDATE()) AS age,
-		tm.remark AS birthday,
-		tm.STATUS AS STATUS,
-		tmi.marital_status AS maritalStatus,
-		tmi.job AS job,
-		tmi.education_degree AS educationDegree,
-		tmi.native_place AS nativePlace,
-		th.health_mgr_name AS healthMgrname
-		FROM
-		t_member tm,
-		t_member_info tmi,
-		t_healthmgr th
+			tm.id AS id,
+			tm.fileNumber AS filenumber,
+			tm.name AS name,
+			tm.sex AS sex,
+			tm.idCard AS idcard,
+			tm.phoneNumber AS phonenumber,
+			tm.regTime AS regtime,
+			tm.PASSWORD AS PASSWORD,
+			tm.email AS email,
+			TIMESTAMPDIFF(YEAR,tm.birthday,CURDATE()) AS age,
+			tm.remark AS birthday,
+			tm.STATUS AS status,
+			tmi.marital_status AS maritalStatus,
+			tmi.job AS job,
+			tmi.education_degree AS educationDegree,
+			tmi.native_place AS nativePlace,
+			th.health_mgr_name AS healthMgrName
+		FROM t_member tm
+			left  join t_member_info tmi on tm.id = tmi.t_member_id
+			left  join  t_healthmgr th on tmi.health_mgr_id = th.health_mgr_id
 		WHERE
-		tmi.health_mgr_id = th.health_mgr_id
-		AND tm.id = tmi.t_member_id
-		AND tm.STATUS =0
-        <if test="value != null and value.length > 0">
-            <where>
-                and tm.NAME like #{value}
-            </where>
+			tm.status = 0
+        <if test="name != null and name.length > 0">
+    		and tm.name like #{name}
         </if>
     </select>
     
