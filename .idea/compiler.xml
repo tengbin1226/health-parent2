@@ -13,6 +13,7 @@
         <module name="health-user-web" />
         <module name="health-common" />
         <module name="health-order-web" />
+        <module name="health-web" />
         <module name="health-user-service" />
         <module name="health-healthmanager-service" />
         <module name="health-api" />
@@ -32,6 +33,7 @@
       <module name="health-parent" options="-parameters" />
       <module name="health-user-service" options="-parameters" />
       <module name="health-user-web" options="-parameters" />
+      <module name="health-web" options="-parameters" />
     </option>
   </component>
 </project>
