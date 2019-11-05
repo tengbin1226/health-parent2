@@ -1,6 +1,8 @@
 package com.health.utils;
 
 import java.text.SimpleDateFormat;
+import java.time.*;
+import java.time.format.DateTimeFormatter;
 import java.util.*;
 
 /**
@@ -239,6 +241,7 @@ public class DateUtils {
         c.set(Calendar.DAY_OF_WEEK, c.getFirstDayOfWeek() + 6);
         return c.getTime();
     }
+
     //获得上周一的日期
     public static Date geLastWeekMonday(Date date) {
         Calendar cal = Calendar.getInstance();
@@ -274,14 +277,14 @@ public class DateUtils {
     }
 
     //获得今天日期
-    public static Date getToday(){
+    public static Date getToday() {
         return new Date();
     }
 
     //获得本月一日的日期
-    public static Date getFirstDay4ThisMonth(){
+    public static Date getFirstDay4ThisMonth() {
         Calendar calendar = Calendar.getInstance();
-        calendar.set(Calendar.DAY_OF_MONTH,1);
+        calendar.set(Calendar.DAY_OF_MONTH, 1);
         return calendar.getTime();
     }
 
@@ -293,4 +296,98 @@ public class DateUtils {
             e.printStackTrace();
         }
     }
+
+    /**
+     * 将LocalDateTime 转换成 Date
+     *
+     * @param localDateTime
+     * @return
+     */
+    public static Date localDateTimeToDate(LocalDateTime localDateTime) {
+        ZoneId zoneId = ZoneId.systemDefault();
+        ZonedDateTime zdt = localDateTime.atZone(zoneId);
+        return Date.from(zdt.toInstant());
+    }
+
+    /**
+     * 将LocalDate 转换成 Date
+     *
+     * @param localDateTime
+     * @return
+     */
+    public static Date localDateToDate(LocalDate localDate) {
+        Instant instant = localDate.atStartOfDay(ZoneOffset.ofHours(8)).toInstant();
+        return Date.from(instant);
+    }
+
+
+    /**
+     * 将 Date 转换成LocalDate
+     * atZone()方法返回在指定时区从此Instant生成的ZonedDateTime。
+     *
+     * @param date
+     * @return
+     */
+    public static LocalDate dateToLocalDate(Date date) {
+        Instant instant = date.toInstant();
+        ZoneId zoneId = ZoneId.systemDefault();
+        return instant.atZone(zoneId).toLocalDate();
+    }
+
+    /**
+     * 计算两个LocalDate 之间的Period
+     * @param time1
+     * @param time2
+     * @return
+     */
+    public static Period periodLocalDate(LocalDate time1,LocalDate time2){
+        return Period.between(time1,time2);
+    }
+
+    /**
+     * 计算两个Date 之间的Period
+     *
+     * @param date1
+     * @param date2
+     * @return
+     */
+    public static Period periodDate(Date date1, Date date2) {
+        return periodLocalDate(dateToLocalDate(date1), dateToLocalDate(date2));
+    }
+
+    /**
+     * 计算两个LocalDateTime 之间的毫秒数
+     *
+     * @param time1
+     * @param time2
+     * @return
+     */
+    public static Long minusToMillsLocalDateTime(LocalDateTime time1, LocalDateTime time2) {
+        return Duration.between(time1, time2).toMillis();
+    }
+
+    /**
+     * 将localDate 按照一定的格式转换成String
+     *
+     * @param localDate
+     * @param pattern
+     * @return
+     */
+    public static String localDateFormat(LocalDate localDate, String pattern) {
+        return localDate.format(DateTimeFormatter.ofPattern(pattern));
+    }
+
+
+    /**
+     * 将String 按照pattern 转换成LocalDate
+     *
+     * @param time
+     * @param pattern
+     * @return
+     */
+    public static LocalDate localDateParse(String time, String pattern) {
+        return LocalDate.parse(time, DateTimeFormatter.ofPattern(pattern));
+    }
+
+
 }

@@ -17,6 +17,8 @@
         <option value="$PROJECT_DIR$/health-user-web/pom.xml" />
         <option value="$PROJECT_DIR$/health-user-service/pom.xml" />
         <option value="$PROJECT_DIR$/health-order-service/pom.xml" />
+        <option value="$PROJECT_DIR$/health-healthmanager-service/pom.xml" />
+        <option value="$PROJECT_DIR$/health-order-web/pom.xml" />
       </list>
     </option>
   </component>

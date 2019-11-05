@@ -12,13 +12,12 @@
         <module name="health-member-web" />
         <module name="health-user-web" />
         <module name="health-common" />
+        <module name="health-order-web" />
         <module name="health-user-service" />
+        <module name="health-healthmanager-service" />
         <module name="health-api" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="health-healthmanager-service" target="1.8" />
-    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
@@ -29,6 +28,7 @@
       <module name="health-member-web" options="-parameters" />
       <module name="health-mobile" options="-parameters" />
       <module name="health-order-service" options="-parameters" />
+      <module name="health-order-web" options="-parameters" />
       <module name="health-parent" options="-parameters" />
       <module name="health-user-service" options="-parameters" />
       <module name="health-user-web" options="-parameters" />

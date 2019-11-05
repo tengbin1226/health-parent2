@@ -379,13 +379,13 @@
     <select id="queryMemberInfo" resultType="com.health.vo.MemberQueryVO">
 		SELECT
 			tm.id AS id,
-			tm.fileNumber AS filenumber,
+			tm.fileNumber AS fileNumber,
 			tm.name AS name,
 			tm.sex AS sex,
 			tm.idCard AS idcard,
-			tm.phoneNumber AS phonenumber,
+			tm.phoneNumber AS phoneNumber,
 			tm.regTime AS regtime,
-			tm.PASSWORD AS PASSWORD,
+			tm.PASSWORD AS password,
 			tm.email AS email,
 			TIMESTAMPDIFF(YEAR,tm.birthday,CURDATE()) AS age,
 			tm.remark AS birthday,

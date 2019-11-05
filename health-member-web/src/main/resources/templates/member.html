@@ -32,7 +32,7 @@
             </div>
             <!--数据表格-->
             <el-table size="small" current-row-key="id" :data="tableData" stripe highlight-current-row>
-                <el-table-column prop="filenumber" align="center" label="档案号"></el-table-column>
+                <el-table-column prop="fileNumber" align="center" label="档案号"></el-table-column>
                 <el-table-column prop="name" label="姓名" align="center"></el-table-column>
                 <el-table-column label="性别" align="center">
                     <template slot-scope="scope">
@@ -41,13 +41,13 @@
                 </el-table-column>
                 <el-table-column prop="age" label="年龄" align="center"></el-table-column>
                 <el-table-column prop="healthMgrName" label="健康管理师" align="center"></el-table-column>
-                <el-table-column prop="phonenumber" label="手机号码" align="center"></el-table-column>
+                <el-table-column prop="phoneNumber" label="手机号码" align="center"></el-table-column>
                 <el-table-column prop="regtime" label="注册时间" align="center" :formatter="dateFormat"></el-table-column>
                 <el-table-column label="操作" align="center">
                     <template slot-scope="scope">
                         <!--scope.row表示列表中的一条数据-->
                         <el-button type="primary" size="mini" @click="findById(scope.row.id)">编辑</el-button>
-                        <el-button size="mini" type="danger" @click="">删除</el-button>
+                        <el-button size="mini" type="danger" @click="deleteById(scope.row.id)">删除</el-button>
                     </template>
                 </el-table-column>
             </el-table>
@@ -62,7 +62,7 @@
                         :total="total">
                 </el-pagination>
             </div>
-            <!-- 新增标签弹层 -->
+            <!-- 新增标签弹层-->
             <div class="add-form">
                 <el-dialog title="新增会员" :visible.sync="dialogFormVisible">
                     <template>
@@ -73,7 +73,7 @@
                                     <el-row>
                                         <el-col :span="10">
                                             <el-form-item label="档案号" prop="filenumber">
-                                                <el-input v-model="formData.filenumber"/>
+                                                <el-input v-model="formData.filenumber" readonly/>
                                             </el-form-item>
                                         </el-col>
                                         <el-col :span="10">
@@ -100,7 +100,7 @@
                                     <el-row>
                                         <el-col :span="10">
                                             <el-form-item label="手机号码" prop="phonenumber">
-                                                <el-input v-model="formData.telephone"/>
+                                                <el-input v-model="formData.phonenumber"/>
                                             </el-form-item>
                                         </el-col>
                                         <el-col :span="10">
@@ -111,8 +111,12 @@
                                     </el-row>
                                     <el-row>
                                         <el-col :span="10">
-                                            <el-form-item label="出生日期" prop="birthday">
-                                                <el-input v-model="formData.birthday"/>
+                                            <el-form-item label="出生日期">
+                                                <el-date-picker
+                                                        v-model="formData.birthday"
+                                                        type="date"
+                                                        placeholder="选择日期">
+                                                </el-date-picker>
                                             </el-form-item>
                                         </el-col>
                                         <el-col :span="10">
@@ -124,10 +128,13 @@
 
                                     <el-row>
                                         <el-col :span="10">
-                                            <el-form-item label="婚姻状态" prop="maritalStatus">
+                                            <el-form-item label="婚姻状态">
                                                 <el-select v-model="formData.maritalStatus">
-                                                    <el-option label="已婚" value="0"></el-option>
-                                                    <el-option label="未婚" value="1"></el-option>
+                                                    <el-option v-for="item in maritalStatus"
+                                                               :key="item.value"
+                                                               :label="item.label"
+                                                               :value="item.value">
+                                                    </el-option>
                                                 </el-select>
                                             </el-form-item>
                                         </el-col>
@@ -153,16 +160,25 @@
 
                                     <el-row>
                                         <el-col :span="10">
-                                            <el-form-item label="健康管理师" prop="healthManagerName">
-                                                <el-input v-model="formData.healthManagerName"></el-input>
+                                            <el-form-item label="健康管理师" prop="healthMgrName">
+                                                <el-select v-model="formData.healthMgrName">
+                                                    <el-option v-for="item in healthMgrInfo"
+                                                               :key="item.healthMgrId"
+                                                               :label="item.healthMgrName"
+                                                               :value="item.healthMgrId">
+                                                    </el-option>
+                                                </el-select>
                                             </el-form-item>
                                         </el-col>
 
                                         <el-col :span="10">
-                                            <el-form-item label="档案状态" prop="status">
+                                            <el-form-item label="档案状态">
                                                 <el-select v-model="formData.status">
-                                                    <el-option label="启用" value="0"></el-option>
-                                                    <el-option label="禁用" value="1"></el-option>
+                                                    <el-option v-for="item in status"
+                                                               :key="item.value"
+                                                               :label="item.label"
+                                                               :value="item.value">
+                                                    </el-option>
                                                 </el-select>
                                             </el-form-item>
                                         </el-col>
@@ -297,7 +313,7 @@
                 </el-dialog>
             </div>
 
-            <!-- 新增标签弹层 -->
+            <!--编辑标签弹层-->
             <div class="add-form">
                 <el-dialog title="编辑会员" :visible.sync="dialogFormVisible4Edit">
                     <template>
@@ -305,27 +321,28 @@
                             <el-tab-pane label="基本信息" name="first">
                                 <el-form ref="dataEditForm" :model="formData" :rules="rules" label-position="right"
                                          label-width="100px">
+                                    <input v-model="formData.id" type="hidden"/>
                                     <el-row>
                                         <el-col :span="10">
-                                            <el-form-item label="档案号" prop="filenumber">
-                                                <el-input v-model="formData.member.filenumber"/>
+                                            <el-form-item label="档案号">
+                                                <el-input v-model="formData.filenumber"/>
                                             </el-form-item>
                                         </el-col>
                                         <el-col :span="10">
-                                            <el-form-item label="密码" prop="password">
-                                                <el-input v-model="formData.member.password"/>
+                                            <el-form-item label="密码">
+                                                <el-input v-model="formData.password"/>
                                             </el-form-item>
                                         </el-col>
                                     </el-row>
                                     <el-row>
                                         <el-col :span="10">
-                                            <el-form-item label="姓名" prop="name">
-                                                <el-input v-model="formData.member.name"/>
+                                            <el-form-item label="姓名">
+                                                <el-input v-model="formData.name"/>
                                             </el-form-item>
                                         </el-col>
                                         <el-col :span="10">
-                                            <el-form-item label="性别" prop="sex">
-                                                <el-select v-model="formData.member.sex">
+                                            <el-form-item label="性别">
+                                                <el-select v-model="formData.sex">
                                                     <el-option label="男" value="1"></el-option>
                                                     <el-option label="女" value="2"></el-option>
                                                 </el-select>
@@ -334,78 +351,94 @@
                                     </el-row>
                                     <el-row>
                                         <el-col :span="10">
-                                            <el-form-item label="手机号码" prop="phonenumber">
-                                                <el-input v-model="formData.member.telephone"/>
+                                            <el-form-item label="手机号码">
+                                                <el-input v-model="formData.telephone"/>
                                             </el-form-item>
                                         </el-col>
                                         <el-col :span="10">
-                                            <el-form-item label="身份证" prop="idcard">
-                                                <el-input v-model="formData.member.idcard"/>
+                                            <el-form-item label="身份证">
+                                                <el-input v-model="formData.idcard"/>
                                             </el-form-item>
                                         </el-col>
                                     </el-row>
                                     <el-row>
                                         <el-col :span="10">
-                                            <el-form-item label="出生日期" prop="birthday">
-                                                <el-input v-model="formData.member.birthday"/>
+                                            <el-form-item label="出生日期">
+                                                <el-date-picker
+                                                        v-model="formData.birthday"
+                                                        type="date"
+                                                        placeholder="选择日期">
+                                                </el-date-picker>
                                             </el-form-item>
                                         </el-col>
                                         <el-col :span="10">
                                             <el-form-item label="邮箱">
-                                                <el-input v-model="formData.member.email"></el-input>
+                                                <el-input v-model="formData.email"></el-input>
                                             </el-form-item>
                                         </el-col>
                                     </el-row>
 
                                     <el-row>
                                         <el-col :span="10">
-                                            <el-form-item label="婚姻状态" prop="maritalStatus">
-                                                <el-select v-model="formData.memberInfo.maritalStatus">
-                                                    <el-option label="已婚" value="0"></el-option>
-                                                    <el-option label="未婚" value="1"></el-option>
+                                            <el-form-item label="婚姻状态">
+                                                <el-select v-model="formData.maritalStatus">
+                                                    <el-option v-for="item in maritalStatus"
+                                                    :key="item.value"
+                                                    :label="item.label"
+                                                    :value="item.value">
+                                                    </el-option>
                                                 </el-select>
                                             </el-form-item>
                                         </el-col>
                                         <el-col :span="10">
-                                            <el-form-item label="职业" prop="job">
-                                                <el-input v-model="formData.memberInfo.job"></el-input>
+                                            <el-form-item label="职业">
+                                                <el-input v-model="formData.job"></el-input>
                                             </el-form-item>
                                         </el-col>
                                     </el-row>
 
                                     <el-row>
                                         <el-col :span="10">
-                                            <el-form-item label="文化程度" prop="educationDegree">
-                                                <el-input v-model="formData.memberInfo.educationDegree"></el-input>
+                                            <el-form-item label="文化程度">
+                                                <el-input v-model="formData.educationDegree"></el-input>
                                             </el-form-item>
                                         </el-col>
                                         <el-col :span="10">
-                                            <el-form-item label="籍贯" prop="nativePlace">
-                                                <el-input v-model="formData.memberInfo.nativePlace"></el-input>
+                                            <el-form-item label="籍贯">
+                                                <el-input v-model="formData.nativePlace"></el-input>
                                             </el-form-item>
                                         </el-col>
                                     </el-row>
 
                                     <el-row>
                                         <el-col :span="10">
-                                            <el-form-item label="健康管理师" prop="healthManagerName">
-                                                <el-input v-model="formData.healthManagerName"></el-input>
+                                            <el-form-item label="健康管理师" prop="healthMgrName">
+                                                <el-select v-model="formData.healthMgrName">
+                                                    <el-option v-for="item in healthMgrInfo"
+                                                               :key="item.healthMgrId"
+                                                               :label="item.healthMgrName"
+                                                               :value="item.healthMgrId">
+                                                    </el-option>
+                                                </el-select>
                                             </el-form-item>
                                         </el-col>
 
                                         <el-col :span="10">
-                                            <el-form-item label="档案状态" prop="status">
-                                                <el-select v-model="formData.member.status">
-                                                    <el-option label="启用" value="0"></el-option>
-                                                    <el-option label="禁用" value="1"></el-option>
+                                            <el-form-item label="档案状态">
+                                                <el-select v-model="formData.status">
+                                                    <el-option v-for="item in status"
+                                                               :key="item.value"
+                                                               :label="item.label"
+                                                               :value="item.value">
+                                                    </el-option>
                                                 </el-select>
                                             </el-form-item>
                                         </el-col>
                                     </el-row>
                                     <el-row>
                                         <el-col :span="20">
-                                            <el-form-item label="备注" prop="remark">
-                                                <el-input v-model="formData.member.remark" type="textarea"></el-input>
+                                            <el-form-item label="备注">
+                                                <el-input v-model="formData.remark" type="textarea"></el-input>
                                             </el-form-item>
                                         </el-col>
                                     </el-row>
@@ -416,60 +449,60 @@
                                          label-width="100px">
                                     <el-row>
                                         <el-col :span="6">
-                                            <el-form-item label="身高" prop="height">
-                                                <el-input v-model="formData.memberDynamicInfo.height"/>
+                                            <el-form-item label="身高">
+                                                <el-input v-model="formData.height"/>
                                             </el-form-item>
                                         </el-col>
                                         <el-col :span="6">
-                                            <el-form-item label="体重" prop="weight">
-                                                <el-input v-model="formData.memberDynamicInfo.weight"/>
+                                            <el-form-item label="体重">
+                                                <el-input v-model="formData.weight"/>
                                             </el-form-item>
                                         </el-col>
                                         <el-col :span="6">
-                                            <el-form-item label="舒张压" prop="dbp">
-                                                <el-input v-model="formData.memberDynamicInfo.dbp"/>
+                                            <el-form-item label="舒张压">
+                                                <el-input v-model="formData.dbp"/>
                                             </el-form-item>
                                         </el-col>
                                         <el-col :span="6">
-                                            <el-form-item label="收缩压" prop="sbp">
-                                                <el-input v-model="formData.memberDynamicInfo.sbp"/>
+                                            <el-form-item label="收缩压">
+                                                <el-input v-model="formData.sbp"/>
                                             </el-form-item>
                                         </el-col>
                                     </el-row>
 
                                     <el-row>
                                         <el-col :span="10">
-                                            <el-form-item label="呼吸" prop="breth">
-                                                <el-input v-model="formData.memberDynamicInfo.breth"></el-input>
+                                            <el-form-item label="呼吸">
+                                                <el-input v-model="formData.breth"></el-input>
                                             </el-form-item>
                                         </el-col>
                                         <el-col :span="10">
-                                            <el-form-item label="体温" prop="thermometer">
-                                                <el-input v-model="formData.memberDynamicInfo.thermometer"></el-input>
-                                            </el-form-item>
-                                        </el-col>
-                                    </el-row>
-                                    <el-row>
-                                        <el-col :span="10">
-                                            <el-form-item label="腰围" prop="waistline">
-                                                <el-input v-model="formData.memberDynamicInfo.waistline"></el-input>
-                                            </el-form-item>
-                                        </el-col>
-                                        <el-col :span="10">
-                                            <el-form-item label="臀围" prop="hipline">
-                                                <el-input v-model="formData.memberDynamicInfo.hipline"></el-input>
+                                            <el-form-item label="体温">
+                                                <el-input v-model="formData.thermometer"></el-input>
                                             </el-form-item>
                                         </el-col>
                                     </el-row>
                                     <el-row>
                                         <el-col :span="10">
-                                            <el-form-item label="BMI" prop="bmi">
-                                                <el-input v-model="formData.memberDynamicInfo.bmi"></el-input>
+                                            <el-form-item label="腰围">
+                                                <el-input v-model="formData.waistline"></el-input>
                                             </el-form-item>
                                         </el-col>
                                         <el-col :span="10">
-                                            <el-form-item label="血氧饱和度" prop="spo">
-                                                <el-input v-model="formData.memberDynamicInfo.spo">%</el-input>
+                                            <el-form-item label="臀围">
+                                                <el-input v-model="formData.hipline"></el-input>
+                                            </el-form-item>
+                                        </el-col>
+                                    </el-row>
+                                    <el-row>
+                                        <el-col :span="10">
+                                            <el-form-item label="BMI">
+                                                <el-input v-model="formData.bmi"></el-input>
+                                            </el-form-item>
+                                        </el-col>
+                                        <el-col :span="10">
+                                            <el-form-item label="血氧饱和度">
+                                                <el-input v-model="formData.spo"></el-input>%
                                             </el-form-item>
                                         </el-col>
                                     </el-row>
@@ -481,8 +514,8 @@
                                          label-width="100px">
                                     <el-row>
                                         <el-col :span="20">
-                                            <el-form-item label="既往史" prop="previousHistory">
-                                                <el-input v-model="formData.memberMedicalHistory.previousHistory"
+                                            <el-form-item label="既往史">
+                                                <el-input v-model="formData.previousHistory"
                                                           type="textarea"></el-input>
                                             </el-form-item>
                                         </el-col>
@@ -490,8 +523,8 @@
 
                                     <el-row>
                                         <el-col :span="20">
-                                            <el-form-item label="家族史" prop="">
-                                                <el-input v-model="formData.memberMedicalHistory.remark"
+                                            <el-form-item label="家族史">
+                                                <el-input v-model="formData.remark"
                                                           type="textarea"></el-input>
                                             </el-form-item>
                                         </el-col>
@@ -499,8 +532,8 @@
 
                                     <el-row>
                                         <el-col :span="20">
-                                            <el-form-item label="过敏史" prop="allergicHistory">
-                                                <el-input v-model="formData.memberMedicalHistory.allergicHistory"
+                                            <el-form-item label="过敏史">
+                                                <el-input v-model="formData.allergicHistory"
                                                           type="textarea"></el-input>
                                             </el-form-item>
                                         </el-col>
@@ -508,8 +541,8 @@
 
                                     <el-row>
                                         <el-col :span="20">
-                                            <el-form-item label="病史" prop="medicalHistory">
-                                                <el-input v-model="formData.memberMedicalHistory.medicalHistory"
+                                            <el-form-item label="病史">
+                                                <el-input v-model="formData.medicalHistory"
                                                           type="textarea"></el-input>
                                             </el-form-item>
                                         </el-col>
@@ -517,8 +550,8 @@
 
                                     <el-row>
                                         <el-col :span="20">
-                                            <el-form-item label="慢性病" prop="chronicDisease">
-                                                <el-input v-model="formData.memberMedicalHistory.chronicDisease"
+                                            <el-form-item label="慢性病">
+                                                <el-input v-model="formData.chronicDisease"
                                                           type="textarea"></el-input>
                                             </el-form-item>
                                         </el-col>
@@ -528,8 +561,8 @@
                         </el-tabs>
                     </template>
                     <div slot="footer" class="dialog-footer">
-                        <el-button @click="dialogFormVisible = false">取消</el-button>
-                        <el-button type="primary" @click="handleUpdate()">确定</el-button>
+                        <el-button @click="dialogFormVisible4Edit = false">取消</el-button>
+                        <el-button type="primary" @click="handleEdit()">确定</el-button>
                     </div>
                 </el-dialog>
             </div>
@@ -544,7 +577,8 @@
 <script type="text/javascript" src="/static/js/jquery.min.js"></script>
 <script src="/static/js/axios-0.18.0.js"></script>
 <script>
-    var vue = new Vue({
+    var vue;
+    vue = new Vue({
         el: '#app',
         data: {
             //当前页码
@@ -563,55 +597,178 @@
             dialogFormVisible: false,
             //编辑表单是否可见
             dialogFormVisible4Edit: false,
-            rules: {}
+            // 健康管理师下拉框
+            healthMgrInfo:[],
+            // 婚姻状态
+            maritalStatus:[{
+                value: 1,
+                label: '未婚'
+            },{
+                value: 0,
+                label: '已婚'
+            }],
+            // 档案状态
+            status:[{
+                value: 1,
+                label: '禁用'
+            },{
+                value: 0,
+                label: '启用'
+            }],
+
+            rules: {
+                filenumber: [{required: true, message: '档案号为必填项', trigger: 'blur'}],
+                password: [{required: true, message: '密码为必填项', trigger: 'blur'}],
+                name: [{required: true, message: '姓名为必填项', trigger: 'blur'}],
+                phonenumber: [{required: true, message: '手机号为必填项', trigger: 'blur'}],
+                idcard: [{required: true, message: '身份证为必填项', trigger: 'blur'}],
+                birthday: [{required: true, message: '生日为必填项', trigger: 'blur'}],
+                sex: [{required: true, message: '性别为必选项', trigger: 'blur'}]
+            }
         },
         //钩子函数，VUE对象初始化完成后自动执行
         created() {
-            this.findPage(this.currentPage, this.pageSize, this.queryString);
+            this.findPage();
+            this. initHealthInfo();
         },
         methods: {
+            //重置表单
+            resetForm() {
+                this.formData = {};
+            },
+
             //分页查询
-            findPage: function (currentPage, pageSize, queryString) {
-                var _this=this;
+            findPage: function () {
+                var _this = this;
+
+                var currentPage = _this.currentPage;
+                var pageSize = _this.pageSize;
+                var queryString = _this.queryString;
+
                 axios.post("/memberInfo/members", {
-                    currentPage: _this.currentPage,
-                    pageSize: _this.pageSize,
-                    queryString: _this.queryString
+                    currentPage: currentPage,
+                    pageSize: pageSize,
+                    queryString: queryString
                 }).then(function (response) {
                     _this.total = response.data.total;
                     _this.tableData = response.data.rows;
-                })
+                });
             },
             //切换页码
             handleCurrentChange(currentPage) {
-                this.currentPage = currentPage;
-                this.findPage(this.currentPage, this.pageSize, this.queryString);
+                var _this = this;
+                _this.currentPage = currentPage;
+                this.findPage();
             },
-
+            // 初始化健康管理师下拉框
+            initHealthInfo: function() {
+                var _this = this;
+                axios.post("/memberInfo/healthMgrInfo").then(function (response) {
+                    _this.healthMgrInfo=response.data.data;
+                });
+            },
             // 弹出添加窗口
             handleCreate() {
+                //先清空表单
+                this.resetForm();
                 var _this = this;
                 _this.dialogFormVisible = true;
             },
-            // 弹出编辑窗口
-            findById(id) {
+            // 添加数据
+            heandleAdd(){
                 var _this = this;
-                // 查询数据后,将数据显示到弹窗后再显示弹窗
-                var memberId = id;
-                var url = "/memberInfo/member/" + memberId;
-                axios.get(url).then(function (response) {
-                    _this.formData = response.data;
-                    _this.dialogFormVisible4Edit = true;
-                }).catch(function (err) {
+                _this.$refs['dataAddForm'].validate(function (valid) {
+                    if (valid){
+                        axios.post("/memberInfo/amember",_this.formData).then(function (response) {
+                            // 隐藏编辑窗口
+                            this.dialogFormVisible = false;
+                            if(response.data.flag){
+                                _this.$message({
+                                    type: 'success',
+                                    message: response.data.message
+                                });
+                            }else {
+                                _this.$message.error(response.data.message);
+                            }
+                        }).finally(function () {
+                            // 无论是否编辑成功都刷新数据
+                            _this.findPage();
+                        });
+                    }else{
+                        //表单校验失败
+                        _this.$message.error("表单数据校验失败");
+                        return false;
+                    }
                 });
+            },
+            // 弹出编辑窗口并显示数据
+            findById(id) {
+                //先清空表单
+                this.resetForm();
+                var _this = this;
+                _this.dialogFormVisible4Edit = true;
+
+                axios.get("/memberInfo/memberInfo/" + id).then(function (response) {
+                    _this.formData = response.data.data;
+                });
+            },
+            // 编辑数据
+            handleEdit() {
+                var _this = this;
+                _this.$refs['dataEditForm'].validate(function (valid) {
+                    if (valid){
+                        axios.post("/memberInfo/umember",_this.formData).then(function (response) {
+                            // 隐藏编辑窗口
+                            this.dialogFormVisible4Edit = false;
+                            if(response.data.flag){
+                                _this.$message({
+                                    type: 'success',
+                                    message: response.data.message
+                                });
+                            }else {
+                                _this.$message.error(response.data.message);
+                            }
+                        }).finally(function () {
+                            // 无论是否编辑成功都刷新数据
+                            _this.findPage();
+                        });
+                    }else{
+                        //表单校验失败
+                        _this.$message.error("表单数据校验失败");
+                        return false;
+                    }
+                });
+            },
+            // 删除
+            deleteById(id) {
+                var _this = this;
+                this.$confirm("确认删除当前选中记录吗？", "提示", {type: 'warning'}).then(() => {
+                    axios.get("/memberInfo/member/" + id).then(function (response) {
+                        if (response.data.flag) {
+                            _this.$message({
+                                type: 'success',
+                                message: response.data.message
+                            });
+                            //删除成功后刷新页面
+                            _this.findPage();
+                        } else {
+                            _this.$message.error(response.data.message);
+                        }
+                    })
+                }).catch(() => {
+                    //点击取消时执行的逻辑
+                    //如果没有catch，浏览器会报错
+                    _this.$message('操作已取消');
+                });
+            },
+            //时间格式化
+            dateFormat: function (row, column) {
+                //row 表示一行数据, updateTime 表示要格式化的字段名称
+                var t = new Date(row.regtime);
+                return t.getFullYear() + "年" + (t.getMonth() + 1) + "月" + t.getDate() + "日";
             }
-        },
-        //时间格式化
-        dateFormat: function (row, column) {
-            //row 表示一行数据, updateTime 表示要格式化的字段名称
-            var t = new Date(row.regtime);
-            return t.getFullYear() + "年" + (t.getMonth() + 1) + "月" + t.getDate() + "日";
         }
+
     });
 </script>
 </html>

@@ -5,8 +5,10 @@
         <id column="id" property="id" jdbcType="INTEGER"/>
         <result column="health_mgr_id" property="healthMgrId" jdbcType="INTEGER"/>
         <result column="health_mgr_name" property="healthMgrName" jdbcType="VARCHAR"/>
-        <result column="state" property="state" jdbcType="INTEGER"/>
+        <result column="status" property="status" jdbcType="INTEGER"/>
         <result column="remark" property="remark" jdbcType="VARCHAR"/>
+        <result column="create_time" property="createTime" jdbcType="TIMESTAMP"/>
+        <result column="update_time" property="updateTime" jdbcType="TIMESTAMP"/>
     </resultMap>
     <sql id="Example_Where_Clause">
         <where>
@@ -69,7 +71,7 @@
         </where>
     </sql>
     <sql id="Base_Column_List">
-    id, health_mgr_id, health_mgr_name, state, remark
+    id, health_mgr_id, health_mgr_name, status, remark, create_time, update_time
   </sql>
     <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.health.bean.HealthMgrExample">
         select
@@ -103,9 +105,11 @@
     </delete>
     <insert id="insert" parameterType="com.health.bean.HealthMgr">
     insert into t_healthmgr (id, health_mgr_id, health_mgr_name, 
-      state, remark)
+      status, remark, create_time, 
+      update_time)
     values (#{id,jdbcType=INTEGER}, #{healthMgrId,jdbcType=INTEGER}, #{healthMgrName,jdbcType=VARCHAR}, 
-      #{state,jdbcType=INTEGER}, #{remark,jdbcType=VARCHAR})
+      #{status,jdbcType=INTEGER}, #{remark,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP}, 
+      #{updateTime,jdbcType=TIMESTAMP})
   </insert>
     <insert id="insertSelective" parameterType="com.health.bean.HealthMgr">
         insert into t_healthmgr
@@ -119,11 +123,17 @@
             <if test="healthMgrName != null">
                 health_mgr_name,
             </if>
-            <if test="state != null">
-                state,
+            <if test="status != null">
+                status,
             </if>
             <if test="remark != null">
                 remark,
+            </if>
+            <if test="createTime != null">
+                create_time,
+            </if>
+            <if test="updateTime != null">
+                update_time,
             </if>
         </trim>
         <trim prefix="values (" suffix=")" suffixOverrides=",">
@@ -136,11 +146,17 @@
             <if test="healthMgrName != null">
                 #{healthMgrName,jdbcType=VARCHAR},
             </if>
-            <if test="state != null">
-                #{state,jdbcType=INTEGER},
+            <if test="status != null">
+                #{status,jdbcType=INTEGER},
             </if>
             <if test="remark != null">
                 #{remark,jdbcType=VARCHAR},
+            </if>
+            <if test="createTime != null">
+                #{createTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="updateTime != null">
+                #{updateTime,jdbcType=TIMESTAMP},
             </if>
         </trim>
     </insert>
@@ -162,11 +178,17 @@
             <if test="record.healthMgrName != null">
                 health_mgr_name = #{record.healthMgrName,jdbcType=VARCHAR},
             </if>
-            <if test="record.state != null">
-                state = #{record.state,jdbcType=INTEGER},
+            <if test="record.status != null">
+                status = #{record.status,jdbcType=INTEGER},
             </if>
             <if test="record.remark != null">
                 remark = #{record.remark,jdbcType=VARCHAR},
+            </if>
+            <if test="record.createTime != null">
+                create_time = #{record.createTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="record.updateTime != null">
+                update_time = #{record.updateTime,jdbcType=TIMESTAMP},
             </if>
         </set>
         <if test="_parameter != null">
@@ -178,8 +200,10 @@
         set id = #{record.id,jdbcType=INTEGER},
         health_mgr_id = #{record.healthMgrId,jdbcType=INTEGER},
         health_mgr_name = #{record.healthMgrName,jdbcType=VARCHAR},
-        state = #{record.state,jdbcType=INTEGER},
-        remark = #{record.remark,jdbcType=VARCHAR}
+        status = #{record.status,jdbcType=INTEGER},
+        remark = #{record.remark,jdbcType=VARCHAR},
+        create_time = #{record.createTime,jdbcType=TIMESTAMP},
+        update_time = #{record.updateTime,jdbcType=TIMESTAMP}
         <if test="_parameter != null">
             <include refid="Update_By_Example_Where_Clause"/>
         </if>
@@ -193,11 +217,17 @@
             <if test="healthMgrName != null">
                 health_mgr_name = #{healthMgrName,jdbcType=VARCHAR},
             </if>
-            <if test="state != null">
-                state = #{state,jdbcType=INTEGER},
+            <if test="status != null">
+                status = #{status,jdbcType=INTEGER},
             </if>
             <if test="remark != null">
                 remark = #{remark,jdbcType=VARCHAR},
+            </if>
+            <if test="createTime != null">
+                create_time = #{createTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="updateTime != null">
+                update_time = #{updateTime,jdbcType=TIMESTAMP},
             </if>
         </set>
         where id = #{id,jdbcType=INTEGER}
@@ -206,8 +236,10 @@
     update t_healthmgr
     set health_mgr_id = #{healthMgrId,jdbcType=INTEGER},
       health_mgr_name = #{healthMgrName,jdbcType=VARCHAR},
-      state = #{state,jdbcType=INTEGER},
-      remark = #{remark,jdbcType=VARCHAR}
+      status = #{status,jdbcType=INTEGER},
+      remark = #{remark,jdbcType=VARCHAR},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP}
     where id = #{id,jdbcType=INTEGER}
   </update>
 </mapper>

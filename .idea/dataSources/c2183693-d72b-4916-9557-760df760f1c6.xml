@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dataSource name="health@localhost">
+<dataSource name="MySQL for 5.1 - health@localhost">
   <database-model serializer="dbm" dbms="MYSQL" family-id="MYSQL" format-version="4.15">
     <root id="1">
       <ServerVersion>5.7.23</ServerVersion>
@@ -16,7 +16,7 @@
     <schema id="4" parent="1" name="health">
       <Current>1</Current>
       <Visible>1</Visible>
-      <Collation>utf8mb4_general_ci</Collation>
+      <Collation>utf8_general_ci</Collation>
     </schema>
     <schema id="5" parent="1" name="information_schema">
       <Collation>utf8_general_ci</Collation>
@@ -946,35 +946,27 @@
     </table>
     <table id="239" parent="4" name="t_checkgroup">
       <Comment>检查分组表</Comment>
-      <Collation>utf8_general_ci</Collation>
     </table>
     <table id="240" parent="4" name="t_checkgroup_checkitem">
       <Comment>检查分组关联表</Comment>
-      <Collation>utf8_general_ci</Collation>
     </table>
     <table id="241" parent="4" name="t_checkitem">
       <Comment>检查项表</Comment>
-      <Collation>utf8_general_ci</Collation>
     </table>
     <table id="242" parent="4" name="t_clinic_department">
       <Comment>就诊科室</Comment>
-      <Collation>utf8_general_ci</Collation>
     </table>
     <table id="243" parent="4" name="t_disease_library">
       <Comment>疾病库</Comment>
-      <Collation>utf8_general_ci</Collation>
     </table>
     <table id="244" parent="4" name="t_evaluate">
       <Comment>评估建议</Comment>
-      <Collation>utf8_general_ci</Collation>
     </table>
     <table id="245" parent="4" name="t_health_plan">
       <Comment>健康方案</Comment>
-      <Collation>utf8_general_ci</Collation>
     </table>
     <table id="246" parent="4" name="t_health_plan_type">
       <Comment>健康方案类型</Comment>
-      <Collation>utf8_general_ci</Collation>
     </table>
     <table id="247" parent="4" name="t_healthmgr">
       <Comment>健康管理师</Comment>
@@ -1011,15 +1003,12 @@
     </table>
     <table id="255" parent="4" name="t_meals">
       <Comment>膳食库</Comment>
-      <Collation>utf8_general_ci</Collation>
     </table>
     <table id="256" parent="4" name="t_meals_type">
       <Comment>膳食类别</Comment>
-      <Collation>utf8_general_ci</Collation>
     </table>
     <table id="257" parent="4" name="t_member">
       <Comment>会员表</Comment>
-      <Collation>utf8_general_ci</Collation>
     </table>
     <table id="258" parent="4" name="t_member_dynamicinfo">
       <Comment>会员动态信息表</Comment>
@@ -1047,7 +1036,6 @@
     </table>
     <table id="264" parent="4" name="t_menu">
       <Comment>菜单表</Comment>
-      <Collation>utf8_general_ci</Collation>
     </table>
     <table id="265" parent="4" name="t_menu_permission">
       <Comment>菜单权限关联表</Comment>
@@ -1055,15 +1043,12 @@
     </table>
     <table id="266" parent="4" name="t_order">
       <Comment>预约表</Comment>
-      <Collation>utf8_general_ci</Collation>
     </table>
     <table id="267" parent="4" name="t_ordersetting">
       <Comment>预约设置表</Comment>
-      <Collation>utf8_general_ci</Collation>
     </table>
     <table id="268" parent="4" name="t_permission">
       <Comment>权限表</Comment>
-      <Collation>utf8_general_ci</Collation>
     </table>
     <table id="269" parent="4" name="t_question_bank">
       <Comment>题库表</Comment>
@@ -1075,31 +1060,24 @@
     </table>
     <table id="271" parent="4" name="t_role">
       <Comment>角色表</Comment>
-      <Collation>utf8_general_ci</Collation>
     </table>
     <table id="272" parent="4" name="t_role_menu">
       <Comment>角色菜单关联表</Comment>
-      <Collation>utf8_general_ci</Collation>
     </table>
     <table id="273" parent="4" name="t_setmeal">
       <Comment>套餐表</Comment>
-      <Collation>utf8_general_ci</Collation>
     </table>
     <table id="274" parent="4" name="t_setmeal_checkgroup">
       <Comment>套餐检查分组关联表</Comment>
-      <Collation>utf8_general_ci</Collation>
     </table>
     <table id="275" parent="4" name="t_sports_item_library">
       <Comment>运动项目库</Comment>
-      <Collation>utf8_general_ci</Collation>
     </table>
     <table id="276" parent="4" name="t_user">
       <Comment>用户表</Comment>
-      <Collation>utf8_general_ci</Collation>
     </table>
     <table id="277" parent="4" name="t_user_role">
       <Comment>用户角色关联表</Comment>
-      <Collation>utf8_general_ci</Collation>
     </table>
     <column id="278" parent="237" name="id">
       <Position>1</Position>

@@ -4,6 +4,7 @@ package com.health.constant;
  * 消息常量
  */
 public class MessageConstant {
+    
     public static final String DELETE_CHECKITEM_FAIL = "删除检查项失败";
     public static final String DELETE_CHECKITEM_SUCCESS = "删除检查项成功";
     public static final String ADD_CHECKITEM_SUCCESS = "新增检查项成功";
@@ -55,6 +56,8 @@ public class MessageConstant {
     public static final String ORDER_SUCCESS = "预约成功";
     public static final String ORDER_FAIL = "预约失败";
     public static final String GET_USERNAME_SUCCESS = "获取当前登录用户名称成功";
+    public static final String GET_MEMBER_SUCCESS = "获取当前会员信息成功";
+    public static final String GET_MEMBER_FAIL = "获取当前会员信息失败";
     public static final String GET_USERNAME_FAIL = "获取当前登录用户名称失败";
     public static final String GET_MENU_SUCCESS = "获取当前登录用户菜单成功";
     public static final String GET_MENU_FAIL = "获取当前登录用户菜单失败";
