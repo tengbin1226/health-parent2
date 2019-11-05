@@ -1,9 +1,12 @@
 package com.health.service;
 
 import com.github.pagehelper.PageInfo;
+import com.health.bean.HealthMgr;
 import com.health.entity.PageResult;
 import com.health.vo.MemberVO;
 import com.health.vo.MemberQueryVO;
+
+import java.util.List;
 
 /**
  * 会员管理接口
@@ -51,4 +54,10 @@ public interface MemberService {
      * @return
      */
     Boolean updateMemberInfo(MemberVO memberVO);
+
+    /**
+     * 查询所有健康管理师信息
+     * @return
+     */
+    List<HealthMgr> queryHealthMgrs();
 }

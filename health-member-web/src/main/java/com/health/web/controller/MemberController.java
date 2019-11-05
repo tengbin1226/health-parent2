@@ -6,18 +6,14 @@ import com.health.constant.MessageConstant;
 import com.health.entity.PageResult;
 import com.health.entity.QueryPageBean;
 import com.health.entity.Result;
-import com.health.service.HealthMgrService;
 import com.health.service.MemberService;
 import com.health.vo.MemberQueryVO;
 import com.health.vo.MemberVO;
-import org.apache.commons.lang3.ArrayUtils;
 import org.apache.dubbo.config.annotation.Reference;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.util.ObjectUtils;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -30,10 +26,6 @@ public class MemberController {
     // 会员接口
     @Reference(check = false)
     private MemberService memberService;
-
-    // 健康管理师接口
-    @Reference(check = false)
-    private HealthMgrService healthMgrService;
 
     /**
      * 跳转到页面
@@ -63,7 +55,10 @@ public class MemberController {
         return pageResult;
     }
 
-
+    /**
+     * 动态加载健康管理师下拉框
+     * @return
+     */
     @PostMapping("/healthMgrInfo")
     @ResponseBody
     public Result initHealthInfo(){
@@ -71,7 +66,7 @@ public class MemberController {
         Result result = new Result();
 
         // 获取健康管理师信息
-        List<HealthMgr> healthMgrs = healthMgrService.queryHealthMgrs();
+        List<HealthMgr> healthMgrs = memberService.queryHealthMgrs();
 
         if (healthMgrs.size()>0){
             result.setFlag(true);

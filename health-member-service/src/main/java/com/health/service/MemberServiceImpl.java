@@ -37,6 +37,9 @@ public class MemberServiceImpl implements MemberService {
     @Autowired
     private MemberMedicalHistoryMapper memberMedicalHistoryMapper;
 
+    @Autowired
+    private HealthMgrMapper healthMgrMapper;
+
     /**
      * 分页查询会员信息
      *
@@ -370,125 +373,17 @@ public class MemberServiceImpl implements MemberService {
 
 
     /**
-     * 添加会员信息
-     *
-     * @param memberVO
+     * 查询所有健康管理师信息
+     * 用于动态加载健康管理师下拉框
      * @return
+     */
+    @Override
+    public List<HealthMgr> queryHealthMgrs() {
 
-     @Override public Boolean addMember(MemberVO memberVO) {
-     if (ObjectUtils.isEmpty(memberVO)) {
-     return false;
-     }
-     // 获取会员基本信息对象
-     Member member = memberVO.getMember();
-     // 获取会员详细信息对象
-     MemberInfo memberinfo = memberVO.getMemberInfo();
-     // 获取会员动态信息对象
-     MemberDynamicInfo MemberDynamicInfo = memberVO.getMemberDynamicInfo();
-     // 获取会员病史信息对象
-     MemberMedicalHistory MemberMedicalHistory = memberVO.getMemberMedicalHistory();
+        HealthMgrExample example=new HealthMgrExample();
+        HealthMgrExample.Criteria criteria = example.createCriteria();
+        criteria.andStatusEqualTo(0);
 
-     // 添加会员基本信息
-     int i = memberMapper.insertSelective(member);
-     // 添加会员详细信息
-     int i1 = memberInfoMapper.insertSelective(memberinfo);
-     // 添加会员动态信息
-     int i2 = MemberDynamicInfoMapper.insertSelective(MemberDynamicInfo);
-     // 添加会员病史信息
-     int i3 = MemberMedicalHistoryMapper.insertSelective(MemberMedicalHistory);
-
-     return i > 0;
-     }*/
-
-    /**
-     * 根据主键编号查询会员基本信息,详细信息,动态信息,病史信息
-     *
-     * @param id
-     * @return
-
-     @Override public MemberVO findByMemberId(Integer id) {
-     if (ObjectUtils.isEmpty(id)) {
-     return null;
-     }
-     // 查询会员基本信息
-     Member member = memberMapper.selectByPrimaryKey(id);
-
-     // 查询会员详细信息
-     MemberInfoExample example = new MemberInfoExample();
-     MemberInfoExample.Criteria criteria = example.createCriteria();
-     criteria.andTMemberIdEqualTo(id);
-     List<MemberInfo> memberInfos = memberInfoMapper.selectByExample(example);
-     MemberInfo memberInfo = memberInfos.get(0);
-
-     // 根据健康管理师编号查询健康管理师信息
-     Integer healthMgrId = memberInfo.getHealthMgrId();
-     HealthMgrExample healthMgrExample = new HealthMgrExample();
-     HealthMgrExample.Criteria criteria1 = healthMgrExample.createCriteria();
-     criteria1.andHealthMgrIdEqualTo(healthMgrId);
-     List<HealthMgr> healthMgrs = healthMgrMapper.selectByExample(healthMgrExample);
-     HealthMgr healthMgr = healthMgrs.get(0);
-
-     // 查询会员动态信息
-     MemberDynamicInfoExample example1 = new MemberDynamicInfoExample();
-     MemberDynamicInfoExample.Criteria criteria2 = example1.createCriteria();
-     criteria2.andTMemberIdEqualTo(id);
-     List<MemberDynamicInfo> MemberDynamicInfos = MemberDynamicInfoMapper.selectByExample(example1);
-     MemberDynamicInfo MemberDynamicInfo = MemberDynamicInfos.get(0);
-
-
-     // 查询会员病史信息
-     MemberMedicalHistoryExample example2 = new MemberMedicalHistoryExample();
-     MemberMedicalHistoryExample.Criteria criteria3 = example2.createCriteria();
-     criteria3.andTMemberIdEqualTo(id);
-     List<MemberMedicalHistory> memberMedicalhistories = MemberMedicalHistoryMapper.selectByExample(example2);
-     MemberMedicalHistory MemberMedicalHistory = memberMedicalhistories.get(0);
-
-     // 实例化vo对象
-     MemberVO memberVO = new MemberVO();
-     // 设置属性
-     memberVO.setMember(member);
-     memberVO.setMemberInfo(memberInfo);
-     memberVO.setMemberDynamicInfo(MemberDynamicInfo);
-     memberVO.setMemberMedicalHistory(MemberMedicalHistory);
-     return memberVO;
-     }*/
-
-
-    /**
-     * 修改会员信息
-     *
-     * @param memberVO
-     * @return
-
-     @Override public Boolean updateMemberInfo(MemberVO memberVO) {
-     // 获取会员基本信息对象
-     Member member = memberVO.getMember();
-     // 获取会员详细信息对象
-     MemberInfo memberinfo = memberVO.getMemberInfo();
-     // 获取会员动态信息对象
-     MemberDynamicInfo MemberDynamicInfo = memberVO.getMemberDynamicInfo();
-     // 获取会员病史信息对象
-     MemberMedicalHistory MemberMedicalHistory = memberVO.getMemberMedicalHistory();
-
-     // 修改会员基本信息
-     int i = memberMapper.updateByPrimaryKeySelective(member);
-     // 会员详细信息
-     MemberInfoExample memberInfoExample = new MemberInfoExample();
-     MemberInfoExample.Criteria criteria = memberInfoExample.createCriteria();
-     criteria.andTMemberIdEqualTo(member.getId());
-     int i1 = memberInfoMapper.updateByExampleSelective(memberinfo, memberInfoExample);
-     // 修改会员动态信息
-     MemberDynamicInfoExample dynamicinfoExample = new MemberDynamicInfoExample();
-     MemberDynamicInfoExample.Criteria criteria1 = dynamicinfoExample.createCriteria();
-     criteria1.andTMemberIdEqualTo(member.getId());
-     int i2 = MemberDynamicInfoMapper.updateByExampleSelective(MemberDynamicInfo, dynamicinfoExample);
-
-     // 修改会员病史信息
-     MemberMedicalHistoryExample medicalhistoryExample = new MemberMedicalHistoryExample();
-     MemberMedicalHistoryExample.Criteria criteria2 = medicalhistoryExample.createCriteria();
-     criteria2.andTMemberIdEqualTo(member.getId());
-     int i3 = MemberMedicalHistoryMapper.updateByExampleSelective(MemberMedicalHistory, medicalhistoryExample);
-
-     return i3 > 0;
-     }*/
+        return healthMgrMapper.selectByExample(example);
+    }
 }

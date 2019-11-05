@@ -26,7 +26,6 @@
         <module>health-user-service</module>
         <module>health-order-web</module>
         <module>health-order-service</module>
-        <module>health-healthmanager-service</module>
         <module>health-web</module>
     </modules>
 
