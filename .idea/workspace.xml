@@ -2,33 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a0f75aff-8077-4b6c-bea1-18fd3c78ad7a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/health-api/src/main/java/com/health/service/HealthMgrService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/health-healthmanager-service/src/main/java/com/health/service/HealthMgrServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/health-healthmanager-service/src/main/resources/logback.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/health-member-service/src/main/resources/META-INF/spring-devtools.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/health-member-web/src/main/resources/META-INF/spring-devtools.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/health-order-web/src/main/java/com/health/web/controller/OrderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7f30284c-e9ca-4ed1-9296-236cb10b64d0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/health-api/src/main/java/com/health/vo/MemberQueryVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/health-api/src/main/java/com/health/vo/MemberQueryVO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/health-api/src/main/java/com/health/vo/MemberVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/health-api/src/main/java/com/health/vo/MemberVO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/health-common/src/main/java/com/health/constant/MessageConstant.java" beforeDir="false" afterPath="$PROJECT_DIR$/health-common/src/main/java/com/health/constant/MessageConstant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/health-common/src/main/java/com/health/utils/DateUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/health-common/src/main/java/com/health/utils/DateUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/health-member-service/src/main/java/com/health/mapper/HealthMgrMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/health-healthmanager-service/src/main/java/com/health/mapper/HealthMgrMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/health-member-service/src/main/java/com/health/mapper/HealthMgrMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/health-healthmanager-service/src/main/java/com/health/mapper/HealthMgrMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/health-member-service/src/main/java/com/health/mapper/MemberMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/health-member-service/src/main/java/com/health/mapper/MemberMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/health-member-service/src/main/java/com/health/service/MemberServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/health-member-service/src/main/java/com/health/service/MemberServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/health-member-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/health-member-service/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/health-member-service/src/main/resources/logback.xml" beforeDir="false" afterPath="$PROJECT_DIR$/health-member-service/src/main/resources/logback.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/java/com/health/web/controller/MemberController.java" beforeDir="false" afterPath="$PROJECT_DIR$/health-member-web/src/main/java/com/health/web/controller/MemberController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/health-member-web/src/main/resources/templates/member.html" beforeDir="false" afterPath="$PROJECT_DIR$/health-member-web/src/main/resources/templates/member.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/health-parent.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -82,18 +56,7 @@
     <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/health-order-web/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="12" column="33" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
-            </state>
-          </provider>
-          <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -281,7 +244,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -290,20 +252,11 @@
               <item name="health-parent" type="b2602c69:ProjectViewProjectNode" />
               <item name="health-parent" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="health-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="health-parent" type="462c0819:PsiDirectoryNode" />
-              <item name="health-order-service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="health-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="health-parent" type="462c0819:PsiDirectoryNode" />
-              <item name="health-order-web" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -338,7 +291,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Facets" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.14125" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="io.acari.n7.config" />
@@ -514,7 +467,8 @@
       <workItem from="1572829428622" duration="16363000" />
       <workItem from="1572855348272" duration="1633000" />
       <workItem from="1572863893752" duration="5782000" />
-      <workItem from="1572913966805" duration="1041000" />
+      <workItem from="1572913966805" duration="2267000" />
+      <workItem from="1572916271154" duration="470000" />
     </task>
     <task id="LOCAL-00001" summary="健康管理系统项目">
       <created>1571971670804</created>
@@ -628,11 +582,18 @@
       <option name="project" value="LOCAL" />
       <updated>1572508759636</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="基本完成会员管理中的会员档案功能.添加修改有待测试">
+      <created>1572915151149</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1572915151149</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="237475000" />
+    <option name="totallyTimeSpent" value="239171000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -645,7 +606,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1488" height="878" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Structure" order="0" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="1" />
@@ -654,7 +614,7 @@
       <window_info id="UI Designer" order="4" />
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info id="Web" order="6" side_tool="true" />
-      <window_info active="true" content_ui="combo" x="531" y="59" width="411" height="746" id="Project" order="7" visible="true" weight="0.24125874" />
+      <window_info active="true" content_ui="combo" x="531" y="59" width="411" height="746" id="Project" order="7" visible="true" weight="0.19020979" />
       <window_info anchor="bottom" id="Messages" order="0" weight="0.35897437" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.32914925" />
@@ -708,7 +668,8 @@
     <MESSAGE value="完成会员接口及实现,实现页面分页显示数据" />
     <MESSAGE value="数据库表以及领域对象基本完善,完成会员管理的会员档案显示功能" />
     <MESSAGE value="将所有领域对象序列化,完成会员档案页面" />
-    <option name="LAST_COMMIT_MESSAGE" value="将所有领域对象序列化,完成会员档案页面" />
+    <MESSAGE value="基本完成会员管理中的会员档案功能.添加修改有待测试" />
+    <option name="LAST_COMMIT_MESSAGE" value="基本完成会员管理中的会员档案功能.添加修改有待测试" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1054,16 +1015,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/health-member-web/src/main/java/com/health/web/controller/MemberController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2438">
-          <caret line="126" column="48" selection-start-line="126" selection-start-column="48" selection-end-line="126" selection-end-column="48" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/health-api/src/main/java/com/health/service/MemberService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="644">
@@ -1104,16 +1055,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/health-healthmanager-service/src/main/java/com/health/service/HealthMgrServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="22" column="17" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/health-order-web/src/main/java/com/health/web/controller/OrderController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="299">
@@ -1136,6 +1077,26 @@
       </provider>
       <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/health-healthmanager-service/src/main/java/com/health/service/HealthMgrServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="22" column="17" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/health-member-web/src/main/java/com/health/web/controller/MemberController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="24" column="3" lean-forward="true" selection-start-line="24" selection-start-column="3" selection-end-line="24" selection-end-column="3" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
   </component>
   <component name="masterDetails">
     <states>
@@ -1147,7 +1108,6 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>
