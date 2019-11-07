@@ -7,7 +7,6 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-@Data
 public class SetMealCheckGroupExample implements Serializable {
 
     private static final long serialVersionUID = 3002759421588314161L;

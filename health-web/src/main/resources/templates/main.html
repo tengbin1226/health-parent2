@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- 页面meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>传智健康</title>
+    <meta name="description" content="传智健康">
+    <meta name="keywords" content="传智健康">
+    <meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" name="viewport">
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="/static/plugins/elementui/index.css">
+    <link rel="stylesheet" href="/static/plugins/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <style type="text/css">
+        .el-main{
+            position: absolute;
+            top: 70px;
+            bottom: 0px;
+            left: 200px;
+            right: 10px;
+            padding: 0;
+        }
+    </style>
+</head>
+<body class="hold-transition skin-purple sidebar-mini">
+<div id="app">
+    <el-container>
+        <el-header  class="main-header" style="height:70px;">
+            <nav class="navbar navbar-static-top" :class=''>
+                <!-- Logo -->
+                <a href="#" class="logo" style="text-align:center">
+                    <span class="logo-lg"><img src="/static/img/logo.png"></span>
+                </a>
+                <div class="right-menu">
+                    <span class="help"><i class="fa fa-exclamation-circle" aria-hidden="true"></i>帮助</span>
+                    <el-dropdown class="avatar-container right-menu-item" trigger="click">
+                        <div class="avatar-wrapper">
+                            <img src="/static/img/user2-160x160.jpg" class="user-avatar">
+                            {{username}}
+                        </div>
+                        <el-dropdown-menu slot="dropdown">
+                            <el-dropdown-item divided>
+                                <span style="display:block;">修改密码</span>
+                            </el-dropdown-item>
+                            <el-dropdown-item divided>
+                                <span style="display:block;"><a href="/logout.do">退出</a></span>
+                            </el-dropdown-item>
+                        </el-dropdown-menu>
+                    </el-dropdown>
+                </div>
+            </nav>
+        </el-header>
+        <el-container>
+            <el-aside width="200px">
+                <el-menu>
+                    <el-submenu v-for="menu in menuList" :index="menu.path">
+                        <template slot="title">
+                            <i class="fa" :class="menu.icon"></i>
+                            {{menu.title}}
+                        </template>
+                        <template v-for="child in menu.children">
+                            <el-menu-item :index="child.path">
+                                <a :href="child.linkUrl" target="right">{{child.title}}</a>
+                            </el-menu-item>
+                        </template>
+                    </el-submenu>
+                </el-menu>
+            </el-aside>
+            <el-container>
+                <iframe name="right" class="el-main" src="" width="1258px" height="1200px" frameborder="0"></iframe>
+            </el-container>
+        </el-container>
+    </el-container>
+</div>
+</body>
+<!-- 引入组件库 -->
+<script src="/static/js/vue.js"></script>
+<script src="/static/plugins/elementui/index.js"></script>
+<script type="text/javascript" src="/static/js/jquery.min.js"></script>
+<script src="/static/js/axios-0.18.0.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data:{
+            username:null,//用户名
+            menuList:[
+                {
+                    "path": "1",
+                    "title": "工作台",
+                    "icon":"fa-dashboard",
+                    "children": []
+                },
+                {
+                    "path": "2",
+                    "title": "会员管理",
+                    "icon":"fa-user-md",
+                    "children": [
+                        {
+                            "path": "/2-1",
+                            "title": "会员档案",
+                            "linkUrl":"http://localhost:9091/memberInfo/member",
+                            "children":[]
+                        },
+                        {
+                            "path": "/2-2",
+                            "title": "体检上传",
+                            "children":[]
+                        },
+                        {
+                            "path": "/2-3",
+                            "title": "会员统计",
+                            "linkUrl":"report_member.html",
+                            "children":[]
+                        },
+                    ]
+                },
+                {
+                    "path": "3",
+                    "title": "预约管理",
+                    "icon":"fa-tty",
+                    "children": [
+                        {
+                            "path": "/3-1",
+                            "title": "预约列表",
+                            "linkUrl":"http://localhost:9093/order/order",
+                            "children":[]
+                        },
+                        {
+                            "path": "/3-2",
+                            "title": "预约设置",
+                            "linkUrl":"ordersetting.html",
+                            "children":[]
+                        },
+                        {
+                            "path": "/3-3",
+                            "title": "套餐管理",
+                            "linkUrl":"setmeal.html",
+                            "children":[]
+                        },
+                        {
+                            "path": "/3-4",
+                            "title": "检查组管理",
+                            "linkUrl":"checkgroup.html",
+                            "children":[]
+                        },
+                        {
+                            "path": "/3-5",
+                            "title": "检查项管理",
+                            "linkUrl":"checkitem.html",
+                            "children":[]
+                        },
+                    ]
+                },
+                {
+                    "path": "4",
+                    "title": "健康评估",
+                    "icon":"fa-stethoscope",
+                    "children":[
+                        {
+                            "path": "/4-1",
+                            "title": "体制测评",
+                            "linkUrl":"all-medical-list.html",
+                            "children":[]
+                        },
+                        {
+                            "path": "/4-2",
+                            "title": "心理测评",
+                            "linkUrl":"all-medical-list.html",
+                            "children":[]
+                        },
+                        {
+                            "path": "/4-3",
+                            "title": "风险评估",
+                            "linkUrl":"all-medical-list.html",
+                            "children":[]
+                        }
+                    ]
+                },
+                {
+                    "path": "5",
+                    "title": "健康干预",
+                    "icon":"fa-stethoscope",
+                    "children":[
+                        {
+                            "path": "/5-1",
+                            "title": "人群分类",
+                            "linkUrl":"all-medical-list.html",
+                            "children":[]
+                        },
+                        {
+                            "path": "/5-2",
+                            "title": "干预方案",
+                            "linkUrl":"all-medical-list.html",
+                            "children":[]
+                        },
+                        {
+                            "path": "/5-3",
+                            "title": "随访日记",
+                            "linkUrl":"all-medical-list.html",
+                            "children":[]
+                        },
+                        {
+                            "path": "/5-4",
+                            "title": "指标管理",
+                            "linkUrl":"all-medical-list.html",
+                            "children":[]
+                        },
+                        {
+                            "path": "/5-5",
+                            "title": "模板管理",
+                            "linkUrl":"all-medical-list.html",
+                            "children":[]
+                        },
+                    ]
+                },
+                {
+                    "path": "6",
+                    "title": "系统设置",
+                    "icon":"fa-stethoscope",
+                    "children":[
+                        {
+                            "path": "/6-1",
+                            "title": "菜单设置",
+                            "linkUrl":"http://localhost:9092/menu/menu",
+                            "children":[]
+                        },
+                        {
+                            "path": "/6-2",
+                            "title": "权限管理",
+                            "linkUrl":"permission.html",
+                            "children":[]
+                        },
+                        {
+                            "path": "/6-3",
+                            "title": "用户管理",
+                            "linkUrl":"user.html",
+                            "children":[]
+                        },
+                        {
+                            "path": "/6-4",
+                            "title": "题库管理",
+                            "linkUrl":"all-medical-list.html",
+                            "children":[]
+                        },
+                        {
+                            "path": "/6-5",
+                            "title": "问卷管理",
+                            "linkUrl":"all-medical-list.html",
+                            "children":[]
+                        },
+                    ]
+                },
+                {
+                    "path": "7",     //菜单项所对应的路由路径
+                    "title": "统计分析",     //菜单项名称
+                    "icon":"fa-heartbeat",
+                    "children":[//是否有子菜单，若没有，则为[]
+                        {
+                            "path": "/7-1",
+                            "title": "预约套餐占比",
+                            "linkUrl":"report_setmeal.html",
+                            "children":[]
+                        },
+                        {
+                            "path": "/7-2",
+                            "title": "运营数据统计",
+                            "linkUrl":"report_business.html",
+                            "children":[]
+                        }
+                    ]
+                }
+            ]
+        },
+        created(){
+
+        }
+    });
+    $(function() {
+        var wd = 200;
+        $(".el-main").css('width', $('body').width() - wd + 'px');
+    });
+</script>
+</html>

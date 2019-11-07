@@ -2,7 +2,9 @@ package com.health.mapper;
 
 import com.health.bean.OrderSetting;
 import com.health.bean.OrderSettingExample;
+
 import java.util.List;
+
 import org.apache.ibatis.annotations.Param;
 
 public interface OrderSettingMapper {

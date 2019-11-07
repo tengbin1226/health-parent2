@@ -5,13 +5,10 @@ import lombok.Data;
 import java.io.Serializable;
 import java.util.Date;
 
-/**
- * 检查项
- */
 @Data
 public class CheckiTem implements Serializable {
 
-    private static final long serialVersionUID = -5768533703449544239L;
+    private static final long serialVersionUID = 7837502330993110385L;
 
     private Integer id;
 
@@ -34,6 +31,8 @@ public class CheckiTem implements Serializable {
     private String remark;
 
     private String attention;
+
+    private String status;
 
     private Date createTime;
 

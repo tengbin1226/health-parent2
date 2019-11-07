@@ -17,7 +17,7 @@ public class MemberQueryVO implements Serializable {
     private Integer id;
 
     // 档案号
-    private String fileNumber;
+    private String filenumber;
 
     // 姓名
     private String name;
@@ -29,7 +29,7 @@ public class MemberQueryVO implements Serializable {
     private String idcard;
 
     // 手机号码
-    private String phoneNumber;
+    private String phonenumber;
 
     // 注册时间
     private Date regtime;

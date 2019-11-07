@@ -31,5 +31,5 @@ public interface MemberMapper {
     int updateByPrimaryKey(Member record);
     
     /* 查询会员信息*/
-    List<MemberQueryVO> queryMemberInfo(@Param(value = "name") String name);
+    List<MemberQueryVO> queryMemberInfo(String queryString);
 }

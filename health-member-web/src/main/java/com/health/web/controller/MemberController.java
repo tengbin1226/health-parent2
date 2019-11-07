@@ -19,6 +19,7 @@ import java.util.List;
 /**
  * 会员管理后端控制器
  */
+@CrossOrigin(origins = "*",allowCredentials="true",allowedHeaders = "",methods = {})
 @Controller
 @RequestMapping("/memberInfo")
 public class MemberController {
@@ -88,9 +89,9 @@ public class MemberController {
      * @param memberAddVO
      * @return
      */
-    @PostMapping("/amember")
+    @PostMapping("/addmember")
     @ResponseBody
-    public Result addMemberInfo(MemberVO memberAddVO) {
+    public Result addMemberInfo(@RequestBody MemberVO memberAddVO) {
         // 实例化返回结果
         Result result = new Result();
         // 添加会员信息
@@ -165,7 +166,7 @@ public class MemberController {
      * @param memberAddVO
      * @return
      */
-    @PostMapping("/umember")
+    @PostMapping("/updatemember")
     @ResponseBody
     public Result updateMemberInfo(@RequestBody MemberVO memberVO) {
         // 实例化返回结果

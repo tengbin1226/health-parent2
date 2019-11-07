@@ -34,12 +34,6 @@ public interface MemberService {
      */
     Boolean updateMemberStatus(Integer id);
 
-    /**
-     *物理删除
-     * @param id
-     * @return
-     */
-    Boolean deleteMemberById(Integer id);
 
     /**
      * 根据主键编号查询会员基本信息和详细信息

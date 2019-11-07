@@ -10,6 +10,7 @@ import com.health.vo.MemberVO;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.dubbo.config.annotation.Service;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.ObjectUtils;
 
 import java.time.LocalDate;
@@ -19,6 +20,7 @@ import java.util.List;
  * 会员管理接口实现类
  */
 @Service
+@Transactional
 public class MemberServiceImpl implements MemberService {
 
     // 会员基本信息
@@ -51,7 +53,7 @@ public class MemberServiceImpl implements MemberService {
     @Override
     public PageInfo<MemberQueryVO> queryMembers(Integer currentPage, Integer pageSize, String queryString) {
         //拼接模糊查询的%
-        if ("无".equals(queryString) || "".equals(queryString) || StringUtils.isBlank(queryString)) {
+        if ("".equals(queryString) || StringUtils.isBlank(queryString)) {
             queryString = null;
         } else {
             queryString = "%" + queryString + "%";
@@ -150,7 +152,10 @@ public class MemberServiceImpl implements MemberService {
         // 添加会员病史信息
         int i3 = memberMedicalHistoryMapper.insertSelective(memberMedicalHistory);
 
-        return i3 > 0;
+        // 定义总影响行数
+        int total = i + i1 + i2 + i3;
+
+        return total > 0;
     }
 
     /**
@@ -213,6 +218,7 @@ public class MemberServiceImpl implements MemberService {
         memberVO.setName(member.getName());
         memberVO.setSex(member.getSex());
         memberVO.setIdcard(member.getIdcard());
+        memberVO.setBirthday(member.getBirthday());
         memberVO.setPhonenumber(member.getPhonenumber());
         memberVO.setRegtime(member.getRegtime());
         memberVO.setPassword(member.getPassword());
@@ -260,20 +266,19 @@ public class MemberServiceImpl implements MemberService {
     public Boolean updateMemberInfo(MemberVO memberVO) {
 
         Member member = memberMapper.selectByPrimaryKey(memberVO.getId());
+        member.setFilenumber(memberVO.getFilenumber());
+        member.setName(memberVO.getName());
+        member.setSex(memberVO.getSex());
+        member.setIdcard(memberVO.getIdcard());
+        member.setBirthday(memberVO.getBirthday());
+        member.setPhonenumber(memberVO.getPhonenumber());
+        member.setPassword(memberVO.getPassword());
+        member.setRegtime(memberVO.getRegtime());
+        member.setEmail(memberVO.getEmail());
+        member.setUpdateTime(DateUtils.localDateToDate(LocalDate.now()));
+        member.setStatus(memberVO.getStatus());
 
-        MemberExample example = new MemberExample();
-        MemberExample.Criteria criteria = example.createCriteria();
-        criteria.andFilenumberEqualTo(memberVO.getFilenumber());
-        criteria.andNameEqualTo(memberVO.getName());
-        criteria.andSexEqualTo(memberVO.getSex());
-        criteria.andIdcardEqualTo(memberVO.getIdcard());
-        criteria.andPhonenumberEqualTo(memberVO.getPhonenumber());
-        criteria.andRegtimeEqualTo(memberVO.getRegtime());
-        criteria.andPasswordEqualTo(memberVO.getPassword());
-        criteria.andEmailEqualTo(memberVO.getEmail());
-        criteria.andUpdateTimeEqualTo(DateUtils.localDateToDate(LocalDate.now()));
-        criteria.andStatusEqualTo(memberVO.getStatus());
-        int i = memberMapper.updateByExampleSelective(member, example);
+        int i = memberMapper.updateByPrimaryKeySelective(member);
 
         // TODO 先查询会员详细信息,再修改信息
         MemberInfoExample memberInfoExample = new MemberInfoExample();
@@ -281,15 +286,14 @@ public class MemberServiceImpl implements MemberService {
         criteria1.andTMemberIdEqualTo(memberVO.getId());
         MemberInfo memberInfo = memberInfoMapper.selectByExample(memberInfoExample).get(0);
 
-        MemberInfoExample memberInfoExample1 = new MemberInfoExample();
-        MemberInfoExample.Criteria criteria4 = memberInfoExample1.createCriteria();
-        criteria4.andMaritalStatusEqualTo(memberVO.getMaritalStatus());
-        criteria4.andJobEqualTo(memberVO.getJob());
-        criteria4.andEducationDegreeEqualTo(memberVO.getEducationDegree());
-        criteria4.andNativePlaceEqualTo(memberVO.getNativePlace());
-        criteria4.andHealthMgrIdEqualTo(memberVO.getHealthMgrId());
-        criteria4.andUpdateTimeEqualTo(DateUtils.localDateToDate(LocalDate.now()));
-        int i1 = memberInfoMapper.updateByExampleSelective(memberInfo, memberInfoExample1);
+        memberInfo.setMaritalStatus(memberVO.getMaritalStatus());
+        memberInfo.setJob(memberVO.getJob());
+        memberInfo.setEducationDegree(memberVO.getEducationDegree());
+        memberInfo.setNativePlace(memberVO.getNativePlace());
+        memberInfo.setHealthMgrId(memberVO.getHealthMgrId());
+        memberInfo.setUpdateTime(DateUtils.localDateToDate(LocalDate.now()));
+
+        int i1 = memberInfoMapper.updateByPrimaryKeySelective(memberInfo);
 
 
         //  TODO 先查询会员动态信息,再修改信息
@@ -300,22 +304,20 @@ public class MemberServiceImpl implements MemberService {
         // 查询
         MemberDynamicInfo memberDynamicInfo = memberDynamicInfoMapper.selectByExample(dynamicinfoExample).get(0);
 
-        MemberDynamicInfoExample dynamicInfoExample1 = new MemberDynamicInfoExample();
-        MemberDynamicInfoExample.Criteria criteria6 = dynamicInfoExample1.createCriteria();
         // 修改条件
-        criteria6.andHeightEqualTo(memberVO.getHeight());
-        criteria6.andWeightEqualTo(memberVO.getWeight());
-        criteria6.andDbpEqualTo(memberVO.getDbp());
-        criteria6.andSbpEqualTo(memberVO.getSbp());
-        criteria6.andBrethEqualTo(memberVO.getBreth());
-        criteria6.andThermometerEqualTo(memberVO.getThermometer());
-        criteria6.andWaistlineEqualTo(memberVO.getWaistline());
-        criteria6.andHiplineEqualTo(memberVO.getHipline());
-        criteria6.andBmiEqualTo(memberVO.getBmi());
-        criteria6.andSpoEqualTo(memberVO.getSpo());
-        criteria6.andUpdateTimeEqualTo(DateUtils.localDateToDate(LocalDate.now()));
+        memberDynamicInfo.setHeight(memberVO.getHeight());
+        memberDynamicInfo.setWeight(memberVO.getWeight());
+        memberDynamicInfo.setDbp(memberVO.getDbp());
+        memberDynamicInfo.setSbp(memberVO.getSbp());
+        memberDynamicInfo.setBreth(memberVO.getBreth());
+        memberDynamicInfo.setThermometer(memberVO.getThermometer());
+        memberDynamicInfo.setWaistline(memberVO.getWaistline());
+        memberDynamicInfo.setHipline(memberVO.getHipline());
+        memberDynamicInfo.setBmi(memberVO.getBmi());
+        memberDynamicInfo.setSpo(memberVO.getSpo());
+        memberDynamicInfo.setUpdateTime(DateUtils.localDateToDate(LocalDate.now()));
         // 修改
-        int i2 = memberDynamicInfoMapper.updateByExampleSelective(memberDynamicInfo, dynamicInfoExample1);
+        int i2 = memberDynamicInfoMapper.updateByPrimaryKeySelective(memberDynamicInfo);
 
         // 修改会员病史信息
         MemberMedicalHistoryExample medicalhistoryExample = new MemberMedicalHistoryExample();
@@ -323,64 +325,31 @@ public class MemberServiceImpl implements MemberService {
         criteria3.andTMemberIdEqualTo(member.getId());
         MemberMedicalHistory memberMedicalHistory = memberMedicalHistoryMapper.selectByExample(medicalhistoryExample).get(0);
 
-        MemberMedicalHistoryExample medicalhistoryExample1 = new MemberMedicalHistoryExample();
-        MemberMedicalHistoryExample.Criteria criteria7 = medicalhistoryExample1.createCriteria();
-        criteria7.andPreviousHistoryEqualTo(memberVO.getPreviousHistory());
-        criteria7.andFamilyHistoryEqualTo(memberVO.getFamilyHistory());
-        criteria7.andAllergicHistoryEqualTo(memberVO.getAllergicHistory());
-        criteria7.andMedicalHistoryEqualTo(memberVO.getMedicalHistory());
-        criteria7.andChronicDiseaseEqualTo(memberVO.getChronicDisease());
-        criteria7.andUpdateTimeEqualTo(DateUtils.localDateToDate(LocalDate.now()));
-        int i3 = memberMedicalHistoryMapper.updateByExampleSelective(memberMedicalHistory, medicalhistoryExample1);
+        memberMedicalHistory.setPreviousHistory(memberVO.getPreviousHistory());
+        memberMedicalHistory.setFamilyHistory(memberVO.getFamilyHistory());
+        memberMedicalHistory.setAllergicHistory(memberVO.getAllergicHistory());
+        memberMedicalHistory.setMedicalHistory(memberVO.getMedicalHistory());
+        memberMedicalHistory.setChronicDisease(memberVO.getChronicDisease());
+        memberMedicalHistory.setUpdateTime(DateUtils.localDateToDate(LocalDate.now()));
 
-        return i3>0;
+        int i3 = memberMedicalHistoryMapper.updateByPrimaryKeySelective(memberMedicalHistory);
+
+        // 定义总影响行数
+        int total = i + i1 + i2 + i3;
+
+        return total > 0;
     }
-
-
-    /**
-     * 物理删除
-     *
-     * @param id
-     * @return
-     */
-    @Override
-    public Boolean deleteMemberById(Integer id) {
-        if (ObjectUtils.isEmpty(id)) {
-            return false;
-        }
-        // 删除会员动态信息
-        MemberDynamicInfoExample MemberDynamicInfoExample = new MemberDynamicInfoExample();
-        MemberDynamicInfoExample.Criteria criteria1 = MemberDynamicInfoExample.createCriteria();
-        criteria1.andTMemberIdEqualTo(id);
-        int i2 = memberDynamicInfoMapper.deleteByExample(MemberDynamicInfoExample);
-
-        // 删除会员病史信息
-        MemberMedicalHistoryExample MemberMedicalHistoryExample = new MemberMedicalHistoryExample();
-        MemberMedicalHistoryExample.Criteria criteria2 = MemberMedicalHistoryExample.createCriteria();
-        criteria2.andTMemberIdEqualTo(id);
-        int i3 = memberMedicalHistoryMapper.deleteByExample(MemberMedicalHistoryExample);
-
-        //删除会员详细信息
-        MemberInfoExample example = new MemberInfoExample();
-        MemberInfoExample.Criteria criteria = example.createCriteria();
-        criteria.andTMemberIdEqualTo(id);
-        int i = memberInfoMapper.deleteByExample(example);
-        // 删除会员基本信息
-        int i1 = memberMapper.deleteByPrimaryKey(id);
-
-        return i1 > 0;
-    }
-
 
     /**
      * 查询所有健康管理师信息
      * 用于动态加载健康管理师下拉框
+     *
      * @return
      */
     @Override
     public List<HealthMgr> queryHealthMgrs() {
 
-        HealthMgrExample example=new HealthMgrExample();
+        HealthMgrExample example = new HealthMgrExample();
         HealthMgrExample.Criteria criteria = example.createCriteria();
         criteria.andStatusEqualTo(0);
 

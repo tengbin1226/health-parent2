@@ -2,7 +2,10 @@ package com.health.mapper;
 
 import com.health.bean.Order;
 import com.health.bean.OrderExample;
+
 import java.util.List;
+
+import com.health.vo.OrderQueryVO;
 import org.apache.ibatis.annotations.Param;
 
 public interface OrderMapper {
@@ -27,4 +30,7 @@ public interface OrderMapper {
     int updateByPrimaryKeySelective(Order record);
 
     int updateByPrimaryKey(Order record);
+
+    /*查询预约列表信息*/
+    List<OrderQueryVO> selectOrderInfo(String queryString);
 }

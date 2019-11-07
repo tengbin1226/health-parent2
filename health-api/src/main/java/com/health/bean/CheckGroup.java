@@ -3,15 +3,13 @@ package com.health.bean;
 import lombok.Data;
 
 import java.io.Serializable;
+import java.security.SecureRandom;
 import java.util.Date;
 
-/**
- * 检查组
- */
 @Data
 public class CheckGroup implements Serializable {
 
-    private static final long serialVersionUID = -1957815206578149998L;
+    private static final long serialVersionUID = -5870086726921420437L;
 
     private Integer id;
 
@@ -26,6 +24,8 @@ public class CheckGroup implements Serializable {
     private String remark;
 
     private String attention;
+
+    private String status;
 
     private Date createTime;
 

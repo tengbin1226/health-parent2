@@ -379,11 +379,11 @@
     <select id="queryMemberInfo" resultType="com.health.vo.MemberQueryVO">
 		SELECT
 			tm.id AS id,
-			tm.fileNumber AS fileNumber,
+			tm.fileNumber AS filenumber,
 			tm.name AS name,
 			tm.sex AS sex,
 			tm.idCard AS idcard,
-			tm.phoneNumber AS phoneNumber,
+			tm.phoneNumber AS phonenumber,
 			tm.regTime AS regtime,
 			tm.PASSWORD AS password,
 			tm.email AS email,
@@ -400,8 +400,8 @@
 			left  join  t_healthmgr th on tmi.health_mgr_id = th.health_mgr_id
 		WHERE
 			tm.status = 0
-        <if test="name != null and name.length > 0">
-    		and tm.name like #{name}
+        <if test="value != null and value.length > 0">
+    		and tm.name like #{value} or tm.fileNumber like #{value} or tm.phoneNumber like #{value}
         </if>
     </select>
     

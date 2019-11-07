@@ -12,6 +12,8 @@
         <module name="health-member-web" />
         <module name="health-user-web" />
         <module name="health-common" />
+        <module name="health-menu-web" />
+        <module name="health-menu-service" />
         <module name="health-order-web" />
         <module name="health-web" />
         <module name="health-user-service" />
@@ -29,6 +31,8 @@
       <module name="health-healthmanager-service" options="-parameters" />
       <module name="health-member-service" options="-parameters" />
       <module name="health-member-web" options="-parameters" />
+      <module name="health-menu-service" options="-parameters" />
+      <module name="health-menu-web" options="-parameters" />
       <module name="health-mobile" options="-parameters" />
       <module name="health-order-service" options="-parameters" />
       <module name="health-order-web" options="-parameters" />

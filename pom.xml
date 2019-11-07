@@ -27,6 +27,8 @@
         <module>health-order-web</module>
         <module>health-order-service</module>
         <module>health-web</module>
+        <module>health-menu-web</module>
+        <module>health-menu-service</module>
     </modules>
 
     <properties>
