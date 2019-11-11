@@ -947,9 +947,7 @@
     <table id="239" parent="4" name="t_checkgroup">
       <Comment>检查分组表</Comment>
     </table>
-    <table id="240" parent="4" name="t_checkgroup_checkitem">
-      <Comment>检查分组关联表</Comment>
-    </table>
+    <table id="240" parent="4" name="t_checkgroup_checkitem"/>
     <table id="241" parent="4" name="t_checkitem">
       <Comment>检查项表</Comment>
     </table>
@@ -1235,7 +1233,6 @@
     </key>
     <column id="303" parent="240" name="checkgroup_id">
       <Position>1</Position>
-      <Comment>检查分组编号</Comment>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>0</DefaultExpression>
@@ -1243,7 +1240,6 @@
     </column>
     <column id="304" parent="240" name="checkitem_id">
       <Position>2</Position>
-      <Comment>检查项编号</Comment>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>0</DefaultExpression>
@@ -1251,13 +1247,11 @@
     </column>
     <column id="305" parent="240" name="create_time">
       <Position>3</Position>
-      <Comment>创建时间</Comment>
       <DataType>datetime|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="306" parent="240" name="update_time">
       <Position>4</Position>
-      <Comment>修改时间</Comment>
       <DataType>datetime|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>

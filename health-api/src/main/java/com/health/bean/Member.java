@@ -6,9 +6,9 @@ import java.io.Serializable;
 import java.util.Date;
 
 @Data
-public class Member implements Serializable {
+public class Member implements Serializable{
 
-    private static final long serialVersionUID = 4490948706124079478L;
+    private static final long serialVersionUID = 7405043823121867987L;
 
     private Integer id;
 

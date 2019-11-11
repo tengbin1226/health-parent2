@@ -2,9 +2,10 @@ package com.health.mapper;
 
 import com.health.bean.HealthMgr;
 import com.health.bean.HealthMgrExample;
-import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
+
+import org.apache.ibatis.annotations.Param;
 
 public interface HealthMgrMapper {
     int countByExample(HealthMgrExample example);

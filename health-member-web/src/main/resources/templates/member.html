@@ -90,7 +90,7 @@
                                             </el-form-item>
                                         </el-col>
                                         <el-col :span="10">
-                                            <el-form-item label="性别" prop="sex">
+                                            <el-form-item label="性别" prop="sex" >
                                                 <el-select v-model="formData.sex">
                                                     <el-option label="男" value="1"></el-option>
                                                     <el-option label="女" value="2"></el-option>
@@ -253,7 +253,7 @@
                                         </el-col>
                                         <el-col :span="10">
                                             <el-form-item label="血氧饱和度" prop="spo">
-                                                <el-input v-model="formData.spo">%</el-input>
+                                                <el-input v-model="formData.spo"></el-input>
                                             </el-form-item>
                                         </el-col>
                                     </el-row>
@@ -352,7 +352,7 @@
                                     <el-row>
                                         <el-col :span="10">
                                             <el-form-item label="手机号码">
-                                                <el-input v-model="formData.telephone"/>
+                                                <el-input v-model="formData.phonenumber"/>
                                             </el-form-item>
                                         </el-col>
                                         <el-col :span="10">
@@ -502,7 +502,7 @@
                                         </el-col>
                                         <el-col :span="10">
                                             <el-form-item label="血氧饱和度">
-                                                <el-input v-model="formData.spo"></el-input>%
+                                                <el-input v-model="formData.spo"></el-input>
                                             </el-form-item>
                                         </el-col>
                                     </el-row>
@@ -577,8 +577,7 @@
 <script type="text/javascript" src="/static/js/jquery.min.js"></script>
 <script src="/static/js/axios-0.18.0.js"></script>
 <script>
-    var vue;
-    vue = new Vue({
+    var vue = new Vue({
         el: '#app',
         data: {
             //当前页码
@@ -769,7 +768,6 @@
                 return t.getFullYear() + "年" + (t.getMonth() + 1) + "月" + t.getDate() + "日";
             }
         }
-
     });
 </script>
 </html>

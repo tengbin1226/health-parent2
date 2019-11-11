@@ -1,6 +1,5 @@
 package com.health.bean;
 
-import javax.naming.directory.SearchResult;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;

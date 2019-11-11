@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- 页面meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>传智健康</title>
+    <meta name="description" content="传智健康">
+    <meta name="keywords" content="传智健康">
+    <meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" name="viewport">
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="../plugins/elementui/index.css">
+    <link rel="stylesheet" href="../plugins/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- 引入组件库 -->
+    <script type="text/javascript" src="../js/jquery.min.js"></script>
+    <script src="../js/vue.js"></script>
+    <script src="../plugins/elementui/index.js"></script>
+    <script src="../js/axios-0.18.0.js"></script>
+    <style>
+        .datatable {
+            position: relative;
+            box-sizing: border-box;
+            -webkit-box-flex: 1;
+            width: 100%;
+            max-width: 100%;
+            font-size: 14px;
+            color: rgb(96, 98, 102);
+            overflow: hidden;
+            flex: 1 1 0%;
+        }
+
+        .datatable td,
+        .datatable th {
+            padding: 12px 0;
+            min-width: 0;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            text-overflow: ellipsis;
+            vertical-align: middle;
+            position: relative;
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body class="hold-transition">
+<div id="app">
+    <div class="content-header">
+        <h1>健康评估
+            <small>心理测评</small>
+        </h1>
+        <el-breadcrumb separator-class="el-icon-arrow-right" class="breadcrumb">
+            <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
+            <el-breadcrumb-item>健康评估</el-breadcrumb-item>
+            <el-breadcrumb-item>心理测评</el-breadcrumb-item>
+        </el-breadcrumb>
+    </div>
+    <div class="app-container">
+        <div class="box">
+            <div class="filter-container">
+                <el-input placeholder="档案号/姓名" v-model="queryString" style="width: 200px;" class="filter-item"
+                          @keyup.enter.native="handleFilter"></el-input>
+                <el-button @click="findPage()" class="dalfBut">查询</el-button>
+                <el-button type="primary" class="butT" @click="handleCreate()">新建</el-button>
+            </div>
+            <el-table size="small" current-row-key="id" :data="dataList" stripe highlight-current-row>
+                <el-table-column type="index" align="center" label="序号"></el-table-column>
+                <el-table-column prop=" " label="档案号" align="center"></el-table-column>
+                <el-table-column prop=" " label="姓名" align="center"></el-table-column>
+                <el-table-column prop=" " label="心理评测日期" align="center"></el-table-column>
+                <el-table-column prop=" " label="躯体化" align="center"></el-table-column>
+                <el-table-column prop=" " label="强迫症化" align="center"></el-table-column>
+                <el-table-column prop=" " label="人际关系敏感" align="center"></el-table-column>
+                <el-table-column prop=" " label="犹豫" align="center"></el-table-column>
+                <el-table-column prop=" " label="焦虑" align="center"></el-table-column>
+                <el-table-column prop=" " label="敌对" align="center"></el-table-column>
+                <el-table-column prop=" " label="恐怖" align="center"></el-table-column>
+                <el-table-column prop=" " label="偏执" align="center"></el-table-column>
+                <el-table-column prop=" " label="精神病性" align="center"></el-table-column>
+                <el-table-column label="操作" align="center">
+                    <template slot-scope="scope">
+                        <!--scope.row表示列表中的一条数据-->
+                        <el-button type="primary" size="mini" @click="handleUpdate(scope.row.id)">编辑</el-button>
+                        <el-button size="mini" type="danger" @click="handleDelete(scope.row.id)">删除</el-button>
+                    </template>
+                </el-table-column>
+            </el-table>
+
+            <!--分页-->
+            <div class="pagination-container" align="right">
+                <el-pagination class="pagiantion" @current-change="handleCurrentChange" :current-page="currentPage"
+                               :page-size="pageSize" layout="total, prev, pager, next, jumper" :total="total">
+                </el-pagination>
+            </div>
+            <!-- 新增标签弹层-->
+            <div class="add-form">
+                <el-dialog title="新增" :visible.sync="dialogFormVisible">
+                    <template>
+                        <el-form ref="dataAddForm" :model="formData" :rules="rules" label-position="right"
+                                 label-width="100px">
+                            <el-row>
+                                <el-col :span="10">
+                                    <el-form-item label="档案号" prop="filenumber">
+                                        <el-input v-model="formData.filenumber"/>
+                                    </el-form-item>
+                                </el-col>
+                                <el-col :span="10">
+                                    <el-form-item label="姓名" prop="name">
+                                        <el-input v-model="formData.name"/>
+                                    </el-form-item>
+                                </el-col>
+                            </el-row>
+
+                            <!--切换面板-->
+                            <el-tabs type="card">
+                                <el-tab-pane label="心理测评" name="first">
+                                    请根据近一年的感觉，回答以下问题：<br/><br/>
+
+                                </el-tab-pane>
+                            </el-tabs>
+                        </el-form>
+                    </template>
+                    <div slot="footer" class="dialog-footer">
+                        <el-button @click="dialogFormVisible = false">取消</el-button>
+                        <el-button type="primary" @click="handleAdd()">保存</el-button>
+                    </div>
+                </el-dialog>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script>
+    var vue = new Vue({
+        el: '#app',
+        data: {
+            //当前页码
+            currentPage: 1,
+            //每页显示的记录数
+            pageSize: 6,
+            //总记录数
+            total: 0,
+            //查询条件
+            queryString: null,
+            //当前页要展示的分页列表数据
+            dataList: [],
+            //表单数据
+            formData: {},
+            //增加表单是否可见
+            dialogFormVisible: false,
+            //编辑表单是否可见
+            dialogFormVisible4Edit: false,
+            rules: {
+                filenumber: [{
+                    required: true,
+                    message: '档案号为必填项',
+                    trigger: 'blur'
+                }],
+                name: [{
+                    required: true,
+                    message: '姓名为必填项',
+                    trigger: 'blur'
+                }]
+            }
+        },
+        //钩子函数，VUE对象初始化完成后自动执行
+        created() {
+
+        },
+        methods: {
+            //重置表单
+            resetForm() {
+                this.formData = {};
+            },
+            // 弹出添加窗口
+            handleCreate() {
+                //先清空表单
+                this.resetForm();
+                var _this = this;
+                _this.dialogFormVisible = true;
+            },
+            //分页查询
+            findPage: function () {
+                var _this = this;
+
+                var currentPage = _this.currentPage;
+                var pageSize = _this.pageSize;
+                var queryString = _this.queryString;
+
+                axios.post("#", {
+                    currentPage: currentPage,
+                    pageSize: pageSize,
+                    queryString: queryString
+                }).then(function (response) {
+                    _this.total = response.data.total;
+                    _this.dataList = response.data.rows;
+                });
+            },
+            //切换页码
+            handleCurrentChange(currentPage) {
+                var _this = this;
+                _this.currentPage = currentPage;
+                this.findPage();
+            },
+        }
+    });
+</script>

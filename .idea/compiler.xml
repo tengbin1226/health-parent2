@@ -6,28 +6,34 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="health-mobile" />
         <module name="health-member-service" />
+        <module name="health-common" />
+        <module name="health-mobile" />
+        <module name="health-evaluate-web" />
+        <module name="health-setting-web" />
+        <module name="health-setting-service" />
         <module name="health-order-service" />
         <module name="health-member-web" />
-        <module name="health-user-web" />
-        <module name="health-common" />
-        <module name="health-menu-web" />
-        <module name="health-menu-service" />
         <module name="health-order-web" />
         <module name="health-web" />
-        <module name="health-user-service" />
         <module name="health-api" />
+        <module name="health-evaluate-service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="health-healthmanager-service" target="1.8" />
+      <module name="health-menu-service" target="1.8" />
+      <module name="health-menu-web" target="1.8" />
+      <module name="health-user-service" target="1.8" />
+      <module name="health-user-web" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="health-api" options="-parameters" />
       <module name="health-common" options="-parameters" />
+      <module name="health-evaluate-service" options="-parameters" />
+      <module name="health-evaluate-web" options="-parameters" />
       <module name="health-healthmanager-service" options="-parameters" />
       <module name="health-member-service" options="-parameters" />
       <module name="health-member-web" options="-parameters" />
@@ -37,6 +43,8 @@
       <module name="health-order-service" options="-parameters" />
       <module name="health-order-web" options="-parameters" />
       <module name="health-parent" options="-parameters" />
+      <module name="health-setting-service" options="-parameters" />
+      <module name="health-setting-web" options="-parameters" />
       <module name="health-user-service" options="-parameters" />
       <module name="health-user-web" options="-parameters" />
       <module name="health-web" options="-parameters" />

@@ -3,6 +3,7 @@ package com.health.service;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.health.bean.*;
+import com.health.exception.CustomException;
 import com.health.mapper.*;
 import com.health.utils.DateUtils;
 import com.health.vo.MemberQueryVO;
@@ -82,6 +83,9 @@ public class MemberServiceImpl implements MemberService {
      */
     @Override
     public Boolean addMember(MemberVO memberVO) {
+        if (ObjectUtils.isEmpty(memberVO)){
+            throw new CustomException("会员添加对象为空!");
+        }
         // 实例化会员基本信息对象
         Member member = new Member();
         // 设置属性
@@ -105,7 +109,7 @@ public class MemberServiceImpl implements MemberService {
         // 实例化会员详细信息
         MemberInfo memberInfo = new MemberInfo();
         // 设置属性
-        memberInfo.setTMemberId(memberVO.getId());
+        memberInfo.setTMemberId(member.getId());
         memberInfo.setMaritalStatus(memberVO.getMaritalStatus());
         memberInfo.setJob(memberVO.getJob());
         memberInfo.setEducationDegree(memberVO.getEducationDegree());
@@ -120,7 +124,7 @@ public class MemberServiceImpl implements MemberService {
 
         // 实例化会员动态信息
         MemberDynamicInfo memberDynamicInfo = new MemberDynamicInfo();
-        memberDynamicInfo.setTMemberId(memberVO.getId());
+        memberDynamicInfo.setTMemberId(member.getId());
         memberDynamicInfo.setHeight(memberVO.getHeight());
         memberDynamicInfo.setWeight(memberVO.getWeight());
         memberDynamicInfo.setDbp(memberVO.getDbp());
@@ -140,7 +144,7 @@ public class MemberServiceImpl implements MemberService {
         // 实例化会员病史信息
         MemberMedicalHistory memberMedicalHistory = new MemberMedicalHistory();
         // 设置属性
-        memberMedicalHistory.setTMemberId(memberVO.getId());
+        memberMedicalHistory.setTMemberId(member.getId());
         memberMedicalHistory.setPreviousHistory(memberVO.getPreviousHistory());
         memberMedicalHistory.setFamilyHistory(memberVO.getFamilyHistory());
         memberMedicalHistory.setAllergicHistory(memberVO.getAllergicHistory());
@@ -264,7 +268,9 @@ public class MemberServiceImpl implements MemberService {
      */
     @Override
     public Boolean updateMemberInfo(MemberVO memberVO) {
-
+        if(ObjectUtils.isEmpty(memberVO)){
+            throw new CustomException("会员修改对象为空!");
+        }
         Member member = memberMapper.selectByPrimaryKey(memberVO.getId());
         member.setFilenumber(memberVO.getFilenumber());
         member.setName(memberVO.getName());
@@ -348,11 +354,11 @@ public class MemberServiceImpl implements MemberService {
      */
     @Override
     public List<HealthMgr> queryHealthMgrs() {
-
+        // 创建查询条件对象
         HealthMgrExample example = new HealthMgrExample();
         HealthMgrExample.Criteria criteria = example.createCriteria();
         criteria.andStatusEqualTo(0);
-
+        // 返回查询结果集
         return healthMgrMapper.selectByExample(example);
     }
 }

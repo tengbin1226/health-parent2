@@ -5,13 +5,9 @@ import lombok.Data;
 import java.io.Serializable;
 import java.util.Date;
 
-/**
- * 健康管理师
- */
 @Data
 public class HealthMgr implements Serializable {
-
-    private static final long serialVersionUID = 1398332775390066665L;
+    private static final long serialVersionUID = -5354776543591466661L;
 
     private Integer id;
 
@@ -26,4 +22,5 @@ public class HealthMgr implements Serializable {
     private Date createTime;
 
     private Date updateTime;
+
 }

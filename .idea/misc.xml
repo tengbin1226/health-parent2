@@ -14,14 +14,23 @@
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/health-common/pom.xml" />
-        <option value="$PROJECT_DIR$/health-user-web/pom.xml" />
-        <option value="$PROJECT_DIR$/health-user-service/pom.xml" />
         <option value="$PROJECT_DIR$/health-order-service/pom.xml" />
         <option value="$PROJECT_DIR$/health-order-web/pom.xml" />
         <option value="$PROJECT_DIR$/health-web/pom.xml" />
-        <option value="$PROJECT_DIR$/health-menu-service/pom.xml" />
-        <option value="$PROJECT_DIR$/health-menu-web/pom.xml" />
+        <option value="$PROJECT_DIR$/health-evaluate-service/pom.xml" />
+        <option value="$PROJECT_DIR$/health-evaluate-web/pom.xml" />
+        <option value="$PROJECT_DIR$/health-setting-service/pom.xml" />
+        <option value="$PROJECT_DIR$/health-setting-web/pom.xml" />
+        <option value="$PROJECT_DIR$/health-api/pom.xml" />
+        <option value="$PROJECT_DIR$/health-member-service/pom.xml" />
+        <option value="$PROJECT_DIR$/health-member-web/pom.xml" />
+        <option value="$PROJECT_DIR$/health-mobile/pom.xml" />
       </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/health-user-web/pom.xml" />
+      </set>
     </option>
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">

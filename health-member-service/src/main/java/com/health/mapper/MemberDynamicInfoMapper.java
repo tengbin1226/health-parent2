@@ -2,9 +2,10 @@ package com.health.mapper;
 
 import com.health.bean.MemberDynamicInfo;
 import com.health.bean.MemberDynamicInfoExample;
-import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
+
+import org.apache.ibatis.annotations.Param;
 
 public interface MemberDynamicInfoMapper {
     int countByExample(MemberDynamicInfoExample example);

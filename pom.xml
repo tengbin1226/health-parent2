@@ -18,17 +18,17 @@
 
     <modules>
         <module>health-api</module>
-        <module>health-mobile</module>
         <module>health-common</module>
-        <module>health-member-web</module>
+        <module>health-evaluate-service</module>
+        <module>health-evaluate-web</module>
         <module>health-member-service</module>
-        <module>health-user-web</module>
-        <module>health-user-service</module>
-        <module>health-order-web</module>
+        <module>health-member-web</module>
+        <module>health-mobile</module>
         <module>health-order-service</module>
+        <module>health-order-web</module>
+        <module>health-setting-service</module>
+        <module>health-setting-web</module>
         <module>health-web</module>
-        <module>health-menu-web</module>
-        <module>health-menu-service</module>
     </modules>
 
     <properties>

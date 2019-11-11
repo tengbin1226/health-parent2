@@ -25,7 +25,7 @@ public class BackendController {
      * 进入到登录页面
      * @return
      */
-    @GetMapping("/health")
+    @GetMapping("/login")
     public String toLoginPage(){
         return "login";
     }

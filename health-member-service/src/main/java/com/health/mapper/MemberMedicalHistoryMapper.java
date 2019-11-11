@@ -2,9 +2,10 @@ package com.health.mapper;
 
 import com.health.bean.MemberMedicalHistory;
 import com.health.bean.MemberMedicalHistoryExample;
-import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
+
+import org.apache.ibatis.annotations.Param;
 
 public interface MemberMedicalHistoryMapper {
     int countByExample(MemberMedicalHistoryExample example);
