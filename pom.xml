@@ -16,6 +16,7 @@
     <packaging>pom</packaging>
     <name>health-parent</name>
 
+
     <modules>
         <!--用于存放领域对象,vo类,各模块接口-->
         <module>health-api</module>
