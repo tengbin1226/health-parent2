@@ -299,6 +299,76 @@ public class BodyTestExample implements Serializable {
             return (Criteria) this;
         }
 
+        public Criteria andTBodyTypeIsNull() {
+            addCriterion("t_body_type is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andTBodyTypeIsNotNull() {
+            addCriterion("t_body_type is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andTBodyTypeEqualTo(String value) {
+            addCriterion("t_body_type =", value, "tBodyType");
+            return (Criteria) this;
+        }
+
+        public Criteria andTBodyTypeNotEqualTo(String value) {
+            addCriterion("t_body_type <>", value, "tBodyType");
+            return (Criteria) this;
+        }
+
+        public Criteria andTBodyTypeGreaterThan(String value) {
+            addCriterion("t_body_type >", value, "tBodyType");
+            return (Criteria) this;
+        }
+
+        public Criteria andTBodyTypeGreaterThanOrEqualTo(String value) {
+            addCriterion("t_body_type >=", value, "tBodyType");
+            return (Criteria) this;
+        }
+
+        public Criteria andTBodyTypeLessThan(String value) {
+            addCriterion("t_body_type <", value, "tBodyType");
+            return (Criteria) this;
+        }
+
+        public Criteria andTBodyTypeLessThanOrEqualTo(String value) {
+            addCriterion("t_body_type <=", value, "tBodyType");
+            return (Criteria) this;
+        }
+
+        public Criteria andTBodyTypeLike(String value) {
+            addCriterion("t_body_type like", value, "tBodyType");
+            return (Criteria) this;
+        }
+
+        public Criteria andTBodyTypeNotLike(String value) {
+            addCriterion("t_body_type not like", value, "tBodyType");
+            return (Criteria) this;
+        }
+
+        public Criteria andTBodyTypeIn(List<String> values) {
+            addCriterion("t_body_type in", values, "tBodyType");
+            return (Criteria) this;
+        }
+
+        public Criteria andTBodyTypeNotIn(List<String> values) {
+            addCriterion("t_body_type not in", values, "tBodyType");
+            return (Criteria) this;
+        }
+
+        public Criteria andTBodyTypeBetween(String value1, String value2) {
+            addCriterion("t_body_type between", value1, value2, "tBodyType");
+            return (Criteria) this;
+        }
+
+        public Criteria andTBodyTypeNotBetween(String value1, String value2) {
+            addCriterion("t_body_type not between", value1, value2, "tBodyType");
+            return (Criteria) this;
+        }
+
         public Criteria andCreateTimeIsNull() {
             addCriterion("create_time is null");
             return (Criteria) this;

@@ -129,37 +129,19 @@
                             <el-tabs type="card">
                                 <el-tab-pane label="阳虚体质" name="first">
                                     请根据近一年的感觉，回答以下问题：<br/><br/>
-                                    1.您手脚发凉吗？<br/>
-                                    <template>
-                                        <el-radio-group>
-                                            <el-radio :label="1">没有 (根本不)</el-radio>
-                                            <el-radio :label="2">很少（有一点）</el-radio>
-                                            <el-radio :label="3">有时（有些）</el-radio>
-                                            <el-radio :label="4">经常（相当）</el-radio>
-                                            <el-radio :label="5">总是（非常）</el-radio>
-                                        </el-radio-group>
-                                    </template>
-                                    <br/>
-                                    <br/> 2.您胃脘部、背部或腰膝部怕冷吗？
-                                    <template>
-                                        <el-radio-group>
-                                            <el-radio :label="1">没有 (根本不)</el-radio>
-                                            <el-radio :label="2">很少（有一点）</el-radio>
-                                            <el-radio :label="3">有时（有些）</el-radio>
-                                            <el-radio :label="4">经常（相当）</el-radio>
-                                            <el-radio :label="5">总是（非常）</el-radio>
-                                        </el-radio-group>
-                                    </template>
-                                    <br/><br/>3.您感到怕冷、衣服比别人穿得多吗？
-                                    <template>
-                                        <el-radio-group>
-                                            <el-radio :label="1">没有 (根本不)</el-radio>
-                                            <el-radio :label="2">很少（有一点）</el-radio>
-                                            <el-radio :label="3">有时（有些）</el-radio>
-                                            <el-radio :label="4">经常（相当）</el-radio>
-                                            <el-radio :label="5">总是（非常）</el-radio>
-                                        </el-radio-group>
-                                    </template>
+                                    <!--<template v-for="q in questions">
+
+                                        <el-form-item label="" prop="tquestion">
+
+                                            <el-radio-group>
+                                                <el-radio label="没有 (根本不)"></el-radio>
+                                                <el-radio label="很少（有一点）"></el-radio>
+                                                <el-radio label="有时（有些）"></el-radio>
+                                                <el-radio label="经常（相当）"></el-radio>
+                                                <el-radio label="总是（非常）"></el-radio>
+                                            </el-radio-group>
+                                        </el-form-item>
+                                    </template>-->
                                 </el-tab-pane>
 
                                 <el-tab-pane label="阴虚体质" name="second">
@@ -198,6 +180,8 @@
             dataList: [],
             //表单数据
             formData: {},
+            // 测评问题
+            questions:[],
             //增加表单是否可见
             dialogFormVisible: false,
             //编辑表单是否可见
@@ -218,6 +202,7 @@
         //钩子函数，VUE对象初始化完成后自动执行
         created() {
             this.findPage();
+            //this.initQuertions();
         },
         methods: {
             //重置表单
@@ -247,12 +232,39 @@
                 _this.currentPage = currentPage;
                 this.findPage();
             },
+            initQuertions:function(){
+                var _this = this;
+                axios.post("/body/queryTest").then(function (response) {
+                    _this.questions=response.data;
+                });
+            },
             // 弹出添加窗口
             handleCreate() {
                 //先清空表单
                 this.resetForm();
                 var _this = this;
                 _this.dialogFormVisible = true;
+            },
+            handleDelete(id){
+                var _this = this;
+                this.$confirm("确认删除当前选中记录吗？", "提示", {type: 'warning'}).then(() => {
+                    axios.get("/body/deleteById/" + id).then(function (response) {
+                        if (response.data.flag) {
+                            _this.$message({
+                                type: 'success',
+                                message: response.data.message
+                            });
+                            //删除成功后刷新页面
+                            _this.findPage();
+                        } else {
+                            _this.$message.error(response.data.message);
+                        }
+                    })
+                }).catch(() => {
+                    //点击取消时执行的逻辑
+                    //如果没有catch，浏览器会报错
+                    _this.$message('操作已取消');
+                });
             },
             //时间格式化
             dateFormat: function (row, column) {

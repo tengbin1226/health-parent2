@@ -404,4 +404,8 @@
         </if>
     </select>
 
+    <select id="countMemberByMonth" resultType="java.lang.Integer">
+        SELECT count(*) FROM t_member m WHERE m.regTime &lt;= #{date}
+    </select>
+
 </mapper>

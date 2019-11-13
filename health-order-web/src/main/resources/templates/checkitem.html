@@ -251,7 +251,7 @@
                 var pageSize = _this.pageSize;
                 var queryString = _this.queryString;
 
-                axios.post("/check/checkitems", {
+                axios.post("/checkitem/checkitems", {
                     currentPage: currentPage,
                     pageSize: pageSize,
                     queryString: queryString
@@ -280,7 +280,7 @@
                 var _this = this;
                 _this.dialogFormVisible4Edit = true;
 
-               axios.get("/check/checkitem/" + id).then(function (response) {
+               axios.get("/checkitem/checkitem/" + id).then(function (response) {
                     _this.formData = response.data;
                 });
             },
@@ -288,7 +288,7 @@
             handleDelete(id){
                 var _this = this;
                 this.$confirm("确认删除当前选中记录吗？", "提示", {type: 'warning'}).then(() => {
-                    axios.get("/check/deleteinfo/" + id).then(function (response) {
+                    axios.get("/checkitem/deleteinfo/" + id).then(function (response) {
                         if (response.data.flag) {
                             _this.$message({
                                 type: 'success',
@@ -312,7 +312,7 @@
                 var _this = this;
                 _this.$refs['dataAddForm'].validate(function (valid) {
                     if (valid){
-                        axios.post("/check/addinfo",_this.formData).then(function (response) {
+                        axios.post("/checkitem/addinfo",_this.formData).then(function (response) {
                             // 隐藏编辑窗口
                             _this.dialogFormVisible = false;
                             if(response.data.flag){
@@ -338,7 +338,7 @@
                 var _this = this;
                 _this.$refs['dataEditForm'].validate(function (valid) {
                     if (valid){
-                        axios.post("/check/updateinfo",_this.formData).then(function (response) {
+                        axios.post("/checkitem/updateinfo",_this.formData).then(function (response) {
                             // 隐藏编辑窗口
                             _this.dialogFormVisible4Edit = false;
                             if(response.data.flag){

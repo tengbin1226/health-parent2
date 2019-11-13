@@ -222,19 +222,6 @@
                                         </el-form>
                                     </el-tab-pane>
                                     <el-tab-pane label="检查项信息" name="second">
-                                        <!--检查项表格数据
-                                        <template>
-                                            <el-table ref="multipleTable" height="300" style="width: 100%" border
-                                                      :data="tableData"
-                                                      tooltip-effect="dark"
-                                                      :row-key="getRowKeys"
-                                                      @selection-change="handleSelectionChange">
-                                                <el-table-column type="selection" class="selection" width="55" prop="id" value="id"></el-table-column>
-                                                <el-table-column label="项目编码" width="120"prop="code"></el-table-column>
-                                                <el-table-column label="项目名称"  width="120" prop="name"></el-table-column>
-                                                <el-table-column label="项目说明"  width="120" prop="remark"></el-table-column>
-                                            </el-table>
-                                        </template>-->
                                         <div class="checkScrol">
                                             <table class="datatable">
                                                 <thead>
@@ -279,9 +266,7 @@
                 pageSize:10,
                 total:100,
                 queryString:null,
-
                 multipleSelection:[],
-
                 dataList: [],//列表数据
                 formData: {},//表单数据
                 tableData:[],//新增和编辑表单中对应的检查项列表数据
@@ -298,14 +283,6 @@
                     this.formData = {};
                     this.checkitemIds = [];
                 },
-                handleSelectionChange(row) {
-                    var _this = this;
-                    _this.multipleSelection = row;
-
-                },
-                getRowKeys(row) {
-                    return row.id;
-                },
                 //分页查询
                 findPage() {
                     var _this = this;
@@ -314,7 +291,7 @@
                     var pageSize = _this.pageSize;
                     var queryString = _this.queryString;
 
-                    axios.post("/check/checkgroups", {
+                    axios.post("/checkgroup/checkgroups", {
                         currentPage: currentPage,
                         pageSize: pageSize,
                         queryString: queryString
@@ -337,16 +314,15 @@
                     var _this = this;
                     _this.dialogFormVisible = true;
                     //发送ajax请求查询所有的检查项信息，显示到窗口中
-                    axios.get("/check/findAllItem").then(function (response) {
+                    axios.get("/checkitem/findAllItem").then(function (response) {
                         //可以进行检查项的列表展示
-                        _this.tableData = response.data;
+                        _this.tableData = response.data.data;
                     });
                 },
                 /*添加*/
                 handleAdd () {
                     var _this = this;
-
-                    axios.post("/check/addcheckgroup?checkitemIds="+_this.checkitemIds,_this.formData).then(function (response) {
+                    axios.post("/checkgroup/addcheckgroup?checkitemIds="+_this.checkitemIds,_this.formData).then(function (response) {
                         // 隐藏编辑窗口
                         _this.dialogFormVisible = false;
                         if(response.data.flag){
@@ -370,32 +346,53 @@
                     _this.dialogFormVisible4Edit = true;
 
                     /* 回显数据 */
-                    axios.get("/check/checkgroup/"+id).then(function (response) {
+                    axios.get("/checkgroup/checkgroup/"+id).then(function(response) {
                         // 查询成功，可以回显
                         _this.formData = response.data;
 
                         // 发送ajax请求查询所有的检查项信息，显示到窗口中
-                        axios.get("/check/findAllItem").then(function (response) {
-
-                            // 可以进行检查项的列表展示
-                            _this.tableData = response.data;
-
-                            // 根据当前检查组id查询其关联的检查项的id
-                            axios.get("/check/findItemById/"+id).then(function (response) {
-                                this.checkitemIds = response.data;
-                            });
+                        axios.get("/checkitem/findAllItem").then(function (response) {
+                            if (response.data.flag) {
+                                _this.tableData = response.data.data;
+                                // 根据当前检查组id查询其关联的检查项的id
+                                axios.get("/checkitem/findItemById/" + id).then(function (response) {
+                                    if (response.data.flag) {
+                                        response.data.data.forEach(function (e, i) {
+                                            _this.checkitemIds.push(e.checkitemId);
+                                        });
+                                    }
+                                });
+                            }
                         });
                     })
                 },
-                // 编辑
+                /*编辑数据*/
                 handleEdit() {
-
+                    var _this = this;
+                    axios.post("/checkgroup/edit?checkitemIds="+_this.checkitemIds,_this.formData).then(function (response) {
+                        // 隐藏编辑窗口
+                        _this.dialogFormVisible4Edit = false;
+                        if(response.data.flag){
+                            _this.$message({
+                                type: 'success',
+                                message: response.data.message
+                            });
+                        }else {
+                            _this.$message({
+                                type: 'error',
+                                message: response.data.message
+                            });
+                        }
+                    }).finally(function () {
+                        // 无论是否编辑成功都刷新数据
+                        _this.findPage();
+                    });
                 },
                 // 删除
                 handleDelete(id) {
                     var _this = this;
                     this.$confirm("确认删除当前选中记录吗？", "提示", {type: 'warning'}).then(() => {
-                        axios.get("/check/deletegroup/" + id).then(function (response) {
+                        axios.get("/checkgroup/deletegroup/" + id).then(function (response) {
                             if (response.data.flag) {
                                 _this.$message({
                                     type: 'success',
@@ -408,9 +405,9 @@
                             }
                         })
                     }).catch(() => {
-                        //点击取消时执行的逻辑
-                        //如果没有catch，浏览器会报错
-                        _this.$message('操作已取消');
+                        _this.$message({
+                            message: '操作已取消'
+                        });
                     });
                 }
             }

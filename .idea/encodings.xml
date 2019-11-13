@@ -6,17 +6,19 @@
     <file url="file://$PROJECT_DIR$/health-common" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/health-evaluate-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/health-evaluate-web" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/health-interpose-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/health-interpose-web" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/health-knowledge-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/health-knowledge-web" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/health-member-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/health-member-web" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/health-menu-service" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/health-menu-web" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/health-mobile" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/health-order-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/health-order-web" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/health-setting-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/health-setting-web" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/health-user-service" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/health-user-web" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/health-statistics-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/health-statistics-web" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/health-web" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />
   </component>

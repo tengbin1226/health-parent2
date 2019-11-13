@@ -2,11 +2,9 @@ package com.health.service;
 
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
-import com.health.bean.CheckGroup;
-import com.health.bean.CheckGroupCheckiTem;
-import com.health.bean.CheckGroupCheckiTemExample;
-import com.health.bean.CheckiTem;
+import com.health.bean.*;
 import com.health.entity.PageResult;
+import com.health.exception.CustomException;
 import com.health.mapper.CheckGroupCheckiTemMapper;
 import com.health.mapper.CheckGroupMapper;
 import com.health.mapper.CheckiTemMapper;
@@ -100,7 +98,7 @@ public class CheckServiceImpl implements CheckService {
             // 修改指定信息的状态值
             return checkiTemMapper.updateByPrimaryKeySelective(checkiTem);
         }
-        return 0;
+        throw new CustomException("未获取到需删除的指定检查项信息!");
     }
 
     /**
@@ -116,7 +114,7 @@ public class CheckServiceImpl implements CheckService {
             checkiTem.setStatus("0");
             return checkiTemMapper.insertSelective(checkiTem);
         }
-        return 0;
+        throw new CustomException("未获取到需添加的检查组信息!");
     }
 
     /**
@@ -130,7 +128,7 @@ public class CheckServiceImpl implements CheckService {
         if (ObjectUtils.isNotEmpty(checkiTem)) {
             return checkiTemMapper.updateByPrimaryKeySelective(checkiTem);
         }
-        return 0;
+        throw new CustomException("未获取到指定检查项信息!");
     }
 
 
@@ -184,16 +182,25 @@ public class CheckServiceImpl implements CheckService {
      * @return
      */
     @Override
-    public int deleteCheckgroupById(Integer id) {
+    public Boolean deleteCheckgroupById(Integer id) {
         if (ObjectUtils.isNotEmpty(id)) {
-            // 根据主键查询检查组信息
-            CheckGroup checkGroup = checkGroupMapper.selectByPrimaryKey(id);
-            // 设置属性
-            checkGroup.setStatus("1");
-            // 修改指定信息的状态值
-            return checkGroupMapper.updateByPrimaryKeySelective(checkGroup);
+
+            // 查询当前禁用的检查组是否还有检查项信息
+            List<CheckGroupCheckiTem> checkGroupCheckiTems = checkGroupCheckiTemMapper.selectByCheckGroupId(id);
+
+            // 判断查询出的结果集大小
+            if (checkGroupCheckiTems.size()==0){
+                // 根据主键查询检查组信息
+                CheckGroup checkGroup = checkGroupMapper.selectByPrimaryKey(id);
+                // 设置属性
+                checkGroup.setStatus("1");
+                // 修改当前检查组状态值
+                int i = checkGroupMapper.updateByPrimaryKeySelective(checkGroup);
+                return true;
+            }
+            return false;
         }
-        return 0;
+        throw new CustomException("检查组编号为空!");
     }
 
     /**
@@ -223,9 +230,9 @@ public class CheckServiceImpl implements CheckService {
                 checkGroupCheckiTem.setCreateTime(DateUtils.localDateToDate(LocalDate.now()));
                 j = checkGroupCheckiTemMapper.insertSelective(checkGroupCheckiTem);
             }
-            return i+j;
+            return i + j;
         }
-        return 0;
+        throw new CustomException("检查组信息未勾选或未获取到指定检查项信息!");
     }
 
     /**
@@ -238,6 +245,8 @@ public class CheckServiceImpl implements CheckService {
         if (ObjectUtils.isNotEmpty(checkGroup) && checkitemIds.length > 0) {
 
             // TODO 修改检查组信息
+            // 设置修改时间
+            checkGroup.setUpdateTime(DateUtils.localDateToDate(LocalDate.now()));
             int i = checkGroupMapper.updateByPrimaryKeySelective(checkGroup);
 
             // TODO 先删除原有的检查组与检查项关联信息,然后再添加新的信息
@@ -250,7 +259,7 @@ public class CheckServiceImpl implements CheckService {
             CheckGroupCheckiTemExample example = new CheckGroupCheckiTemExample();
             CheckGroupCheckiTemExample.Criteria criteria = example.createCriteria();
             criteria.andCheckgroupIdEqualTo(checkGroup.getId());
-            checkGroupCheckiTemMapper.deleteByExample(example);
+            int i1 = checkGroupCheckiTemMapper.deleteByExample(example);
 
             // TODO 遍历勾选的检查项编号后逐一添加
             for (Integer checkitemId : checkitemIds) {
@@ -264,11 +273,12 @@ public class CheckServiceImpl implements CheckService {
             }
             return i + j;
         }
-        return 0;
+        throw new CustomException("检查组信息未勾选或未获取到指定检查项信息!");
     }
 
     /**
      * 查询所有检查组信息
+     *
      * @return
      */
     @Override
@@ -290,13 +300,11 @@ public class CheckServiceImpl implements CheckService {
         CheckGroup checkGroup = checkGroupMapper.selectByPrimaryKey(id);
 
         // 创建查询条件对象
-        CheckGroupCheckiTemExample example=new CheckGroupCheckiTemExample();
+        CheckGroupCheckiTemExample example = new CheckGroupCheckiTemExample();
         CheckGroupCheckiTemExample.Criteria criteria = example.createCriteria();
         criteria.andCheckgroupIdEqualTo(id);
         // 执行查询,获取查询结果集合
         List<CheckGroupCheckiTem> checkGroupCheckiTems = checkGroupCheckiTemMapper.selectByExample(example);
-
-
         // 返回
         return checkGroupCheckiTems;
     }

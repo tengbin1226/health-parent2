@@ -8,7 +8,7 @@ import java.util.Date;
 @Data
 public class MentalityResult implements Serializable {
 
-    private static final long serialVersionUID = -3704003949453611715L;
+    private static final long serialVersionUID = -3471822441243644071L;
 
     private Integer id;
 
@@ -17,6 +17,8 @@ public class MentalityResult implements Serializable {
     private Integer tOcd;
 
     private Integer tAnxiety;
+
+    private String status;
 
     private Integer tTerror;
 

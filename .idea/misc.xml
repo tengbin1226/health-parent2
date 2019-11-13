@@ -25,6 +25,12 @@
         <option value="$PROJECT_DIR$/health-member-service/pom.xml" />
         <option value="$PROJECT_DIR$/health-member-web/pom.xml" />
         <option value="$PROJECT_DIR$/health-mobile/pom.xml" />
+        <option value="$PROJECT_DIR$/health-statistics-service/pom.xml" />
+        <option value="$PROJECT_DIR$/health-statistics-web/pom.xml" />
+        <option value="$PROJECT_DIR$/health-knowledge-service/pom.xml" />
+        <option value="$PROJECT_DIR$/health-knowledge-web/pom.xml" />
+        <option value="$PROJECT_DIR$/health-interpose-service/pom.xml" />
+        <option value="$PROJECT_DIR$/health-interpose-web/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

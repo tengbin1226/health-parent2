@@ -79,20 +79,19 @@
                         </el-row>
                         <el-row>
                             <el-col :span="12">
-                                <el-form-item label="菜单项所对应的路由路径" prop="path">
-                                    <el-input v-model="formData.path"/>
+                                <el-form-item label="菜单图标" prop="icon">
+                                    <el-input v-model="formData.icon"/>
                                 </el-form-item>
                             </el-col>
                             <el-col :span="12">
-                                <el-form-item label="菜单优先级" prop="priority">
-                                    <el-input v-model="formData.priority"/>
-                                </el-form-item>
-                            </el-col>
-                        </el-row>
-                        <el-row>
-                            <el-col :span="24">
-                                <el-form-item label="菜单图标" prop="icon">
-                                    <el-input v-model="formData.icon"/>
+                                <el-form-item label="父菜单"  prop="parentmenuid">
+                                    <el-select v-model="formData.parentmenuid">
+                                        <el-option v-for="p in parentMenus"
+                                                   :key="p.id"
+                                                   :label="p.name"
+                                                   :value="p.id">
+                                        </el-option>
+                                    </el-select>
                                 </el-form-item>
                             </el-col>
                         </el-row>
@@ -100,19 +99,6 @@
                             <el-col :span="24">
                                 <el-form-item label="菜单描述" prop="description">
                                     <el-input v-model="formData.description" type="textarea"></el-input>
-                                </el-form-item>
-                            </el-col>
-                        </el-row>
-                        <el-row>
-                            <el-form-item label="菜单层级" prop="level">
-                                <el-select v-model="formData.level">
-                                    <el-option label="1" value="1"></el-option>
-                                    <el-option label="2" value="2"></el-option>
-                                </el-select>
-                            </el-form-item>
-                            <el-col :span="12">
-                                <el-form-item label="父菜单Id" v-model="parentmenuid">
-                                    <el-input v-model="formData.parentmenuid"/>
                                 </el-form-item>
                             </el-col>
                         </el-row>
@@ -144,20 +130,19 @@
                         </el-row>
                         <el-row>
                             <el-col :span="12">
-                                <el-form-item label="菜单项所对应的路由路径" prop="path">
-                                    <el-input v-model="formData.path"/>
+                                <el-form-item label="菜单图标" prop="icon">
+                                    <el-input v-model="formData.icon"/>
                                 </el-form-item>
                             </el-col>
                             <el-col :span="12">
-                                <el-form-item label="菜单优先级" prop="priority">
-                                    <el-input v-model="formData.priority"/>
-                                </el-form-item>
-                            </el-col>
-                        </el-row>
-                        <el-row>
-                            <el-col :span="24">
-                                <el-form-item label="菜单图标" prop="icon">
-                                    <el-input v-model="formData.icon"/>
+                                <el-form-item label="父菜单"  prop="parentmenuid">
+                                    <el-select v-model="formData.parentmenuid">
+                                        <el-option v-for="p in parentMenus"
+                                                   :key="p.id"
+                                                   :label="p.name"
+                                                   :value="p.id">
+                                        </el-option>
+                                    </el-select>
                                 </el-form-item>
                             </el-col>
                         </el-row>
@@ -165,19 +150,6 @@
                             <el-col :span="24">
                                 <el-form-item label="菜单描述" prop="description">
                                     <el-input v-model="formData.description" type="textarea"></el-input>
-                                </el-form-item>
-                            </el-col>
-                        </el-row>
-                        <el-row>
-                            <el-form-item label="菜单层级" prop="level">
-                                <el-select v-model="formData.level">
-                                    <el-option label="1" value="1"></el-option>
-                                    <el-option label="2" value="2"></el-option>
-                                </el-select>
-                            </el-form-item>
-                            <el-col :span="12">
-                                <el-form-item label="父菜单Id" v-model="parentmenuid">
-                                    <el-input v-model="formData.parentmenuid"/>
                                 </el-form-item>
                             </el-col>
                         </el-row>
@@ -211,6 +183,8 @@
             queryString: null,
             //当前页要展示的分页列表数据
             dataList: [],
+            // 父菜单信息
+            parentMenus:[],
             //表单数据
             formData: {},
             //增加表单是否可见，即是否弹出添加窗口
@@ -226,6 +200,7 @@
         //钩子函数，VUE对象初始化完成后自动执行
         created() {
             this.findPage();
+            this.initParentMenus();
         },
         methods: {
             // 重置表单
@@ -245,7 +220,7 @@
                 var queryString = _this.queryString;
 
                 //请求后台
-                axios.post("/menu/menu", {
+                axios.post("/menu/menus", {
                     currentPage: currentPage,
                     pageSize: pageSize,
                     queryString: queryString
@@ -260,6 +235,13 @@
                 _this.currentPage = currentPage;
                 this.findPage();
             },
+            initParentMenus(){
+                var _this = this;
+                axios.post("/menu/queryparentmenus").then(function (response) {
+                    _this.parentMenus=response.data;
+                });
+            },
+
             // 弹出添加窗口
             handleCreate() {
                 this.resetForm();
@@ -307,14 +289,17 @@
                             //删除成功后刷新页面
                             _this.findPage();
                         } else {
-                            _this.$message.error(response.data.message);
+                            _this.$message({
+                                type: 'error',
+                                message: response.data.message
+                            });
                         }
                     })
                 }).catch(() => {
                     //点击取消时执行的逻辑
                     //如果没有catch，浏览器会报错
                     _this.$message('操作已取消');
-            });
+                });
             },
             // 弹出修改窗口
             handleEdit(id) {
@@ -341,7 +326,10 @@
                                     message: response.data.message
                                 });
                             }else {
-                                _this.$message.error(response.data.message);
+                                _this.$message({
+                                    type: 'error',
+                                    message: response.data.message
+                                });
                             }
                         }).finally(function () {
                             // 无论是否编辑成功都刷新数据

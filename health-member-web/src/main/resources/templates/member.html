@@ -752,7 +752,10 @@
                             //删除成功后刷新页面
                             _this.findPage();
                         } else {
-                            _this.$message.error(response.data.message);
+                            _this.$message({
+                                type: 'error',
+                                message: response.data.message
+                            });
                         }
                     })
                 }).catch(() => {

@@ -2,9 +2,12 @@ package com.health.service;
 
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
+import com.health.bean.BodyTest;
+import com.health.bean.BodyType;
 import com.health.entity.PageResult;
 import com.health.entity.QueryPageBean;
 import com.health.exception.CustomException;
+import com.health.mapper.BodyTestMapper;
 import com.health.mapper.BodyTypeMapper;
 import com.health.vo.BodyQueryVO;
 import org.apache.commons.lang3.ObjectUtils;
@@ -24,6 +27,9 @@ public class BodyServiceImpl implements BodyService {
 
     @Autowired
     private BodyTypeMapper bodyTypeMapper;
+
+    @Autowired
+    private BodyTestMapper bodyTestMapper;
 
     /**
      * 分页查询体质测评信息
@@ -60,5 +66,36 @@ public class BodyServiceImpl implements BodyService {
         }else {
             throw new CustomException("分页查询条件为空!");
         }
+    }
+
+    /**
+     * 查询所有体质调查问题
+     * @return
+     */
+    @Override
+    public List<BodyTest> queryTests() {
+        return bodyTestMapper.selectByExample(null);
+    }
+
+
+    /**
+     * 根据编号删除体质测评信息(逻辑删除)
+     *
+     * @param id
+     * @return
+     */
+    @Override
+    public Boolean deleteById(Integer id) {
+        if(ObjectUtils.isEmpty(id)){
+            throw new CustomException("未获取到需删除的体质测评信息主键!");
+        }
+        // 1.根据主键查询体质测评信息
+        BodyType bodyType = bodyTypeMapper.selectByPrimaryKey(id);
+        // 2.根据体质测评信息对象设置属性
+        bodyType.setStatus("1");
+        // 3.根据主键修改信息
+        int i = bodyTypeMapper.updateByPrimaryKeySelective(bodyType);
+
+        return i>0;
     }
 }

@@ -7,16 +7,22 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="health-member-service" />
+        <module name="health-knowledge-web" />
+        <module name="health-statistics-service" />
         <module name="health-common" />
         <module name="health-mobile" />
+        <module name="health-interpose-web" />
         <module name="health-evaluate-web" />
         <module name="health-setting-web" />
         <module name="health-setting-service" />
         <module name="health-order-service" />
         <module name="health-member-web" />
+        <module name="health-knowledge-service" />
         <module name="health-order-web" />
+        <module name="health-interpose-service" />
         <module name="health-web" />
         <module name="health-api" />
+        <module name="health-statistics-web" />
         <module name="health-evaluate-service" />
       </profile>
     </annotationProcessing>
@@ -35,6 +41,10 @@
       <module name="health-evaluate-service" options="-parameters" />
       <module name="health-evaluate-web" options="-parameters" />
       <module name="health-healthmanager-service" options="-parameters" />
+      <module name="health-interpose-service" options="-parameters" />
+      <module name="health-interpose-web" options="-parameters" />
+      <module name="health-knowledge-service" options="-parameters" />
+      <module name="health-knowledge-web" options="-parameters" />
       <module name="health-member-service" options="-parameters" />
       <module name="health-member-web" options="-parameters" />
       <module name="health-menu-service" options="-parameters" />
@@ -45,6 +55,8 @@
       <module name="health-parent" options="-parameters" />
       <module name="health-setting-service" options="-parameters" />
       <module name="health-setting-web" options="-parameters" />
+      <module name="health-statistics-service" options="-parameters" />
+      <module name="health-statistics-web" options="-parameters" />
       <module name="health-user-service" options="-parameters" />
       <module name="health-user-web" options="-parameters" />
       <module name="health-web" options="-parameters" />

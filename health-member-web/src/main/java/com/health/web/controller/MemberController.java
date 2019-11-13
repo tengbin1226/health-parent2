@@ -14,7 +14,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.util.ObjectUtils;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
+import java.text.SimpleDateFormat;
+import java.util.*;
 
 /**
  * 会员管理后端控制器
@@ -34,6 +35,11 @@ public class MemberController {
     @GetMapping("/member")
     public String toMemberPage() {
         return "member";
+    }
+
+    @GetMapping("/report")
+    public String toReportPage(){
+        return "report_member";
     }
 
     /**
@@ -170,21 +176,51 @@ public class MemberController {
     @ResponseBody
     public Result updateMemberInfo(@RequestBody MemberVO memberVO) {
         // 实例化返回结果
-        Result Result = new Result();
+        Result result = new Result();
 
         // 修改会员信息
         Boolean flag = memberService.updateMemberInfo(memberVO);
 
         if (flag) {
             // 设置属性
-            Result.setMessage(MessageConstant.EDIT_MEMBER_SUCCESS);
-            Result.setFlag(true);
+            result.setMessage(MessageConstant.EDIT_MEMBER_SUCCESS);
+            result.setFlag(true);
         } else {
             // 设置属性
-            Result.setMessage(MessageConstant.EDIT_MEMBER_FAIL);
-            Result.setFlag(false);
+            result.setMessage(MessageConstant.EDIT_MEMBER_FAIL);
+            result.setFlag(false);
         }
-        return Result;
+        return result;
+    }
+
+    @GetMapping("/countMemberDynamic")
+    @ResponseBody
+    public Result countMemberDynamic(){
+        // 初始化
+        Map<String, List> map = new HashMap<>();
+        List<String> monthList = new ArrayList<>();
+        List<Integer> countMonthList = new ArrayList<>();
+
+        //monthList 月份表
+        Calendar calendar = Calendar.getInstance();
+        calendar.add(Calendar.MONTH, -12);
+
+        for (int i = 0; i < 12; i++) {
+            calendar.add(Calendar.MONTH, 1);
+            monthList.add(new SimpleDateFormat("yyyy-MM-dd").format(calendar.getTime()).toString());
+        }
+        map.put("months", monthList);
+
+        //countMonthList 用户统计结果表
+        for (String s : monthList) {
+            String month = s + "-31";
+            int monthCount = memberService.countMemberByMonth(s);
+            countMonthList.add(monthCount);
+        }
+        map.put("count", countMonthList);
+
+        // 返回实例化结果对象
+        return  new Result(true, MessageConstant.GET_MEMBER_NUMBER_REPORT_SUCCESS, map);
     }
 
 }

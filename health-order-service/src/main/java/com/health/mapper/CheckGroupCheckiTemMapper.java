@@ -30,4 +30,7 @@ public interface CheckGroupCheckiTemMapper {
     int updateByPrimaryKeySelective(CheckGroupCheckiTem record);
 
     int updateByPrimaryKey(CheckGroupCheckiTem record);
+
+    /* 根据检查组编号查询对应的检查项*/
+    List<CheckGroupCheckiTem> selectByCheckGroupId(Integer id);
 }

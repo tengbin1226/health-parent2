@@ -55,4 +55,10 @@ public interface MenuService {
      * @return
      */
     Boolean updateMenuInfo(Menu menu);
+
+    /**
+     * 查询所有父菜单信息
+     * @return
+     */
+    List<Menu> querParentMenus();
 }

@@ -36,4 +36,9 @@ public interface MenuMapper {
 
     /*分页查询菜单信息*/
     List<Menu> selectMenuByPage(String queryString);
+
+    /*查询添加前菜单的优先级*/
+    int selecMenuPriority();
+    /*查询指定菜单是否有子菜单(子菜单数量)*/
+    int selectSubmenu(Integer parentmenuid);
 }

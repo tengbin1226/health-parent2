@@ -5,6 +5,25 @@ package com.health.constant;
  */
 public class MessageConstant {
 
+
+    public static final String GET_CHECKITEMBYID_FAIL = "获取指定检查项信息失败";
+    public static final String GET_CHECKITEMBYID_SUCCESS = "获取指定检查项信息成功";
+
+    public static final String GET_ROLEBYID_FAIL = "获取指定角色信息失败";
+    public static final String GET_ROLEBYID_SUCCESS = "获取指定角色信息成功";
+
+    public static final String GET_USERBYID_FAIL = "获取指定用户信息失败";
+    public static final String GET_USERBYID_SUCCESS = "获取指定用户信息成功";
+
+    public static final String DELETE_USER_FAIL = "删除用户信息失败";
+    public static final String DELETE_USER_SUCCESS = "删除用户信息成功";
+
+    public static final String DELETE_MENTALITY_FAIL = "删除心理测评信息失败";
+    public static final String DELETE_MENTALITY_SUCCESS = "删除心理测评信息成功";
+
+    public static final String DELETE_BODY_FAIL = "删除体质测评信息失败";
+    public static final String DELETE_BODY_SUCCESS = "删除体质测评信息成功";
+
     public static final String DELETE_CHECKITEM_FAIL = "删除检查项失败";
     public static final String DELETE_CHECKITEM_SUCCESS = "删除检查项成功";
 
@@ -24,10 +43,11 @@ public class MessageConstant {
     public static final String ADD_CHECKGROUP_FAIL = "新增检查组失败";
     public static final String ADD_CHECKGROUP_SUCCESS = "新增检查组成功";
 
-    public static final String DELETE_CHECKGROUP_FAIL = "删除检查组失败";
-    public static final String DELETE_MENU_SUCCESS = "菜单删除成功";
 
+    public static final String DELETE_MENU_SUCCESS = "菜单删除成功";
     public static final String DELETE_MENU_FAIL = "菜单删除失败";
+
+    public static final String DELETE_CHECKGROUP_FAIL = "当前检查组包含检查项信息,请删除其检查项后重试";
     public static final String DELETE_CHECKGROUP_SUCCESS = "删除检查组成功";
 
     public static final String QUERY_CHECKGROUP_SUCCESS = "查询检查组成功";

@@ -54,4 +54,11 @@ public interface MemberService {
      * @return
      */
     List<HealthMgr> queryHealthMgrs();
+
+    /**
+     * 根据月份计算会员的注册数量
+     * @param s
+     * @return
+     */
+    Integer countMemberByMonth(String date);
 }

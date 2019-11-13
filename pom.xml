@@ -17,17 +17,34 @@
     <name>health-parent</name>
 
     <modules>
+        <!--用于存放领域对象,vo类,各模块接口-->
         <module>health-api</module>
+        <!--用于存放工具类.自定义异常,日期转换等-->
         <module>health-common</module>
+        <!--健康测评-->
         <module>health-evaluate-service</module>
         <module>health-evaluate-web</module>
+        <!--健康干预-->
+        <module>health-interpose-service</module>
+        <module>health-interpose-web</module>
+        <!--知识库-->
+        <module>health-knowledge-service</module>
+        <module>health-knowledge-web</module>
+        <!--会员管理-->
         <module>health-member-service</module>
         <module>health-member-web</module>
+        <!--客户端-->
         <module>health-mobile</module>
+        <!--预约管理-->
         <module>health-order-service</module>
         <module>health-order-web</module>
+        <!--系统设置-->
         <module>health-setting-service</module>
         <module>health-setting-web</module>
+        <!--统计分析-->
+        <module>health-statistics-service</module>
+        <module>health-statistics-web</module>
+        <!--后台入口-->
         <module>health-web</module>
     </modules>
 
@@ -162,12 +179,6 @@
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-web</artifactId>
-                <version>2.2.0.RELEASE</version>
-            </dependency>
-
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-devtools</artifactId>
                 <version>2.2.0.RELEASE</version>
             </dependency>
 

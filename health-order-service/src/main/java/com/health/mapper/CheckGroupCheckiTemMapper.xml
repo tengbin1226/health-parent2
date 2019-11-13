@@ -146,6 +146,7 @@
             <include refid="Example_Where_Clause"/>
         </if>
     </select>
+
     <update id="updateByExampleSelective" parameterType="map">
         update t_checkgroup_checkitem
         <set>
@@ -196,4 +197,20 @@
     where checkgroup_id = #{checkgroupId,jdbcType=INTEGER}
       and checkitem_id = #{checkitemId,jdbcType=INTEGER}
   </update>
+
+    <!--根据检查组编号查询对应的检查项-->
+    <select id="selectByCheckGroupId" resultType="com.health.bean.CheckGroupCheckiTem">
+        SELECT
+            cc.checkgroup_id as checkgroupId,
+            cc.checkitem_id as checkitemId,
+            cc.create_time as createTime,
+            cc.update_time as updateTime
+        FROM
+            t_checkgroup cg,
+            t_checkitem ci,
+            t_checkgroup_checkitem cc
+        WHERE
+            cg.id = cc.checkgroup_id
+            AND ci.id = cc.checkitem_id and ci.`status`=0 and cg.id=#{value}
+    </select>
 </mapper>

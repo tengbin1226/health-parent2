@@ -2,7 +2,6 @@ package com.health.mapper;
 
 import com.health.bean.BodyType;
 import com.health.bean.BodyTypeExample;
-
 import java.util.List;
 
 import com.health.vo.BodyQueryVO;
@@ -30,7 +29,7 @@ public interface BodyTypeMapper {
     int updateByPrimaryKeySelective(BodyType record);
 
     int updateByPrimaryKey(BodyType record);
-
+    
     /*查询体质信息*/
     List<BodyQueryVO> selectBodyInfo(String queryString);
 }

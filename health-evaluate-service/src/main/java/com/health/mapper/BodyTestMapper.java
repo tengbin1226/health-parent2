@@ -2,7 +2,9 @@ package com.health.mapper;
 
 import com.health.bean.BodyTest;
 import com.health.bean.BodyTestExample;
+
 import java.util.List;
+
 import org.apache.ibatis.annotations.Param;
 
 public interface BodyTestMapper {

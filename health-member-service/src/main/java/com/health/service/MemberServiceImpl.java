@@ -361,4 +361,19 @@ public class MemberServiceImpl implements MemberService {
         // 返回查询结果集
         return healthMgrMapper.selectByExample(example);
     }
+
+
+    /**
+     * 根据月份计算会员的注册数量
+     *
+     * @param s
+     * @return
+     */
+    @Override
+    public Integer countMemberByMonth(String date) {
+        if (StringUtils.isEmpty(date)){
+            throw new CustomException("需计算会员的注册数量的日期为空!");
+        }
+        return memberMapper.countMemberByMonth(date);
+    }
 }

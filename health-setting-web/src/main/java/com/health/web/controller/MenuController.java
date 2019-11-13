@@ -12,6 +12,8 @@ import org.apache.dubbo.config.annotation.Reference;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @CrossOrigin(origins = "*", allowCredentials = "true", allowedHeaders = "", methods = {})
 @Controller
 @RequestMapping("/menu")
@@ -30,93 +32,17 @@ public class MenuController {
         return "menu";
     }
 
+
     /**
      * 分页查询菜单信息
      *
      * @param queryPageBean
      * @return
      */
-    @PostMapping("/menu")
+    @PostMapping("/menus")
     @ResponseBody
     public PageResult<Menu> queryMenus(@RequestBody QueryPageBean queryPageBean) {
         PageResult<Menu> result = menuService.queryMenusByPage(queryPageBean.getCurrentPage(), queryPageBean.getPageSize(), queryPageBean.getQueryString());
-        return result;
-    }
-
-    /**
-     * 逻辑删除
-     *
-     * @param id
-     * @return
-     */
-    @GetMapping("/menu/{id}")
-    @ResponseBody
-    public Result deleteMenu(@PathVariable Integer id) {
-        Result result = new Result();
-
-        if (ObjectUtils.isNotEmpty(id)) {
-            Boolean flag = menuService.deleteById(id);
-            // 设置属性
-            result.setFlag(flag);
-            result.setMessage(MessageConstant.DELETE_MENU_SUCCESS);
-            result.setData(null);
-        } else {
-            // 设置属性
-            result.setFlag(false);
-            result.setMessage(MessageConstant.DELETE_MENU_FAIL);
-            result.setData(null);
-        }
-        return result;
-    }
-
-
-    /**
-     * 根据编号查询菜单信息
-     *
-     * @param id
-     * @return
-     */
-    @GetMapping("/menuInfo/{id}")
-    @ResponseBody
-    public Result queryById(@PathVariable Integer id) {
-
-        Result result = new Result();
-
-        if (ObjectUtils.isNotEmpty(id)) {
-            Menu menu = menuService.findById(id);
-            result.setFlag(true);
-            result.setMessage(MessageConstant.GET_MENUBYID_SUCCESS);
-            result.setData(menu);
-        } else {
-            result.setFlag(false);
-            result.setMessage(MessageConstant.GET_MENUBYID_FAIL);
-            result.setData(null);
-        }
-        return result;
-    }
-
-    /**
-     * 修改菜单信息
-     *
-     * @param menu
-     * @return
-     */
-    @PostMapping("/updatemenu")
-    @ResponseBody
-    public Result updateMenu(@RequestBody Menu menu) {
-        Result result = new Result();
-        if (ObjectUtils.isNotEmpty(menu)) {
-            Boolean flag = menuService.updateMenuInfo(menu);
-            // 设置属性
-            result.setFlag(true);
-            result.setMessage(MessageConstant.GET_UPDATEMENU_SUCCESS);
-            result.setData(null);
-        } else {
-            // 设置属性
-            result.setFlag(false);
-            result.setMessage(MessageConstant.GET_UPDATEMENU_FAIL);
-            result.setData(null);
-        }
         return result;
     }
 
@@ -130,21 +56,71 @@ public class MenuController {
     @PostMapping("/addmenu")
     @ResponseBody
     public Result addMenu(@RequestBody Menu menu) {
-        Result result = new Result();
-        if (ObjectUtils.isNotEmpty(menu)) {
-            Boolean flag = menuService.addMenuInfo(menu);
-            // 设置属性
-            result.setFlag(true);
-            result.setMessage(MessageConstant.GET_ADDMENU_SUCCESS);
-            result.setData(null);
-        } else {
-            // 设置属性
-            result.setFlag(false);
-            result.setMessage(MessageConstant.GET_ADDMENU_FAIL);
-            result.setData(null);
+        Boolean flag = menuService.addMenuInfo(menu);
+        if (flag) {
+            return new Result(true, MessageConstant.GET_ADDMENU_SUCCESS, null);
         }
-        return result;
+        return new Result(false, MessageConstant.GET_ADDMENU_FAIL, null);
     }
 
+    /**
+     * 逻辑删除
+     *
+     * @param id
+     * @return
+     */
+    @GetMapping("/menu/{id}")
+    @ResponseBody
+    public Result deleteMenu(@PathVariable Integer id) {
+        Boolean flag = menuService.deleteById(id);
+        if (flag) {
+            return new Result(true, MessageConstant.DELETE_MENU_SUCCESS, null);
+        }
+        return new Result(false, MessageConstant.DELETE_MENU_FAIL, null);
+    }
+
+
+    /**
+     * 根据编号查询菜单信息
+     *
+     * @param id
+     * @return
+     */
+    @GetMapping("/menuInfo/{id}")
+    @ResponseBody
+    public Result queryById(@PathVariable Integer id) {
+        // 根据编号查询指定菜单对象
+        Menu menu = menuService.findById(id);
+        // 返回结果对象
+        return new Result(true, MessageConstant.GET_MENUBYID_SUCCESS, menu);
+    }
+
+
+    /**
+     * 修改菜单信息
+     *
+     * @param menu
+     * @return
+     */
+    @PostMapping("/updatemenu")
+    @ResponseBody
+    public Result updateMenu(@RequestBody Menu menu) {
+        Boolean flag = menuService.updateMenuInfo(menu);
+        if (flag) {
+            return new Result(true, MessageConstant.GET_UPDATEMENU_SUCCESS, null);
+        }
+        return new Result(false, MessageConstant.GET_UPDATEMENU_FAIL, null);
+    }
+
+
+    /**
+     * 查询所有父菜单信息
+     * @return
+     */
+    @PostMapping("/queryparentmenus")
+    @ResponseBody
+    public List<Menu> queryParentMenus(){
+        return menuService.querParentMenus();
+    }
 
 }

@@ -10,14 +10,14 @@
     <meta name="keywords" content="传智健康">
     <meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" name="viewport">
     <!-- 引入样式 -->
-    <link rel="stylesheet" href="../plugins/elementui/index.css">
-    <link rel="stylesheet" href="../plugins/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="/static/plugins/elementui/index.css">
+    <link rel="stylesheet" href="/static/plugins/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/static/css/style.css">
     <!-- 引入组件库 -->
-    <script type="text/javascript" src="../js/jquery.min.js"></script>
-    <script src="../js/vue.js"></script>
-    <script src="../plugins/elementui/index.js"></script>
-    <script src="../js/axios-0.18.0.js"></script>
+    <script type="text/javascript" src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/vue.js"></script>
+    <script src="/static/plugins/elementui/index.js"></script>
+    <script src="/static/js/axios-0.18.0.js"></script>
     <style>
         .datatable {
             position: relative;
@@ -67,23 +67,35 @@
             </div>
             <el-table size="small" current-row-key="id" :data="dataList" stripe highlight-current-row>
                 <el-table-column type="index" align="center" label="序号"></el-table-column>
-                <el-table-column prop=" " label="档案号" align="center"></el-table-column>
-                <el-table-column prop=" " label="姓名" align="center"></el-table-column>
-                <el-table-column prop=" " label="心理评测日期" align="center"></el-table-column>
-                <el-table-column prop=" " label="躯体化" align="center"></el-table-column>
-                <el-table-column prop=" " label="强迫症化" align="center"></el-table-column>
-                <el-table-column prop=" " label="人际关系敏感" align="center"></el-table-column>
-                <el-table-column prop=" " label="犹豫" align="center"></el-table-column>
-                <el-table-column prop=" " label="焦虑" align="center"></el-table-column>
-                <el-table-column prop=" " label="敌对" align="center"></el-table-column>
-                <el-table-column prop=" " label="恐怖" align="center"></el-table-column>
-                <el-table-column prop=" " label="偏执" align="center"></el-table-column>
-                <el-table-column prop=" " label="精神病性" align="center"></el-table-column>
+                <el-table-column prop="fileNumber" label="档案号" align="center"></el-table-column>
+                <el-table-column prop="name" label="姓名" align="center"></el-table-column>
+                <el-table-column prop="createtime" label="心理评测日期" align="center" :formatter="dateFormat"></el-table-column>
+                <el-table-column label="强迫症化" align="center">
+                    <template slot-scope="scope">
+                        <span>{{scope.row.tocd == 0 ? '是':'否'}}</span>
+                    </template>
+                </el-table-column>
+                <el-table-column label="焦虑" align="center">
+                    <template slot-scope="scope">
+                        <span>{{scope.row.tanxiety == 0 ? '是':'否'}}</span>
+                    </template>
+                </el-table-column>
+                <el-table-column label="恐怖" align="center">
+                    <template slot-scope="scope">
+                        <span>{{scope.row.tterror == 0 ? '是':'否'}}</span>
+                    </template>
+                </el-table-column>
                 <el-table-column label="操作" align="center">
                     <template slot-scope="scope">
                         <!--scope.row表示列表中的一条数据-->
                         <el-button type="primary" size="mini" @click="handleUpdate(scope.row.id)">编辑</el-button>
                         <el-button size="mini" type="danger" @click="handleDelete(scope.row.id)">删除</el-button>
+                    </template>
+                </el-table-column>
+                <el-table-column label="查看报告" align="center">
+                    <template slot-scope="scope">
+                        <!--scope.row表示列表中的一条数据-->
+                        <el-button type="primary" size="mini" @click="handleView(scope.row.id)">查看</el-button>
                     </template>
                 </el-table-column>
             </el-table>
@@ -167,7 +179,7 @@
         },
         //钩子函数，VUE对象初始化完成后自动执行
         created() {
-
+            this.findPage();
         },
         methods: {
             //重置表单
@@ -189,7 +201,7 @@
                 var pageSize = _this.pageSize;
                 var queryString = _this.queryString;
 
-                axios.post("#", {
+                axios.post("/mentality/query", {
                     currentPage: currentPage,
                     pageSize: pageSize,
                     queryString: queryString
@@ -204,6 +216,37 @@
                 _this.currentPage = currentPage;
                 this.findPage();
             },
+            // 删除
+            handleDelete(id){
+                var _this = this;
+                this.$confirm("确认删除当前选中记录吗？", "提示", {type: 'warning'}).then(() => {
+                    axios.get("/mentality/deleteById/" + id).then(function (response) {
+                        if (response.data.flag) {
+                            _this.$message({
+                                type: 'success',
+                                message: response.data.message
+                            });
+                            //删除成功后刷新页面
+                            _this.findPage();
+                        } else {
+                            _this.$message({
+                                type: 'error',
+                                message: response.data.message
+                            });
+                        }
+                    })
+                }).catch(() => {
+                    //点击取消时执行的逻辑
+                    //如果没有catch，浏览器会报错
+                    _this.$message('操作已取消');
+                });
+            },
+            //时间格式化
+            dateFormat: function (row, column) {
+                //row 表示一行数据, updateTime 表示要格式化的字段名称
+                var t = new Date(row.createtime);
+                return t.getFullYear() + "年" + (t.getMonth() + 1) + "月" + t.getDate() + "日";
+            }
         }
     });
 </script>

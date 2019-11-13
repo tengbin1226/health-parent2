@@ -340,7 +340,7 @@
     </resultMap>
 
     <!--查询菜单信息-->
-    <select id="selectMenus"  resultMap="menuMap">
+    <select id="selectMenus" resultMap="menuMap">
         SELECT * FROM t_menu
     </select>
 
@@ -349,6 +349,16 @@
         <if test="value != null and value.length > 0">
             and name LIKE #{value}
         </if>
+    </select>
+
+    <!--查询添加前菜单的优先级-->
+    <select id="selecMenuPriority" resultType="java.lang.Integer">
+        SELECT COUNT(*)  FROM t_menu  WHERE  level = 1
+    </select>
+
+    <!--查询指定菜单是否有子菜单(子菜单数量),用于设置path属性值-->
+    <select id="selectSubmenu" resultType="java.lang.Integer" >
+        select COUNT(*) from t_menu where parentMenuId=#{value}
     </select>
 
 </mapper>

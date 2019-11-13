@@ -7,7 +7,6 @@ import com.health.bean.CheckiTem;
 import com.health.entity.PageResult;
 
 import java.util.List;
-import java.util.Map;
 
 /**
  * 检查项及检查组接口
@@ -61,7 +60,7 @@ public interface CheckService {
      * @param id
      * @return
      */
-    int deleteCheckgroupById(Integer id);
+    Boolean deleteCheckgroupById(Integer id);
 
 
     /**
